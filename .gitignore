@@ -1,0 +1,5 @@
+/terraform-provider-commercelayer
+/examples/**/*.tfstate*
+/examples/**/*.tfvars
+/bin
+/dist/
