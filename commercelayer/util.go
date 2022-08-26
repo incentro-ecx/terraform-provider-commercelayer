@@ -24,6 +24,17 @@ func stringRef(val interface{}) *string {
 	return &ref
 }
 
+func keyValueRef(val interface{}) map[string]interface{} {
+	if val == nil {
+		return map[string]interface{}{}
+	}
+	ref := val.(map[string]interface{})
+	if len(ref) == 0 {
+		return map[string]interface{}{}
+	}
+	return ref
+}
+
 func boolRef(val interface{}) *bool {
 	if val == nil {
 		return nil
@@ -34,7 +45,7 @@ func boolRef(val interface{}) *bool {
 	return &ref
 }
 
-func float64Tofloat32Ref(val interface{}) *float32 {
+func float64ToFloat32Ref(val interface{}) *float32 {
 	if val == nil {
 		return nil
 	}

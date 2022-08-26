@@ -38,7 +38,9 @@ func Provider() *schema.Provider {
 				Description: "The Commercelayer auth endpoint",
 			},
 		},
-		ResourcesMap:         map[string]*schema.Resource{},
+		ResourcesMap: map[string]*schema.Resource{
+			"commercelayer_address": resourceAddress(),
+		},
 		ConfigureContextFunc: providerConfigureFunc,
 	}
 }
