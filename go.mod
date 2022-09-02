@@ -8,6 +8,8 @@ require (
 	golang.org/x/oauth2 v0.0.0-20220630143837-2104d58473e0
 )
 
+replace github.com/incentro-dc/go-commercelayer-sdk => ./../go-commercelayer-sdk
+
 require (
 	github.com/agext/levenshtein v1.2.3 // indirect
 	github.com/apparentlymart/go-textseg/v13 v13.0.0 // indirect
