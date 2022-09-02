@@ -1,4 +1,4 @@
-resource "commercelayer_address" "incentro-address" {
+resource "commercelayer_address" "incentro_address" {
   attributes {
     business     = true
     company      = "Incentro"

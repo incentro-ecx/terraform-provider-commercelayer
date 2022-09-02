@@ -2,6 +2,7 @@ package commercelayer
 
 import (
 	"context"
+	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
@@ -9,7 +10,8 @@ import (
 
 func resourceMerchant() *schema.Resource {
 	return &schema.Resource{
-		Description:   "",
+		Description: "A merchant is the fiscal representative that is selling in a specific market. Tax calculators " +
+			"use the merchant's address (and the shipping address) to determine the tax rate for an order.",
 		ReadContext:   resourceMerchantReadFunc,
 		CreateContext: resourceMerchantCreateFunc,
 		UpdateContext: resourceMerchantUpdateFunc,
@@ -32,9 +34,21 @@ func resourceMerchant() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"name": {
-							Description: "",
+							Description: "The merchant's internal name",
 							Type:        schema.TypeString,
 							Required:    true,
+						},
+						"reference": {
+							Description: "A string that you can use to add any external identifier to the resource. This " +
+								"can be useful for integrating the resource to an external system, like an ERP, a " +
+								"marketing tool, a CRM, or whatever.",
+							Type:     schema.TypeString,
+							Optional: true,
+						},
+						"reference_origin": {
+							Description: "Any identifier of the third party system that defines the reference code",
+							Type:        schema.TypeString,
+							Optional:    true,
 						},
 						"metadata": {
 							Description: "Set of key-value pairs that you can attach to the resource. This can be useful " +
@@ -56,7 +70,11 @@ func resourceMerchant() *schema.Resource {
 				Required:    true,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
-						//	TODO: implement geocoder relation
+						"address": {
+							Description: "The associated address",
+							Type:        schema.TypeString,
+							Required:    true,
+						},
 					},
 				},
 			},
@@ -72,6 +90,9 @@ func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i i
 	c := i.(*commercelayer.APIClient)
 
 	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	relationships := d.Get("relationships").([]interface{})[0].(map[string]interface{})
+
+	fmt.Println(relationships)
 
 	merchantCreate := commercelayer.MerchantCreate{
 		Data: commercelayer.MerchantCreateData{
@@ -82,7 +103,12 @@ func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i i
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
-			Relationships: nil,
+			Relationships: &commercelayer.POSTMerchants201ResponseDataRelationships{
+				Address: commercelayer.GETBingGeocoders200ResponseDataInnerRelationshipsAddresses{
+					Type: addressType,
+					Id:   relationships["address"].(string),
+				},
+			},
 		},
 	}
 

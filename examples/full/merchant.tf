@@ -1,6 +1,6 @@
-resource "commercelayer_merchant" "incentro-merchant" {
+resource "commercelayer_merchant" "incentro_merchant" {
   attributes {
-    name     = "Tolga"
+    name     = "Incentro Merchant"
     metadata = {
       foo : "bar"
     }
@@ -8,6 +8,6 @@ resource "commercelayer_merchant" "incentro-merchant" {
 
 
   relationships {
-
+    address = commercelayer_address.incentro_address.id
   }
 }
