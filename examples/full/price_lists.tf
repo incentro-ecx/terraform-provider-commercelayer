@@ -1,6 +1,7 @@
-resource "commercelayer_customer_group" "incentro_customer_group" {
+resource "commercelayer_price_list" "incentro_price_list" {
   attributes {
     name     = "incentro_group"
+    currency_code = "EUR"
     metadata = {
       foo: "bar"
     }
