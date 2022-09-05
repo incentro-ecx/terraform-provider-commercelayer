@@ -27,13 +27,11 @@ func resourceCustomerGroup() *schema.Resource {
 			"attributes": {
 				Description: "Resource attributes",
 				Type:        schema.TypeList,
-				MaxItems:    1,
-				MinItems:    1,
 				Required:    true,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"name": {
-							Description: "The CustomerGroup's internal name",
+							Description: "The Customer Group's internal name",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
@@ -66,7 +64,23 @@ func resourceCustomerGroup() *schema.Resource {
 }
 
 func resourceCustomerGroupReadFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
-	return diag.Errorf("Not implemented")
+	c := i.(*commercelayer.APIClient)
+
+	resp, _, err := c.CustomerGroupsApi.GETCustomerGroupsCustomerGroupId(ctx, d.Id()).Execute()
+	if err != nil {
+		return diagErr(err)
+	}
+
+	customer_group, ok := resp.GetDataOk()
+	if !ok {
+		d.SetId("")
+		return nil
+	}
+
+	d.SetId(customer_group.GetId())
+
+	return nil
+	// return diag.Errorf("Not implemented")
 }
 
 func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
@@ -74,7 +88,7 @@ func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData
 
 	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
 
-	CustomerGroupCreate := commercelayer.CustomerGroupCreate{
+	customerGroupCreate := commercelayer.CustomerGroupCreate{
 		Data: commercelayer.CustomerGroupCreateData{
 			Type: customerGroupType,
 			Attributes: commercelayer.POSTCustomerGroups201ResponseDataAttributes{
@@ -82,24 +96,47 @@ func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
-				},
 			},
-		}
+		},
+	}
 
-	CustomerGroup, _, err := c.CustomerGroupsApi.POSTCustomerGroups(ctx).CustomerGroupCreate(CustomerGroupCreate).Execute()
+	customer_group, _, err := c.CustomerGroupsApi.POSTCustomerGroups(ctx).CustomerGroupCreate(customerGroupCreate).Execute()
 	if err != nil {
 		return diagErr(err)
 	}
 
-	d.SetId(*CustomerGroup.Data.Id)
+	d.SetId(*customer_group.Data.Id)
 
 	return nil
 }
 
 func resourceCustomerGroupDeleteFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
-	return diag.Errorf("Not implemented")
+	c := i.(*commercelayer.APIClient)
+	_, err := c.CustomerGroupsApi.DELETECustomerGroupsCustomerGroupId(ctx, d.Id()).Execute()
+	return diag.FromErr(err)
+	// return diag.Errorf("Not implemented")
 }
 
 func resourceCustomerGroupUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
-	return diag.Errorf("Not implemented")
+	c := i.(*commercelayer.APIClient)
+
+	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+
+	var customerGroupUpdate = commercelayer.CustomerGroupUpdate{
+		Data: commercelayer.CustomerGroupUpdateData{
+			Type: customerGroupType,
+			Id: d.Id(),
+			Attributes: commercelayer.PATCHCustomerGroupsCustomerGroupId200ResponseDataAttributes{
+				Name:            stringRef(attributes["name"].(string)),
+				Reference:       stringRef(attributes["reference"]),
+				ReferenceOrigin: stringRef(attributes["reference_origin"]),
+				Metadata:        keyValueRef(attributes["metadata"]),
+			},
+		},
+	}
+	
+	
+	_, _, err := c.CustomerGroupsApi.PATCHCustomerGroupsCustomerGroupId(ctx, d.Id()).CustomerGroupUpdate(customerGroupUpdate).Execute()
+
+	return diag.FromErr(err)
 }
