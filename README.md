@@ -1,67 +1,39 @@
-== Requirements
+## Requirements
 
-[cols="a,a",options="header,autowidth"]
-|===
-|Name |Version
-|[[requirement_commercelayer]] <<requirement_commercelayer,commercelayer>> |>= 0.0.1
-|===
+| Name | Version |
+|------|---------|
+| <a name="requirement_commercelayer"></a> [commercelayer](#requirement\_commercelayer) | >= 0.0.1 |
 
-== Providers
+## Providers
 
-[cols="a,a",options="header,autowidth"]
-|===
-|Name |Version
-|[[provider_commercelayer]] <<provider_commercelayer,commercelayer>> |>= 0.0.1
-|===
+| Name | Version |
+|------|---------|
+| <a name="provider_commercelayer"></a> [commercelayer](#provider\_commercelayer) | >= 0.0.1 |
 
-== Modules
+## Modules
 
 No modules.
 
-== Resources
+## Resources
 
-[cols="a,a",options="header,autowidth"]
-|===
-|Name |Type
-|https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address[commercelayer_address.example-address] |resource
-|https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address[commercelayer_address.incentro-address2] |resource
-|https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address[commercelayer_address.incentro-address3] |resource
-|https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address[commercelayer_address.incentro_address] |resource
-|https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/customer_group[commercelayer_customer_group.incentro_customer_group] |resource
-|https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/price_list[commercelayer_price_list.incentro_price_list] |resource
-|===
+| Name | Type |
+|------|------|
+| [commercelayer_address.example-address](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
+| [commercelayer_address.incentro-address2](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
+| [commercelayer_address.incentro-address3](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
+| [commercelayer_address.incentro_address](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
+| [commercelayer_customer_group.incentro_customer_group](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/customer_group) | resource |
+| [commercelayer_price_list.incentro_price_list](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/price_list) | resource |
 
-== Inputs
+## Inputs
 
-[cols="a,a,a,a,a",options="header,autowidth"]
-|===
-|Name |Description |Type |Default |Required
-|[[input_api_endpoint]] <<input_api_endpoint,api_endpoint>>
-|n/a
-|`string`
-|n/a
-|yes
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_api_endpoint"></a> [api\_endpoint](#input\_api\_endpoint) | n/a | `string` | n/a | yes |
+| <a name="input_auth_endpoint"></a> [auth\_endpoint](#input\_auth\_endpoint) | n/a | `string` | n/a | yes |
+| <a name="input_client_id"></a> [client\_id](#input\_client\_id) | n/a | `string` | n/a | yes |
+| <a name="input_client_secret"></a> [client\_secret](#input\_client\_secret) | n/a | `string` | n/a | yes |
 
-|[[input_auth_endpoint]] <<input_auth_endpoint,auth_endpoint>>
-|n/a
-|`string`
-|n/a
-|yes
-
-|[[input_client_id]] <<input_client_id,client_id>>
-|n/a
-|`string`
-|n/a
-|yes
-
-|[[input_client_secret]] <<input_client_secret,client_secret>>
-|n/a
-|`string`
-|n/a
-|yes
-
-|===
-
-== Outputs
+## Outputs
 
 No outputs.

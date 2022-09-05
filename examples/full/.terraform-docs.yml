@@ -1,4 +1,4 @@
-formatter: "asciidoc" # this is required
+formatter: "markdown table"
 
 version: ""
 
