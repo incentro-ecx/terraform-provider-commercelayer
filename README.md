@@ -1,88 +1,41 @@
-# Commercelayer Terraform Provider
+<!-- BEGIN_TF_DOCS -->
+## Requirements
 
-The Commercelayer terraform provider allows you to configure your [Commercelayer shops](https://commercelayer.io/) with
-infrastructure-as-code principles.
+| Name | Version |
+|------|---------|
+| <a name="requirement_commercelayer"></a> [commercelayer](#requirement\_commercelayer) | >= 0.0.1 |
 
-## Usage
+## Providers
 
-Add the provider to your terraform project
+| Name | Version |
+|------|---------|
+| <a name="provider_commercelayer"></a> [commercelayer](#provider\_commercelayer) | >= 0.0.1 |
 
-```hcl
-terraform {
-  required_providers {
-    commercelayer = {
-      version = ">= 0.0.1"
-      source  = "incentro-dc/commercelayer"
-    }
-  }
-}
+## Modules
 
-provider "commercelayer" {
-  client_id     = "<client_id>"
-  client_secret = "<client_secret>"
-  api_endpoint  = "<api_endpoint>"
-  auth_endpoint = "<auth_endpoint"
-}
-```
+No modules.
 
-## Development
+## Resources
 
-### Requirements
+| Name | Type |
+|------|------|
+| [commercelayer_address.example-address](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
+| [commercelayer_address.incentro-address2](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
+| [commercelayer_address.incentro-address3](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
+| [commercelayer_address.incentro_address](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
+| [commercelayer_customer_group.incentro_customer_group](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/customer_group) | resource |
+| [commercelayer_price_list.incentro_price_list](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/price_list) | resource |
 
-In order to build from the source code, you must have the following set up in your development environment.
+## Inputs
 
-- [Go >= 1.17](https://golang.org/doc/install)
-- [Make](https://www.gnu.org/software/make/)
-- [Terraform >= 1.0.0](https://www.terraform.io/downloads.html)
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_api_endpoint"></a> [api\_endpoint](#input\_api\_endpoint) | n/a | `string` | n/a | yes |
+| <a name="input_auth_endpoint"></a> [auth\_endpoint](#input\_auth\_endpoint) | n/a | `string` | n/a | yes |
+| <a name="input_client_id"></a> [client\_id](#input\_client\_id) | n/a | `string` | n/a | yes |
+| <a name="input_client_secret"></a> [client\_secret](#input\_client\_secret) | n/a | `string` | n/a | yes |
 
-There is also a dependency on another internal
-project, [which provides the SDK used](https://github.com/incentro-dc/go-commercelayer-sdk).
+## Outputs
 
-### Running
-
-Build the binary with `make`. Note that this will also import any required dependencies and generate any code or
-documentation necessary.
-
-    make build
-
-This will produce the project binary. Note that by default the `go build` process will check your environment and build
-the binary (using the project name) accordingly. If you want to change this check out the build options `go help build`.
-
-Now you can run the binary
-
-    ./terraform-provider-commercelayer
-
-This will however only tell you that the project needs to run as a plugin to terraform. To this end we can also provide
-a parameter to the binary to tell it to run in development mode
-
-    ./terraform-provider-commercelayer -debug
-
-This will provide an environment variable that can be loaded when initializing and running terraform
-
-    export TF_REATTACH_PROVIDERS='<provider data>'
-    terraform init
-    terraform apply
-
-### Testing and cleaning
-
-Run the tests to check for any issues
-
-```
-go test ./...
-```
-
-Run formatting to clean up the code (you might need to run this several times to make sure all issues have been handled)
-
-```
-go fmt ./...
-```
-
-Make sure to also clean up the mod file
-
-```
-go mod tidy
-```
-
-## Examples
-
-See the [examples folder](./examples) for some examples of terraform code
+No outputs.
+<!-- END_TF_DOCS -->
