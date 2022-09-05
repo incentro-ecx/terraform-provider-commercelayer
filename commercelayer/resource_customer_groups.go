@@ -2,7 +2,6 @@ package commercelayer
 
 import (
 	"context"
-	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
@@ -65,26 +64,6 @@ func resourceCustomerGroup() *schema.Resource {
 		},
 	}
 }
-			// "relationships": {
-			// 	Description: "Resource relationships",
-			// 	Type:        schema.TypeList,
-			// 	MaxItems:    1,
-			// 	MinItems:    1,
-			// 	Required:    true,
-			// 	Elem: &schema.Resource{
-			// 		Schema: map[string]*schema.Schema{
-			// 			"address": {
-			// 				Description: "The associated address",
-			// 				Type:        schema.TypeString,
-			// 				Required:    true,
-			// 			},
-					// },
-				// },
-			// },
-		// },
-	// }
-// },
-// }
 
 func resourceCustomerGroupReadFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	return diag.Errorf("Not implemented")
@@ -94,9 +73,6 @@ func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData
 	c := i.(*commercelayer.APIClient)
 
 	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
-	relationships := d.Get("relationships").([]interface{})[0].(map[string]interface{})
-
-	fmt.Println(relationships)
 
 	CustomerGroupCreate := commercelayer.CustomerGroupCreate{
 		Data: commercelayer.CustomerGroupCreateData{
@@ -106,12 +82,7 @@ func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
-			},
-			// Relationships: &commercelayer.POSTCustomerGroups201ResponseDataRelationships{
-			// 	Address: commercelayer.GETBingGeocoders200ResponseDataInnerRelationshipsAddresses{
-			// 		Type: addressType,
-			// 		Id:   relationships["address"].(string),
-			// 	},
+				},
 			},
 		}
 
