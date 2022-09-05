@@ -9,3 +9,6 @@ test:
 build:
 	go build ./...
 
+generate:
+	cd examples/full && terraform-docs .
+
