@@ -83,7 +83,22 @@ func resourceMerchant() *schema.Resource {
 }
 
 func resourceMerchantReadFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
-	return diag.Errorf("Not implemented")
+	c := i.(*commercelayer.APIClient)
+
+	resp, _, err := c.MerchantsApi.GETMerchantsMerchantId(ctx, d.Id()).Execute()
+	if err != nil {
+		return diagErr(err)
+	}
+
+	merchant, ok := resp.GetDataOk()
+	if !ok {
+		d.SetId("")
+		return nil
+	}
+
+	d.SetId(merchant.GetId())
+
+	return nil
 }
 
 func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
@@ -123,9 +138,29 @@ func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i i
 }
 
 func resourceMerchantDeleteFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
-	return diag.Errorf("Not implemented")
+	c := i.(*commercelayer.APIClient)
+	_, err := c.MerchantsApi.DELETEMerchantsMerchantId(ctx, d.Id()).Execute()
+	return diag.FromErr(err)
 }
 
 func resourceMerchantUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
-	return diag.Errorf("Not implemented")
-}
+	c := i.(*commercelayer.APIClient)
+
+	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+
+	var merchantUpdate = commercelayer.MerchantUpdate{
+		Data: commercelayer.MerchantUpdateData{
+			Type: merchantType,
+			Attributes: commercelayer.PATCHMerchantsMerchantId200ResponseDataAttributes{
+				Name:            stringRef(attributes["name"].(string)),
+				Reference:       stringRef(attributes["reference"]),
+				ReferenceOrigin: stringRef(attributes["reference_origin"]),
+				Metadata:        keyValueRef(attributes["metadata"]),
+			},
+			Relationships: nil,
+		},
+	}	
+	
+	_, _, err := c.MerchantsApi.PATCHMerchantsMerchantId(ctx, d.Id()).MerchantUpdate(merchantUpdate).Execute()
+
+	return diag.FromErr(err)}
