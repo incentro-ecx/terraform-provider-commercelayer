@@ -11,4 +11,3 @@ build:
 
 generate:
 	cd examples/full && terraform-docs .
-
