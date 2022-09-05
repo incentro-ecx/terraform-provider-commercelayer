@@ -1,4 +1,4 @@
-formatter: "markdown document" # this is required
+formatter: "asciidoc" # this is required
 
 version: ""
 
