@@ -61,15 +61,15 @@ resource "commercelayer_address" "incentro-address3" {
 resource "commercelayer_address" "example-address" {
   attributes {
       business = false
-      first_name = John
-      last_name = Smith
-      company = The Red Brand Inc
-      line_1 =  2883 Geraldine Lane,
-      city = New York,
-      zip_code = 10013,
-      state_code = NY,
-      country_code = US
-      phone = (212) 646-338-1228
+      first_name = "John"
+      last_name = "Smith"
+      company ="The Red Brand Inc"
+      line_1 =  "2883 Geraldine Lane"
+      city = "New York"
+      zip_code = "10013"
+      state_code = "NY"
+      country_code = "US"
+      phone = "(212) 646-338-1228"
     metadata = {
       foo: "bar"
     }
