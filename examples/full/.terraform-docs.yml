@@ -1,4 +1,4 @@
-formatter: "markdown table"
+formatter: "markdown" # this is required
 
 version: ""
 
@@ -13,13 +13,18 @@ sections:
   hide: []
   show: []
 
+  hide-all: false # deprecated in v0.13.0, removed in v0.15.0
+  show-all: true  # deprecated in v0.13.0, removed in v0.15.0
+
 content: ""
 
 output:
   file: "../../README.md"
-  mode: replace 
+  mode: inject
   template: |-
+    <!-- BEGIN_TF_DOCS -->
     {{ .Content }}
+    <!-- END_TF_DOCS -->
 
 output-values:
   enabled: false
@@ -27,7 +32,7 @@ output-values:
 
 sort:
   enabled: true
-  by: required
+  by: name
 
 settings:
   anchor: true
