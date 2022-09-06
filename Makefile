@@ -10,4 +10,4 @@ build:
 	go build ./...
 
 generate:
-	cd examples/full && terraform-docs .
+	gomarkdoc -u -o README.md ./commercelayer/
