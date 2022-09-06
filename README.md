@@ -236,9 +236,6 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [commercelayer_address.example-address](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
-| [commercelayer_address.incentro-address2](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
-| [commercelayer_address.incentro-address3](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
 | [commercelayer_address.incentro_address](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/address) | resource |
 | [commercelayer_customer_group.incentro_customer_group](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/customer_group) | resource |
 | [commercelayer_price_list.incentro_price_list](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs/resources/price_list) | resource |
