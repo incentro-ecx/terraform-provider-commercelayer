@@ -2,7 +2,6 @@ package commercelayer
 
 import (
 	"context"
-	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
@@ -71,7 +70,7 @@ func resourceMerchant() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"address": {
-							Description: "The associated address",
+							Description: "The related address",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
@@ -104,10 +103,8 @@ func resourceMerchantReadFunc(ctx context.Context, d *schema.ResourceData, i int
 func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
-	relationships := d.Get("relationships").([]interface{})[0].(map[string]interface{})
-
-	fmt.Println(relationships)
+	attributes := d.Get("attributes").([]any)[0].(map[string]any)
+	relationships := d.Get("relationships").([]any)[0].(map[string]any)
 
 	merchantCreate := commercelayer.MerchantCreate{
 		Data: commercelayer.MerchantCreateData{
@@ -118,10 +115,12 @@ func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i i
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
-			Relationships: &commercelayer.POSTMerchants201ResponseDataRelationships{
-				Address: commercelayer.GETBingGeocoders200ResponseDataInnerRelationshipsAddresses{
-					Type: addressType,
-					Id:   relationships["address"].(string),
+			Relationships: &commercelayer.MerchantCreateDataRelationships{
+				Address: commercelayer.BingGeocoderDataRelationshipsAddresses{
+					Data: commercelayer.BingGeocoderDataRelationshipsAddressesData{
+						Type: stringRef(addressType),
+						Id:   stringRef(relationships["address"].(string)),
+					},
 				},
 			},
 		},
@@ -146,21 +145,31 @@ func resourceMerchantDeleteFunc(ctx context.Context, d *schema.ResourceData, i i
 func resourceMerchantUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := d.Get("attributes").([]any)[0].(map[string]any)
+	relationships := d.Get("relationships").([]any)[0].(map[string]any)
 
 	var merchantUpdate = commercelayer.MerchantUpdate{
 		Data: commercelayer.MerchantUpdateData{
 			Type: merchantType,
+			Id:   d.Id(),
 			Attributes: commercelayer.PATCHMerchantsMerchantId200ResponseDataAttributes{
 				Name:            stringRef(attributes["name"].(string)),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
-			Relationships: nil,
+			Relationships: &commercelayer.MerchantUpdateDataRelationships{
+				Address: &commercelayer.BingGeocoderDataRelationshipsAddresses{
+					Data: commercelayer.BingGeocoderDataRelationshipsAddressesData{
+						Type: stringRef(addressType),
+						Id:   stringRef(relationships["address"].(string)),
+					},
+				},
+			},
 		},
-	}	
-	
+	}
+
 	_, _, err := c.MerchantsApi.PATCHMerchantsMerchantId(ctx, d.Id()).MerchantUpdate(merchantUpdate).Execute()
 
-	return diag.FromErr(err)}
+	return diag.FromErr(err)
+}

@@ -142,18 +142,6 @@ func resourceAddress() *schema.Resource {
 					},
 				},
 			},
-			"relationships": {
-				Description: "Resource relationships",
-				Type:        schema.TypeList,
-				MaxItems:    1,
-				MinItems:    1,
-				Required:    true,
-				Elem: &schema.Resource{
-					Schema: map[string]*schema.Schema{
-						//	TODO: implement geocoder relation
-					},
-				},
-			},
 		},
 	}
 }
