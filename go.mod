@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.1
-	github.com/incentro-dc/go-commercelayer-sdk v0.0.0-20220708125716-60e688b00bc9
+	github.com/incentro-dc/go-commercelayer-sdk v0.0.0-20220909135040-a967fe9433aa
 	golang.org/x/oauth2 v0.0.0-20220630143837-2104d58473e0
 )
 

@@ -1,4 +1,4 @@
-resource "commercelayer_address" "incentro-address" {
+resource "commercelayer_address" "incentro_address" {
   attributes {
     business     = true
     company      = "Incentro"
@@ -11,9 +11,5 @@ resource "commercelayer_address" "incentro-address" {
     metadata = {
       foo: "bar"
     }
-  }
-
-  relationships {
-
   }
 }

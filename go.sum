@@ -204,6 +204,10 @@ github.com/imdario/mergo v0.3.11/go.mod h1:jmQim1M+e3UYxmgPu/WyfjB3N3VflVyUjjjwH
 github.com/imdario/mergo v0.3.12/go.mod h1:jmQim1M+e3UYxmgPu/WyfjB3N3VflVyUjjjwH0dnCYA=
 github.com/incentro-dc/go-commercelayer-sdk v0.0.0-20220708125716-60e688b00bc9 h1:5eEVLpTxW2FeIbwYkXzMayek9KPPrPJBmUBu067krl4=
 github.com/incentro-dc/go-commercelayer-sdk v0.0.0-20220708125716-60e688b00bc9/go.mod h1:7o1L5RRkJ6Fw04+Hvjqt/dCDonYA+it1Leug5rtE+/s=
+github.com/incentro-dc/go-commercelayer-sdk v0.0.0-20220708134853-5c71991be907 h1:YGbTuJ2+Xczz6qnWBdOH85OgX12nVHn4sxQvm6ohCsQ=
+github.com/incentro-dc/go-commercelayer-sdk v0.0.0-20220708134853-5c71991be907/go.mod h1:7o1L5RRkJ6Fw04+Hvjqt/dCDonYA+it1Leug5rtE+/s=
+github.com/incentro-dc/go-commercelayer-sdk v0.0.0-20220909135040-a967fe9433aa h1:1LNePHoMZhlXGbxii+nmS8ke4eMPuzTxz3JIk4XZCuM=
+github.com/incentro-dc/go-commercelayer-sdk v0.0.0-20220909135040-a967fe9433aa/go.mod h1:7o1L5RRkJ6Fw04+Hvjqt/dCDonYA+it1Leug5rtE+/s=
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99/go.mod h1:1lJo3i6rXxKeerYnT8Nvf0QmHCRC1n8sfWVwXF2Frvo=
 github.com/jessevdk/go-flags v1.5.0/go.mod h1:Fw0T6WPc1dYxT4mKEZRfG5kJhaTDP9pj1c2EWnYs/m4=
 github.com/jhump/protoreflect v1.6.0 h1:h5jfMVslIg6l29nsMs0D8Wj17RDVdNYti0vDN/PZZoE=

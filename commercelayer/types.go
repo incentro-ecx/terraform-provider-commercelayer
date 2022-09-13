@@ -1,5 +1,6 @@
 package commercelayer
 
 const (
-	addressType = "addresses"
+	addressType  = "addresses"
+	merchantType = "merchants"
 )
