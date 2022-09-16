@@ -12,8 +12,4 @@ resource "commercelayer_address" "incentro_address" {
       foo: "bar"
     }
   }
-
-  relationships {
-
-  }
 }
