@@ -125,7 +125,7 @@ func resourceCustomerGroupUpdateFunc(ctx context.Context, d *schema.ResourceData
 	var customerGroupUpdate = commercelayer.CustomerGroupUpdate{
 		Data: commercelayer.CustomerGroupUpdateData{
 			Type: customerGroupType,
-			Id: d.Id(),
+			Id:   d.Id(),
 			Attributes: commercelayer.PATCHCustomerGroupsCustomerGroupId200ResponseDataAttributes{
 				Name:            stringRef(attributes["name"].(string)),
 				Reference:       stringRef(attributes["reference"]),
@@ -134,8 +134,7 @@ func resourceCustomerGroupUpdateFunc(ctx context.Context, d *schema.ResourceData
 			},
 		},
 	}
-	
-	
+
 	_, _, err := c.CustomerGroupsApi.PATCHCustomerGroupsCustomerGroupId(ctx, d.Id()).CustomerGroupUpdate(customerGroupUpdate).Execute()
 
 	return diag.FromErr(err)
