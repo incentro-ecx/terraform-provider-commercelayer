@@ -33,7 +33,7 @@ func resourceCustomerGroup() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"name": {
-							Description: "The Customer Group's internal name",
+							Description: "The customer group's internal name",
 							Type:        schema.TypeString,
 							Required:    true,
 						},

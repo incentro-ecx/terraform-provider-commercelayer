@@ -34,7 +34,7 @@ func resourcePriceList() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"name": {
-							Description: "The price list unique identifier",
+							Description: "The price list's internal name",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
