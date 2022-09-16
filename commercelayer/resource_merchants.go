@@ -103,10 +103,12 @@ func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i i
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
-			Relationships: &commercelayer.POSTMerchants201ResponseDataRelationships{
-				Address: commercelayer.GETBingGeocoders200ResponseDataInnerRelationshipsAddresses{
-					Type: addressType,
-					Id:   relationships["address"].(string),
+			Relationships: &commercelayer.MerchantCreateDataRelationships{
+				Address: commercelayer.BingGeocoderDataRelationshipsAddresses{
+					Data: commercelayer.BingGeocoderDataRelationshipsAddressesData{
+						Type: stringRef(addressType),
+						Id:   stringRef(relationships["address"].(string)),
+					},
 				},
 			},
 		},

@@ -82,7 +82,6 @@ func resourceCustomerGroupReadFunc(ctx context.Context, d *schema.ResourceData, 
 	d.SetId(customer_group.GetId())
 
 	return nil
-	// return diag.Errorf("Not implemented")
 }
 
 func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
@@ -116,7 +115,6 @@ func resourceCustomerGroupDeleteFunc(ctx context.Context, d *schema.ResourceData
 	c := i.(*commercelayer.APIClient)
 	_, err := c.CustomerGroupsApi.DELETECustomerGroupsCustomerGroupId(ctx, d.Id()).Execute()
 	return diag.FromErr(err)
-	// return diag.Errorf("Not implemented")
 }
 
 func resourceCustomerGroupUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
