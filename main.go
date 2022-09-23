@@ -7,7 +7,7 @@ import (
 	"github.com/incentro-dc/terraform-provider-commercelayer/commercelayer"
 	"log"
 )
- 
+
 func main() {
 	var debugMode bool
 
