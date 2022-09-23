@@ -9,10 +9,11 @@ import (
 
 func resourcePriceList() *schema.Resource {
 	return &schema.Resource{
-		Description: `A customer group is a resource that can be used to organize customers into groups. 
-		When you associate a customer group to a market, that market becomes private and can be accessed
-		 only by the customers belonging to the group. You can use customer groups to manage B2B customers, 
-		 B2C loyalty programs, private sales, and more.`,
+		Description: `Price lists are collections of SKU prices, 
+		defined by currency and market. When a list of SKUs is fetched, 
+		only SKUs with a price defined in the market's price list and at least 
+		a stock item in one of the market stock locations will be returned. 
+		A user can create price lists to manage international business or B2B/B2C models.`,
 		ReadContext:   resourcePriceListReadFunc,
 		CreateContext: resourcePriceListCreateFunc,
 		UpdateContext: resourcePriceListUpdateFunc,
@@ -33,19 +34,21 @@ func resourcePriceList() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"name": {
-							Description: "The Customer Group's internal name",
+							Description: "The price list's internal name",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
 						"currency_code": {
-							Description: "The international 3-letter currency code as defined by the ISO 4217 standard.",
-							Type:        schema.TypeString,
-							Required:    true,
+							Description:      "The international 3-letter currency code as defined by the ISO 4217 standard.",
+							Type:             schema.TypeString,
+							Required:         true,
+							ValidateDiagFunc: currencyCodeValidation,
 						},
 						"tax_included": {
 							Description: "Indicates if the associated prices include taxes.",
 							Type:        schema.TypeBool,
 							Optional:    true,
+							Default:     true,
 						},
 						"reference": {
 							Description: "A string that you can use to add any external identifier to the resource. This " +
@@ -83,16 +86,15 @@ func resourcePriceListReadFunc(ctx context.Context, d *schema.ResourceData, i in
 		return diagErr(err)
 	}
 
-	price_list, ok := resp.GetDataOk()
+	priceList, ok := resp.GetDataOk()
 	if !ok {
 		d.SetId("")
 		return nil
 	}
 
-	d.SetId(price_list.GetId())
+	d.SetId(priceList.GetId())
 
 	return nil
-	// return diag.Errorf("Not implemented")
 }
 
 func resourcePriceListCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
@@ -105,8 +107,8 @@ func resourcePriceListCreateFunc(ctx context.Context, d *schema.ResourceData, i 
 			Type: priceListType,
 			Attributes: commercelayer.POSTPriceLists201ResponseDataAttributes{
 				Name:            attributes["name"].(string),
-				CurrencyCode: 	 attributes["currency_code"].(string),
-				TaxIncluded: 	 boolRef(attributes["tax_included"]),
+				CurrencyCode:    attributes["currency_code"].(string),
+				TaxIncluded:     boolRef(attributes["tax_included"]),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
@@ -114,12 +116,12 @@ func resourcePriceListCreateFunc(ctx context.Context, d *schema.ResourceData, i 
 		},
 	}
 
-	price_list, _, err := c.PriceListsApi.POSTPriceLists(ctx).PriceListCreate(priceListCreate).Execute()
+	priceList, _, err := c.PriceListsApi.POSTPriceLists(ctx).PriceListCreate(priceListCreate).Execute()
 	if err != nil {
 		return diagErr(err)
 	}
 
-	d.SetId(*price_list.Data.Id)
+	d.SetId(*priceList.Data.Id)
 
 	return nil
 }
@@ -128,7 +130,6 @@ func resourcePriceListDeleteFunc(ctx context.Context, d *schema.ResourceData, i 
 	c := i.(*commercelayer.APIClient)
 	_, err := c.PriceListsApi.DELETEPriceListsPriceListId(ctx, d.Id()).Execute()
 	return diag.FromErr(err)
-	// return diag.Errorf("Not implemented")
 }
 
 func resourcePriceListUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
@@ -139,19 +140,18 @@ func resourcePriceListUpdateFunc(ctx context.Context, d *schema.ResourceData, i 
 	var PriceListUpdate = commercelayer.PriceListUpdate{
 		Data: commercelayer.PriceListUpdateData{
 			Type: priceListType,
-			Id: d.Id(),
+			Id:   d.Id(),
 			Attributes: commercelayer.PATCHPriceListsPriceListId200ResponseDataAttributes{
 				Name:            stringRef(attributes["name"].(string)),
-				CurrencyCode: 	 stringRef(attributes["currency_code"].(string)),
-				TaxIncluded: 	 boolRef(attributes["tax_included"]),
+				CurrencyCode:    stringRef(attributes["currency_code"].(string)),
+				TaxIncluded:     boolRef(attributes["tax_included"]),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
 		},
 	}
-	
-	
+
 	_, _, err := c.PriceListsApi.PATCHPriceListsPriceListId(ctx, d.Id()).PriceListUpdate(PriceListUpdate).Execute()
 
 	return diag.FromErr(err)

@@ -33,7 +33,7 @@ func resourceCustomerGroup() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"name": {
-							Description: "The Customer Group's internal name",
+							Description: "The customer group's internal name",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
@@ -73,16 +73,15 @@ func resourceCustomerGroupReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return diagErr(err)
 	}
 
-	customer_group, ok := resp.GetDataOk()
+	customerGroup, ok := resp.GetDataOk()
 	if !ok {
 		d.SetId("")
 		return nil
 	}
 
-	d.SetId(customer_group.GetId())
+	d.SetId(customerGroup.GetId())
 
 	return nil
-	// return diag.Errorf("Not implemented")
 }
 
 func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
@@ -102,12 +101,12 @@ func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData
 		},
 	}
 
-	customer_group, _, err := c.CustomerGroupsApi.POSTCustomerGroups(ctx).CustomerGroupCreate(customerGroupCreate).Execute()
+	customerGroup, _, err := c.CustomerGroupsApi.POSTCustomerGroups(ctx).CustomerGroupCreate(customerGroupCreate).Execute()
 	if err != nil {
 		return diagErr(err)
 	}
 
-	d.SetId(*customer_group.Data.Id)
+	d.SetId(*customerGroup.Data.Id)
 
 	return nil
 }
@@ -116,7 +115,6 @@ func resourceCustomerGroupDeleteFunc(ctx context.Context, d *schema.ResourceData
 	c := i.(*commercelayer.APIClient)
 	_, err := c.CustomerGroupsApi.DELETECustomerGroupsCustomerGroupId(ctx, d.Id()).Execute()
 	return diag.FromErr(err)
-	// return diag.Errorf("Not implemented")
 }
 
 func resourceCustomerGroupUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
@@ -127,7 +125,7 @@ func resourceCustomerGroupUpdateFunc(ctx context.Context, d *schema.ResourceData
 	var customerGroupUpdate = commercelayer.CustomerGroupUpdate{
 		Data: commercelayer.CustomerGroupUpdateData{
 			Type: customerGroupType,
-			Id: d.Id(),
+			Id:   d.Id(),
 			Attributes: commercelayer.PATCHCustomerGroupsCustomerGroupId200ResponseDataAttributes{
 				Name:            stringRef(attributes["name"].(string)),
 				Reference:       stringRef(attributes["reference"]),
@@ -136,8 +134,7 @@ func resourceCustomerGroupUpdateFunc(ctx context.Context, d *schema.ResourceData
 			},
 		},
 	}
-	
-	
+
 	_, _, err := c.CustomerGroupsApi.PATCHCustomerGroupsCustomerGroupId(ctx, d.Id()).CustomerGroupUpdate(customerGroupUpdate).Execute()
 
 	return diag.FromErr(err)
