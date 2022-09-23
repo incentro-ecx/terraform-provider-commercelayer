@@ -3,8 +3,10 @@ module github.com/incentro-dc/terraform-provider-commercelayer
 go 1.18
 
 require (
+	github.com/hashicorp/go-cty v1.4.1-0.20200414143053-d3edf31b6320
 	github.com/hashicorp/terraform-plugin-sdk/v2 v2.7.1
-	github.com/incentro-dc/go-commercelayer-sdk v0.0.0-20220909135040-a967fe9433aa
+	github.com/incentro-dc/go-commercelayer-sdk v0.0.0-20220922114217-d52fca418579
+	github.com/ladydascalie/currency v1.5.0
 	github.com/stretchr/testify v1.7.0
 	golang.org/x/oauth2 v0.0.0-20220630143837-2104d58473e0
 )
@@ -16,7 +18,6 @@ require (
 	github.com/fatih/color v1.12.0 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
-	github.com/hashicorp/go-cty v1.4.1-0.20200414143053-d3edf31b6320 // indirect
 	github.com/hashicorp/go-hclog v0.16.2 // indirect
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/hashicorp/go-plugin v1.4.3 // indirect

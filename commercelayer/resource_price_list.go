@@ -39,14 +39,15 @@ func resourcePriceList() *schema.Resource {
 							Required:    true,
 						},
 						"currency_code": {
-							Description: "The international 3-letter currency code as defined by the ISO 4217 standard.",
-							Type:        schema.TypeString,
-							Required:    true,
+							Description:      "The international 3-letter currency code as defined by the ISO 4217 standard.",
+							Type:             schema.TypeString,
+							Required:         true,
+							ValidateDiagFunc: currencyCodeValidation,
 						},
 						"tax_included": {
 							Description: "Indicates if the associated prices include taxes.",
 							Type:        schema.TypeBool,
-							Required:    true,
+							Optional:    true,
 							Default:     true,
 						},
 						"reference": {
