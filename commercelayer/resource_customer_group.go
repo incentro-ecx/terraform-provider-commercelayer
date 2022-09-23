@@ -73,13 +73,13 @@ func resourceCustomerGroupReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return diagErr(err)
 	}
 
-	customer_group, ok := resp.GetDataOk()
+	customerGroup, ok := resp.GetDataOk()
 	if !ok {
 		d.SetId("")
 		return nil
 	}
 
-	d.SetId(customer_group.GetId())
+	d.SetId(customerGroup.GetId())
 
 	return nil
 }
@@ -101,12 +101,12 @@ func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData
 		},
 	}
 
-	customer_group, _, err := c.CustomerGroupsApi.POSTCustomerGroups(ctx).CustomerGroupCreate(customerGroupCreate).Execute()
+	customerGroup, _, err := c.CustomerGroupsApi.POSTCustomerGroups(ctx).CustomerGroupCreate(customerGroupCreate).Execute()
 	if err != nil {
 		return diagErr(err)
 	}
 
-	d.SetId(*customer_group.Data.Id)
+	d.SetId(*customerGroup.Data.Id)
 
 	return nil
 }
