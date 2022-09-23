@@ -28,11 +28,7 @@ func keyValueRef(val interface{}) map[string]interface{} {
 	if val == nil {
 		return map[string]interface{}{}
 	}
-	ref := val.(map[string]interface{})
-	if len(ref) == 0 {
-		return map[string]interface{}{}
-	}
-	return ref
+	return val.(map[string]interface{})
 }
 
 func boolRef(val interface{}) *bool {
