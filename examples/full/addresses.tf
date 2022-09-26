@@ -9,7 +9,7 @@ resource "commercelayer_address" "incentro_address" {
     phone        = "+31(0)10 20 20 544"
     state_code   = "ZH"
     metadata = {
-      foo: "bar"
+      foo : "bar"
     }
   }
 }
