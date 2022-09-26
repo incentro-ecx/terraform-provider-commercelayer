@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := build
+.DEFAULT_GOAL := generate build
 
 fmt:
 	go fmt ./...
@@ -9,5 +9,8 @@ test:
 build:
 	go build ./...
 
-generate:
-	gomarkdoc -u -o README.md ./commercelayer/ && cd examples/full && terraform-docs .
+generate: dependencies
+	go generate
+
+dependencies:
+	go get -u github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs

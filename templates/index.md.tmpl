@@ -1,0 +1,50 @@
+---
+page_title: "commercelayer provider"
+subcategory: ""
+description: |-
+The commercelayer provider provides resources to interact with the commercelayer API
+
+---
+
+# commercelayer provider
+
+## Commercial support
+TODO
+
+## Installation
+Terraform automatically downloads providers from the terraform registry. Add the following to your terraform project
+
+```hcl
+terraform {
+    required_providers {
+        commercelayer = {
+            version = ">= 0.0.1"
+            source  = "incentro/commercelayer"
+        }
+    }
+}
+```
+
+Packages of the releases are available at [the GitHub Repo](https://github.com/incentro-dc/terraform-provider-commercelayer/releases).
+See the [terraform documentation](https://www.terraform.io/docs/configuration/providers.html#third-party-plugins)
+for more information about installing third-party providers.
+
+## Using the provider
+The provider attempts to read the required values from environment variables:
+- `COMMERCELAYER_CLIENT_ID`
+- `COMMERCELAYER_CLIENT_SECRET`
+- `COMMERCELAYER_API_ENDPOINT`
+- `COMMERCELAYER_AUTH_ENDPOINT`
+
+Alternatively, you can set it up directly in the terraform file:
+
+```hcl
+provider "commercelayer" {
+    client_id     = "<client_id>"
+    client_secret = "<client_secret>"
+    api_endpoint  = "<api_endpoint>"
+    auth_endpoint = "<auth_endpoint>"
+}
+```
+
+{{ .SchemaMarkdown | trimspace }}
