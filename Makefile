@@ -9,8 +9,5 @@ test:
 build:
 	go build ./...
 
-generate: dependencies
+generate:
 	go generate
-
-dependencies:
-	go get -u github.com/hashicorp/terraform-plugin-docs/cmd/tfplugindocs
