@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := build
+.DEFAULT_GOAL := generate build
 
 fmt:
 	go fmt ./...
@@ -9,3 +9,5 @@ test:
 build:
 	go build ./...
 
+generate:
+	go generate

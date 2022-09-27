@@ -1,4 +1,4 @@
-resource "commercelayer_address" "incentro-address" {
+resource "commercelayer_address" "incentro_address" {
   attributes {
     business     = true
     company      = "Incentro"
@@ -9,11 +9,7 @@ resource "commercelayer_address" "incentro-address" {
     phone        = "+31(0)10 20 20 544"
     state_code   = "ZH"
     metadata = {
-      foo: "bar"
+      foo : "bar"
     }
-  }
-
-  relationships {
-
   }
 }

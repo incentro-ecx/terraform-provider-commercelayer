@@ -39,7 +39,10 @@ func Provider() *schema.Provider {
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
-			"commercelayer_address": resourceAddress(),
+			"commercelayer_address":        resourceAddress(),
+			"commercelayer_merchant":       resourceMerchant(),
+			"commercelayer_price_list":     resourcePriceList(),
+			"commercelayer_customer_group": resourceCustomerGroup(),
 		},
 		ConfigureContextFunc: providerConfigureFunc,
 	}
