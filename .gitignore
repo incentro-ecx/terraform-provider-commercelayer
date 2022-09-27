@@ -2,5 +2,7 @@
 /terraform-provider-commercelayer
 /examples/**/*.tfstate*
 /examples/**/*.tfvars
+/examples/**/*.lock.hcl
+/examples/**/.terraform
 /bin
 /dist/
