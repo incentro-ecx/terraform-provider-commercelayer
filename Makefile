@@ -2,6 +2,7 @@
 
 fmt:
 	go fmt ./...
+	terraform fmt -recursive ./examples/
 
 test:
 	go test -v ./...
