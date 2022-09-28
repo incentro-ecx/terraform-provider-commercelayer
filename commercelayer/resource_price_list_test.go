@@ -8,6 +8,7 @@ import (
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
 	"regexp"
 	"testing"
+	"time"
 )
 
 func testAccCheckPriceListDestroy(s *terraform.State) error {
@@ -15,16 +16,25 @@ func testAccCheckPriceListDestroy(s *terraform.State) error {
 
 	for _, rs := range s.RootModule().Resources {
 		if rs.Type == "commercelayer_price_list" {
-			_, resp, err := client.PriceListsApi.GETPriceListsPriceListId(context.Background(), rs.Primary.ID).Execute()
-			if resp.StatusCode == 404 {
-				fmt.Printf("commercelayer_price_list with id %s has been removed\n", rs.Primary.ID)
-				continue
-			}
-			if err != nil {
-				return err
-			}
+			//Retry required because there is some latency before a price list is actually removed
+			for retries := 1; retries < 10; retries++ {
+				_, resp, err := client.PriceListsApi.GETPriceListsPriceListId(context.Background(), rs.Primary.ID).Execute()
+				if resp.StatusCode == 404 {
+					fmt.Printf("commercelayer_price_list with id %s has been removed\n", rs.Primary.ID)
+					continue
+				}
+				if err != nil {
+					return err
+				}
 
-			return fmt.Errorf("received response code with status %d", resp.StatusCode)
+				if resp.StatusCode == 200 {
+					fmt.Printf("commercelayer_price_list with id %s still exists. Retrying\n", rs.Primary.ID)
+					time.Sleep(time.Second)
+					continue
+				}
+
+				return fmt.Errorf("received response code with status %d", resp.StatusCode)
+			}
 		}
 
 	}
