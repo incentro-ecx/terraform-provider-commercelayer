@@ -2,6 +2,7 @@
   <configuration default="false" name="run acceptance tests" type="GoTestRunConfiguration" factoryName="Go Test">
     <module name="terraform-provider-commercelayer" />
     <working_directory value="$PROJECT_DIR$" />
+    <go_parameters value="-p 1" />
     <envs>
       <env name="TF_ACC" value="1" />
     </envs>

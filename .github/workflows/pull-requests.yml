@@ -47,7 +47,7 @@ jobs:
         with:
           terraform_version: ${{ matrix.terraform-version }}
           terraform_wrapper: false
-      - run: go test -v -cover ./...
+      - run: go test -v -p 1 ./...
         env:
           # TODO: switch to mocked server at some point, as this runs live
           TF_ACC: '1'

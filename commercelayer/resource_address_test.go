@@ -13,19 +13,18 @@ func testAccCheckAddressDestroy(s *terraform.State) error {
 	client := testAccProviderCommercelayer.Meta().(*commercelayer.APIClient)
 
 	for _, rs := range s.RootModule().Resources {
-		if rs.Type != "commercelayer_address" {
-			continue
-		}
-		_, resp, err := client.AddressesApi.GETAddressesAddressId(context.Background(), rs.Primary.ID).Execute()
-		if resp.StatusCode == 404 {
-			fmt.Printf("Resource with id %s has been removed\n", rs.Primary.ID)
-			continue
-		}
-		if err != nil {
-			return err
-		}
+		if rs.Type == "commercelayer_address" {
+			_, resp, err := client.AddressesApi.GETAddressesAddressId(context.Background(), rs.Primary.ID).Execute()
+			if resp.StatusCode == 404 {
+				fmt.Printf("commercelayer_address with id %s has been removed\n", rs.Primary.ID)
+				continue
+			}
+			if err != nil {
+				return err
+			}
 
-		return fmt.Errorf("received response code with status %d", resp.StatusCode)
+			return fmt.Errorf("received response code with status %d", resp.StatusCode)
+		}
 
 	}
 	return nil
