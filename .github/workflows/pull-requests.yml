@@ -35,8 +35,8 @@ jobs:
       fail-fast: false
       matrix:
         terraform-version:
-          - '1.0.*'
-          - '1.1.*'
+#          - '1.0.*'
+#          - '1.1.*'
           - '1.2.*'
     steps:
       - uses: actions/checkout@v3
