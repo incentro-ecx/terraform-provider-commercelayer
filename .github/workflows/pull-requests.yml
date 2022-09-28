@@ -1,4 +1,4 @@
-name: Run tests
+name: run tests
 
 on:
   pull_request:
@@ -27,3 +27,31 @@ jobs:
         with:
           go-version: '1.18'
       - run: go test -v -cover ./...
+
+  acceptance-tests:
+    name: Acceptance Tests (Terraform ${{ matrix.terraform-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        terraform-version:
+#          - '1.0.*'
+#          - '1.1.*'
+          - '1.2.*'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.18'
+      - uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: ${{ matrix.terraform-version }}
+          terraform_wrapper: false
+      - run: go test -v -p 1 ./...
+        env:
+          # TODO: switch to mocked server at some point, as this runs live
+          TF_ACC: '1'
+          COMMERCELAYER_CLIENT_ID: ${{ secrets.COMMERCELAYER_CLIENT_ID }}
+          COMMERCELAYER_CLIENT_SECRET: ${{ secrets.COMMERCELAYER_CLIENT_SECRET }}
+          COMMERCELAYER_API_ENDPOINT: ${{ secrets.COMMERCELAYER_API_ENDPOINT }}
+          COMMERCELAYER_AUTH_ENDPOINT: ${{ secrets.COMMERCELAYER_AUTH_ENDPOINT }}

@@ -1,6 +1,6 @@
 resource "commercelayer_webhook" "orders_create_webhook" {
   attributes {
-    name         = "order-fulfillment"
+    name         = "order-create"
     topic        = "orders.create"
     callback_url = "http://example.url"
     include_resources = [
