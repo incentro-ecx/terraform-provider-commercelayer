@@ -3,12 +3,12 @@
 page_title: "commercelayer_address Resource - terraform-provider-commercelayer"
 subcategory: ""
 description: |-
-  Get notified when specific events occur on a Commercelayer store. For more information, see Addresss Overview.
+  Addresses can be associated with orders as their shipping or billing addresses. Add a Google or Bing geocoder to a market if you want its addresses to be automatically geocoded. Customers can save their most-used addresses in their address books (as customer addresses).
 ---
 
 # commercelayer_address (Resource)
 
-Get notified when specific events occur on a Commercelayer store. For more information, see Addresss Overview.
+Addresses can be associated with orders as their shipping or billing addresses. Add a Google or Bing geocoder to a market if you want its addresses to be automatically geocoded. Customers can save their most-used addresses in their address books (as customer addresses).
 
 
 

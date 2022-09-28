@@ -71,3 +71,21 @@ func TestFloat64ToFloat32RefZeroVal(t *testing.T) {
 func TestFloat64ToFloat32RefFloat64Val(t *testing.T) {
 	assert.Equal(t, float32(1), *float64ToFloat32Ref(float64(1)))
 }
+
+func TestStringSliceValueRefNilVal(t *testing.T) {
+	assert.Equal(t, []string{}, stringSliceValueRef(nil))
+}
+
+func TestStringSliceValueRefEmptySliceVal(t *testing.T) {
+	assert.Equal(t, []string(nil), stringSliceValueRef([]interface{}{}))
+}
+
+func TestStringSliceValueRefFilledSliceVal(t *testing.T) {
+	assert.Equal(t, []string{"foobar"}, stringSliceValueRef([]interface{}{"foobar"}))
+}
+
+func TestStringSliceValueRefFilledIntSliceVal(t *testing.T) {
+	assert.Panics(t, func() {
+		stringSliceValueRef([]interface{}{1})
+	})
+}

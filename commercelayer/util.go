@@ -54,3 +54,17 @@ func float64ToFloat32Ref(val interface{}) *float32 {
 
 	return &ref
 }
+
+func stringSliceValueRef(val interface{}) []string {
+	if val == nil {
+		return []string{}
+	}
+
+	var s []string
+
+	for _, v := range val.([]interface{}) {
+		s = append(s, v.(string))
+	}
+
+	return s
+}
