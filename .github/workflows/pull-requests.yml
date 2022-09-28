@@ -49,4 +49,9 @@ jobs:
           terraform_wrapper: false
       - run: go test -v -cover ./...
         env:
+          # TODO: switch to mocked server at some point, as this runs live
           TF_ACC: '1'
+          COMMERCELAYER_CLIENT_ID: ${{ secrets.COMMERCELAYER_CLIENT_ID }}
+          COMMERCELAYER_CLIENT_SECRET: ${{ secrets.COMMERCELAYER_CLIENT_SECRET }}
+          COMMERCELAYER_API_ENDPOINT: ${{ secrets.COMMERCELAYER_API_ENDPOINT }}
+          COMMERCELAYER_AUTH_ENDPOINT: ${{ secrets.COMMERCELAYER_AUTH_ENDPOINT }}
