@@ -1,0 +1,37 @@
+{
+  "id" : "072c302c-52b6-4d35-b568-d3d94a6e7d63",
+  "name" : "api_customer_groups_gdwgdhlqdz",
+  "request" : {
+    "url" : "/api/customer_groups/GDWgdhLqDZ",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "25",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "703b637c-4114-401a-8a52-e0786e464e37",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 18 Oct 2022 12:05:42 GMT",
+      "X-Served-By" : "cache-ams21033-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666094742.998554,VS0,VE79",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "072c302c-52b6-4d35-b568-d3d94a6e7d63",
+  "persistent" : true,
+  "insertionIndex" : 25
+}
