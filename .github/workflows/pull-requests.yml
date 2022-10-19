@@ -29,14 +29,19 @@ jobs:
       - run: go test -v -cover ./...
 
   acceptance-tests:
-    name: Acceptance Tests (Terraform ${{ matrix.terraform-version }})
+    name: acceptance-tests (terraform ${{ matrix.terraform-version }})
     runs-on: ubuntu-latest
+    services:
+      commercelayer-mock:
+        image: wiremock/wiremock:2.34.0
+        ports:
+          - "8080:8080"
     strategy:
       fail-fast: false
       matrix:
         terraform-version:
-#          - '1.0.*'
-#          - '1.1.*'
+          - '1.0.*'
+          - '1.1.*'
           - '1.2.*'
     steps:
       - uses: actions/checkout@v3
@@ -47,11 +52,15 @@ jobs:
         with:
           terraform_version: ${{ matrix.terraform-version }}
           terraform_wrapper: false
+      - name: load mock data
+        shell: bash
+        run: |
+          FILES="${{ github.workspace }}/mock/mappings/*"
+          for f in $FILES; do curl --location --request POST 'http://localhost:8080/__admin/mappings' --header 'Content-Type: application/json' --header 'Accept: application/json' --data-raw "$(cat "$f")"; done
       - run: go test -v -p 1 ./...
         env:
-          # TODO: switch to mocked server at some point, as this runs live
           TF_ACC: '1'
-          COMMERCELAYER_CLIENT_ID: ${{ secrets.COMMERCELAYER_CLIENT_ID }}
-          COMMERCELAYER_CLIENT_SECRET: ${{ secrets.COMMERCELAYER_CLIENT_SECRET }}
-          COMMERCELAYER_API_ENDPOINT: ${{ secrets.COMMERCELAYER_API_ENDPOINT }}
-          COMMERCELAYER_AUTH_ENDPOINT: ${{ secrets.COMMERCELAYER_AUTH_ENDPOINT }}
+          COMMERCELAYER_CLIENT_ID: client-id
+          COMMERCELAYER_CLIENT_SECRET: client-secret
+          COMMERCELAYER_API_ENDPOINT: http://localhost:8080/api
+          COMMERCELAYER_AUTH_ENDPOINT: http://localhost:8080/oauth/token

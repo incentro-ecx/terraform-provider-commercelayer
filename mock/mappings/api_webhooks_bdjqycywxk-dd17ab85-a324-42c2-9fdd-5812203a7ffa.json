@@ -1,0 +1,43 @@
+{
+  "id" : "dd17ab85-a324-42c2-9fdd-5812203a7ffa",
+  "name" : "api_webhooks_bdjqycywxk",
+  "request" : {
+    "url" : "/api/webhooks/BdJqyCywXK",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"BdJqyCywXK\",\"type\":\"webhooks\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/BdJqyCywXK\"},\"attributes\":{\"name\":\"incentro webhook\",\"topic\":\"orders.create\",\"callback_url\":\"http://example.url\",\"include_resources\":[\"customer\"],\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"5e55a437816ef18fddde16e0d902d820\",\"created_at\":\"2022-10-18T12:05:49.808Z\",\"updated_at\":\"2022-10-18T12:05:49.808Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\"}},\"relationships\":{\"last_event_callbacks\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/BdJqyCywXK/relationships/last_event_callbacks\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/BdJqyCywXK/last_event_callbacks\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "68",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"0852b81a26082487d0e0ffeaedae86b3\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "7a7d78c2-6c2a-4c5d-b010-6709d29e03d6",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 18 Oct 2022 12:05:50 GMT",
+      "X-Served-By" : "cache-ams21055-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666094750.132447,VS0,VE82",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "dd17ab85-a324-42c2-9fdd-5812203a7ffa",
+  "persistent" : true,
+  "scenarioName" : "scenario-8-api-webhooks-BdJqyCywXK",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-8-api-webhooks-BdJqyCywXK-2",
+  "insertionIndex" : 70
+}

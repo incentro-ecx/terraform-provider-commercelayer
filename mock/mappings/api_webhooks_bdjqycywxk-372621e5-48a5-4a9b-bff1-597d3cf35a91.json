@@ -1,0 +1,45 @@
+{
+  "id" : "372621e5-48a5-4a9b-bff1-597d3cf35a91",
+  "name" : "api_webhooks_bdjqycywxk",
+  "request" : {
+    "url" : "/api/webhooks/BdJqyCywXK",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"callback_url\":\"http://other-example.url\",\"include_resources\":[\"line_items\"],\"metadata\":{\"bar\":\"foo\"},\"name\":\"incentro updated webhook\",\"topic\":\"orders.place\"},\"id\":\"BdJqyCywXK\",\"type\":\"webhooks\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"BdJqyCywXK\",\"type\":\"webhooks\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/BdJqyCywXK\"},\"attributes\":{\"name\":\"incentro updated webhook\",\"topic\":\"orders.place\",\"callback_url\":\"http://other-example.url\",\"include_resources\":[\"line_items\"],\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"5e55a437816ef18fddde16e0d902d820\",\"created_at\":\"2022-10-18T12:05:49.808Z\",\"updated_at\":\"2022-10-18T12:05:50.876Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\"}},\"relationships\":{\"last_event_callbacks\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/BdJqyCywXK/relationships/last_event_callbacks\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/BdJqyCywXK/last_event_callbacks\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "72",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"f3db7c8e02cc63da44cbcbe4f24ca2df\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "90df0e49-2258-4b5f-8aaa-531d028f4300",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 18 Oct 2022 12:05:50 GMT",
+      "X-Served-By" : "cache-ams21060-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666094751.843589,VS0,VE45",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "372621e5-48a5-4a9b-bff1-597d3cf35a91",
+  "persistent" : true,
+  "insertionIndex" : 74
+}

@@ -1,0 +1,45 @@
+{
+  "id" : "0629e840-2dd2-4bb2-8db7-cb24aaa5cd66",
+  "name" : "api_webhooks",
+  "request" : {
+    "url" : "/api/webhooks",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"callback_url\":\"http://example.url\",\"include_resources\":[\"customer\"],\"metadata\":{\"foo\":\"bar\"},\"name\":\"incentro webhook\",\"topic\":\"orders.create\"},\"type\":\"webhooks\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"BdJqyCywXK\",\"type\":\"webhooks\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/BdJqyCywXK\"},\"attributes\":{\"name\":\"incentro webhook\",\"topic\":\"orders.create\",\"callback_url\":\"http://example.url\",\"include_resources\":[\"customer\"],\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"5e55a437816ef18fddde16e0d902d820\",\"created_at\":\"2022-10-18T12:05:49.808Z\",\"updated_at\":\"2022-10-18T12:05:49.808Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\"}},\"relationships\":{\"last_event_callbacks\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/BdJqyCywXK/relationships/last_event_callbacks\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/BdJqyCywXK/last_event_callbacks\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "66",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"0852b81a26082487d0e0ffeaedae86b3\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "89cb5f7d-e135-4bf2-ba9e-62a1f42b8bbb",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 18 Oct 2022 12:05:49 GMT",
+      "X-Served-By" : "cache-ams21036-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666094750.744630,VS0,VE78",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "0629e840-2dd2-4bb2-8db7-cb24aaa5cd66",
+  "persistent" : true,
+  "insertionIndex" : 68
+}
