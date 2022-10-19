@@ -1,0 +1,45 @@
+{
+  "id" : "609c2b09-c81e-401a-81e6-26d198d4d0e6",
+  "name" : "api_external_tax_calculators",
+  "request" : {
+    "url" : "/api/external_tax_calculators",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"foo\":\"bar\"},\"name\":\"incentro_external_tax_calculator\",\"tax_calculator_url\":\"https://example.com\"},\"type\":\"external_tax_calculators\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"ovAJRTebqO\",\"type\":\"external_tax_calculators\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/ovAJRTebqO\"},\"attributes\":{\"name\":\"incentro_external_tax_calculator\",\"created_at\":\"2022-10-19T07:59:14.131Z\",\"updated_at\":\"2022-10-19T07:59:14.131Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\"},\"tax_calculator_url\":\"https://example.com\",\"shared_secret\":\"47816c165dbd88f7944ac0e0e76ff796\"},\"relationships\":{\"tax_categories\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/ovAJRTebqO/relationships/tax_categories\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/ovAJRTebqO/tax_categories\"}},\"markets\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/ovAJRTebqO/relationships/markets\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/ovAJRTebqO/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/ovAJRTebqO/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/ovAJRTebqO/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "47",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"c3c6193236d3d065d6a76b009b802c9d\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "94858888-32bc-4d89-a2cc-2f990c29952e",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 19 Oct 2022 07:59:14 GMT",
+      "X-Served-By" : "cache-ams21073-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666166354.100475,VS0,VE47",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "609c2b09-c81e-401a-81e6-26d198d4d0e6",
+  "persistent" : true,
+  "insertionIndex" : 385
+}

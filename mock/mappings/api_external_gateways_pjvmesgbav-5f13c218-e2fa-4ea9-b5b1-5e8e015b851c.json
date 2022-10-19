@@ -1,0 +1,43 @@
+{
+  "id" : "5f13c218-e2fa-4ea9-b5b1-5e8e015b851c",
+  "name" : "api_external_gateways_pjvmesgbav",
+  "request" : {
+    "url" : "/api/external_gateways/pjVmesGbAv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"pjVmesGbAv\",\"type\":\"external_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/pjVmesGbAv\"},\"attributes\":{\"name\":\"incentro_external_gateway_changed\",\"created_at\":\"2022-10-19T07:59:10.973Z\",\"updated_at\":\"2022-10-19T07:59:12.941Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{},\"shared_secret\":\"6df580030304970c0e7e60e73c0cb647\",\"authorize_url\":\"https://foo.com\",\"capture_url\":\"https://foo.com\",\"void_url\":\"https://foo.com\",\"refund_url\":\"https://foo.com\",\"token_url\":\"https://foo.com\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/pjVmesGbAv/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/pjVmesGbAv/payment_methods\"}},\"external_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/pjVmesGbAv/relationships/external_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/pjVmesGbAv/external_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "42",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"b42677dd0f3269aeeaca39124207d73c\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "fa02b828-80be-4902-8434-9ec572ddc6da",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 19 Oct 2022 07:59:13 GMT",
+      "X-Served-By" : "cache-ams21025-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666166353.239873,VS0,VE40",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "5f13c218-e2fa-4ea9-b5b1-5e8e015b851c",
+  "persistent" : true,
+  "scenarioName" : "scenario-5-api-external_gateways-pjVmesGbAv",
+  "requiredScenarioState" : "scenario-5-api-external_gateways-pjVmesGbAv-5",
+  "newScenarioState" : "scenario-5-api-external_gateways-pjVmesGbAv-6",
+  "insertionIndex" : 380
+}
