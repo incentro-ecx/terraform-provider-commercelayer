@@ -1,0 +1,45 @@
+{
+  "id" : "b43b3270-31e3-410a-a298-a32008241cd1",
+  "name" : "oauth_token",
+  "request" : {
+    "url" : "/oauth/token",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalTo" : "grant_type=client_credentials",
+      "caseInsensitive" : false
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"access_token\":\"eyJhbGciOiJIUzUxMiJ9.eyJvcmdhbml6YXRpb24iOnsiaWQiOiJWeWpCWkZPV0p5Iiwic2x1ZyI6InRoZS1ncmVlbi1icmFuZC0yNDUiLCJlbnRlcnByaXNlIjpmYWxzZX0sImFwcGxpY2F0aW9uIjp7ImlkIjoibEdxWG5pYWpFTiIsImtpbmQiOiJpbnRlZ3JhdGlvbiIsInB1YmxpYyI6ZmFsc2V9LCJ0ZXN0Ijp0cnVlLCJleHAiOjE2NjYxNzI4OTEsInJhbmQiOjAuNDA2ODU5NzU0Nzg1MjkyMn0.-sE2UJyDP98xqoEwNICEDW5aE149ZbNVCV0o3ac4S31ZGIGNqAduB76NK35-USJUX-kk4Dzvrp0ICkLJSz4c-w\",\"token_type\":\"Bearer\",\"expires_in\":6529,\"scope\":\"market:all\",\"created_at\":1666165691}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "Cache-Control" : "no-store",
+      "Pragma" : "no-cache",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Etag" : "W/\"0df34c4bf5dea527dcf9df615d987c3a\"",
+      "X-Request-Id" : "21de8d75-a212-4a86-bd39-44e69cc55906",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 19 Oct 2022 07:59:21 GMT",
+      "X-Served-By" : "cache-ams21037-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666166362.820148,VS0,VE34",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "b43b3270-31e3-410a-a298-a32008241cd1",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-oauth-token",
+  "requiredScenarioState" : "scenario-1-oauth-token-40",
+  "newScenarioState" : "scenario-1-oauth-token-41",
+  "insertionIndex" : 437
+}

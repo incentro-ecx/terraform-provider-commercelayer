@@ -1,0 +1,37 @@
+{
+  "id" : "1148eed2-21bf-4249-be1c-e9d4ecc90e46",
+  "name" : "api_external_tax_calculators_ovajrtebqo",
+  "request" : {
+    "url" : "/api/external_tax_calculators/ovAJRTebqO",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "57",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "7645de66-3511-4b5e-88f7-a65986c8b7cf",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 19 Oct 2022 07:59:15 GMT",
+      "X-Served-By" : "cache-ams21051-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666166356.771755,VS0,VE83",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "1148eed2-21bf-4249-be1c-e9d4ecc90e46",
+  "persistent" : true,
+  "insertionIndex" : 395
+}

@@ -1,0 +1,45 @@
+{
+  "id" : "284f4aa7-e167-4cf0-ad82-f51d1f8aabd2",
+  "name" : "api_external_gateways",
+  "request" : {
+    "url" : "/api/external_gateways",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"authorize_url\":\"https://example.com\",\"capture_url\":\"https://example.com\",\"metadata\":{\"foo\":\"bar\"},\"name\":\"incentro_external_gateway\",\"refund_url\":\"https://example.com\",\"token_url\":\"https://example.com\",\"void_url\":\"https://example.com\"},\"type\":\"external_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"pjVmesGbAv\",\"type\":\"external_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/pjVmesGbAv\"},\"attributes\":{\"name\":\"incentro_external_gateway\",\"created_at\":\"2022-10-19T07:59:10.973Z\",\"updated_at\":\"2022-10-19T07:59:10.973Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\"},\"shared_secret\":\"6df580030304970c0e7e60e73c0cb647\",\"authorize_url\":\"https://example.com\",\"capture_url\":\"https://example.com\",\"void_url\":\"https://example.com\",\"refund_url\":\"https://example.com\",\"token_url\":\"https://example.com\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/pjVmesGbAv/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/pjVmesGbAv/payment_methods\"}},\"external_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/pjVmesGbAv/relationships/external_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/pjVmesGbAv/external_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "28",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"a75d79efea030d4742b8ff0182993f0d\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "67619ee2-b499-449d-8882-593968a3ba30",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 19 Oct 2022 07:59:10 GMT",
+      "X-Served-By" : "cache-ams21036-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666166351.942862,VS0,VE45",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "284f4aa7-e167-4cf0-ad82-f51d1f8aabd2",
+  "persistent" : true,
+  "insertionIndex" : 366
+}
