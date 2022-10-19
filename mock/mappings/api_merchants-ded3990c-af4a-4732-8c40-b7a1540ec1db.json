@@ -1,0 +1,45 @@
+{
+  "id" : "ded3990c-af4a-4732-8c40-b7a1540ec1db",
+  "name" : "api_merchants",
+  "request" : {
+    "url" : "/api/merchants",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"foo\":\"bar\"},\"name\":\"Incentro Merchant\"},\"relationships\":{\"address\":{\"data\":{\"id\":\"bQxruNrewv\",\"type\":\"addresses\"}}},\"type\":\"merchants\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"anLlOHmXNn\",\"type\":\"merchants\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/merchants/anLlOHmXNn\"},\"attributes\":{\"name\":\"Incentro Merchant\",\"created_at\":\"2022-10-18T12:05:42.806Z\",\"updated_at\":\"2022-10-18T12:05:42.806Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/merchants/anLlOHmXNn/relationships/address\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/merchants/anLlOHmXNn/address\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/merchants/anLlOHmXNn/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/merchants/anLlOHmXNn/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "29",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"92c639a3d545533e653d10dab2e5ad7e\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "c1ce4ec7-4236-4b0c-a56c-0dffa612469e",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 18 Oct 2022 12:05:42 GMT",
+      "X-Served-By" : "cache-ams21080-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666094743.737005,VS0,VE86",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "ded3990c-af4a-4732-8c40-b7a1540ec1db",
+  "persistent" : true,
+  "insertionIndex" : 29
+}

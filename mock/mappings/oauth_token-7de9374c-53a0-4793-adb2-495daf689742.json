@@ -1,0 +1,45 @@
+{
+  "id" : "7de9374c-53a0-4793-adb2-495daf689742",
+  "name" : "oauth_token",
+  "request" : {
+    "url" : "/oauth/token",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalTo" : "grant_type=client_credentials",
+      "caseInsensitive" : false
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"access_token\":\"eyJhbGciOiJIUzUxMiJ9.eyJvcmdhbml6YXRpb24iOnsiaWQiOiJWeWpCWkZPV0p5Iiwic2x1ZyI6InRoZS1ncmVlbi1icmFuZC0yNDUiLCJlbnRlcnByaXNlIjpmYWxzZX0sImFwcGxpY2F0aW9uIjp7ImlkIjoibEdxWG5pYWpFTiIsImtpbmQiOiJpbnRlZ3JhdGlvbiIsInB1YmxpYyI6ZmFsc2V9LCJ0ZXN0Ijp0cnVlLCJleHAiOjE2NjYxMDE5MzcsInJhbmQiOjAuODI3OTA1NzQxMTc0NDA1M30.FGz5QXBEneQm5vgkRy1fseo190PT4VadfR5SfB2GviFZgCTNeMEk8Qga4y4ju2CNjCwaP5h9Oy1I4Q5rjh8dsA\",\"token_type\":\"Bearer\",\"expires_in\":7198,\"scope\":\"market:all\",\"created_at\":1666094737}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "Cache-Control" : "no-store",
+      "Pragma" : "no-cache",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Etag" : "W/\"a8ef28265d3db2d5cea1022a3fd5bfe2\"",
+      "X-Request-Id" : "054b1523-0763-48d4-a017-cde39189d328",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 18 Oct 2022 12:05:39 GMT",
+      "X-Served-By" : "cache-ams21077-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666094739.083631,VS0,VE81",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "7de9374c-53a0-4793-adb2-495daf689742",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-oauth-token",
+  "requiredScenarioState" : "scenario-1-oauth-token-5",
+  "newScenarioState" : "scenario-1-oauth-token-6",
+  "insertionIndex" : 9
+}
