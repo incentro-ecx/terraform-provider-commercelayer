@@ -48,6 +48,8 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_webhook":                 resourceWebhook(),
 	"commercelayer_external_gateway":        resourceExternalGateway(),
 	"commercelayer_external_tax_calculator": resourceExternalTaxCalculator(),
+	"commercelayer_market":                  resourceMarket(),
+	"commercelayer_inventory_model":         resourceInventoryModel(),
 }
 
 type Configuration struct {
