@@ -25,6 +25,11 @@ func resourceAddress() *schema.Resource {
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
+			"type": {
+				Description: "The resource type",
+				Type:        schema.TypeString,
+				Computed:    true,
+			},
 			"attributes": {
 				Description: "Resource attributes",
 				Type:        schema.TypeList,
@@ -143,6 +148,22 @@ func resourceAddress() *schema.Resource {
 					},
 				},
 			},
+			"relationships": {
+				Description: "Resource relationships",
+				Type:        schema.TypeList,
+				MaxItems:    1,
+				MinItems:    1,
+				Optional:    true,
+				Elem: &schema.Resource{
+					Schema: map[string]*schema.Schema{
+						"geocoder_id": {
+							Description: "The associated geocoder id.",
+							Type:        schema.TypeString,
+							Optional:    true,
+						},
+					},
+				},
+			},
 		},
 	}
 }
@@ -169,7 +190,8 @@ func resourceAddressReadFunc(ctx context.Context, d *schema.ResourceData, i inte
 func resourceAddressCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := nestedMap(d.Get("attributes"))
+	relationships := nestedMap(d.Get("relationships"))
 
 	addressCreate := commercelayer.AddressCreate{
 		Data: commercelayer.AddressCreateData{
@@ -195,8 +217,21 @@ func resourceAddressCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
-			Relationships: nil,
 		},
+	}
+
+	geocoderId := stringRef(relationships["geocoder_id"])
+	if geocoderId != nil {
+		addressCreate.Data.Relationships.Geocoder = &commercelayer.AddressDataRelationshipsGeocoder{
+			Data: commercelayer.AddressDataRelationshipsGeocoderData{
+				Type: stringRef(geocoderType),
+				Id:   stringRef(geocoderId),
+			}}
+	}
+
+	err := d.Set("type", addressType)
+	if err != nil {
+		return diagErr(err)
 	}
 
 	address, _, err := c.AddressesApi.POSTAddresses(ctx).AddressCreate(addressCreate).Execute()
@@ -218,7 +253,8 @@ func resourceAddressDeleteFunc(ctx context.Context, d *schema.ResourceData, i in
 func resourceAddressUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := nestedMap(d.Get("attributes"))
+	relationships := nestedMap(d.Get("relationships"))
 
 	var addressUpdate = commercelayer.AddressUpdate{
 		Data: commercelayer.AddressUpdateData{
@@ -245,8 +281,16 @@ func resourceAddressUpdateFunc(ctx context.Context, d *schema.ResourceData, i in
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
-			Relationships: nil,
 		},
+	}
+
+	geocoderId := stringRef(relationships["geocoder_id"])
+	if geocoderId != nil {
+		addressUpdate.Data.Relationships.Geocoder = &commercelayer.AddressDataRelationshipsGeocoder{
+			Data: commercelayer.AddressDataRelationshipsGeocoderData{
+				Type: stringRef(geocoderType),
+				Id:   geocoderId,
+			}}
 	}
 
 	_, _, err := c.AddressesApi.PATCHAddressesAddressId(ctx, d.Id()).AddressUpdate(addressUpdate).Execute()

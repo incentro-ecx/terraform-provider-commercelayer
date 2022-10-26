@@ -1,6 +1,6 @@
-resource "commercelayer_webhook" "orders_create_webhook" {
+resource "commercelayer_webhook" "incentro_webhook" {
   attributes {
-    name         = "order-create"
+    name         = "Incentro Webhook"
     topic        = "orders.create"
     callback_url = "http://example.url"
     include_resources = [

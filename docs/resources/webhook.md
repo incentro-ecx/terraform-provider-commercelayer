@@ -22,6 +22,7 @@ A webhook object is returned as part of the response body of each successful lis
 ### Read-Only
 
 - `id` (String) The webhook unique identifier
+- `type` (String) The resource type
 
 <a id="nestedblock--attributes"></a>
 ### Nested Schema for `attributes`

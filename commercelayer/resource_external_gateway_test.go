@@ -43,6 +43,7 @@ func TestAccExternalGateway_basic(t *testing.T) {
 			{
 				Config: testAccExternalGatewayCreate(),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", externalGatewayType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro_external_gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.authorize_url", "https://example.com"),

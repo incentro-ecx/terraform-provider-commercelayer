@@ -2,11 +2,14 @@ package commercelayer
 
 import (
 	"bytes"
+	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"log"
+	"net/http"
 	"os"
 	"testing"
 	"text/template"
+	"time"
 )
 
 func init() {
@@ -50,4 +53,26 @@ func hclTemplate(data string, params map[string]any) string {
 		log.Fatal(err)
 	}
 	return out.String()
+}
+
+func retryRemoval(times int, callable func() (*http.Response, error)) error {
+	for retries := 1; retries < times; retries++ {
+		resp, err := callable()
+		if resp.StatusCode == 404 {
+			return nil
+		}
+		if err != nil {
+			return err
+		}
+
+		if resp.StatusCode == 200 {
+			log.Println("retrying removal")
+			time.Sleep(time.Second)
+			continue
+		}
+
+		return fmt.Errorf("received response code with status %d", resp.StatusCode)
+	}
+
+	return nil
 }

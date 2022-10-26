@@ -43,6 +43,7 @@ func TestAccAddress_basic(t *testing.T) {
 			{
 				Config: testAccAddressCreate(),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", addressType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.business", "true"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.company", "Incentro"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.line_1", "Van Nelleweg 1"),

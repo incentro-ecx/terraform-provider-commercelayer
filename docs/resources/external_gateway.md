@@ -30,6 +30,7 @@ Price lists are collections of SKU prices,
 ### Read-Only
 
 - `id` (String) The external gateway unique identifier
+- `type` (String) The resource type
 
 <a id="nestedblock--attributes"></a>
 ### Nested Schema for `attributes`

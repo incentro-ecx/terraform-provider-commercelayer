@@ -24,6 +24,11 @@ func resourceMerchant() *schema.Resource {
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
+			"type": {
+				Description: "The resource type",
+				Type:        schema.TypeString,
+				Computed:    true,
+			},
 			"attributes": {
 				Description: "Resource attributes",
 				Type:        schema.TypeList,
@@ -69,8 +74,8 @@ func resourceMerchant() *schema.Resource {
 				Required:    true,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
-						"address": {
-							Description: "The related address",
+						"address_id": {
+							Description: "The associated address id.",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
@@ -103,8 +108,8 @@ func resourceMerchantReadFunc(ctx context.Context, d *schema.ResourceData, i int
 func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]any)[0].(map[string]any)
-	relationships := d.Get("relationships").([]any)[0].(map[string]any)
+	attributes := nestedMap(d.Get("attributes"))
+	relationships := nestedMap(d.Get("relationships"))
 
 	merchantCreate := commercelayer.MerchantCreate{
 		Data: commercelayer.MerchantCreateData{
@@ -119,11 +124,16 @@ func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i i
 				Address: commercelayer.BingGeocoderDataRelationshipsAddresses{
 					Data: commercelayer.BingGeocoderDataRelationshipsAddressesData{
 						Type: stringRef(addressType),
-						Id:   stringRef(relationships["address"].(string)),
+						Id:   stringRef(relationships["address_id"]),
 					},
 				},
 			},
 		},
+	}
+
+	err := d.Set("type", merchantType)
+	if err != nil {
+		return diagErr(err)
 	}
 
 	merchant, _, err := c.MerchantsApi.POSTMerchants(ctx).MerchantCreate(merchantCreate).Execute()
@@ -145,8 +155,8 @@ func resourceMerchantDeleteFunc(ctx context.Context, d *schema.ResourceData, i i
 func resourceMerchantUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]any)[0].(map[string]any)
-	relationships := d.Get("relationships").([]any)[0].(map[string]any)
+	attributes := nestedMap(d.Get("attributes"))
+	relationships := nestedMap(d.Get("relationships"))
 
 	var merchantUpdate = commercelayer.MerchantUpdate{
 		Data: commercelayer.MerchantUpdateData{
@@ -162,7 +172,7 @@ func resourceMerchantUpdateFunc(ctx context.Context, d *schema.ResourceData, i i
 				Address: &commercelayer.BingGeocoderDataRelationshipsAddresses{
 					Data: commercelayer.BingGeocoderDataRelationshipsAddressesData{
 						Type: stringRef(addressType),
-						Id:   stringRef(relationships["address"].(string)),
+						Id:   stringRef(relationships["address_id"]),
 					},
 				},
 			},

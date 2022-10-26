@@ -25,6 +25,11 @@ func resourceExternalTaxCalculator() *schema.Resource {
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
+			"type": {
+				Description: "The resource type",
+				Type:        schema.TypeString,
+				Computed:    true,
+			},
 			"attributes": {
 				Description: "Resource attributes",
 				Type:        schema.TypeList,
@@ -98,13 +103,13 @@ func resourceExternalTaxCalculatorReadFunc(ctx context.Context, d *schema.Resour
 		return diagErr(err)
 	}
 
-	ExternalTaxCalculator, ok := resp.GetDataOk()
+	externalTaxCalculator, ok := resp.GetDataOk()
 	if !ok {
 		d.SetId("")
 		return nil
 	}
 
-	d.SetId(ExternalTaxCalculator.GetId())
+	d.SetId(externalTaxCalculator.GetId())
 
 	return nil
 }
@@ -112,10 +117,10 @@ func resourceExternalTaxCalculatorReadFunc(ctx context.Context, d *schema.Resour
 func resourceExternalTaxCalculatorCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]any)[0].(map[string]any)
-	//relationships := d.Get("relationships").([]any)[0].(map[string]any)
+	attributes := nestedMap(d.Get("attributes"))
+	//relationships := nestedMap(d.Get("relationships"))
 
-	ExternalTaxCalculatorCreate := commercelayer.ExternalTaxCalculatorCreate{
+	externalTaxCalculatorCreate := commercelayer.ExternalTaxCalculatorCreate{
 		Data: commercelayer.ExternalTaxCalculatorCreateData{
 			Type: externalTaxCalculatorType,
 			Attributes: commercelayer.POSTExternalTaxCalculators201ResponseDataAttributes{
@@ -136,12 +141,17 @@ func resourceExternalTaxCalculatorCreateFunc(ctx context.Context, d *schema.Reso
 		},
 	}
 
-	ExternalTaxCalculator, _, err := c.ExternalTaxCalculatorsApi.POSTExternalTaxCalculators(ctx).ExternalTaxCalculatorCreate(ExternalTaxCalculatorCreate).Execute()
+	err := d.Set("type", externalTaxCalculatorType)
 	if err != nil {
 		return diagErr(err)
 	}
 
-	d.SetId(*ExternalTaxCalculator.Data.Id)
+	externalTaxCalculator, _, err := c.ExternalTaxCalculatorsApi.POSTExternalTaxCalculators(ctx).ExternalTaxCalculatorCreate(externalTaxCalculatorCreate).Execute()
+	if err != nil {
+		return diagErr(err)
+	}
+
+	d.SetId(*externalTaxCalculator.Data.Id)
 
 	return nil
 }
@@ -155,8 +165,8 @@ func resourceExternalTaxCalculatorDeleteFunc(ctx context.Context, d *schema.Reso
 func resourceExternalTaxCalculatorUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]any)[0].(map[string]any)
-	//relationships := d.Get("relationships").([]any)[0].(map[string]any)
+	attributes := nestedMap(d.Get("attributes"))
+	//relationships := nestedMap(d.Get("relationships"))
 
 	var ExternalTaxCalculatorUpdate = commercelayer.ExternalTaxCalculatorUpdate{
 		Data: commercelayer.ExternalTaxCalculatorUpdateData{

@@ -24,6 +24,11 @@ func resourceWebhook() *schema.Resource {
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
+			"type": {
+				Description: "The resource type",
+				Type:        schema.TypeString,
+				Computed:    true,
+			},
 			"attributes": {
 				Description: "Resource attributes",
 				Type:        schema.TypeList,
@@ -107,7 +112,7 @@ func resourceWebhookReadFunc(ctx context.Context, d *schema.ResourceData, i inte
 func resourceWebhookCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := nestedMap(d.Get("attributes"))
 
 	webhookCreate := commercelayer.WebhookCreate{
 		Data: commercelayer.WebhookCreateData{
@@ -124,12 +129,17 @@ func resourceWebhookCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 		},
 	}
 
-	address, _, err := c.WebhooksApi.POSTWebhooks(ctx).WebhookCreate(webhookCreate).Execute()
+	err := d.Set("type", webhookType)
 	if err != nil {
 		return diagErr(err)
 	}
 
-	d.SetId(*address.Data.Id)
+	webhook, _, err := c.WebhooksApi.POSTWebhooks(ctx).WebhookCreate(webhookCreate).Execute()
+	if err != nil {
+		return diagErr(err)
+	}
+
+	d.SetId(*webhook.Data.Id)
 
 	return nil
 }
@@ -143,7 +153,7 @@ func resourceWebhookDeleteFunc(ctx context.Context, d *schema.ResourceData, i in
 func resourceWebhookUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := nestedMap(d.Get("attributes"))
 
 	var webhookUpdate = commercelayer.WebhookUpdate{
 		Data: commercelayer.WebhookUpdateData{

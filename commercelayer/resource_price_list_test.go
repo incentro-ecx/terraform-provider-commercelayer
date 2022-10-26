@@ -2,13 +2,12 @@ package commercelayer
 
 import (
 	"context"
-	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	"net/http"
 	"regexp"
 	"testing"
-	"time"
 )
 
 func testAccCheckPriceListDestroy(s *terraform.State) error {
@@ -16,24 +15,13 @@ func testAccCheckPriceListDestroy(s *terraform.State) error {
 
 	for _, rs := range s.RootModule().Resources {
 		if rs.Type == "commercelayer_price_list" {
-			//Retry required because there is some latency before a price list is actually removed
-			for retries := 1; retries < 10; retries++ {
-				_, resp, err := client.PriceListsApi.GETPriceListsPriceListId(context.Background(), rs.Primary.ID).Execute()
-				if resp.StatusCode == 404 {
-					fmt.Printf("commercelayer_price_list with id %s has been removed\n", rs.Primary.ID)
-					continue
-				}
-				if err != nil {
-					return err
-				}
-
-				if resp.StatusCode == 200 {
-					fmt.Printf("commercelayer_price_list with id %s still exists. Retrying\n", rs.Primary.ID)
-					time.Sleep(time.Second)
-					continue
-				}
-
-				return fmt.Errorf("received response code with status %d", resp.StatusCode)
+			err := retryRemoval(10, func() (*http.Response, error) {
+				_, resp, err := client.PriceListsApi.GETPriceListsPriceListId(context.Background(), rs.Primary.ID).
+					Execute()
+				return resp, err
+			})
+			if err != nil {
+				return err
 			}
 		}
 
@@ -54,6 +42,7 @@ func TestAccPriceList_basic(t *testing.T) {
 			{
 				Config: testAccPriceListCreate(),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", priceListType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro price list"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "EUR"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
