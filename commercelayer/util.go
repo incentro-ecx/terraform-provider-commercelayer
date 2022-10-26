@@ -68,3 +68,15 @@ func stringSliceValueRef(val interface{}) []string {
 
 	return s
 }
+
+func nestedMap(val interface{}) map[string]any {
+	if val == nil {
+		return map[string]any{}
+	}
+	valMap := val.([]any)
+	if len(valMap) == 0 {
+		return map[string]any{}
+	}
+
+	return valMap[0].(map[string]any)
+}

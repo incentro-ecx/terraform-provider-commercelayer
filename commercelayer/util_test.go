@@ -89,3 +89,17 @@ func TestStringSliceValueRefFilledIntSliceVal(t *testing.T) {
 		stringSliceValueRef([]interface{}{1})
 	})
 }
+
+func TestNestedMapNilVal(t *testing.T) {
+	assert.Equal(t, map[string]any{}, nestedMap(nil))
+}
+
+func TestNestedMapEmptyVal(t *testing.T) {
+	assert.Equal(t, map[string]any{}, nestedMap([]interface{}{}))
+}
+
+func TestNestedMapFilledVal(t *testing.T) {
+	assert.Equal(t, map[string]any{"hello": "world"}, nestedMap([]interface{}{
+		map[string]interface{}{"hello": "world"},
+	}))
+}

@@ -27,6 +27,11 @@ func resourcePriceList() *schema.Resource {
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
+			"type": {
+				Description: "The resource type",
+				Type:        schema.TypeString,
+				Computed:    true,
+			},
 			"attributes": {
 				Description: "Resource attributes",
 				Type:        schema.TypeList,
@@ -100,7 +105,7 @@ func resourcePriceListReadFunc(ctx context.Context, d *schema.ResourceData, i in
 func resourcePriceListCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := nestedMap(d.Get("attributes"))
 
 	priceListCreate := commercelayer.PriceListCreate{
 		Data: commercelayer.PriceListCreateData{
@@ -114,6 +119,11 @@ func resourcePriceListCreateFunc(ctx context.Context, d *schema.ResourceData, i 
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
 		},
+	}
+
+	err := d.Set("type", priceListType)
+	if err != nil {
+		return diagErr(err)
 	}
 
 	priceList, _, err := c.PriceListsApi.POSTPriceLists(ctx).PriceListCreate(priceListCreate).Execute()
@@ -135,9 +145,9 @@ func resourcePriceListDeleteFunc(ctx context.Context, d *schema.ResourceData, i 
 func resourcePriceListUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := nestedMap(d.Get("attributes"))
 
-	var PriceListUpdate = commercelayer.PriceListUpdate{
+	var priceListUpdate = commercelayer.PriceListUpdate{
 		Data: commercelayer.PriceListUpdateData{
 			Type: priceListType,
 			Id:   d.Id(),
@@ -152,7 +162,7 @@ func resourcePriceListUpdateFunc(ctx context.Context, d *schema.ResourceData, i 
 		},
 	}
 
-	_, _, err := c.PriceListsApi.PATCHPriceListsPriceListId(ctx, d.Id()).PriceListUpdate(PriceListUpdate).Execute()
+	_, _, err := c.PriceListsApi.PATCHPriceListsPriceListId(ctx, d.Id()).PriceListUpdate(priceListUpdate).Execute()
 
 	return diag.FromErr(err)
 }

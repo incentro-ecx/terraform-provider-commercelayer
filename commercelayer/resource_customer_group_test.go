@@ -43,6 +43,7 @@ func TestAccCustomerGroup_basic(t *testing.T) {
 			{
 				Config: testAccCustomerGroupCreate(),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", customerGroupType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro customer group"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),

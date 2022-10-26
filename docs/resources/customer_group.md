@@ -28,6 +28,7 @@ A customer group is a resource that can be used to organize customers into group
 ### Read-Only
 
 - `id` (String) The CustomerGroup unique identifier
+- `type` (String) The resource type
 
 <a id="nestedblock--attributes"></a>
 ### Nested Schema for `attributes`

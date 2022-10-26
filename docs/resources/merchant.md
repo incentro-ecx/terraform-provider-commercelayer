@@ -23,6 +23,7 @@ A merchant is the fiscal representative that is selling in a specific market. Ta
 ### Read-Only
 
 - `id` (String) The merchant unique identifier
+- `type` (String) The resource type
 
 <a id="nestedblock--attributes"></a>
 ### Nested Schema for `attributes`
@@ -43,6 +44,6 @@ Optional:
 
 Required:
 
-- `address` (String) The related address
+- `address_id` (String) The associated address id.
 
 

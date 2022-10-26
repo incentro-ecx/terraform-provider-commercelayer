@@ -27,6 +27,11 @@ func resourceExternalGateway() *schema.Resource {
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
+			"type": {
+				Description: "The resource type",
+				Type:        schema.TypeString,
+				Computed:    true,
+			},
 			"attributes": {
 				Description: "Resource attributes",
 				Type:        schema.TypeList,
@@ -113,7 +118,7 @@ func resourceExternalGatewayReadFunc(ctx context.Context, d *schema.ResourceData
 func resourceExternalGatewayCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := nestedMap(d.Get("attributes"))
 
 	externalGatewayCreate := commercelayer.ExternalGatewayCreate{
 		Data: commercelayer.ExternalGatewayCreateData{
@@ -130,6 +135,11 @@ func resourceExternalGatewayCreateFunc(ctx context.Context, d *schema.ResourceDa
 				RefundUrl:       stringRef(attributes["refund_url"]),
 			},
 		},
+	}
+
+	err := d.Set("type", externalGatewayType)
+	if err != nil {
+		return diagErr(err)
 	}
 
 	externalGateway, _, err := c.ExternalGatewaysApi.POSTExternalGateways(ctx).ExternalGatewayCreate(externalGatewayCreate).Execute()
@@ -151,7 +161,7 @@ func resourceExternalGatewayDeleteFunc(ctx context.Context, d *schema.ResourceDa
 func resourceExternalGatewayUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := nestedMap(d.Get("attributes"))
 
 	var externalGatewayUpdate = commercelayer.ExternalGatewayUpdate{
 		Data: commercelayer.ExternalGatewayUpdateData{

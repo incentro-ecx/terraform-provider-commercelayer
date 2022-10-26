@@ -2,6 +2,7 @@ package commercelayer
 
 const (
 	addressType               = "addresses"
+	geocoderType              = "geocoders"
 	merchantType              = "merchants"
 	customerGroupType         = "customer_groups"
 	priceListType             = "price_lists"

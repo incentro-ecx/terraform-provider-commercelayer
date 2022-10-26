@@ -1,8 +1,7 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="run acceptance tests" type="GoTestRunConfiguration" factoryName="Go Test">
+  <configuration default="false" name="run resource_webhook_test.go" type="GoTestRunConfiguration" factoryName="Go Test" folderName="Resource integration tests">
     <module name="terraform-provider-commercelayer" />
-    <working_directory value="$PROJECT_DIR$" />
-    <go_parameters value="-p 1" />
+    <working_directory value="$PROJECT_DIR$/commercelayer" />
     <envs>
       <env name="TF_ACC" value="1" />
     </envs>
@@ -17,12 +16,12 @@
         <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH=".env" />
       </ENTRIES>
     </EXTENSION>
-    <kind value="DIRECTORY" />
+    <root_directory value="$PROJECT_DIR$" />
+    <kind value="FILE" />
+    <package value="github.com/incentro-dc/terraform-provider-commercelayer" />
     <directory value="$PROJECT_DIR$" />
-    <filePath value="$PROJECT_DIR$" />
+    <filePath value="$PROJECT_DIR$/commercelayer/resource_webhook_test.go" />
     <framework value="gotest" />
-    <method v="2">
-      <option name="RunConfigurationTask" enabled="true" run_configuration_name="reset.sh" run_configuration_type="ShConfigurationType" />
-    </method>
+    <method v="2" />
   </configuration>
 </component>

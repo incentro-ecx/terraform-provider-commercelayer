@@ -43,6 +43,7 @@ func TestAccExternalTaxCalculator_basic(t *testing.T) {
 			{
 				Config: testAccExternalTaxCalculatorCreate(),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", externalTaxCalculatorType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro_external_tax_calculator"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.tax_calculator_url", "https://example.com"),

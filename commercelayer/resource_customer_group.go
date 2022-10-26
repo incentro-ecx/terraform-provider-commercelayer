@@ -26,6 +26,11 @@ func resourceCustomerGroup() *schema.Resource {
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
+			"type": {
+				Description: "The resource type",
+				Type:        schema.TypeString,
+				Computed:    true,
+			},
 			"attributes": {
 				Description: "Resource attributes",
 				Type:        schema.TypeList,
@@ -87,7 +92,7 @@ func resourceCustomerGroupReadFunc(ctx context.Context, d *schema.ResourceData, 
 func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := nestedMap(d.Get("attributes"))
 
 	customerGroupCreate := commercelayer.CustomerGroupCreate{
 		Data: commercelayer.CustomerGroupCreateData{
@@ -99,6 +104,11 @@ func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
 		},
+	}
+
+	err := d.Set("type", customerGroupType)
+	if err != nil {
+		return diagErr(err)
 	}
 
 	customerGroup, _, err := c.CustomerGroupsApi.POSTCustomerGroups(ctx).CustomerGroupCreate(customerGroupCreate).Execute()
@@ -120,7 +130,7 @@ func resourceCustomerGroupDeleteFunc(ctx context.Context, d *schema.ResourceData
 func resourceCustomerGroupUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	attributes := d.Get("attributes").([]interface{})[0].(map[string]interface{})
+	attributes := nestedMap(d.Get("attributes"))
 
 	var customerGroupUpdate = commercelayer.CustomerGroupUpdate{
 		Data: commercelayer.CustomerGroupUpdateData{

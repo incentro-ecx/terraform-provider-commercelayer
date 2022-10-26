@@ -6,6 +6,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	"strings"
 	"testing"
 )
 
@@ -54,14 +55,15 @@ func TestAccMerchant_basic(t *testing.T) {
 		CheckDestroy:      testAccCheckMerchantDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccMerchantCreate(),
+				Config: strings.Join([]string{testAccAddressCreate(), testAccMerchantCreate()}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", merchantType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Merchant"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
 			},
 			{
-				Config: testAccMerchantUpdate(),
+				Config: strings.Join([]string{testAccAddressCreate(), testAccMerchantUpdate()}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Updated Merchant"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
@@ -73,22 +75,6 @@ func TestAccMerchant_basic(t *testing.T) {
 
 func testAccMerchantCreate() string {
 	return hclTemplate(`
-		resource "commercelayer_address" "incentro_address" {
-		  attributes {
-			business     = true
-			company      = "Incentro"
-			line_1       = "Van Nelleweg 1"
-			zip_code     = "3044 BC"
-			country_code = "NL"
-			city         = "Rotterdam"
-			phone        = "+31(0)10 20 20 544"
-			state_code   = "ZH"
-			metadata = {
-			  foo : "bar"
-			}
-		  }
-		}
-
 		resource "commercelayer_merchant" "incentro_merchant" {
 		  attributes {
 			name = "Incentro Merchant"
@@ -98,7 +84,7 @@ func testAccMerchantCreate() string {
 		  }
 		
 		  relationships {
-			address = commercelayer_address.incentro_address.id
+			address_id = commercelayer_address.incentro_address.id
 		  }
 		}
 	`, map[string]any{})
@@ -106,22 +92,6 @@ func testAccMerchantCreate() string {
 
 func testAccMerchantUpdate() string {
 	return hclTemplate(`
-		resource "commercelayer_address" "incentro_address" {
-		  attributes {
-			business     = true
-			company      = "Incentro"
-			line_1       = "Van Nelleweg 1"
-			zip_code     = "3044 BC"
-			country_code = "NL"
-			city         = "Rotterdam"
-			phone        = "+31(0)10 20 20 544"
-			state_code   = "ZH"
-			metadata = {
-			  foo : "bar"
-			}
-		  }
-		}
-
 		resource "commercelayer_merchant" "incentro_merchant" {
 		  attributes {
 			name = "Incentro Updated Merchant"
@@ -131,7 +101,7 @@ func testAccMerchantUpdate() string {
 		  }
 		
 		  relationships {
-			address = commercelayer_address.incentro_address.id
+			address_id = commercelayer_address.incentro_address.id
 		  }
 		}
 	`, map[string]any{})

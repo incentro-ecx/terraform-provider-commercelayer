@@ -22,6 +22,7 @@ Create an external tax calculator to delegate tax calculation logic to the speci
 ### Read-Only
 
 - `id` (String) The external tax calculator unique identifier
+- `type` (String) The resource type
 
 <a id="nestedblock--attributes"></a>
 ### Nested Schema for `attributes`

@@ -19,9 +19,14 @@ Addresses can be associated with orders as their shipping or billing addresses. 
 
 - `attributes` (Block List, Min: 1, Max: 1) Resource attributes (see [below for nested schema](#nestedblock--attributes))
 
+### Optional
+
+- `relationships` (Block List, Max: 1) Resource relationships (see [below for nested schema](#nestedblock--relationships))
+
 ### Read-Only
 
 - `id` (String) The address unique identifier
+- `type` (String) The resource type
 
 <a id="nestedblock--attributes"></a>
 ### Nested Schema for `attributes`
@@ -50,5 +55,13 @@ Optional:
 - `reference` (String) A string that you can use to add any external identifier to the resource. This can be useful for integrating the resource to an external system, like an ERP, a marketing tool, a CRM, or whatever.
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code
 - `zip_code` (String) ZIP or postal code
+
+
+<a id="nestedblock--relationships"></a>
+### Nested Schema for `relationships`
+
+Optional:
+
+- `geocoder_id` (String) The associated geocoder id.
 
 

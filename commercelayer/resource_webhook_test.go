@@ -43,6 +43,7 @@ func TestAccWebhook_basic(t *testing.T) {
 			{
 				Config: testAccWebhookCreate(),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", webhookType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro webhook"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.topic", "orders.create"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.callback_url", "http://example.url"),
