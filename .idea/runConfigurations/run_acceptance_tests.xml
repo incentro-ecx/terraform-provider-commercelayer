@@ -17,12 +17,11 @@
         <ENTRY IS_ENABLED="true" PARSER="env" IS_EXECUTABLE="false" PATH=".env" />
       </ENTRIES>
     </EXTENSION>
-    <kind value="DIRECTORY" />
+    <kind value="PACKAGE" />
+    <package value="github.com/incentro-dc/terraform-provider-commercelayer/commercelayer" />
     <directory value="$PROJECT_DIR$" />
     <filePath value="$PROJECT_DIR$" />
     <framework value="gotest" />
-    <method v="2">
-      <option name="RunConfigurationTask" enabled="true" run_configuration_name="reset.sh" run_configuration_type="ShConfigurationType" />
-    </method>
+    <method v="2" />
   </configuration>
 </component>

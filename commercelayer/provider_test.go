@@ -13,7 +13,11 @@ import (
 )
 
 func init() {
-	testAccProviderCommercelayer = Provider()
+	tokenFile := fmt.Sprintf("%s/provider-token.json", os.TempDir())
+
+	fmt.Printf("using token file %s", tokenFile)
+
+	testAccProviderCommercelayer = Provider(WithCachedToken(tokenFile))()
 	testAccProviderFactories = map[string]func() (*schema.Provider, error){
 		"commercelayer": func() (*schema.Provider, error) {
 			return testAccProviderCommercelayer, nil
@@ -25,7 +29,7 @@ var testAccProviderCommercelayer *schema.Provider
 var testAccProviderFactories = map[string]func() (*schema.Provider, error){}
 
 func TestProvider(t *testing.T) {
-	provider := Provider()
+	provider := Provider()()
 	if err := provider.InternalValidate(); err != nil {
 		t.Fatalf("err: %s", err)
 	}
