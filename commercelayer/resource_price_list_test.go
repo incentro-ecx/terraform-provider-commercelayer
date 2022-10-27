@@ -40,7 +40,7 @@ func TestAccPriceList_basic(t *testing.T) {
 		CheckDestroy:      testAccCheckPriceListDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccPriceListCreate(),
+				Config: testAccPriceListCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", priceListType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro price list"),
@@ -49,7 +49,7 @@ func TestAccPriceList_basic(t *testing.T) {
 				),
 			},
 			{
-				Config: testAccPriceListUpdate(),
+				Config: testAccPriceListUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro updated price list"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "CHF"),
@@ -61,6 +61,7 @@ func TestAccPriceList_basic(t *testing.T) {
 }
 
 func TestAccPriceList_invalid(t *testing.T) {
+	resourceName := "commercelayer_price_list.incentro_price_list_invalid_currency"
 	resource.Test(t, resource.TestCase{
 		PreCheck: func() {
 			testAccPreCheck(t)
@@ -69,14 +70,14 @@ func TestAccPriceList_invalid(t *testing.T) {
 		CheckDestroy:      testAccCheckPriceListDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config:      testAccPriceListCreateInvalidCurrency(),
+				Config:      testAccPriceListCreateInvalidCurrency(resourceName),
 				ExpectError: regexp.MustCompile(".*FOOBAR.*"),
 			},
 		},
 	})
 }
 
-func testAccPriceListCreate() string {
+func testAccPriceListCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_price_list" "incentro_price_list" {
 		  attributes {
@@ -84,13 +85,14 @@ func testAccPriceListCreate() string {
 			currency_code = "EUR"
 			metadata = {
 			  foo : "bar"
+		 	  testName: "{{.testName}}"
 			}
 		  }
 		}
 	`, map[string]any{})
 }
 
-func testAccPriceListUpdate() string {
+func testAccPriceListUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_price_list" "incentro_price_list" {
 		  attributes {
@@ -98,13 +100,14 @@ func testAccPriceListUpdate() string {
 			currency_code = "CHF"
 			metadata = {
 			  bar : "foo"
+		 	  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
-func testAccPriceListCreateInvalidCurrency() string {
+func testAccPriceListCreateInvalidCurrency(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_price_list" "incentro_price_list_invalid_currency" {
 		  attributes {
@@ -112,8 +115,9 @@ func testAccPriceListCreateInvalidCurrency() string {
 			currency_code = "FOOBAR"
 			metadata = {
 			  bar : "foo"
+		 	  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }

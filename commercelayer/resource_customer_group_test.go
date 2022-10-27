@@ -41,7 +41,7 @@ func TestAccCustomerGroup_basic(t *testing.T) {
 		CheckDestroy:      testAccCheckCustomerGroupDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccCustomerGroupCreate(),
+				Config: testAccCustomerGroupCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", customerGroupType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro customer group"),
@@ -49,7 +49,7 @@ func TestAccCustomerGroup_basic(t *testing.T) {
 				),
 			},
 			{
-				Config: testAccCustomerGroupUpdate(),
+				Config: testAccCustomerGroupUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro updated customer group"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
@@ -59,28 +59,30 @@ func TestAccCustomerGroup_basic(t *testing.T) {
 	})
 }
 
-func testAccCustomerGroupCreate() string {
+func testAccCustomerGroupCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_customer_group" "incentro_customer_group" {
 		  attributes {
 			name = "Incentro customer group"
 			metadata = {
 			  foo : "bar"
+			  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
-func testAccCustomerGroupUpdate() string {
+func testAccCustomerGroupUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_customer_group" "incentro_customer_group" {
 		  attributes {
 			name = "Incentro updated customer group"
 			metadata = {
 			  bar : "foo"
+			  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }

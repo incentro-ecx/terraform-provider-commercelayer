@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -12,20 +13,41 @@ import (
 	"time"
 )
 
-func init() {
-	testAccProviderCommercelayer = Provider()
+var testAccProviderCommercelayer *schema.Provider
+var testAccProviderFactories = map[string]func() (*schema.Provider, error){}
+
+func TestMain(m *testing.M) {
+	tokenFile, err := ioutil.TempFile("", "token")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("using token file %s\n", tokenFile.Name())
+
+	testAccProviderCommercelayer = Provider(WithTokenCacheFile(tokenFile))()
 	testAccProviderFactories = map[string]func() (*schema.Provider, error){
 		"commercelayer": func() (*schema.Provider, error) {
 			return testAccProviderCommercelayer, nil
 		},
 	}
+
+	retCode := m.Run()
+
+	err = tokenFile.Close()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	err = os.Remove(tokenFile.Name())
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("removed token file %s\n", tokenFile.Name())
+
+	os.Exit(retCode)
 }
 
-var testAccProviderCommercelayer *schema.Provider
-var testAccProviderFactories = map[string]func() (*schema.Provider, error){}
-
 func TestProvider(t *testing.T) {
-	provider := Provider()
+	provider := Provider()()
 	if err := provider.InternalValidate(); err != nil {
 		t.Fatalf("err: %s", err)
 	}

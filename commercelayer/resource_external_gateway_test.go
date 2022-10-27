@@ -41,7 +41,7 @@ func TestAccExternalGateway_basic(t *testing.T) {
 		CheckDestroy:      testAccCheckExternalGatewayDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccExternalGatewayCreate(),
+				Config: testAccExternalGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", externalGatewayType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro_external_gateway"),
@@ -54,7 +54,7 @@ func TestAccExternalGateway_basic(t *testing.T) {
 				),
 			},
 			{
-				Config: testAccExternalGatewayUpdateWithUrls(),
+				Config: testAccExternalGatewayUpdateWithUrls(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro_external_gateway_changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
@@ -66,7 +66,7 @@ func TestAccExternalGateway_basic(t *testing.T) {
 				),
 			},
 			{
-				Config: testAccExternalGatewayUpdateWithoutUrls(),
+				Config: testAccExternalGatewayUpdateWithoutUrls(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					//TODO: check how to do custom value checks
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.authorize_url", ""),
@@ -80,7 +80,7 @@ func TestAccExternalGateway_basic(t *testing.T) {
 	})
 }
 
-func testAccExternalGatewayCreate() string {
+func testAccExternalGatewayCreate(testName string) string {
 	return hclTemplate(`
 	resource "commercelayer_external_gateway" "incentro_external_gateway" {
 		  attributes {
@@ -92,13 +92,14 @@ func testAccExternalGatewayCreate() string {
 			token_url = "https://example.com"
 			metadata = {
 			  foo : "bar"
+			  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
-func testAccExternalGatewayUpdateWithUrls() string {
+func testAccExternalGatewayUpdateWithUrls(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_external_gateway" "incentro_external_gateway" {
 		  attributes {
@@ -110,18 +111,22 @@ func testAccExternalGatewayUpdateWithUrls() string {
 			token_url = "https://foo.com"
 			metadata = {
 			  bar : "foo"
+			  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
-func testAccExternalGatewayUpdateWithoutUrls() string {
+func testAccExternalGatewayUpdateWithoutUrls(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_external_gateway" "incentro_external_gateway" {
 		  attributes {
 			name          = "incentro_external_gateway_changed"
+			metadata = {
+			  testName: "{{.testName}}"
+			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }

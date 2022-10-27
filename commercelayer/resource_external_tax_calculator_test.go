@@ -41,7 +41,7 @@ func TestAccExternalTaxCalculator_basic(t *testing.T) {
 		CheckDestroy:      testAccCheckExternalTaxCalculatorDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccExternalTaxCalculatorCreate(),
+				Config: testAccExternalTaxCalculatorCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", externalTaxCalculatorType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro_external_tax_calculator"),
@@ -50,7 +50,7 @@ func TestAccExternalTaxCalculator_basic(t *testing.T) {
 				),
 			},
 			{
-				Config: testAccExternalTaxCalculatorUpdateWithUrls(),
+				Config: testAccExternalTaxCalculatorUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro_external_tax_calculator_changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
@@ -61,7 +61,7 @@ func TestAccExternalTaxCalculator_basic(t *testing.T) {
 	})
 }
 
-func testAccExternalTaxCalculatorCreate() string {
+func testAccExternalTaxCalculatorCreate(testName string) string {
 	return hclTemplate(`
 	resource "commercelayer_external_tax_calculator" "incentro_external_tax_calculator" {
 	  attributes {
@@ -69,13 +69,14 @@ func testAccExternalTaxCalculatorCreate() string {
 		tax_calculator_url = "https://example.com"
 		metadata = {
 		  foo : "bar"
+		  testName: "{{.testName}}"
 		}
 	  }
 	}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
-func testAccExternalTaxCalculatorUpdateWithUrls() string {
+func testAccExternalTaxCalculatorUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_external_tax_calculator" "incentro_external_tax_calculator" {
 		  attributes {
@@ -83,8 +84,9 @@ func testAccExternalTaxCalculatorUpdateWithUrls() string {
 			tax_calculator_url = "https://foo.com"
 			metadata = {
 			  bar : "foo"
+		 	  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }

@@ -55,7 +55,7 @@ func TestAccMerchant_basic(t *testing.T) {
 		CheckDestroy:      testAccCheckMerchantDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: strings.Join([]string{testAccAddressCreate(), testAccMerchantCreate()}, "\n"),
+				Config: strings.Join([]string{testAccAddressCreate(resourceName), testAccMerchantCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", merchantType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Merchant"),
@@ -63,7 +63,7 @@ func TestAccMerchant_basic(t *testing.T) {
 				),
 			},
 			{
-				Config: strings.Join([]string{testAccAddressCreate(), testAccMerchantUpdate()}, "\n"),
+				Config: strings.Join([]string{testAccAddressCreate(resourceName), testAccMerchantUpdate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Updated Merchant"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
@@ -73,13 +73,14 @@ func TestAccMerchant_basic(t *testing.T) {
 	})
 }
 
-func testAccMerchantCreate() string {
+func testAccMerchantCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_merchant" "incentro_merchant" {
 		  attributes {
 			name = "Incentro Merchant"
 			metadata = {
 			  foo : "bar"
+		 	  testName: "{{.testName}}"
 			}
 		  }
 		
@@ -87,16 +88,17 @@ func testAccMerchantCreate() string {
 			address_id = commercelayer_address.incentro_address.id
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
-func testAccMerchantUpdate() string {
+func testAccMerchantUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_merchant" "incentro_merchant" {
 		  attributes {
 			name = "Incentro Updated Merchant"
 			metadata = {
 			  bar : "foo"
+		 	  testName: "{{.testName}}"
 			}
 		  }
 		
@@ -104,5 +106,5 @@ func testAccMerchantUpdate() string {
 			address_id = commercelayer_address.incentro_address.id
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }

@@ -1,0 +1,37 @@
+{
+  "id" : "cb56c0e4-ad63-4c95-889f-e385a55bbb38",
+  "name" : "api_external_tax_calculators_kyzeltkzqe",
+  "request" : {
+    "url" : "/api/external_tax_calculators/kyzeLTkzqE",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "31",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "8cd16b40-854e-4364-bde2-ec151e450312",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 07:25:46 GMT",
+      "X-Served-By" : "cache-ams21060-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666855546.124096,VS0,VE82",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "cb56c0e4-ad63-4c95-889f-e385a55bbb38",
+  "persistent" : true,
+  "insertionIndex" : 206
+}

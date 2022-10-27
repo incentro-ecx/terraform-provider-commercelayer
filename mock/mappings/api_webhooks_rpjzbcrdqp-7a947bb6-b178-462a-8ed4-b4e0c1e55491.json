@@ -1,0 +1,43 @@
+{
+  "id" : "7a947bb6-b178-462a-8ed4-b4e0c1e55491",
+  "name" : "api_webhooks_rpjzbcrdqp",
+  "request" : {
+    "url" : "/api/webhooks/rPjZbCRDQP",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"rPjZbCRDQP\",\"type\":\"webhooks\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/rPjZbCRDQP\"},\"attributes\":{\"name\":\"incentro updated webhook\",\"topic\":\"orders.place\",\"callback_url\":\"http://other-example.url\",\"include_resources\":[\"line_items\"],\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"4bae06b2ff1e10e552799020114d1bb6\",\"created_at\":\"2022-10-27T07:25:50.360Z\",\"updated_at\":\"2022-10-27T07:25:51.051Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_webhook.incentro_webhook\"}},\"relationships\":{\"last_event_callbacks\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/rPjZbCRDQP/relationships/last_event_callbacks\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/rPjZbCRDQP/last_event_callbacks\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "56",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"bc35657cbcfd32d8553a23ee00099378\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "1362120e-019f-483b-a4a0-0c2ced9264f9",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 07:25:51 GMT",
+      "X-Served-By" : "cache-ams21060-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666855551.227120,VS0,VE42",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "7a947bb6-b178-462a-8ed4-b4e0c1e55491",
+  "persistent" : true,
+  "scenarioName" : "scenario-8-api-webhooks-rPjZbCRDQP",
+  "requiredScenarioState" : "scenario-8-api-webhooks-rPjZbCRDQP-3",
+  "newScenarioState" : "scenario-8-api-webhooks-rPjZbCRDQP-4",
+  "insertionIndex" : 232
+}
