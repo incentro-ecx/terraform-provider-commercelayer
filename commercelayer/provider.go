@@ -8,6 +8,7 @@ import (
 	"github.com/incentro-dc/go-commercelayer-sdk/api"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"
+	"os"
 )
 
 var baseSchema = map[string]*schema.Schema{
@@ -50,23 +51,19 @@ var baseResourceMap = map[string]*schema.Resource{
 }
 
 type Configuration struct {
-	cached        bool
-	cacheLocation string
+	cacheFile *os.File
 }
 
 type ProviderOption func(configuration *Configuration)
 
-func WithCachedToken(cacheLocation string) ProviderOption {
+func WithTokenCacheFile(cacheFile *os.File) ProviderOption {
 	return func(c *Configuration) {
-		c.cached = true
-		c.cacheLocation = cacheLocation
+		c.cacheFile = cacheFile
 	}
 }
 
 func Provider(opts ...ProviderOption) plugin.ProviderFunc {
-	c := Configuration{
-		cached: false,
-	}
+	c := Configuration{}
 
 	for _, opt := range opts {
 		opt(&c)
@@ -97,8 +94,8 @@ func (c *Configuration) configureFunc(ctx context.Context, d *schema.ResourceDat
 	newCtx := context.Background()
 
 	var tokenSource = credentials.TokenSource(newCtx)
-	if c.cached {
-		tokenSource = NewCachedTokenSource(tokenSource, c.cacheLocation)
+	if c.cacheFile != nil {
+		tokenSource = NewCachedTokenSource(tokenSource, c.cacheFile)
 	}
 
 	httpClient := oauth2.NewClient(newCtx, tokenSource)

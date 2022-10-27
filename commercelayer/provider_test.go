@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -16,10 +17,13 @@ var testAccProviderCommercelayer *schema.Provider
 var testAccProviderFactories = map[string]func() (*schema.Provider, error){}
 
 func TestMain(m *testing.M) {
-	tokenFile := fmt.Sprintf("%s/provider-token.json", os.TempDir())
-	fmt.Printf("using token file %s", tokenFile)
+	tokenFile, err := ioutil.TempFile("", "token")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("using token file %s\n", tokenFile.Name())
 
-	testAccProviderCommercelayer = Provider(WithCachedToken(tokenFile))()
+	testAccProviderCommercelayer = Provider(WithTokenCacheFile(tokenFile))()
 	testAccProviderFactories = map[string]func() (*schema.Provider, error){
 		"commercelayer": func() (*schema.Provider, error) {
 			return testAccProviderCommercelayer, nil
@@ -28,11 +32,16 @@ func TestMain(m *testing.M) {
 
 	retCode := m.Run()
 
-	e := os.Remove(tokenFile)
-	if e != nil {
-		log.Fatal(e)
+	err = tokenFile.Close()
+	if err != nil {
+		log.Fatal(err)
 	}
-	fmt.Printf("removed token file %s", tokenFile)
+
+	err = os.Remove(tokenFile.Name())
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Printf("removed token file %s\n", tokenFile.Name())
 
 	os.Exit(retCode)
 }
