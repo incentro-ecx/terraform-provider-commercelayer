@@ -6,7 +6,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
 	"net/http"
-	"testing"
 )
 
 func testAccCheckInventoryModelDestroy(s *terraform.State) error {
@@ -29,18 +28,18 @@ func testAccCheckInventoryModelDestroy(s *terraform.State) error {
 	return nil
 }
 
-func TestAccInventoryModel_basic(t *testing.T) {
+func (s *AcceptanceSuite) TestAccInventoryModel_basic() {
 	resourceName := "commercelayer_inventory_model.incentro_inventory_model"
 
-	resource.Test(t, resource.TestCase{
+	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
-			testAccPreCheck(t)
+			testAccPreCheck(s)
 		},
 		ProviderFactories: testAccProviderFactories,
 		CheckDestroy:      testAccCheckInventoryModelDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccInventoryModelCreate(),
+				Config: testAccInventoryModelCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Inventory Model"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.stock_locations_cutoff", "1"),
@@ -48,7 +47,7 @@ func TestAccInventoryModel_basic(t *testing.T) {
 				),
 			},
 			{
-				Config: testAccInventoryModelUpdate(),
+				Config: testAccInventoryModelUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Inventory Model Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.stock_locations_cutoff", "2"),
@@ -59,26 +58,32 @@ func TestAccInventoryModel_basic(t *testing.T) {
 	})
 }
 
-func testAccInventoryModelCreate() string {
+func testAccInventoryModelCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_inventory_model" "incentro_inventory_model" {
 		  attributes {
 			name                   = "Incentro Inventory Model"
 			stock_locations_cutoff = 1
 			strategy               = "no_split"
+			metadata = {
+			  testName: "{{.testName}}"
+			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
-func testAccInventoryModelUpdate() string {
+func testAccInventoryModelUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_inventory_model" "incentro_inventory_model" {
 		  attributes {
 			name                   = "Incentro Inventory Model Changed"
 			stock_locations_cutoff = 2
 			strategy               = "split_shipments"
+			metadata = {
+			  testName: "{{.testName}}"
+			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }

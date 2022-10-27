@@ -1,0 +1,45 @@
+{
+  "id" : "92c7725f-6087-47b7-8b96-9798f4f34492",
+  "name" : "api_inventory_models_dwngysyngl",
+  "request" : {
+    "url" : "/api/inventory_models/dWngySynGL",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"testName\":\"commercelayer_inventory_model.incentro_inventory_model\"},\"name\":\"Incentro Inventory Model Changed\",\"stock_locations_cutoff\":2,\"strategy\":\"split_shipments\"},\"id\":\"dWngySynGL\",\"type\":\"inventory_models\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"dWngySynGL\",\"type\":\"inventory_models\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/dWngySynGL\"},\"attributes\":{\"name\":\"Incentro Inventory Model Changed\",\"strategy\":\"split_shipments\",\"stock_locations_cutoff\":2,\"created_at\":\"2022-10-27T08:56:25.912Z\",\"updated_at\":\"2022-10-27T08:56:26.539Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_model.incentro_inventory_model\"}},\"relationships\":{\"inventory_stock_locations\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/dWngySynGL/relationships/inventory_stock_locations\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/dWngySynGL/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/dWngySynGL/relationships/inventory_return_locations\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/dWngySynGL/inventory_return_locations\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/dWngySynGL/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/dWngySynGL/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "43",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"06dc0464ab3af499d7242a1262d9260d\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "6b1b73a4-5338-47c6-aaa8-9886df97ece1",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 08:56:26 GMT",
+      "X-Served-By" : "cache-ams21022-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666860986.472267,VS0,VE84",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "92c7725f-6087-47b7-8b96-9798f4f34492",
+  "persistent" : true,
+  "insertionIndex" : 36
+}

@@ -6,7 +6,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
-	"testing"
 )
 
 func testAccCheckExternalTaxCalculatorDestroy(s *terraform.State) error {
@@ -30,12 +29,12 @@ func testAccCheckExternalTaxCalculatorDestroy(s *terraform.State) error {
 	return nil
 }
 
-func TestAccExternalTaxCalculator_basic(t *testing.T) {
+func (s *AcceptanceSuite) TestAccExternalTaxCalculator_basic() {
 	resourceName := "commercelayer_external_tax_calculator.incentro_external_tax_calculator"
 
-	resource.Test(t, resource.TestCase{
+	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
-			testAccPreCheck(t)
+			testAccPreCheck(s)
 		},
 		ProviderFactories: testAccProviderFactories,
 		CheckDestroy:      testAccCheckExternalTaxCalculatorDestroy,

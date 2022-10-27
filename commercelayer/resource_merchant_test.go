@@ -7,7 +7,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
 	"strings"
-	"testing"
 )
 
 func testAccCheckMerchantDestroy(s *terraform.State) error {
@@ -44,12 +43,12 @@ func testAccCheckMerchantDestroy(s *terraform.State) error {
 	return nil
 }
 
-func TestAccMerchant_basic(t *testing.T) {
+func (s *AcceptanceSuite) TestAccMerchant_basic() {
 	resourceName := "commercelayer_merchant.incentro_merchant"
 
-	resource.Test(t, resource.TestCase{
+	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
-			testAccPreCheck(t)
+			testAccPreCheck(s)
 		},
 		ProviderFactories: testAccProviderFactories,
 		CheckDestroy:      testAccCheckMerchantDestroy,

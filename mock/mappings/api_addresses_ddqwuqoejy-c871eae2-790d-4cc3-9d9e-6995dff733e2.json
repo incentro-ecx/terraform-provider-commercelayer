@@ -1,0 +1,43 @@
+{
+  "id" : "c871eae2-790d-4cc3-9d9e-6995dff733e2",
+  "name" : "api_addresses_ddqwuqoejy",
+  "request" : {
+    "url" : "/api/addresses/dDqwuQoeJY",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"dDqwuQoeJY\",\"type\":\"addresses\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/addresses/dDqwuQoeJY\"},\"attributes\":{\"business\":true,\"first_name\":null,\"last_name\":null,\"company\":\"Incentro\",\"full_name\":\"Incentro\",\"line_1\":\"Van Nelleweg 1\",\"line_2\":null,\"city\":\"Rotterdam\",\"zip_code\":\"3044 BC\",\"state_code\":\"ZH\",\"country_code\":\"NL\",\"phone\":\"+31(0)10 20 20 544\",\"full_address\":\"Van Nelleweg 1, 3044 BC Rotterdam ZH (NL) +31(0)10 20 20 544\",\"name\":\"Incentro, Van Nelleweg 1, 3044 BC Rotterdam ZH (NL) +31(0)10 20 20 544\",\"email\":null,\"notes\":null,\"lat\":null,\"lng\":null,\"is_localized\":false,\"is_geocoded\":false,\"provider_name\":null,\"map_url\":null,\"static_map_url\":null,\"billing_info\":null,\"created_at\":\"2022-10-27T08:56:28.566Z\",\"updated_at\":\"2022-10-27T08:56:28.566Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.incentro_market\"}},\"relationships\":{\"geocoder\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/addresses/dDqwuQoeJY/relationships/geocoder\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/addresses/dDqwuQoeJY/geocoder\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "57",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"161323c4abaf2e80f923bd4f097b0fd4\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "0f879ef7-4131-474a-aa8c-37273180b1ee",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 08:56:29 GMT",
+      "X-Served-By" : "cache-ams21022-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666860990.522284,VS0,VE41",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "c871eae2-790d-4cc3-9d9e-6995dff733e2",
+  "persistent" : true,
+  "scenarioName" : "scenario-7-api-addresses-dDqwuQoeJY",
+  "requiredScenarioState" : "scenario-7-api-addresses-dDqwuQoeJY-2",
+  "newScenarioState" : "scenario-7-api-addresses-dDqwuQoeJY-3",
+  "insertionIndex" : 53
+}

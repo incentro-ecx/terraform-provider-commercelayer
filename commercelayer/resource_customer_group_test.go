@@ -6,7 +6,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
-	"testing"
 )
 
 func testAccCheckCustomerGroupDestroy(s *terraform.State) error {
@@ -30,12 +29,12 @@ func testAccCheckCustomerGroupDestroy(s *terraform.State) error {
 	return nil
 }
 
-func TestAccCustomerGroup_basic(t *testing.T) {
+func (s *AcceptanceSuite) TestAccCustomerGroup_basic() {
 	resourceName := "commercelayer_customer_group.incentro_customer_group"
 
-	resource.Test(t, resource.TestCase{
+	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
-			testAccPreCheck(t)
+			testAccPreCheck(s)
 		},
 		ProviderFactories: testAccProviderFactories,
 		CheckDestroy:      testAccCheckCustomerGroupDestroy,

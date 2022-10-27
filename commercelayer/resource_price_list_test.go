@@ -7,7 +7,6 @@ import (
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
 	"net/http"
 	"regexp"
-	"testing"
 )
 
 func testAccCheckPriceListDestroy(s *terraform.State) error {
@@ -29,12 +28,12 @@ func testAccCheckPriceListDestroy(s *terraform.State) error {
 	return nil
 }
 
-func TestAccPriceList_basic(t *testing.T) {
+func (s *AcceptanceSuite) TestAccPriceList_basic() {
 	resourceName := "commercelayer_price_list.incentro_price_list"
 
-	resource.Test(t, resource.TestCase{
+	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
-			testAccPreCheck(t)
+			testAccPreCheck(s)
 		},
 		ProviderFactories: testAccProviderFactories,
 		CheckDestroy:      testAccCheckPriceListDestroy,
@@ -60,11 +59,12 @@ func TestAccPriceList_basic(t *testing.T) {
 	})
 }
 
-func TestAccPriceList_invalid(t *testing.T) {
+func (s *AcceptanceSuite) TestAccPriceList_invalid() {
 	resourceName := "commercelayer_price_list.incentro_price_list_invalid_currency"
-	resource.Test(t, resource.TestCase{
+
+	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
-			testAccPreCheck(t)
+			testAccPreCheck(s)
 		},
 		ProviderFactories: testAccProviderFactories,
 		CheckDestroy:      testAccCheckPriceListDestroy,
@@ -89,7 +89,7 @@ func testAccPriceListCreate(testName string) string {
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
 func testAccPriceListUpdate(testName string) string {

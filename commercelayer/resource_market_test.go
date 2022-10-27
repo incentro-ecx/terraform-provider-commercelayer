@@ -7,7 +7,6 @@ import (
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
 	"net/http"
 	"strings"
-	"testing"
 )
 
 func testAccCheckMarketDestroy(s *terraform.State) error {
@@ -30,23 +29,23 @@ func testAccCheckMarketDestroy(s *terraform.State) error {
 	return nil
 }
 
-func TestAccMarket_basic(t *testing.T) {
+func (s *AcceptanceSuite) TestAccMarket_basic() {
 	resourceName := "commercelayer_market.incentro_market"
 
-	resource.Test(t, resource.TestCase{
+	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
-			testAccPreCheck(t)
+			testAccPreCheck(s)
 		},
 		ProviderFactories: testAccProviderFactories,
 		CheckDestroy:      testAccCheckMarketDestroy,
 		Steps: []resource.TestStep{
 			{
 				Config: strings.Join([]string{
-					testAccAddressCreate(),
-					testAccInventoryModelCreate(),
-					testAccMerchantCreate(),
-					testAccPriceListCreate(),
-					testAccMarketCreate()}, "\n",
+					testAccAddressCreate(resourceName),
+					testAccInventoryModelCreate(resourceName),
+					testAccMerchantCreate(resourceName),
+					testAccPriceListCreate(resourceName),
+					testAccMarketCreate(resourceName)}, "\n",
 				),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Market"),
@@ -55,11 +54,11 @@ func TestAccMarket_basic(t *testing.T) {
 			},
 			{
 				Config: strings.Join([]string{
-					testAccAddressCreate(),
-					testAccInventoryModelCreate(),
-					testAccMerchantCreate(),
-					testAccPriceListCreate(),
-					testAccMarketUpdate()}, "\n",
+					testAccAddressCreate(resourceName),
+					testAccInventoryModelCreate(resourceName),
+					testAccMerchantCreate(resourceName),
+					testAccPriceListCreate(resourceName),
+					testAccMarketUpdate(resourceName)}, "\n",
 				),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Market Changed"),
@@ -70,12 +69,15 @@ func TestAccMarket_basic(t *testing.T) {
 	})
 }
 
-func testAccMarketCreate() string {
+func testAccMarketCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_market" "incentro_market" {
 		  attributes {
 			name              = "Incentro Market"
 			facebook_pixel_id = "pixel"
+			metadata = {
+			  testName: "{{.testName}}"
+			}
 		  }
 		
 		  relationships {
@@ -84,15 +86,18 @@ func testAccMarketCreate() string {
 			price_list_id      = commercelayer_price_list.incentro_price_list.id
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
-func testAccMarketUpdate() string {
+func testAccMarketUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_market" "incentro_market" {
 		  attributes {
 			name              = "Incentro Market Changed"
 			facebook_pixel_id = "pixelchanged"
+			metadata = {
+			  testName: "{{.testName}}"
+			}
 		  }
 		
 		  relationships {
@@ -101,5 +106,5 @@ func testAccMarketUpdate() string {
 			price_list_id      = commercelayer_price_list.incentro_price_list.id
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }

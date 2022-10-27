@@ -1,0 +1,37 @@
+{
+  "id" : "aea00c4c-6fd7-4e1e-ba0f-d4925798b594",
+  "name" : "api_merchants_rbalrhevex",
+  "request" : {
+    "url" : "/api/merchants/RbAlRHeVEx",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "79",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "d8c2230a-2909-4350-90ca-9021e51a073c",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 08:56:33 GMT",
+      "X-Served-By" : "cache-ams21033-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666860993.006269,VS0,VE79",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "aea00c4c-6fd7-4e1e-ba0f-d4925798b594",
+  "persistent" : true,
+  "insertionIndex" : 77
+}
