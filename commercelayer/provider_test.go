@@ -15,7 +15,7 @@ import (
 var testAccProviderCommercelayer *schema.Provider
 var testAccProviderFactories = map[string]func() (*schema.Provider, error){}
 
-func init() {
+func TestMain(m *testing.M) {
 	tokenFile := fmt.Sprintf("%s/provider-token.json", os.TempDir())
 	fmt.Printf("using token file %s", tokenFile)
 
@@ -25,6 +25,16 @@ func init() {
 			return testAccProviderCommercelayer, nil
 		},
 	}
+
+	retCode := m.Run()
+
+	e := os.Remove(tokenFile)
+	if e != nil {
+		log.Fatal(e)
+	}
+	fmt.Printf("removed token file %s", tokenFile)
+
+	os.Exit(retCode)
 }
 
 func TestProvider(t *testing.T) {
