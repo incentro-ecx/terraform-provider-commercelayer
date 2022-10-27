@@ -1,0 +1,44 @@
+{
+  "id" : "6618e14f-9b97-4bbb-863e-4ab27d1c601c",
+  "name" : "api_price_lists_alnoycnjbl",
+  "request" : {
+    "url" : "/api/price_lists/AlnOyCNJbL",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"AlnOyCNJbL\",\"type\":\"price_lists\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/AlnOyCNJbL\"},\"attributes\":{\"name\":\"incentro price list\",\"currency_code\":\"EUR\",\"tax_included\":true,\"created_at\":\"2022-10-27T07:25:48.871Z\",\"updated_at\":\"2022-10-27T07:25:48.871Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"<no value>\"}},\"relationships\":{\"prices\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/AlnOyCNJbL/relationships/prices\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/AlnOyCNJbL/prices\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/AlnOyCNJbL/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/AlnOyCNJbL/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "47",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Cache-Control" : "public, no-cache",
+      "Etag" : "W/\"a6ab823465d8d40d7d3641e4d29507d4\"",
+      "X-Request-Id" : "e61bde59-d843-4d86-ae88-efdf8c2cb018",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 07:25:49 GMT",
+      "Age" : "0",
+      "X-Served-By" : "cache-ams21062-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666855549.049103,VS0,VE43",
+      "Vary" : "Authorization, Origin"
+    }
+  },
+  "uuid" : "6618e14f-9b97-4bbb-863e-4ab27d1c601c",
+  "persistent" : true,
+  "scenarioName" : "scenario-7-api-price_lists-AlnOyCNJbL",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-7-api-price_lists-AlnOyCNJbL-2",
+  "insertionIndex" : 222
+}

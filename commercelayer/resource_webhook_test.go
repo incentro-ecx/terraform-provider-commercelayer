@@ -41,7 +41,7 @@ func TestAccWebhook_basic(t *testing.T) {
 		CheckDestroy:      testAccCheckWebhookDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccWebhookCreate(),
+				Config: testAccWebhookCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", webhookType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro webhook"),
@@ -52,7 +52,7 @@ func TestAccWebhook_basic(t *testing.T) {
 				),
 			},
 			{
-				Config: testAccWebhookUpdate(),
+				Config: testAccWebhookUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "incentro updated webhook"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.topic", "orders.place"),
@@ -65,7 +65,7 @@ func TestAccWebhook_basic(t *testing.T) {
 	})
 }
 
-func testAccWebhookCreate() string {
+func testAccWebhookCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_webhook" "incentro_webhook" {
 		  attributes {
@@ -77,13 +77,14 @@ func testAccWebhookCreate() string {
 			]
 			metadata = {
 			  foo : "bar"
+		 	  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
-func testAccWebhookUpdate() string {
+func testAccWebhookUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_webhook" "incentro_webhook" {
 		  attributes {
@@ -95,8 +96,9 @@ func testAccWebhookUpdate() string {
 			]
 			metadata = {
 			  bar : "foo"
+		 	  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }

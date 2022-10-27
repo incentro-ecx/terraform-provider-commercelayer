@@ -7,12 +7,12 @@ import (
 	"os"
 )
 
-type cachedReusableTokenSource struct {
+type CachedTokenSource struct {
 	innerTokenSource oauth2.TokenSource
 	fileLocation     string
 }
 
-func newCachedTokenSource(tokenSource oauth2.TokenSource, fileLocation string) *cachedReusableTokenSource {
+func NewCachedTokenSource(tokenSource oauth2.TokenSource, fileLocation string) *CachedTokenSource {
 	cacheFile, err := os.OpenFile(fileLocation, os.O_CREATE|os.O_RDONLY, 0644)
 	if err != nil {
 		panic(err)
@@ -31,13 +31,13 @@ func newCachedTokenSource(tokenSource oauth2.TokenSource, fileLocation string) *
 
 	innerTokenSource := oauth2.ReuseTokenSource(&token, tokenSource)
 
-	return &cachedReusableTokenSource{
+	return &CachedTokenSource{
 		innerTokenSource: innerTokenSource,
 		fileLocation:     fileLocation,
 	}
 }
 
-func (c *cachedReusableTokenSource) Token() (*oauth2.Token, error) {
+func (c *CachedTokenSource) Token() (*oauth2.Token, error) {
 	token, err := c.innerTokenSource.Token()
 	if err != nil {
 		return token, err

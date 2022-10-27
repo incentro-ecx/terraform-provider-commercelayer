@@ -41,7 +41,7 @@ func TestAccAddress_basic(t *testing.T) {
 		CheckDestroy:      testAccCheckAddressDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccAddressCreate(),
+				Config: testAccAddressCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", addressType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.business", "true"),
@@ -56,7 +56,7 @@ func TestAccAddress_basic(t *testing.T) {
 				),
 			},
 			{
-				Config: testAccAddressUpdate(),
+				Config: testAccAddressUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.line_1", "Moermanskkade 113"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.zip_code", "1013 BC"),
@@ -71,7 +71,7 @@ func TestAccAddress_basic(t *testing.T) {
 	})
 }
 
-func testAccAddressCreate() string {
+func testAccAddressCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_address" "incentro_address" {
 		  attributes {
@@ -85,13 +85,14 @@ func testAccAddressCreate() string {
 			state_code   = "ZH"
 			metadata = {
 			  foo: "bar"
+			  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }
 
-func testAccAddressUpdate() string {
+func testAccAddressUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_address" "incentro_address" {
 		  attributes {
@@ -105,8 +106,9 @@ func testAccAddressUpdate() string {
 			state_code   = "NH"
 			metadata = {
 			  bar: "foo"
+			  testName: "{{.testName}}"
 			}
 		  }
 		}
-	`, map[string]any{})
+	`, map[string]any{"testName": testName})
 }

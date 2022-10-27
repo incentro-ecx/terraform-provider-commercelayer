@@ -1,0 +1,43 @@
+{
+  "id" : "e4a16bde-9771-428a-8cdf-622fb8868f78",
+  "name" : "api_merchants_embwvhqjvn",
+  "request" : {
+    "url" : "/api/merchants/eMBwVHqjVn",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"eMBwVHqjVn\",\"type\":\"merchants\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/merchants/eMBwVHqjVn\"},\"attributes\":{\"name\":\"Incentro Merchant\",\"created_at\":\"2022-10-27T07:25:46.714Z\",\"updated_at\":\"2022-10-27T07:25:46.714Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_merchant.incentro_merchant\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/merchants/eMBwVHqjVn/relationships/address\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/merchants/eMBwVHqjVn/address\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/merchants/eMBwVHqjVn/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/merchants/eMBwVHqjVn/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "38",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"fa045bafddcb29f18986ff46beda785f\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "14bb6caa-4427-442b-b5f1-5b7f31cd707a",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 07:25:47 GMT",
+      "X-Served-By" : "cache-ams21029-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666855547.351297,VS0,VE42",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "e4a16bde-9771-428a-8cdf-622fb8868f78",
+  "persistent" : true,
+  "scenarioName" : "scenario-6-api-merchants-eMBwVHqjVn",
+  "requiredScenarioState" : "scenario-6-api-merchants-eMBwVHqjVn-2",
+  "newScenarioState" : "scenario-6-api-merchants-eMBwVHqjVn-3",
+  "insertionIndex" : 213
+}

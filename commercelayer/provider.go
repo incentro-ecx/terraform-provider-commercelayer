@@ -10,44 +10,43 @@ import (
 	"golang.org/x/oauth2/clientcredentials"
 )
 
-var baseProvider = &schema.Provider{
-	Schema: map[string]*schema.Schema{
-		"client_id": {
-			Type:        schema.TypeString,
-			Required:    true,
-			DefaultFunc: schema.EnvDefaultFunc("COMMERCELAYER_CLIENT_ID", nil),
-			Description: "The client id of a Commercelayer store",
-			Sensitive:   true,
-		},
-		"client_secret": {
-			Type:        schema.TypeString,
-			Required:    true,
-			DefaultFunc: schema.EnvDefaultFunc("COMMERCELAYER_CLIENT_SECRET", nil),
-			Description: "The client secret of a Commercelayer store",
-			Sensitive:   true,
-		},
-		"api_endpoint": {
-			Type:        schema.TypeString,
-			Required:    true,
-			DefaultFunc: schema.EnvDefaultFunc("COMMERCELAYER_API_ENDPOINT", nil),
-			Description: "The Commercelayer api endpoint",
-		},
-		"auth_endpoint": {
-			Type:        schema.TypeString,
-			Required:    true,
-			DefaultFunc: schema.EnvDefaultFunc("COMMERCELAYER_AUTH_ENDPOINT", nil),
-			Description: "The Commercelayer auth endpoint",
-		},
+var baseSchema = map[string]*schema.Schema{
+	"client_id": {
+		Type:        schema.TypeString,
+		Required:    true,
+		DefaultFunc: schema.EnvDefaultFunc("COMMERCELAYER_CLIENT_ID", nil),
+		Description: "The client id of a Commercelayer store",
+		Sensitive:   true,
 	},
-	ResourcesMap: map[string]*schema.Resource{
-		"commercelayer_address":                 resourceAddress(),
-		"commercelayer_merchant":                resourceMerchant(),
-		"commercelayer_price_list":              resourcePriceList(),
-		"commercelayer_customer_group":          resourceCustomerGroup(),
-		"commercelayer_webhook":                 resourceWebhook(),
-		"commercelayer_external_gateway":        resourceExternalGateway(),
-		"commercelayer_external_tax_calculator": resourceExternalTaxCalculator(),
+	"client_secret": {
+		Type:        schema.TypeString,
+		Required:    true,
+		DefaultFunc: schema.EnvDefaultFunc("COMMERCELAYER_CLIENT_SECRET", nil),
+		Description: "The client secret of a Commercelayer store",
+		Sensitive:   true,
 	},
+	"api_endpoint": {
+		Type:        schema.TypeString,
+		Required:    true,
+		DefaultFunc: schema.EnvDefaultFunc("COMMERCELAYER_API_ENDPOINT", nil),
+		Description: "The Commercelayer api endpoint",
+	},
+	"auth_endpoint": {
+		Type:        schema.TypeString,
+		Required:    true,
+		DefaultFunc: schema.EnvDefaultFunc("COMMERCELAYER_AUTH_ENDPOINT", nil),
+		Description: "The Commercelayer auth endpoint",
+	},
+}
+
+var baseResourceMap = map[string]*schema.Resource{
+	"commercelayer_address":                 resourceAddress(),
+	"commercelayer_merchant":                resourceMerchant(),
+	"commercelayer_price_list":              resourcePriceList(),
+	"commercelayer_customer_group":          resourceCustomerGroup(),
+	"commercelayer_webhook":                 resourceWebhook(),
+	"commercelayer_external_gateway":        resourceExternalGateway(),
+	"commercelayer_external_tax_calculator": resourceExternalTaxCalculator(),
 }
 
 type Configuration struct {
@@ -74,8 +73,11 @@ func Provider(opts ...ProviderOption) plugin.ProviderFunc {
 	}
 
 	return func() *schema.Provider {
-		baseProvider.ConfigureContextFunc = c.configureFunc
-		return baseProvider
+		return &schema.Provider{
+			Schema:               baseSchema,
+			ResourcesMap:         baseResourceMap,
+			ConfigureContextFunc: c.configureFunc,
+		}
 	}
 }
 
@@ -96,8 +98,7 @@ func (c *Configuration) configureFunc(ctx context.Context, d *schema.ResourceDat
 
 	var tokenSource = credentials.TokenSource(newCtx)
 	if c.cached {
-		tokenSource = newCachedTokenSource(tokenSource, c.cacheLocation)
-		tokenSource.Token()
+		tokenSource = NewCachedTokenSource(tokenSource, c.cacheLocation)
 	}
 
 	httpClient := oauth2.NewClient(newCtx, tokenSource)

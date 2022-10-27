@@ -12,9 +12,11 @@ import (
 	"time"
 )
 
+var testAccProviderCommercelayer *schema.Provider
+var testAccProviderFactories = map[string]func() (*schema.Provider, error){}
+
 func init() {
 	tokenFile := fmt.Sprintf("%s/provider-token.json", os.TempDir())
-
 	fmt.Printf("using token file %s", tokenFile)
 
 	testAccProviderCommercelayer = Provider(WithCachedToken(tokenFile))()
@@ -24,9 +26,6 @@ func init() {
 		},
 	}
 }
-
-var testAccProviderCommercelayer *schema.Provider
-var testAccProviderFactories = map[string]func() (*schema.Provider, error){}
 
 func TestProvider(t *testing.T) {
 	provider := Provider()()
