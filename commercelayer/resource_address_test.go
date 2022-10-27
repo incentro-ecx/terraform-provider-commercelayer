@@ -6,7 +6,6 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
-	"testing"
 )
 
 func testAccCheckAddressDestroy(s *terraform.State) error {
@@ -30,12 +29,12 @@ func testAccCheckAddressDestroy(s *terraform.State) error {
 	return nil
 }
 
-func TestAccAddress_basic(t *testing.T) {
+func (s *AcceptanceSuite) TestAccAddress_basic() {
 	resourceName := "commercelayer_address.incentro_address"
 
-	resource.Test(t, resource.TestCase{
+	resource.Test(s.T(), resource.TestCase{
 		PreCheck: func() {
-			testAccPreCheck(t)
+			testAccPreCheck(s)
 		},
 		ProviderFactories: testAccProviderFactories,
 		CheckDestroy:      testAccCheckAddressDestroy,

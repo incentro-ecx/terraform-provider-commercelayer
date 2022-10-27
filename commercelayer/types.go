@@ -9,4 +9,7 @@ const (
 	webhookType               = "webhooks"
 	externalGatewayType       = "external_gateways"
 	externalTaxCalculatorType = "external_tax_calculators"
+	marketType                = "markets"
+	taxCalculatorType         = "tax_calculators"
+	inventoryModelType        = "inventory_models"
 )

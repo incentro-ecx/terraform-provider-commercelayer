@@ -1,0 +1,43 @@
+{
+  "id" : "a8a60b10-2a5b-4b0d-805f-7c16c63155e5",
+  "name" : "api_external_tax_calculators_pyepwtrlqz",
+  "request" : {
+    "url" : "/api/external_tax_calculators/pyEPwTrLqz",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"pyEPwTrLqz\",\"type\":\"external_tax_calculators\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/pyEPwTrLqz\"},\"attributes\":{\"name\":\"incentro_external_tax_calculator\",\"created_at\":\"2022-10-27T08:56:24.386Z\",\"updated_at\":\"2022-10-27T08:56:24.386Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_external_tax_calculator.incentro_external_tax_calculator\"},\"tax_calculator_url\":\"https://example.com\",\"shared_secret\":\"e05fce476a548be9a10bf2408ba798e5\"},\"relationships\":{\"tax_categories\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/pyEPwTrLqz/relationships/tax_categories\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/pyEPwTrLqz/tax_categories\"}},\"markets\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/pyEPwTrLqz/relationships/markets\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/pyEPwTrLqz/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/pyEPwTrLqz/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/pyEPwTrLqz/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "36",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"f48f9451e35bf93a6ace1a8e211cfdaf\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "1942d6e7-57a3-44a5-8e23-fcb17b354e57",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 08:56:24 GMT",
+      "X-Served-By" : "cache-ams21070-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666860985.793269,VS0,VE43",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "a8a60b10-2a5b-4b0d-805f-7c16c63155e5",
+  "persistent" : true,
+  "scenarioName" : "scenario-4-api-external_tax_calculators-pyEPwTrLqz",
+  "requiredScenarioState" : "scenario-4-api-external_tax_calculators-pyEPwTrLqz-2",
+  "newScenarioState" : "scenario-4-api-external_tax_calculators-pyEPwTrLqz-3",
+  "insertionIndex" : 28
+}

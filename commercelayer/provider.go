@@ -8,7 +8,6 @@ import (
 	"github.com/incentro-dc/go-commercelayer-sdk/api"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"
-	"os"
 )
 
 var baseSchema = map[string]*schema.Schema{
@@ -48,17 +47,19 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_webhook":                 resourceWebhook(),
 	"commercelayer_external_gateway":        resourceExternalGateway(),
 	"commercelayer_external_tax_calculator": resourceExternalTaxCalculator(),
+	"commercelayer_market":                  resourceMarket(),
+	"commercelayer_inventory_model":         resourceInventoryModel(),
 }
 
 type Configuration struct {
-	cacheFile *os.File
+	tokenSource oauth2.TokenSource
 }
 
 type ProviderOption func(configuration *Configuration)
 
-func WithTokenCacheFile(cacheFile *os.File) ProviderOption {
+func WithTokenSource(tokenSource oauth2.TokenSource) ProviderOption {
 	return func(c *Configuration) {
-		c.cacheFile = cacheFile
+		c.tokenSource = tokenSource
 	}
 }
 
@@ -94,8 +95,8 @@ func (c *Configuration) configureFunc(ctx context.Context, d *schema.ResourceDat
 	newCtx := context.Background()
 
 	var tokenSource = credentials.TokenSource(newCtx)
-	if c.cacheFile != nil {
-		tokenSource = NewCachedTokenSource(tokenSource, c.cacheFile)
+	if c.tokenSource != nil {
+		tokenSource = c.tokenSource
 	}
 
 	httpClient := oauth2.NewClient(newCtx, tokenSource)

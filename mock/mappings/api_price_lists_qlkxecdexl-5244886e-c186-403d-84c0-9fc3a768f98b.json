@@ -1,0 +1,37 @@
+{
+  "id" : "5244886e-c186-403d-84c0-9fc3a768f98b",
+  "name" : "api_price_lists_qlkxecdexl",
+  "request" : {
+    "url" : "/api/price_lists/qlKxECdexL",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "87",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "f8e47edd-8b3e-4f2b-9c6c-815842005b32",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 08:56:34 GMT",
+      "X-Served-By" : "cache-ams21070-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666860995.649169,VS0,VE49",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "5244886e-c186-403d-84c0-9fc3a768f98b",
+  "persistent" : true,
+  "insertionIndex" : 86
+}

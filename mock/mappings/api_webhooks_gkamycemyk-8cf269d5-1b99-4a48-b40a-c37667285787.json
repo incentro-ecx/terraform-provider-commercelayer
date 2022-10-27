@@ -1,0 +1,45 @@
+{
+  "id" : "8cf269d5-1b99-4a48-b40a-c37667285787",
+  "name" : "api_webhooks_gkamycemyk",
+  "request" : {
+    "url" : "/api/webhooks/gKaMYCEmYK",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"callback_url\":\"http://other-example.url\",\"include_resources\":[\"line_items\"],\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_webhook.incentro_webhook\"},\"name\":\"incentro updated webhook\",\"topic\":\"orders.place\"},\"id\":\"gKaMYCEmYK\",\"type\":\"webhooks\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"gKaMYCEmYK\",\"type\":\"webhooks\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/gKaMYCEmYK\"},\"attributes\":{\"name\":\"incentro updated webhook\",\"topic\":\"orders.place\",\"callback_url\":\"http://other-example.url\",\"include_resources\":[\"line_items\"],\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"e1a3d0ff6d7978667d053cf9105e13f5\",\"created_at\":\"2022-10-27T08:56:35.143Z\",\"updated_at\":\"2022-10-27T08:56:35.817Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_webhook.incentro_webhook\"}},\"relationships\":{\"last_event_callbacks\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/gKaMYCEmYK/relationships/last_event_callbacks\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/webhooks/gKaMYCEmYK/last_event_callbacks\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "92",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"e17de8d4c14e673c7b15950e6b95f988\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "4fb52cef-1d67-4e3e-84e9-2e9f1794037c",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 08:56:35 GMT",
+      "X-Served-By" : "cache-ams21041-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666860996.749402,VS0,VE82",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "8cf269d5-1b99-4a48-b40a-c37667285787",
+  "persistent" : true,
+  "insertionIndex" : 91
+}

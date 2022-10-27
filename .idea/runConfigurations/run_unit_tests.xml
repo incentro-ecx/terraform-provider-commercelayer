@@ -13,8 +13,8 @@
       </ENTRIES>
     </EXTENSION>
     <root_directory value="$PROJECT_DIR$" />
-    <kind value="DIRECTORY" />
-    <package value="github.com/incentro-dc/terraform-provider-commercelayer" />
+    <kind value="PACKAGE" />
+    <package value="github.com/incentro-dc/terraform-provider-commercelayer/commercelayer" />
     <directory value="$PROJECT_DIR$/commercelayer" />
     <filePath value="$PROJECT_DIR$" />
     <framework value="gotest" />

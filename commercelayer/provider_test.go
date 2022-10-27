@@ -2,9 +2,12 @@ package commercelayer
 
 import (
 	"bytes"
+	"context"
 	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
-	"io/ioutil"
+	"github.com/stretchr/testify/suite"
+	"golang.org/x/oauth2"
+	"golang.org/x/oauth2/clientcredentials"
 	"log"
 	"net/http"
 	"os"
@@ -16,34 +19,36 @@ import (
 var testAccProviderCommercelayer *schema.Provider
 var testAccProviderFactories = map[string]func() (*schema.Provider, error){}
 
-func TestMain(m *testing.M) {
-	tokenFile, err := ioutil.TempFile("", "token")
+type AcceptanceSuite struct {
+	suite.Suite
+}
+
+func (s *AcceptanceSuite) SetupSuite() {
+	credentials := clientcredentials.Config{
+		ClientID:     os.Getenv("COMMERCELAYER_CLIENT_ID"),
+		ClientSecret: os.Getenv("COMMERCELAYER_CLIENT_SECRET"),
+		TokenURL:     os.Getenv("COMMERCELAYER_AUTH_ENDPOINT"),
+		Scopes:       []string{},
+	}
+
+	token, err := credentials.Token(context.Background())
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("using token file %s\n", tokenFile.Name())
+	tokenSource := oauth2.StaticTokenSource(token)
 
-	testAccProviderCommercelayer = Provider(WithTokenCacheFile(tokenFile))()
+	testAccProviderCommercelayer = Provider(WithTokenSource(tokenSource))()
 	testAccProviderFactories = map[string]func() (*schema.Provider, error){
 		"commercelayer": func() (*schema.Provider, error) {
 			return testAccProviderCommercelayer, nil
 		},
 	}
+}
 
-	retCode := m.Run()
-
-	err = tokenFile.Close()
-	if err != nil {
-		log.Fatal(err)
+func TestAcceptanceSuite(t *testing.T) {
+	if os.Getenv("TF_ACC") == "1" {
+		suite.Run(t, new(AcceptanceSuite))
 	}
-
-	err = os.Remove(tokenFile.Name())
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Printf("removed token file %s\n", tokenFile.Name())
-
-	os.Exit(retCode)
 }
 
 func TestProvider(t *testing.T) {
@@ -53,7 +58,7 @@ func TestProvider(t *testing.T) {
 	}
 }
 
-func testAccPreCheck(t *testing.T) {
+func testAccPreCheck(s *AcceptanceSuite) {
 	requiredEnvs := []string{
 		"COMMERCELAYER_CLIENT_ID",
 		"COMMERCELAYER_CLIENT_SECRET",
@@ -62,7 +67,7 @@ func testAccPreCheck(t *testing.T) {
 	}
 	for _, val := range requiredEnvs {
 		if os.Getenv(val) == "" {
-			t.Fatalf("%v must be set for acceptance tests", val)
+			s.Failf("%v must be set for acceptance tests", val)
 		}
 	}
 }

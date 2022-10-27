@@ -1,0 +1,37 @@
+{
+  "id" : "44558e34-20b8-4134-b031-158ddecab88e",
+  "name" : "api_markets_eldkxhnxyg",
+  "request" : {
+    "url" : "/api/markets/ElDkXhNXyg",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "64",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "c9dcdfa7-89d5-4dbe-a9a5-0096fb669482",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 27 Oct 2022 08:56:30 GMT",
+      "X-Served-By" : "cache-ams21037-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1666860991.565842,VS0,VE113",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "44558e34-20b8-4134-b031-158ddecab88e",
+  "persistent" : true,
+  "insertionIndex" : 62
+}

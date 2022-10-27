@@ -24,6 +24,17 @@ func stringRef(val interface{}) *string {
 	return &ref
 }
 
+func intToInt32Ref(val interface{}) *int32 {
+	if val == nil {
+		return nil
+	}
+	ref := int32(val.(int))
+	if ref == 0 {
+		return nil
+	}
+	return &ref
+}
+
 func keyValueRef(val interface{}) map[string]interface{} {
 	if val == nil {
 		return map[string]interface{}{}
