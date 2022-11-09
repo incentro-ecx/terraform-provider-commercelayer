@@ -1,6 +1,6 @@
 resource "commercelayer_merchant" "incentro_merchant" {
   attributes {
-    name     = "Incentro Merchant"
+    name = "Incentro Merchant"
     metadata = {
       foo : "bar"
     }

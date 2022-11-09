@@ -1,6 +1,6 @@
 resource "commercelayer_market" "incentro_market" {
   attributes {
-    name              = "Incentro Market"
+    name = "Incentro Market"
     //TODO: check why these are considered invalid
     #    checkout_url        = "http://example.url"
     #    external_prices_url = "http://example.url"

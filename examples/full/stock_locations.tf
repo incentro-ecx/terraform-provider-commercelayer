@@ -3,7 +3,7 @@ resource "commercelayer_stock_location" "incentro_stock_location" {
     name         = "Incentro Stock Location"
     label_format = "PNG"
     suppress_etd = true
-    metadata     = {
+    metadata = {
       foo : "bar"
     }
   }

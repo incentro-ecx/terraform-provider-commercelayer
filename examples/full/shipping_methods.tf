@@ -8,7 +8,7 @@ resource "commercelayer_shipping_method" "incentro_shipping_method" {
     min_weight             = 0.50
     max_weight             = 10
     unit_of_weight         = "kg"
-    metadata               = {
+    metadata = {
       foo : "bar"
     }
   }

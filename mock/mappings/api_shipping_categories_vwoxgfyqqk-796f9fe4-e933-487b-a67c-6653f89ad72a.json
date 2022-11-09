@@ -1,0 +1,37 @@
+{
+  "id" : "796f9fe4-e933-487b-a67c-6653f89ad72a",
+  "name" : "api_shipping_categories_vwoxgfyqqk",
+  "request" : {
+    "url" : "/api/shipping_categories/VWoxGFYqqK",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "15",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "33a64b79-fcaf-45e1-acec-d623f6407da2",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 09 Nov 2022 10:20:30 GMT",
+      "X-Served-By" : "cache-ams21068-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1667989230.248649,VS0,VE91",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "796f9fe4-e933-487b-a67c-6653f89ad72a",
+  "persistent" : true,
+  "insertionIndex" : 109
+}

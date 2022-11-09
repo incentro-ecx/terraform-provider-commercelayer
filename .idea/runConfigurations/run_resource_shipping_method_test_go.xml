@@ -1,7 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="run resource_webhook_test.go" type="GoTestRunConfiguration" factoryName="Go Test" folderName="Resource integration tests">
+  <configuration default="false" name="run resource_shipping_method_test.go" type="GoTestRunConfiguration" factoryName="Go Test" folderName="Resource integration tests">
     <module name="terraform-provider-commercelayer" />
     <working_directory value="$PROJECT_DIR$/commercelayer" />
+    <parameters value=" -testify.m ^TestAccShippingMethod_basic$" />
     <envs>
       <env name="TF_ACC" value="1" />
     </envs>
@@ -17,11 +18,12 @@
       </ENTRIES>
     </EXTENSION>
     <root_directory value="$PROJECT_DIR$" />
-    <kind value="FILE" />
-    <package value="github.com/incentro-dc/terraform-provider-commercelayer" />
+    <kind value="PACKAGE" />
+    <package value="github.com/incentro-dc/terraform-provider-commercelayer/commercelayer" />
     <directory value="$PROJECT_DIR$" />
-    <filePath value="$PROJECT_DIR$/commercelayer/resource_webhook_test.go" />
+    <filePath value="$PROJECT_DIR$" />
     <framework value="gotest" />
+    <pattern value="^\QTestAcceptanceSuite\E$/^\QTestAccShippingMethod_basic\E$" />
     <method v="2" />
   </configuration>
 </component>
