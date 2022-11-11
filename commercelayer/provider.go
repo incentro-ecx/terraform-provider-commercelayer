@@ -49,6 +49,10 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_external_tax_calculator": resourceExternalTaxCalculator(),
 	"commercelayer_market":                  resourceMarket(),
 	"commercelayer_inventory_model":         resourceInventoryModel(),
+	"commercelayer_shipping_method":         resourceShippingMethod(),
+	"commercelayer_shipping_zone":           resourceShippingZone(),
+	"commercelayer_shipping_category":       resourceShippingCategory(),
+	"commercelayer_stock_location":          resourceStockLocation(),
 }
 
 type Configuration struct {

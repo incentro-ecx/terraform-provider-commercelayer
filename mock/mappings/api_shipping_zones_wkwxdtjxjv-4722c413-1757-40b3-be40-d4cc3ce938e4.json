@@ -1,0 +1,43 @@
+{
+  "id" : "4722c413-1757-40b3-be40-d4cc3ce938e4",
+  "name" : "api_shipping_zones_wkwxdtjxjv",
+  "request" : {
+    "url" : "/api/shipping_zones/wKWxDtjXJv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"wKWxDtjXJv\",\"type\":\"shipping_zones\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/shipping_zones/wKWxDtjXJv\"},\"attributes\":{\"name\":\"Incentro Shipping Zone\",\"country_code_regex\":\".*\",\"not_country_code_regex\":\"[^i*&2@]\",\"state_code_regex\":\"^dog\",\"not_state_code_regex\":\"//[^\\r\\n]*[\\r\\n]\",\"zip_code_regex\":\"[a-zA-Z]{2,4}\",\"not_zip_code_regex\":\".+\",\"created_at\":\"2022-11-09T10:20:14.207Z\",\"updated_at\":\"2022-11-09T10:20:14.207Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_shipping_zone.incentro_shipping_zone\"}},\"relationships\":{\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/shipping_zones/wKWxDtjXJv/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/shipping_zones/wKWxDtjXJv/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "3",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"64f402a753bae587228d30e0be347b8b\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "d9b1081a-2152-4868-af0c-bd60b7d46569",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 09 Nov 2022 10:20:14 GMT",
+      "X-Served-By" : "cache-ams21056-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1667989214.416469,VS0,VE117",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "4722c413-1757-40b3-be40-d4cc3ce938e4",
+  "persistent" : true,
+  "scenarioName" : "scenario-2-api-shipping_zones-wKWxDtjXJv",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-2-api-shipping_zones-wKWxDtjXJv-2",
+  "insertionIndex" : 97
+}

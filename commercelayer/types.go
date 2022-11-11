@@ -12,4 +12,8 @@ const (
 	marketType                = "markets"
 	taxCalculatorType         = "tax_calculators"
 	inventoryModelType        = "inventory_models"
+	shippingMethodType        = "shipping_methods"
+	shippingZoneType          = "shipping_zones"
+	shippingCategoryType      = "shipping_categories"
+	stockLocationType         = "stock_locations"
 )

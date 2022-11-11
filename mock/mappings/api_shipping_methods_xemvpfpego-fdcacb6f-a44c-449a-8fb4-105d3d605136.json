@@ -1,0 +1,37 @@
+{
+  "id" : "fdcacb6f-a44c-449a-8fb4-105d3d605136",
+  "name" : "api_shipping_methods_xemvpfpego",
+  "request" : {
+    "url" : "/api/shipping_methods/xEMvPFPeGO",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "44",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "baa9f30a-2016-442f-a7a8-3fa7b4716992",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 09 Nov 2022 13:23:57 GMT",
+      "X-Served-By" : "cache-ams21047-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1668000238.579608,VS0,VE97",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "fdcacb6f-a44c-449a-8fb4-105d3d605136",
+  "persistent" : true,
+  "insertionIndex" : 127
+}
