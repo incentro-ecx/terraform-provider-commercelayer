@@ -29,6 +29,12 @@ func resourceWebhook() *schema.Resource {
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
+			"shared_secret": {
+				Description: "The shared secret used to sign the external request payload.",
+				Type:        schema.TypeString,
+				Computed:    true,
+				Sensitive:   true,
+			},
 			"attributes": {
 				Description: "Resource attributes",
 				Type:        schema.TypeList,
@@ -140,6 +146,19 @@ func resourceWebhookCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 	}
 
 	d.SetId(*webhook.Data.Id)
+
+	//Fetch the shared secret (this is a work-around because the create does not return it)
+	resp, _, err := c.WebhooksApi.GETWebhooksWebhookId(ctx, *webhook.Data.Id).Execute()
+	if err != nil {
+		return diagErr(err)
+	}
+
+	getWebhook := resp.GetData()
+
+	err = d.Set("shared_secret", &getWebhook.Attributes.SharedSecret)
+	if err != nil {
+		return diagErr(err)
+	}
 
 	return nil
 }

@@ -48,6 +48,7 @@ func (s *AcceptanceSuite) TestAccWebhook_basic() {
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.callback_url", "http://example.url"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.include_resources.0", "customer"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
+					resource.TestCheckResourceAttrSet(resourceName, "shared_secret"),
 				),
 			},
 			{
@@ -58,6 +59,7 @@ func (s *AcceptanceSuite) TestAccWebhook_basic() {
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.callback_url", "http://other-example.url"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.include_resources.0", "line_items"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
+					resource.TestCheckResourceAttrSet(resourceName, "shared_secret"),
 				),
 			},
 		},
