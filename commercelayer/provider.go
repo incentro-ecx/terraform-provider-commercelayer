@@ -40,19 +40,21 @@ var baseSchema = map[string]*schema.Schema{
 }
 
 var baseResourceMap = map[string]*schema.Resource{
-	"commercelayer_address":                 resourceAddress(),
-	"commercelayer_merchant":                resourceMerchant(),
-	"commercelayer_price_list":              resourcePriceList(),
-	"commercelayer_customer_group":          resourceCustomerGroup(),
-	"commercelayer_webhook":                 resourceWebhook(),
-	"commercelayer_external_gateway":        resourceExternalGateway(),
-	"commercelayer_external_tax_calculator": resourceExternalTaxCalculator(),
-	"commercelayer_market":                  resourceMarket(),
-	"commercelayer_inventory_model":         resourceInventoryModel(),
-	"commercelayer_shipping_method":         resourceShippingMethod(),
-	"commercelayer_shipping_zone":           resourceShippingZone(),
-	"commercelayer_shipping_category":       resourceShippingCategory(),
-	"commercelayer_stock_location":          resourceStockLocation(),
+	"commercelayer_address":                   resourceAddress(),
+	"commercelayer_merchant":                  resourceMerchant(),
+	"commercelayer_price_list":                resourcePriceList(),
+	"commercelayer_customer_group":            resourceCustomerGroup(),
+	"commercelayer_webhook":                   resourceWebhook(),
+	"commercelayer_external_gateway":          resourceExternalGateway(),
+	"commercelayer_external_tax_calculator":   resourceExternalTaxCalculator(),
+	"commercelayer_market":                    resourceMarket(),
+	"commercelayer_inventory_model":           resourceInventoryModel(),
+	"commercelayer_shipping_method":           resourceShippingMethod(),
+	"commercelayer_shipping_zone":             resourceShippingZone(),
+	"commercelayer_shipping_category":         resourceShippingCategory(),
+	"commercelayer_stock_location":            resourceStockLocation(),
+	"commercelayer_inventory_return_location": resourceInventoryReturnLocation(),
+	"commercelayer_inventory_stock_location":  resourceInventoryStockLocation(),
 }
 
 type Configuration struct {

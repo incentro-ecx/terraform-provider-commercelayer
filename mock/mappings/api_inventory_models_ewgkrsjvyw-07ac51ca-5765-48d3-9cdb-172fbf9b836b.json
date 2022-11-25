@@ -1,0 +1,43 @@
+{
+  "id" : "07ac51ca-5765-48d3-9cdb-172fbf9b836b",
+  "name" : "api_inventory_models_ewgkrsjvyw",
+  "request" : {
+    "url" : "/api/inventory_models/EWgKRSjvYW",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"EWgKRSjvYW\",\"type\":\"inventory_models\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/EWgKRSjvYW\"},\"attributes\":{\"name\":\"Incentro Inventory Model\",\"strategy\":\"no_split\",\"stock_locations_cutoff\":1,\"created_at\":\"2022-11-24T15:10:57.784Z\",\"updated_at\":\"2022-11-24T15:10:57.784Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_stock_location.incentro_inventory_stock_location\"}},\"relationships\":{\"inventory_stock_locations\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/EWgKRSjvYW/relationships/inventory_stock_locations\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/EWgKRSjvYW/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/EWgKRSjvYW/relationships/inventory_return_locations\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/EWgKRSjvYW/inventory_return_locations\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/EWgKRSjvYW/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/EWgKRSjvYW/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "26",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Cache-Control" : "public, no-cache",
+      "Etag" : "W/\"7c6dbaa263c1b93377a4a640d290399a\"",
+      "X-Request-Id" : "573581a0-067d-4b8b-b53a-c4dc3b1b51e2",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 24 Nov 2022 15:10:59 GMT",
+      "Age" : "1",
+      "X-Served-By" : "cache-ams21054-AMS",
+      "X-Cache" : "HIT",
+      "X-Cache-Hits" : "1",
+      "X-Timer" : "S1669302660.540597,VS0,VE1",
+      "Vary" : "Authorization, Origin"
+    }
+  },
+  "uuid" : "07ac51ca-5765-48d3-9cdb-172fbf9b836b",
+  "persistent" : true,
+  "scenarioName" : "scenario-7-api-inventory_models-EWgKRSjvYW",
+  "requiredScenarioState" : "scenario-7-api-inventory_models-EWgKRSjvYW-3",
+  "insertionIndex" : 167
+}
