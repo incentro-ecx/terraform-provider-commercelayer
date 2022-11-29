@@ -18,4 +18,5 @@ const (
 	stockLocationType            = "stock_locations"
 	inventoryReturnLocationsType = "inventory_return_locations"
 	inventoryStockLocationsType  = "inventory_stock_locations"
+	deliveryLeadTimesType        = "delivery_lead_times"
 )
