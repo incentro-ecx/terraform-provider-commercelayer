@@ -7,7 +7,7 @@ const (
 	customerGroupType            = "customer_groups"
 	priceListType                = "price_lists"
 	webhookType                  = "webhooks"
-	externalGatewayType          = "commercelayer_external_gateway"
+	externalGatewayType          = "external_gateways"
 	externalTaxCalculatorType    = "external_tax_calculators"
 	marketType                   = "markets"
 	taxCalculatorType            = "tax_calculators"
@@ -16,6 +16,6 @@ const (
 	shippingZoneType             = "shipping_zones"
 	shippingCategoryType         = "shipping_categories"
 	stockLocationType            = "stock_locations"
-	inventoryReturnLocationsType = "commercelayer_inventory_return_location"
+	inventoryReturnLocationsType = "inventory_return_locations"
 	inventoryStockLocationsType  = "inventory_stock_locations"
 )
