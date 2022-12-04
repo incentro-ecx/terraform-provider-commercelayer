@@ -7,8 +7,5 @@ resource "commercelayer_shipping_zone" "incentro_shipping_zone" {
     not_state_code_regex   = "//[^\r\n]*[\r\n]"
     zip_code_regex         = "[a-zA-Z]{2,4}"
     not_zip_code_regex     = ".+"
-    metadata = {
-      foo : "bar"
-    }
   }
 }

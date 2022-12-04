@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "commercelayer" {
-  client_id     = var.client_id
-  client_secret = var.client_secret
-  api_endpoint  = var.api_endpoint
-  auth_endpoint = var.auth_endpoint
+  client_id     = "<client-id>"
+  client_secret = "<client-secret>"
+  api_endpoint  = "<api-endpoint>"
+  auth_endpoint = "<auth-endpoint>"
 }

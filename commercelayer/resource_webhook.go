@@ -61,7 +61,7 @@ func resourceWebhook() *schema.Resource {
 							Required: true,
 						},
 						"include_resources": {
-							Description: "List of related resources that should be included in the webhook body.",
+							Description: "List of related commercelayer_inventory_stock_location that should be included in the webhook body.",
 							Type:        schema.TypeList,
 							Elem: &schema.Schema{
 								Type: schema.TypeString,
