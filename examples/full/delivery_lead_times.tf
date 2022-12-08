@@ -1,6 +1,6 @@
 resource "commercelayer_delivery_lead_time" "incentro_delivery_lead_time" {
   attributes {
-    min_hours = 10
+    min_hours = 5
     max_hours = 100
     metadata = {
       foo : "bar"
