@@ -125,8 +125,8 @@ func resourceDeliveryLeadTimesCreateFunc(ctx context.Context, d *schema.Resource
 		Data: commercelayer.DeliveryLeadTimeCreateData{
 			Type: deliveryLeadTimesType,
 			Attributes: commercelayer.POSTDeliveryLeadTimes201ResponseDataAttributes{
-				MinHours:        attributes["min_hours"].(int32),
-				MaxHours:        attributes["max_hours"].(int32),
+				MinHours:        int32((attributes["min_hours"]).(int)),
+				MaxHours:        int32((attributes["max_hours"]).(int)),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
@@ -178,8 +178,8 @@ func resourceDeliveryLeadTimesUpdateFunc(ctx context.Context, d *schema.Resource
 			Type: deliveryLeadTimesType,
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHDeliveryLeadTimesDeliveryLeadTimeId200ResponseDataAttributes{
-				MinHours:        intToInt32Ref(attributes["min_hours"].(int32)),
-				MaxHours:        intToInt32Ref(attributes["max_hours"].(int32)),
+				MinHours:        intToInt32Ref(attributes["min_hours"]),
+				MaxHours:        intToInt32Ref(attributes["max_hours"]),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),

@@ -13,7 +13,7 @@ func testAccCheckDeliveryLeadTimeDestroy(s *terraform.State) error {
 	client := testAccProviderCommercelayer.Meta().(*commercelayer.APIClient)
 
 	for _, rs := range s.RootModule().Resources {
-		if rs.Type == "commercelayer_delivery_lead_type" {
+		if rs.Type == "commercelayer_delivery_lead_time" {
 			_, resp, err := client.DeliveryLeadTimesApi.GETDeliveryLeadTimesDeliveryLeadTimeId(context.Background(), rs.Primary.ID).Execute()
 			if resp.StatusCode == 404 {
 				fmt.Printf("commercelayer_merchant with id %s has been removed\n", rs.Primary.ID)
@@ -111,7 +111,7 @@ func testAccDeliveryLeadTimeUpdate(testName string) string {
 			min_hours = 20
 			max_hours = 200
 			metadata = {
-			  foo : "bar"
+			  bar : "foo"
 			}
 		  }
 		
