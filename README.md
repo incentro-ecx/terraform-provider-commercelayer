@@ -3,6 +3,42 @@
 The Commercelayer terraform provider allows you to configure your [Commercelayer shops](https://commercelayer.io/) with
 infrastructure-as-code principles.
 
+## Currently supported resources
+
+Currently, the checked resources are supported. Support for additional resources will come when they are required in
+projects, or contributed.
+
+- [x] Address
+- [ ] Adyen payment gateway
+- [ ] Avalara tax calculator
+- [ ] Bing Geocoder
+- [ ] Braintree payment gateway
+- [ ] Checkout.com payment gateway
+- [x] Customer group
+- [ ] Delivery lead times
+- [x] External payment gateway
+- [x] External tax calculator
+- [ ] Google Geocoder
+- [x] Inventory model
+- [x] Inventory return location
+- [x] Inventory stock location
+- [ ] Klarna payment gateway
+- [ ] Manual payment gateway
+- [ ] Manual tax calculator
+- [x] Market
+- [x] Merchant
+- [ ] Paypal payment gateway
+- [ ] Payment method
+- [x] Price list
+- [x] Shipping category
+- [x] Shipping method
+- [x] Shipping zone
+- [x] Stock location
+- [ ] Stripe payment gateway
+- [ ] Taxjar tax calculator
+- [ ] Tax rules
+- [x] Webhook
+
 ## Usage
 
 Add the provider to your terraform project

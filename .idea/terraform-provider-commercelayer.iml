@@ -3,7 +3,7 @@
   <component name="Go" enabled="true" />
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/examples/full/.terraform" />
+      <excludeFolder url="file://$MODULE_DIR$/examples/resources/.terraform" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
