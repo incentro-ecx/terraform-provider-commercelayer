@@ -42,7 +42,7 @@ func (s *AcceptanceSuite) TestAccStockLocation_basic() {
 				Config: strings.Join([]string{testAccAddressCreate(resourceName), testAccStockLocationCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", stockLocationType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Stock Location"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Warehouse Stock Location"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.label_format", "PNG"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.suppress_etd", "true"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
@@ -51,7 +51,7 @@ func (s *AcceptanceSuite) TestAccStockLocation_basic() {
 			{
 				Config: strings.Join([]string{testAccAddressCreate(resourceName), testAccStockLocationUpdate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Stock Location Updated"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Warehouse Stock Location Updated"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.label_format", "PDF"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.suppress_etd", "false"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
@@ -65,7 +65,7 @@ func testAccStockLocationCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_stock_location" "incentro_stock_location" {
 		  attributes {
-			name         = "Incentro Stock Location"
+			name         = "Incentro Warehouse Stock Location"
 			label_format = "PNG"
 			suppress_etd = true
 			metadata     = {
@@ -85,7 +85,7 @@ func testAccStockLocationUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_stock_location" "incentro_stock_location" {
 		  attributes {
-			name         = "Incentro Stock Location Updated"
+			name         = "Incentro Warehouse Stock Location Updated"
 			label_format = "PDF"
 			suppress_etd = false
 			metadata     = {

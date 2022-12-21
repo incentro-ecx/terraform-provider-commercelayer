@@ -41,7 +41,7 @@ func (s *AcceptanceSuite) TestAccShippingMethod_basic() {
 				Config: testAccShippingMethodCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", shippingMethodType),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Shipping Method"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Shipping Method Test"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.scheme", "flat"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "EUR"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "1000"),
@@ -55,7 +55,7 @@ func (s *AcceptanceSuite) TestAccShippingMethod_basic() {
 			{
 				Config: testAccShippingMethodUpdate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Shipping Method Updated"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Shipping Method Test Updated"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.scheme", "weight_tiered"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "CHF"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "1"),
@@ -74,7 +74,7 @@ func testAccShippingMethodCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_shipping_method" "incentro_shipping_method" {
 		  attributes {
-			name                   = "Incentro Shipping Method"
+			name                   = "Incentro Shipping Method Test"
 			scheme                 = "flat"
 			currency_code          = "EUR"
 			price_amount_cents     = 1000
@@ -95,7 +95,7 @@ func testAccShippingMethodUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_shipping_method" "incentro_shipping_method" {
 		  attributes {
-			name                   = "Incentro Shipping Method Updated"
+			name                   = "Incentro Shipping Method Test Updated"
 			scheme                 = "weight_tiered"
 			currency_code          = "CHF"
 			price_amount_cents     = 1
