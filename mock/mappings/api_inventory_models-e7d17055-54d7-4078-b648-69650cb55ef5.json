@@ -1,0 +1,45 @@
+{
+  "id" : "e7d17055-54d7-4078-b648-69650cb55ef5",
+  "name" : "api_inventory_models",
+  "request" : {
+    "url" : "/api/inventory_models",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"testName\":\"commercelayer_inventory_stock_location.incentro_inventory_stock_location\"},\"name\":\"Incentro Inventory Model\",\"stock_locations_cutoff\":1,\"strategy\":\"no_split\"},\"type\":\"inventory_models\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"GZNNKSzejZ\",\"type\":\"inventory_models\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/GZNNKSzejZ\"},\"attributes\":{\"name\":\"Incentro Inventory Model\",\"strategy\":\"no_split\",\"stock_locations_cutoff\":1,\"created_at\":\"2022-12-21T15:10:41.692Z\",\"updated_at\":\"2022-12-21T15:10:41.692Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_stock_location.incentro_inventory_stock_location\"}},\"relationships\":{\"inventory_stock_locations\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/GZNNKSzejZ/relationships/inventory_stock_locations\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/GZNNKSzejZ/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/GZNNKSzejZ/relationships/inventory_return_locations\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/GZNNKSzejZ/inventory_return_locations\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/GZNNKSzejZ/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/inventory_models/GZNNKSzejZ/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "80",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"409f9a6e2740974b8cc7f472bf81f5a7\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "bcd65a2d-d4f2-4c58-865c-09959c304db8",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:41 GMT",
+      "X-Served-By" : "cache-ams21073-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635442.664502,VS0,VE48",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "e7d17055-54d7-4078-b648-69650cb55ef5",
+  "persistent" : true,
+  "insertionIndex" : 2947
+}

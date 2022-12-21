@@ -1,0 +1,45 @@
+{
+  "id" : "bac7e143-8ff6-4c71-a2ea-85ff43ea8cca",
+  "name" : "api_external_gateways_dknpksadov",
+  "request" : {
+    "url" : "/api/external_gateways/dknPKsadov",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"testName\":\"commercelayer_external_gateway.incentro_external_gateway\"},\"name\":\"incentro_external_gateway_changed\"},\"id\":\"dknPKsadov\",\"type\":\"external_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"dknPKsadov\",\"type\":\"external_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/dknPKsadov\"},\"attributes\":{\"name\":\"incentro_external_gateway_changed\",\"created_at\":\"2022-12-21T15:10:28.771Z\",\"updated_at\":\"2022-12-21T15:10:31.157Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_external_gateway.incentro_external_gateway\"},\"shared_secret\":\"7fa08a911753431878763ff6be6c155e\",\"authorize_url\":\"https://foo.com\",\"capture_url\":\"https://foo.com\",\"void_url\":\"https://foo.com\",\"refund_url\":\"https://foo.com\",\"token_url\":\"https://foo.com\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/dknPKsadov/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/dknPKsadov/payment_methods\"}},\"external_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/dknPKsadov/relationships/external_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_gateways/dknPKsadov/external_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "45",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"cdafa066d78eb947ae79526265d6384b\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "7e78da2d-031f-479f-ae04-bc47dd6c253f",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:31 GMT",
+      "X-Served-By" : "cache-ams21056-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635431.072098,VS0,VE102",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "bac7e143-8ff6-4c71-a2ea-85ff43ea8cca",
+  "persistent" : true,
+  "insertionIndex" : 2907
+}

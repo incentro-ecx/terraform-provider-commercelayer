@@ -1,0 +1,37 @@
+{
+  "id" : "2ab8d02f-3a61-4551-b1fc-ce36366874a4",
+  "name" : "api_shipping_zones_qkzrqtjgwk",
+  "request" : {
+    "url" : "/api/shipping_zones/qKZrqtJGwK",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "160",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "84deaf6d-2271-427f-b676-fab08bb839d8",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:11:03 GMT",
+      "X-Served-By" : "cache-ams21060-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635463.010889,VS0,VE43",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "2ab8d02f-3a61-4551-b1fc-ce36366874a4",
+  "persistent" : true,
+  "insertionIndex" : 3035
+}

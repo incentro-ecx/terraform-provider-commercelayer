@@ -1,0 +1,37 @@
+{
+  "id" : "9ba4392c-abb0-4ad6-8b69-ac28ffb90c3d",
+  "name" : "api_addresses_bvovueenqk",
+  "request" : {
+    "url" : "/api/addresses/BvoVueENqK",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "120",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "763906b8-74a4-43eb-a5ed-f1f9737272e4",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:49 GMT",
+      "X-Served-By" : "cache-ams21070-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635450.834173,VS0,VE82",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "9ba4392c-abb0-4ad6-8b69-ac28ffb90c3d",
+  "persistent" : true,
+  "insertionIndex" : 2994
+}

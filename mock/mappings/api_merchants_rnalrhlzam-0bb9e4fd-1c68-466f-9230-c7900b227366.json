@@ -1,0 +1,37 @@
+{
+  "id" : "0bb9e4fd-1c68-466f-9230-c7900b227366",
+  "name" : "api_merchants_rnalrhlzam",
+  "request" : {
+    "url" : "/api/merchants/RnAlRHLZaM",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "131",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "4a53f50c-3cdf-41bf-9840-d7140548362c",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:52 GMT",
+      "X-Served-By" : "cache-ams21081-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635453.893584,VS0,VE84",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "0bb9e4fd-1c68-466f-9230-c7900b227366",
+  "persistent" : true,
+  "insertionIndex" : 3005
+}

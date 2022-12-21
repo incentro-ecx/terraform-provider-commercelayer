@@ -1,0 +1,44 @@
+{
+  "id" : "580bf62b-d0ab-4dbf-a587-cd3ec213fa0f",
+  "name" : "api_price_lists_kkgaxcevpl",
+  "request" : {
+    "url" : "/api/price_lists/KkgaxCevpL",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"KkgaxCevpL\",\"type\":\"price_lists\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/KkgaxCevpL\"},\"attributes\":{\"name\":\"incentro updated price list\",\"currency_code\":\"CHF\",\"tax_included\":true,\"created_at\":\"2022-12-21T15:10:54.077Z\",\"updated_at\":\"2022-12-21T15:10:54.979Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_price_list.incentro_price_list\"}},\"relationships\":{\"prices\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/KkgaxCevpL/relationships/prices\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/KkgaxCevpL/prices\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/KkgaxCevpL/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/KkgaxCevpL/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "138",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Cache-Control" : "public, no-cache",
+      "Etag" : "W/\"105afffc3aa37d7ac226c6ca024b9455\"",
+      "X-Request-Id" : "551a4125-ccc5-4d70-a5fc-17d4e31665b3",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:55 GMT",
+      "Age" : "0",
+      "X-Served-By" : "cache-ams21058-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635455.239051,VS0,VE75",
+      "Vary" : "Authorization, Origin"
+    }
+  },
+  "uuid" : "580bf62b-d0ab-4dbf-a587-cd3ec213fa0f",
+  "persistent" : true,
+  "scenarioName" : "scenario-25-api-price_lists-KkgaxCevpL",
+  "requiredScenarioState" : "scenario-25-api-price_lists-KkgaxCevpL-3",
+  "newScenarioState" : "scenario-25-api-price_lists-KkgaxCevpL-4",
+  "insertionIndex" : 3013
+}

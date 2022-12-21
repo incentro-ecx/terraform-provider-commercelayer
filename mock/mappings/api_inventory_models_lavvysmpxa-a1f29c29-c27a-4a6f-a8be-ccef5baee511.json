@@ -1,0 +1,37 @@
+{
+  "id" : "a1f29c29-c27a-4a6f-a8be-ccef5baee511",
+  "name" : "api_inventory_models_lavvysmpxa",
+  "request" : {
+    "url" : "/api/inventory_models/laVVySMpxa",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "118",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "7bda79db-c6eb-4a41-9fed-6370ef4a61b5",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:49 GMT",
+      "X-Served-By" : "cache-ams21021-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635450.618381,VS0,VE90",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "a1f29c29-c27a-4a6f-a8be-ccef5baee511",
+  "persistent" : true,
+  "insertionIndex" : 2992
+}

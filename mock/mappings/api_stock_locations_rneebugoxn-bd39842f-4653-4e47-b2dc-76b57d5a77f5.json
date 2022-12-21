@@ -1,0 +1,37 @@
+{
+  "id" : "bd39842f-4653-4e47-b2dc-76b57d5a77f5",
+  "name" : "api_stock_locations_rneebugoxn",
+  "request" : {
+    "url" : "/api/stock_locations/rneEbugoXn",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "77",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "94b98861-fd59-493f-9482-24fc612084e0",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:40 GMT",
+      "X-Served-By" : "cache-ams21065-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635441.709231,VS0,VE165",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "bd39842f-4653-4e47-b2dc-76b57d5a77f5",
+  "persistent" : true,
+  "insertionIndex" : 2944
+}

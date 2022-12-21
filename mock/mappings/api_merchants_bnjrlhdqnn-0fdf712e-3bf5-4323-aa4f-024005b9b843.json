@@ -1,0 +1,37 @@
+{
+  "id" : "0fdf712e-3bf5-4323-aa4f-024005b9b843",
+  "name" : "api_merchants_bnjrlhdqnn",
+  "request" : {
+    "url" : "/api/merchants/BnjrLHDqNn",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "117",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "3465fc74-0d6f-4f0f-adb9-5e2590e5f7ce",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:49 GMT",
+      "X-Served-By" : "cache-ams21082-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635450.618167,VS0,VE51",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "0fdf712e-3bf5-4323-aa4f-024005b9b843",
+  "persistent" : true,
+  "insertionIndex" : 2991
+}

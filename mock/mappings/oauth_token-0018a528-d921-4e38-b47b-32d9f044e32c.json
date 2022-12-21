@@ -1,0 +1,42 @@
+{
+  "id" : "0018a528-d921-4e38-b47b-32d9f044e32c",
+  "name" : "oauth_token",
+  "request" : {
+    "url" : "/oauth/token",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalTo" : "grant_type=client_credentials",
+      "caseInsensitive" : false
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"access_token\":\"eyJhbGciOiJIUzUxMiJ9.eyJvcmdhbml6YXRpb24iOnsiaWQiOiJWeWpCWkZPV0p5Iiwic2x1ZyI6InRoZS1ncmVlbi1icmFuZC0yNDUiLCJlbnRlcnByaXNlIjpmYWxzZX0sImFwcGxpY2F0aW9uIjp7ImlkIjoibEdxWG5pYWpFTiIsImtpbmQiOiJpbnRlZ3JhdGlvbiIsInB1YmxpYyI6ZmFsc2V9LCJ0ZXN0Ijp0cnVlLCJleHAiOjE2NzE2NDE3NTIsInJhbmQiOjAuNzQzNjA3NjQ0MjgzNDM5M30.7ikNQ9ayaHv9dCeGURjUDMv2N9rh4mpYGIdicz08CjGxtBGntGMYHPq_g2ySvCvWjvJ36cpOa4CYt1SGuISg2g\",\"token_type\":\"Bearer\",\"expires_in\":6334,\"scope\":\"market:all\",\"created_at\":1671634552}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "Cache-Control" : "no-store",
+      "Pragma" : "no-cache",
+      "Content-Type" : "application/json; charset=utf-8",
+      "Etag" : "W/\"4badc545e7f857a078380a6a132f105e\"",
+      "X-Request-Id" : "f8c80e5f-5feb-456a-9e35-ae880cbca6b4",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:18 GMT",
+      "X-Served-By" : "cache-ams21027-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635419.841491,VS0,VE78",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "0018a528-d921-4e38-b47b-32d9f044e32c",
+  "persistent" : true,
+  "insertionIndex" : 2861
+}

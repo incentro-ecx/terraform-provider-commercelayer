@@ -1,0 +1,37 @@
+{
+  "id" : "5018a221-d5fc-4f95-9d2d-ec52a7d0f5c2",
+  "name" : "api_customer_groups_gywgdhpdoy",
+  "request" : {
+    "url" : "/api/customer_groups/GyWgdhPdoy",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "14",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "e7ef613c-bb9c-44b3-8533-8bc963fb7653",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:23 GMT",
+      "X-Served-By" : "cache-ams21068-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635423.397818,VS0,VE56",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "5018a221-d5fc-4f95-9d2d-ec52a7d0f5c2",
+  "persistent" : true,
+  "insertionIndex" : 2874
+}

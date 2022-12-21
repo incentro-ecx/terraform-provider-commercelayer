@@ -1,0 +1,45 @@
+{
+  "id" : "b12b5ada-e467-4140-ae8a-75b88c0c2723",
+  "name" : "api_stock_locations",
+  "request" : {
+    "url" : "/api/stock_locations",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"label_format\":\"PNG\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_stock_location.incentro_stock_location\"},\"name\":\"Incentro Warehouse Stock Location\",\"suppress_etd\":true},\"relationships\":{\"address\":{\"data\":{\"id\":\"BOoNuqngRk\",\"type\":\"addresses\"}}},\"type\":\"stock_locations\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"BMOxpumEJn\",\"type\":\"stock_locations\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn\"},\"attributes\":{\"number\":10100,\"name\":\"Incentro Warehouse Stock Location\",\"label_format\":\"PNG\",\"suppress_etd\":true,\"created_at\":\"2022-12-21T15:11:03.720Z\",\"updated_at\":\"2022-12-21T15:11:03.720Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_stock_location.incentro_stock_location\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/relationships/address\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/address\"}},\"inventory_stock_locations\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/relationships/inventory_stock_locations\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/relationships/inventory_return_locations\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/inventory_return_locations\"}},\"stock_items\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/relationships/stock_items\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/stock_items\"}},\"stock_transfers\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/relationships/stock_transfers\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/stock_transfers\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/BMOxpumEJn/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "163",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"9a5147b90a1f8aabbb76cb515e6775b0\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "0e646067-9aff-4a71-a462-d1aae1a7093c",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:11:03 GMT",
+      "X-Served-By" : "cache-ams21051-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635464.678394,VS0,VE115",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "b12b5ada-e467-4140-ae8a-75b88c0c2723",
+  "persistent" : true,
+  "insertionIndex" : 3038
+}

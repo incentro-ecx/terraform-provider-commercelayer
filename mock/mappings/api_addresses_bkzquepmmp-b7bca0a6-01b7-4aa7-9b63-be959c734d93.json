@@ -1,0 +1,43 @@
+{
+  "id" : "b7bca0a6-01b7-4aa7-9b63-be959c734d93",
+  "name" : "api_addresses_bkzquepmmp",
+  "request" : {
+    "url" : "/api/addresses/BKZQuepMmp",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"BKZQuepMmp\",\"type\":\"addresses\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/addresses/BKZQuepMmp\"},\"attributes\":{\"business\":true,\"first_name\":null,\"last_name\":null,\"company\":\"Incentro\",\"full_name\":\"Incentro\",\"line_1\":\"Moermanskkade 113\",\"line_2\":null,\"city\":\"Amsterdam\",\"zip_code\":\"1013 BC\",\"state_code\":\"NH\",\"country_code\":\"NL\",\"phone\":\"020 409 0444\",\"full_address\":\"Moermanskkade 113, 1013 BC Amsterdam NH (NL) 020 409 0444\",\"name\":\"Incentro, Moermanskkade 113, 1013 BC Amsterdam NH (NL) 020 409 0444\",\"email\":null,\"notes\":null,\"lat\":null,\"lng\":null,\"is_localized\":false,\"is_geocoded\":false,\"provider_name\":null,\"map_url\":null,\"static_map_url\":null,\"billing_info\":null,\"created_at\":\"2022-12-21T15:10:19.375Z\",\"updated_at\":\"2022-12-21T15:10:20.377Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_address.incentro_address\"}},\"relationships\":{\"geocoder\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/addresses/BKZQuepMmp/relationships/geocoder\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/addresses/BKZQuepMmp/geocoder\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "6",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"ec1c5714ce393c1271fa4aac6f96b5da\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "b72e9be0-8c80-40dd-a157-40e0484c45a9",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:20 GMT",
+      "X-Served-By" : "cache-ams21020-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635421.620322,VS0,VE84",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "b7bca0a6-01b7-4aa7-9b63-be959c734d93",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-addresses-BKZQuepMmp",
+  "requiredScenarioState" : "scenario-1-api-addresses-BKZQuepMmp-3",
+  "newScenarioState" : "scenario-1-api-addresses-BKZQuepMmp-4",
+  "insertionIndex" : 2866
+}

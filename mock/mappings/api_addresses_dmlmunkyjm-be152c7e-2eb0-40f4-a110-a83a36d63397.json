@@ -1,0 +1,37 @@
+{
+  "id" : "be152c7e-2eb0-40f4-a110-a83a36d63397",
+  "name" : "api_addresses_dmlmunkyjm",
+  "request" : {
+    "url" : "/api/addresses/dmlmuNKyJM",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "78",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "e0b6d5a0-8657-45cb-a884-98dd63bd02b3",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:10:41 GMT",
+      "X-Served-By" : "cache-ams21082-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635441.056998,VS0,VE86",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "be152c7e-2eb0-40f4-a110-a83a36d63397",
+  "persistent" : true,
+  "insertionIndex" : 2945
+}

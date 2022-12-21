@@ -1,0 +1,37 @@
+{
+  "id" : "05f6d5ba-2c69-418f-b018-eb1bcd3f5c91",
+  "name" : "api_stock_locations_bmoxpumejn",
+  "request" : {
+    "url" : "/api/stock_locations/BMOxpumEJn",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "170",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "4916ea2a-a966-49ca-8fbe-a69b270fe476",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 21 Dec 2022 15:11:05 GMT",
+      "X-Served-By" : "cache-ams21059-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671635466.843093,VS0,VE133",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "05f6d5ba-2c69-418f-b018-eb1bcd3f5c91",
+  "persistent" : true,
+  "insertionIndex" : 3046
+}
