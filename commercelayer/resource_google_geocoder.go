@@ -99,7 +99,6 @@ func resourceGoogleGeocodersCreateFunc(ctx context.Context, d *schema.ResourceDa
 	c := i.(*commercelayer.APIClient)
 
 	attributes := nestedMap(d.Get("attributes"))
-	//relationships := nestedMap(d.Get("relationships"))
 
 	googleGeocoderCreate := commercelayer.GoogleGeocoderCreate{
 		Data: commercelayer.GoogleGeocoderCreateData{
@@ -140,7 +139,6 @@ func resourceGoogleGeocodersUpdateFunc(ctx context.Context, d *schema.ResourceDa
 	c := i.(*commercelayer.APIClient)
 
 	attributes := nestedMap(d.Get("attributes"))
-	//relationships := nestedMap(d.Get("relationships"))
 
 	var googleGeocodersUpdate = commercelayer.GoogleGeocoderUpdate{
 		Data: commercelayer.GoogleGeocoderUpdateData{
