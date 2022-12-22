@@ -18,4 +18,6 @@ const (
 	stockLocationType            = "stock_locations"
 	inventoryReturnLocationsType = "inventory_return_locations"
 	inventoryStockLocationsType  = "inventory_stock_locations"
+	googleGeocodersType          = "google_geocoders"
+	bingGeocodersType            = "bing_geocoders"
 )

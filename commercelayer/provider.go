@@ -55,6 +55,8 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_stock_location":            resourceStockLocation(),
 	"commercelayer_inventory_return_location": resourceInventoryReturnLocation(),
 	"commercelayer_inventory_stock_location":  resourceInventoryStockLocation(),
+	"commercelayer_google_geocoder":           resourceGoogleGeocoders(),
+	"commercelayer_bing_geocoder":             resourceBingGeocoders(),
 }
 
 type Configuration struct {
