@@ -1,0 +1,44 @@
+{
+  "id" : "e1d7fe52-d528-43df-8925-c9acb77db58a",
+  "name" : "api_google_geocoders",
+  "request" : {
+    "url" : "/api/google_geocoders",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"api_key\":\"Google Geocoder API Key\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_google_geocoder.incentro_google_geocoder\"},\"name\":\"Incentro Google Geocoder\"},\"type\":\"google_geocoders\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 422,
+    "body" : "{\"errors\":[{\"title\":\"has already been taken\",\"detail\":\"name - has already been taken\",\"code\":\"VALIDATION_ERROR\",\"source\":{\"pointer\":\"/data/attributes/name\"},\"status\":\"422\",\"meta\":{\"error\":\"taken\",\"value\":\"Incentro Google Geocoder\"}}]}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "57",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "bb3acd02-a2a8-40cc-bdc0-78bd5f3ab29f",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 22 Dec 2022 11:06:29 GMT",
+      "X-Served-By" : "cache-ams21034-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671707190.545169,VS0,VE41",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "e1d7fe52-d528-43df-8925-c9acb77db58a",
+  "persistent" : true,
+  "insertionIndex" : 3312
+}

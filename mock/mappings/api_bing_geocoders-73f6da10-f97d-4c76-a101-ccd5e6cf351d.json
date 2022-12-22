@@ -1,0 +1,44 @@
+{
+  "id" : "73f6da10-f97d-4c76-a101-ccd5e6cf351d",
+  "name" : "api_bing_geocoders",
+  "request" : {
+    "url" : "/api/bing_geocoders",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"key\":\"Bing Virtualearth Key\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_bing_geocoder.incentro_bing_geocoder\"},\"name\":\"Incentro Bing Geocoder\"},\"type\":\"bing_geocoders\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 422,
+    "body" : "{\"errors\":[{\"title\":\"has already been taken\",\"detail\":\"name - has already been taken\",\"code\":\"VALIDATION_ERROR\",\"source\":{\"pointer\":\"/data/attributes/name\"},\"status\":\"422\",\"meta\":{\"error\":\"taken\",\"value\":\"Incentro Bing Geocoder\"}}]}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "9",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "2939b27a-95bb-47b1-86c4-f637080f10f3",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Thu, 22 Dec 2022 11:06:17 GMT",
+      "X-Served-By" : "cache-ams21036-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671707177.241418,VS0,VE82",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "73f6da10-f97d-4c76-a101-ccd5e6cf351d",
+  "persistent" : true,
+  "insertionIndex" : 3262
+}
