@@ -55,6 +55,7 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_stock_location":            resourceStockLocation(),
 	"commercelayer_inventory_return_location": resourceInventoryReturnLocation(),
 	"commercelayer_inventory_stock_location":  resourceInventoryStockLocation(),
+	"commercelayer_payment_method":            resourcePaymentMethod(),
 }
 
 type Configuration struct {

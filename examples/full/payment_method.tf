@@ -1,3 +1,19 @@
+resource "commercelayer_payment_method" "incentro_payment_method" {
+  attributes {
+    payment_source_type = "CreditCard"
+    currency_code       = "EUR"
+    price_amount_cents  = 1000
+    metadata = {
+      foo : "bar"
+      testName : "{{.testName}}"
+    }
+  }
+
+  relationships {
+    market_id = commercelayer_market.incentro_market.id
+  }
+}
+
 resource "commercelayer_inventory_model" "incentro_inventory_model" {
   attributes {
     name                   = "Incentro Inventory Model"
