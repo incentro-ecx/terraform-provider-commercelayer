@@ -41,6 +41,7 @@ func (s *AcceptanceSuite) TestAccKlarnaGateway_basic() {
 			{
 				Config: testAccKlarnaGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", klarnaGatewaysType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Klarna Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),

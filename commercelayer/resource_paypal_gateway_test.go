@@ -41,6 +41,7 @@ func (s *AcceptanceSuite) TestAccPaypalGateway_basic() {
 			{
 				Config: testAccPaypalGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", paypalGatewaysType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Paypal Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),

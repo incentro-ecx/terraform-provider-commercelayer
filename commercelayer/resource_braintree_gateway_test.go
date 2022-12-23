@@ -41,6 +41,7 @@ func (s *AcceptanceSuite) TestAccBraintreeGateway_basic() {
 			{
 				Config: testAccBraintreeGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", braintreeGatewaysType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Braintree Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),

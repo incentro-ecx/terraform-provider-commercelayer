@@ -41,6 +41,7 @@ func (s *AcceptanceSuite) TestAccCheckoutComGateway_basic() {
 			{
 				Config: testAccCheckoutComGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", checkoutComGatewaysType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro CheckoutCom Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
@@ -61,8 +62,8 @@ func testAccCheckoutComGatewayCreate(testName string) string {
 		resource "commercelayer_checkout_com_gateway" "incentro_checkout_com_gateway" {
            attributes {
 			name                   = "Incentro CheckoutCom Gateway Changed"
-			secret_key             = "xxxx-yyyy-zzzz"
-			public_key             = "xxxx-yyyy-zzzz"
+			secret_key 			   = "sk_test_xxxx-yyyy-zzzz"
+			public_key 			   = "pk_test_xxxx-yyyy-zzzz"
 
 			metadata = {
 				foo: "bar"
@@ -78,8 +79,8 @@ func testAccCheckoutComGatewayUpdate(testName string) string {
 		resource "commercelayer_checkout_com_gateway" "incentro_checkout_com_gateway" {
            attributes {
 			name                   = "Incentro CheckoutCom Gateway Changed"
-			secret_key             = "xxxx-yyyy-zzzz"
-			public_key             = "xxxx-yyyy-zzzz"
+			secret_key 			   = "sk_test_xxxx-yyyy-zzzz"
+			public_key 			   = "pk_test_xxxx-yyyy-zzzz"
 
 			metadata = {
 				bar: "foo"

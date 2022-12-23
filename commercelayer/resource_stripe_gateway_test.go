@@ -41,6 +41,7 @@ func (s *AcceptanceSuite) TestAccStripeGateway_basic() {
 			{
 				Config: testAccStripeGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", stripeGatewaysType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Stripe Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),

@@ -41,6 +41,7 @@ func (s *AcceptanceSuite) TestAccAdyenGateway_basic() {
 			{
 				Config: testAccAdyenGatewayCreate(resourceName),
 				Check: resource.ComposeTestCheckFunc(
+					resource.TestCheckResourceAttr(resourceName, "type", adyenGatewaysType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Adyen Gateway"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 				),
