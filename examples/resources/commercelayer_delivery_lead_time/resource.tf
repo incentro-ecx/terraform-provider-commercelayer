@@ -8,7 +8,7 @@ resource "commercelayer_delivery_lead_time" "incentro_delivery_lead_time" {
   }
 
   relationships {
-    stock_location_id = commercelayer_stock_location.incentro_warehouse_location.id
+    stock_location_id = commercelayer_stock_location.incentro_stock_location.id
     shipping_method_id = commercelayer_shipping_method.incentro_shipping_method.id
   }
 }
@@ -27,9 +27,9 @@ resource "commercelayer_address" "incentro_address" {
 }
 
 
-resource "commercelayer_stock_location" "incentro_warehouse_location" {
+resource "commercelayer_stock_location" "incentro_stock_location" {
   attributes {
-    name         = "Incentro Warehouse Location"
+    name         = "Incentro Warehouse Location Delivery Lead Time"
     label_format = "PNG"
     suppress_etd = true
   }
@@ -41,7 +41,7 @@ resource "commercelayer_stock_location" "incentro_warehouse_location" {
 
 resource "commercelayer_shipping_method" "incentro_shipping_method" {
   attributes {
-    name                   = "Incentro Shipping Method"
+    name                   = "Incentro Shipping Method Delivery Lead Time"
     scheme                 = "flat"
     currency_code          = "EUR"
     price_amount_cents     = 1000
