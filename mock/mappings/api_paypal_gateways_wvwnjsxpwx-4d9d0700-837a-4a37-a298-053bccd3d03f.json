@@ -1,0 +1,45 @@
+{
+  "id" : "4d9d0700-837a-4a37-a298-053bccd3d03f",
+  "name" : "api_paypal_gateways_wvwnjsxpwx",
+  "request" : {
+    "url" : "/api/paypal_gateways/WvWNJsXpWx",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"client_id\":\"xxxx-yyyy-zzzz\",\"client_secret\":\"xxxx-yyyy-zzzz\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_paypal_gateway.incentro_paypal_gateway\"},\"name\":\"Incentro Paypal Gateway Changed\"},\"id\":\"WvWNJsXpWx\",\"type\":\"paypal_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"WvWNJsXpWx\",\"type\":\"paypal_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/paypal_gateways/WvWNJsXpWx\"},\"attributes\":{\"name\":\"Incentro Paypal Gateway Changed\",\"created_at\":\"2022-12-23T15:19:40.521Z\",\"updated_at\":\"2022-12-23T15:19:41.449Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_paypal_gateway.incentro_paypal_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/paypal_gateways/WvWNJsXpWx/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/paypal_gateways/WvWNJsXpWx/payment_methods\"}},\"paypal_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/paypal_gateways/WvWNJsXpWx/relationships/paypal_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/paypal_gateways/WvWNJsXpWx/paypal_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "5",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"72ea93d801fd3541488d6a84b4ea085e\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "15794e8f-f67e-4580-bd8f-10ec40323d98",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 23 Dec 2022 15:19:41 GMT",
+      "X-Served-By" : "cache-ams21037-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671808781.378210,VS0,VE86",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "4d9d0700-837a-4a37-a298-053bccd3d03f",
+  "persistent" : true,
+  "insertionIndex" : 1039
+}
