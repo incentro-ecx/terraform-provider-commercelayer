@@ -110,8 +110,9 @@ func resourceCheckoutComGatewayCreateFunc(ctx context.Context, d *schema.Resourc
 		Data: commercelayer.CheckoutComGatewayCreateData{
 			Type: checkoutComGatewaysType,
 			Attributes: commercelayer.POSTCheckoutComGateways201ResponseDataAttributes{
-				Name: attributes["name"].(string),
-
+				Name:            attributes["name"].(string),
+				SecretKey:       attributes["secret_key"].(string),
+				PublicKey:       attributes["public_key"].(string),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
@@ -150,11 +151,12 @@ func resourceCheckoutComGatewayUpdateFunc(ctx context.Context, d *schema.Resourc
 			Type: checkoutComGatewaysType,
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHCheckoutComGatewaysCheckoutComGatewayId200ResponseDataAttributes{
-				Name: stringRef(attributes["name"]),
-
+				Name:            stringRef(attributes["name"]),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
+				SecretKey:       stringRef(attributes["secret_key"]),
+				PublicKey:       stringRef(attributes["public_key"]),
 			},
 		},
 	}

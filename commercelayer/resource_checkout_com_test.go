@@ -61,7 +61,7 @@ func testAccCheckoutComGatewayCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_checkout_com_gateway" "incentro_checkout_com_gateway" {
            attributes {
-			name                   = "Incentro CheckoutCom Gateway Changed"
+			name                   = "Incentro CheckoutCom Gateway"
 			secret_key 			   = "sk_test_xxxx-yyyy-zzzz"
 			public_key 			   = "pk_test_xxxx-yyyy-zzzz"
 
