@@ -1,0 +1,37 @@
+{
+  "id" : "9bfbb82b-f9ab-4415-825d-f2d92a28d12c",
+  "name" : "api_delivery_lead_times_mxlamfyqdp",
+  "request" : {
+    "url" : "/api/delivery_lead_times/MxlamFyQdp",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "28",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "ee78c982-7966-4ac7-bda9-5ffeebac7353",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 23 Dec 2022 10:26:08 GMT",
+      "X-Served-By" : "cache-ams21078-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671791168.100251,VS0,VE93",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "9bfbb82b-f9ab-4415-825d-f2d92a28d12c",
+  "persistent" : true,
+  "insertionIndex" : 1130
+}
