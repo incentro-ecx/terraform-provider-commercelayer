@@ -8,18 +8,8 @@ resource "commercelayer_address" "incentro_address" {
     city         = "Rotterdam"
     phone        = "+31(0)10 20 20 544"
     state_code   = "ZH"
-  }
-}
-
-
-resource "commercelayer_stock_location" "incentro_warehouse_location" {
-  attributes {
-    name         = "Incentro Warehouse Stock Location"
-    label_format = "PNG"
-    suppress_etd = true
-  }
-
-  relationships {
-    address_id = commercelayer_address.incentro_address.id
+    metadata = {
+      foo : "bar"
+    }
   }
 }
