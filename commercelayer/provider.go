@@ -56,6 +56,7 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_inventory_return_location": resourceInventoryReturnLocation(),
 	"commercelayer_inventory_stock_location":  resourceInventoryStockLocation(),
 	"commercelayer_delivery_lead_time":        resourceDeliveryLeadTime(),
+	"commercelayer_manual_gateway":            resourceManualGateway(),
 }
 
 type Configuration struct {
