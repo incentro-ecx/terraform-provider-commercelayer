@@ -7,20 +7,23 @@ import (
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
 )
 
-func resourceManualGateway() *schema.Resource {
+func resourceStripeGateway() *schema.Resource {
 	return &schema.Resource{
-		Description: "An manual payment defines a list of stock locations ordered by priority. The priority and " +
-			"cutoff determine how the availability of SKU's gets calculated within a market.",
-		ReadContext:   resourceManualGatewayReadFunc,
-		CreateContext: resourceManualGatewayCreateFunc,
-		UpdateContext: resourceManualGatewayUpdateFunc,
-		DeleteContext: resourceManualGatewayDeleteFunc,
+		Description: "Configuring a Stripe payment gateway for a market lets you safely process payments through Stripe. " +
+			"The Stripe gateway is compliant with the PSD2 European regulation so that you can implement a payment flow " +
+			"that supports SCA and 3DS2 by using the Stripe's official JS SDK and libraries." +
+			"To create a Stripe gateway choose a meaningful name that helps you identify it within your organization and gather all the credentials requested " +
+			"(like secret and publishable keys, etc. — contact Stripe's support if you are not sure about the requested data).",
+		ReadContext:   resourceStripeGatewayReadFunc,
+		CreateContext: resourceStripeGatewayCreateFunc,
+		UpdateContext: resourceStripeGatewayUpdateFunc,
+		DeleteContext: resourceStripeGatewayDeleteFunc,
 		Importer: &schema.ResourceImporter{
 			StateContext: schema.ImportStatePassthroughContext,
 		},
 		Schema: map[string]*schema.Schema{
 			"id": {
-				Description: "The manual payment unique identifier",
+				Description: "The stripe payment unique identifier",
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
@@ -39,6 +42,11 @@ func resourceManualGateway() *schema.Resource {
 					Schema: map[string]*schema.Schema{
 						"name": {
 							Description: "The payment gateway's internal name.",
+							Type:        schema.TypeString,
+							Required:    true,
+						},
+						"login": {
+							Description: "The gateway login.",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
@@ -70,35 +78,36 @@ func resourceManualGateway() *schema.Resource {
 	}
 }
 
-func resourceManualGatewayReadFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
+func resourceStripeGatewayReadFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	resp, _, err := c.ManualGatewaysApi.GETManualGatewaysManualGatewayId(ctx, d.Id()).Execute()
+	resp, _, err := c.StripeGatewaysApi.GETStripeGatewaysStripeGatewayId(ctx, d.Id()).Execute()
 	if err != nil {
 		return diagErr(err)
 	}
 
-	manualGateway, ok := resp.GetDataOk()
+	stripeGateway, ok := resp.GetDataOk()
 	if !ok {
 		d.SetId("")
 		return nil
 	}
 
-	d.SetId(manualGateway.GetId())
+	d.SetId(stripeGateway.GetId())
 
 	return nil
 }
 
-func resourceManualGatewayCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
+func resourceStripeGatewayCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
 	attributes := nestedMap(d.Get("attributes"))
 
-	manualGatewayCreate := commercelayer.ManualGatewayCreate{
-		Data: commercelayer.ManualGatewayCreateData{
-			Type: manualGatewaysType,
-			Attributes: commercelayer.POSTManualGateways201ResponseDataAttributes{
+	stripeGatewayCreate := commercelayer.StripeGatewayCreate{
+		Data: commercelayer.StripeGatewayCreateData{
+			Type: stripeGatewaysType,
+			Attributes: commercelayer.POSTStripeGateways201ResponseDataAttributes{
 				Name:            attributes["name"].(string),
+				Login:           attributes["login"].(string),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
@@ -106,37 +115,37 @@ func resourceManualGatewayCreateFunc(ctx context.Context, d *schema.ResourceData
 		},
 	}
 
-	err := d.Set("type", manualGatewaysType)
+	err := d.Set("type", stripeGatewaysType)
 	if err != nil {
 		return diagErr(err)
 	}
 
-	manualGateway, _, err := c.ManualGatewaysApi.POSTManualGateways(ctx).ManualGatewayCreate(manualGatewayCreate).Execute()
+	stripeGateway, _, err := c.StripeGatewaysApi.POSTStripeGateways(ctx).StripeGatewayCreate(stripeGatewayCreate).Execute()
 	if err != nil {
 		return diagErr(err)
 	}
 
-	d.SetId(*manualGateway.Data.Id)
+	d.SetId(*stripeGateway.Data.Id)
 
 	return nil
 }
 
-func resourceManualGatewayDeleteFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
+func resourceStripeGatewayDeleteFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
-	_, err := c.ManualGatewaysApi.DELETEManualGatewaysManualGatewayId(ctx, d.Id()).Execute()
+	_, err := c.StripeGatewaysApi.DELETEStripeGatewaysStripeGatewayId(ctx, d.Id()).Execute()
 	return diag.FromErr(err)
 }
 
-func resourceManualGatewayUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
+func resourceStripeGatewayUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
 	attributes := nestedMap(d.Get("attributes"))
 
-	var manualGatewayUpdate = commercelayer.ManualGatewayUpdate{
-		Data: commercelayer.ManualGatewayUpdateData{
-			Type: manualGatewaysType,
+	var stripeGatewayUpdate = commercelayer.StripeGatewayUpdate{
+		Data: commercelayer.StripeGatewayUpdateData{
+			Type: stripeGatewaysType,
 			Id:   d.Id(),
-			Attributes: commercelayer.PATCHManualGatewaysManualGatewayId200ResponseDataAttributes{
+			Attributes: commercelayer.PATCHStripeGatewaysStripeGatewayId200ResponseDataAttributes{
 				Name:            stringRef(attributes["name"]),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
@@ -145,8 +154,8 @@ func resourceManualGatewayUpdateFunc(ctx context.Context, d *schema.ResourceData
 		},
 	}
 
-	_, _, err := c.ManualGatewaysApi.PATCHManualGatewaysManualGatewayId(ctx, d.Id()).
-		ManualGatewayUpdate(manualGatewayUpdate).Execute()
+	_, _, err := c.StripeGatewaysApi.PATCHStripeGatewaysStripeGatewayId(ctx, d.Id()).
+		StripeGatewayUpdate(stripeGatewayUpdate).Execute()
 
 	return diag.FromErr(err)
 }

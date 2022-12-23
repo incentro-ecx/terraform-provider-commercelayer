@@ -19,5 +19,6 @@ const (
 	inventoryReturnLocationsType = "inventory_return_locations"
 	inventoryStockLocationsType  = "inventory_stock_locations"
 	deliveryLeadTimesType        = "delivery_lead_times"
-	manualGatewayType            = "manual_gateways"
+	manualGatewaysType           = "manual_gateways"
+	stripeGatewaysType           = "stripe_gateways"
 )
