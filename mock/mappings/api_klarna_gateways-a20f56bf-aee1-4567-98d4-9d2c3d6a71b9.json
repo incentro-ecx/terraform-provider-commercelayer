@@ -1,0 +1,45 @@
+{
+  "id" : "a20f56bf-aee1-4567-98d4-9d2c3d6a71b9",
+  "name" : "api_klarna_gateways",
+  "request" : {
+    "url" : "/api/klarna_gateways",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"api_key\":\"xxxx-yyyy-zzzz\",\"api_secret\":\"xxxx-yyyy-zzzz\",\"country_code\":\"EU\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_klarna_gateway.incentro_klarna_gateway\"},\"name\":\"Incentro Klarna Gateway\"},\"type\":\"klarna_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"axYQYsVoRx\",\"type\":\"klarna_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/klarna_gateways/axYQYsVoRx\"},\"attributes\":{\"name\":\"Incentro Klarna Gateway\",\"created_at\":\"2022-12-23T15:20:35.980Z\",\"updated_at\":\"2022-12-23T15:20:35.980Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_klarna_gateway.incentro_klarna_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/klarna_gateways/axYQYsVoRx/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/klarna_gateways/axYQYsVoRx/payment_methods\"}},\"klarna_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/klarna_gateways/axYQYsVoRx/relationships/klarna_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/klarna_gateways/axYQYsVoRx/klarna_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "2",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"1c1249c265a8fffe10ef19c3907aa2cb\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "614c872a-812a-4eed-bde2-80a1b278ff08",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 23 Dec 2022 15:20:35 GMT",
+      "X-Served-By" : "cache-ams21026-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671808836.904807,VS0,VE93",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "a20f56bf-aee1-4567-98d4-9d2c3d6a71b9",
+  "persistent" : true,
+  "insertionIndex" : 1256
+}
