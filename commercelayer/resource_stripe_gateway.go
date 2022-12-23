@@ -45,11 +45,6 @@ func resourceStripeGateway() *schema.Resource {
 							Type:        schema.TypeString,
 							Required:    true,
 						},
-						"login": {
-							Description: "The gateway login.",
-							Type:        schema.TypeString,
-							Required:    true,
-						},
 						"reference": {
 							Description: "A string that you can use to add any external identifier to the resource. This " +
 								"can be useful for integrating the resource to an external system, like an ERP, a " +
