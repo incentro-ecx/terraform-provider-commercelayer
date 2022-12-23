@@ -60,6 +60,9 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_stripe_gateway":            resourceStripeGateway(),
 	"commercelayer_adyen_gateway":             resourceAdyenGateway(),
 	"commercelayer_paypal_gateway":            resourcePaypalGateway(),
+	"commercelayer_klarna_gateway":            resourceKlarnaGateway(),
+	"commercelayer_braintree_gateway":         resourceBraintreeGateway(),
+	"commercelayer_checkout_com_gateway":      resourceCheckoutComGateway(),
 }
 
 type Configuration struct {
