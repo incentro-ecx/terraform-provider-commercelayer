@@ -58,7 +58,7 @@ func resourceAdyenGateway() *schema.Resource {
 						"public_key": {
 							Description: "The public key linked to your API credential.",
 							Type:        schema.TypeString,
-							Required:    true,
+							Optional:    true,
 						},
 						"live_url_prefix": {
 							Description: "The prefix of the endpoint used for live transactions.",
