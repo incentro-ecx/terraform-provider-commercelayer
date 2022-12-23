@@ -1,0 +1,43 @@
+{
+  "id" : "6827b3b2-6288-4628-bdae-4f113eff8ac8",
+  "name" : "api_braintree_gateways_bjzlvsjrbx",
+  "request" : {
+    "url" : "/api/braintree_gateways/BjZLVsJRbx",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"BjZLVsJRbx\",\"type\":\"braintree_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/braintree_gateways/BjZLVsJRbx\"},\"attributes\":{\"name\":\"Incentro Braintree Gateway Changed\",\"created_at\":\"2022-12-23T15:22:58.231Z\",\"updated_at\":\"2022-12-23T15:22:59.100Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_braintree_gateway.incentro_braintree_gateway\"},\"descriptor_name\":null,\"descriptor_phone\":null,\"descriptor_url\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/braintree_gateways/BjZLVsJRbx\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/braintree_gateways/BjZLVsJRbx/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/braintree_gateways/BjZLVsJRbx/payment_methods\"}},\"braintree_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/braintree_gateways/BjZLVsJRbx/relationships/braintree_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/braintree_gateways/BjZLVsJRbx/braintree_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "14",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"d9899a9dbe652810a613d6fbf843aab5\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "02939db1-b19c-4d40-b9fa-be87557ca4f3",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 23 Dec 2022 15:22:59 GMT",
+      "X-Served-By" : "cache-ams21037-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671808979.348152,VS0,VE88",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "6827b3b2-6288-4628-bdae-4f113eff8ac8",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-braintree_gateways-BjZLVsJRbx",
+  "requiredScenarioState" : "scenario-1-api-braintree_gateways-BjZLVsJRbx-3",
+  "newScenarioState" : "scenario-1-api-braintree_gateways-BjZLVsJRbx-4",
+  "insertionIndex" : 1487
+}

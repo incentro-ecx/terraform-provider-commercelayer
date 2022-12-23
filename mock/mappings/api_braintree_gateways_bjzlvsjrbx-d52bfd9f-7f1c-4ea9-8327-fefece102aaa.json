@@ -1,0 +1,45 @@
+{
+  "id" : "d52bfd9f-7f1c-4ea9-8327-fefece102aaa",
+  "name" : "api_braintree_gateways_bjzlvsjrbx",
+  "request" : {
+    "url" : "/api/braintree_gateways/BjZLVsJRbx",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"merchant_account_id\":\"xxxx-yyyy-zzzz\",\"merchant_id\":\"xxxx-yyyy-zzzz\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_braintree_gateway.incentro_braintree_gateway\"},\"name\":\"Incentro Braintree Gateway Changed\",\"private_key\":\"xxxx-yyyy-zzzz\",\"public_key\":\"xxxx-yyyy-zzzz\"},\"id\":\"BjZLVsJRbx\",\"type\":\"braintree_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"BjZLVsJRbx\",\"type\":\"braintree_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/braintree_gateways/BjZLVsJRbx\"},\"attributes\":{\"name\":\"Incentro Braintree Gateway Changed\",\"created_at\":\"2022-12-23T15:22:58.231Z\",\"updated_at\":\"2022-12-23T15:22:59.100Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_braintree_gateway.incentro_braintree_gateway\"},\"descriptor_name\":null,\"descriptor_phone\":null,\"descriptor_url\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/braintree_gateways/BjZLVsJRbx\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/braintree_gateways/BjZLVsJRbx/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/braintree_gateways/BjZLVsJRbx/payment_methods\"}},\"braintree_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/braintree_gateways/BjZLVsJRbx/relationships/braintree_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/braintree_gateways/BjZLVsJRbx/braintree_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "13",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"d9899a9dbe652810a613d6fbf843aab5\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "07de9f65-9e08-4d43-a4c3-53ad3770ddf2",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 23 Dec 2022 15:22:59 GMT",
+      "X-Served-By" : "cache-ams21083-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671808979.035875,VS0,VE80",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "d52bfd9f-7f1c-4ea9-8327-fefece102aaa",
+  "persistent" : true,
+  "insertionIndex" : 1486
+}
