@@ -22,4 +22,5 @@ const (
 	manualGatewaysType           = "manual_gateways"
 	stripeGatewaysType           = "stripe_gateways"
 	adyenGatewaysType            = "adyen_gateways"
+	paypalGatewaysType           = "paypal_gateways"
 )
