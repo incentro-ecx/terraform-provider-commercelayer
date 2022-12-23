@@ -1,0 +1,45 @@
+{
+  "id" : "7062b32c-1e49-4ca8-a8f2-d8f1049d4961",
+  "name" : "api_bing_geocoders_ynvaqsrrer",
+  "request" : {
+    "url" : "/api/bing_geocoders/YnvAqsRRer",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"key\":\"Bing Virtualearth Key\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_bing_geocoder.incentro_bing_geocoder\"},\"name\":\"Incentro Updated Bing Geocoder\"},\"id\":\"YnvAqsRRer\",\"type\":\"bing_geocoders\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"YnvAqsRRer\",\"type\":\"bing_geocoders\",\"attributes\":{\"name\":\"Incentro Updated Bing Geocoder\",\"created_at\":\"2022-12-23T10:33:16.457Z\",\"updated_at\":\"2022-12-23T10:33:17.371Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_bing_geocoder.incentro_bing_geocoder\"}},\"relationships\":{\"addresses\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/bing_geocoders/YnvAqsRRer/relationships/addresses\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/bing_geocoders/YnvAqsRRer/addresses\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/bing_geocoders/YnvAqsRRer/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/bing_geocoders/YnvAqsRRer/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "5",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"b8f3e29cbd81fc21877aacafc7fc1d1d\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "a6880318-b46d-45bd-a338-23860f09cb22",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 23 Dec 2022 10:33:17 GMT",
+      "X-Served-By" : "cache-ams21061-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671791597.284932,VS0,VE104",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "7062b32c-1e49-4ca8-a8f2-d8f1049d4961",
+  "persistent" : true,
+  "insertionIndex" : 1512
+}
