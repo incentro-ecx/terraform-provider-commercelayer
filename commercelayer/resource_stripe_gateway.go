@@ -45,11 +45,6 @@ func resourceStripeGateway() *schema.Resource {
 							Type:        schema.TypeString,
 							Required:    true,
 						},
-						"login": {
-							Description: "The gateway login.",
-							Type:        schema.TypeString,
-							Required:    true,
-						},
 						"reference": {
 							Description: "A string that you can use to add any external identifier to the resource. This " +
 								"can be useful for integrating the resource to an external system, like an ERP, a " +
@@ -107,7 +102,6 @@ func resourceStripeGatewayCreateFunc(ctx context.Context, d *schema.ResourceData
 			Type: stripeGatewaysType,
 			Attributes: commercelayer.POSTStripeGateways201ResponseDataAttributes{
 				Name:            attributes["name"].(string),
-				Login:           attributes["login"].(string),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
