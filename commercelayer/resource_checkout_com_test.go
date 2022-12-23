@@ -61,9 +61,8 @@ func testAccCheckoutComGatewayCreate(testName string) string {
 		resource "commercelayer_checkout_com_gateway" "incentro_checkout_com_gateway" {
            attributes {
 			name                   = "Incentro CheckoutCom Gateway"
-			country_code              = "EU"
-			api_key              = "xxxx-yyyy-zzzz"
-			api_secret          = "xxxx-yyyy-zzzz"
+			secret_key             = "xxxx-yyyy-zzzz"
+			public_key             = "xxxx-yyyy-zzzz"
 
 			metadata = {
 				foo: "bar"
@@ -79,9 +78,8 @@ func testAccCheckoutComGatewayUpdate(testName string) string {
 		resource "commercelayer_checkout_com_gateway" "incentro_checkout_com_gateway" {
            attributes {
 			name                   = "Incentro CheckoutCom Gateway Changed"
-			country_code              = "EU"
-			api_key              = "xxxx-yyyy-zzzz"
-			api_secret          = "xxxx-yyyy-zzzz"
+			secret_key             = "xxxx-yyyy-zzzz"
+			public_key             = "xxxx-yyyy-zzzz"
 
 			metadata = {
 				bar: "foo"
