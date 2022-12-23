@@ -76,6 +76,7 @@ func testAccStripeGatewayUpdate(testName string) string {
 		resource "commercelayer_stripe_gateway" "incentro_stripe_gateway" {
            attributes {
 			name                   = "Incentro Stripe Gateway Changed"
+			login                  = "SecretPassword"
 			metadata = {
 				bar: "foo"
 				testName: "{{.testName}}"
