@@ -107,6 +107,7 @@ func resourceStripeGatewayCreateFunc(ctx context.Context, d *schema.ResourceData
 			Type: stripeGatewaysType,
 			Attributes: commercelayer.POSTStripeGateways201ResponseDataAttributes{
 				Name:            attributes["name"].(string),
+				Login:           attributes["login"].(string),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
