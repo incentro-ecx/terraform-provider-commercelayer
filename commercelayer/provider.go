@@ -58,6 +58,7 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_delivery_lead_time":        resourceDeliveryLeadTime(),
 	"commercelayer_manual_gateway":            resourceManualGateway(),
 	"commercelayer_stripe_gateway":            resourceStripeGateway(),
+	"commercelayer_adyen_gateway":             resourceAdyenGateway(),
 }
 
 type Configuration struct {

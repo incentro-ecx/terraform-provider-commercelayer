@@ -21,4 +21,5 @@ const (
 	deliveryLeadTimesType        = "delivery_lead_times"
 	manualGatewaysType           = "manual_gateways"
 	stripeGatewaysType           = "stripe_gateways"
+	adyenGatewaysType            = "adyen_gateways"
 )
