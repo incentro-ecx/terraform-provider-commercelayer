@@ -1,0 +1,37 @@
+{
+  "id" : "6caf9df7-62f2-4495-9e1e-608f402958e4",
+  "name" : "api_google_geocoders_znalxsbreq",
+  "request" : {
+    "url" : "/api/google_geocoders/znalXsbreQ",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "7",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "cffc8b38-29a0-4c51-808f-0c8024ad43ff",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 23 Dec 2022 10:37:13 GMT",
+      "X-Served-By" : "cache-ams21076-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671791834.891172,VS0,VE77",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "6caf9df7-62f2-4495-9e1e-608f402958e4",
+  "persistent" : true,
+  "insertionIndex" : 1702
+}
