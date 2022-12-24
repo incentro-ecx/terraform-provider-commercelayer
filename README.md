@@ -18,7 +18,7 @@ projects, or contributed.
 - [X] Delivery lead times
 - [x] External payment gateway
 - [x] External tax calculator
-- [ ] Google Geocoder
+- [x] Google Geocoder
 - [x] Inventory model
 - [x] Inventory return location
 - [x] Inventory stock location
