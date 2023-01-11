@@ -1,0 +1,43 @@
+{
+  "id" : "935c3efc-7aa2-45f1-81bd-217d3f559677",
+  "name" : "api_google_geocoders_znalxsbreq",
+  "request" : {
+    "url" : "/api/google_geocoders/znalXsbreQ",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"znalXsbreQ\",\"type\":\"google_geocoders\",\"attributes\":{\"name\":\"Incentro Google Geocoder\",\"created_at\":\"2022-12-23T10:37:12.530Z\",\"updated_at\":\"2022-12-23T10:37:12.530Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_google_geocoder.incentro_google_geocoder\"}},\"relationships\":{\"addresses\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/google_geocoders/znalXsbreQ/relationships/addresses\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/google_geocoders/znalXsbreQ/addresses\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/google_geocoders/znalXsbreQ/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/google_geocoders/znalXsbreQ/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "3",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"e49559992ac873bd35555288d725ffb2\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "6ceebfd8-fc7d-4d0c-8cad-7504eb60940c",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 23 Dec 2022 10:37:12 GMT",
+      "X-Served-By" : "cache-ams21025-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1671791833.782130,VS0,VE76",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "935c3efc-7aa2-45f1-81bd-217d3f559677",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-google_geocoders-znalXsbreQ",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1-api-google_geocoders-znalXsbreQ-2",
+  "insertionIndex" : 1698
+}

@@ -1,0 +1,44 @@
+{
+  "id" : "4130e644-00e9-47fd-b6b4-a1fce31b0ac8",
+  "name" : "api_stock_locations_pmrpouqzwg",
+  "request" : {
+    "url" : "/api/stock_locations/PMRpouqZwG",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"PMRpouqZwG\",\"type\":\"stock_locations\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG\"},\"attributes\":{\"number\":10121,\"name\":\"Incentro Stock Location\",\"label_format\":\"PNG\",\"suppress_etd\":true,\"created_at\":\"2022-12-23T10:26:05.606Z\",\"updated_at\":\"2022-12-23T10:26:05.606Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_delivery_lead_time.incentro_delivery_lead_time\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/relationships/address\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/address\"}},\"inventory_stock_locations\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/relationships/inventory_stock_locations\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/relationships/inventory_return_locations\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/inventory_return_locations\"}},\"stock_items\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/relationships/stock_items\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/stock_items\"}},\"stock_transfers\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/relationships/stock_transfers\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/stock_transfers\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stock_locations/PMRpouqZwG/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "19",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Cache-Control" : "public, no-cache",
+      "Etag" : "W/\"5044547ca3d800053ddf304860244c1a\"",
+      "X-Request-Id" : "562bd0f5-3f85-4486-bb1e-7cf5e8e3762a",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 23 Dec 2022 10:26:06 GMT",
+      "Age" : "1",
+      "X-Served-By" : "cache-ams21026-AMS",
+      "X-Cache" : "HIT",
+      "X-Cache-Hits" : "1",
+      "X-Timer" : "S1671791167.806179,VS0,VE1",
+      "Vary" : "Authorization, Origin"
+    }
+  },
+  "uuid" : "4130e644-00e9-47fd-b6b4-a1fce31b0ac8",
+  "persistent" : true,
+  "scenarioName" : "scenario-3-api-stock_locations-PMRpouqZwG",
+  "requiredScenarioState" : "scenario-3-api-stock_locations-PMRpouqZwG-2",
+  "newScenarioState" : "scenario-3-api-stock_locations-PMRpouqZwG-3",
+  "insertionIndex" : 1123
+}

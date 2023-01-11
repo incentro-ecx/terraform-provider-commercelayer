@@ -18,6 +18,9 @@ const (
 	stockLocationType            = "stock_locations"
 	inventoryReturnLocationsType = "inventory_return_locations"
 	inventoryStockLocationsType  = "inventory_stock_locations"
+	deliveryLeadTimesType        = "delivery_lead_times"
+	googleGeocodersType          = "google_geocoders"
+	bingGeocodersType            = "bing_geocoders"
 	paymentMethodType            = "payment_methods"
 	paymentGatewayType           = "payment_gateways"
 )
