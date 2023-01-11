@@ -9,11 +9,11 @@ Currently, the checked resources are supported. Support for additional resources
 projects, or contributed.
 
 - [x] Address
-- [ ] Adyen payment gateway
+- [X] Adyen payment gateway
 - [ ] Avalara tax calculator
 - [X] Bing Geocoder
-- [ ] Braintree payment gateway
-- [ ] Checkout.com payment gateway
+- [X] Braintree payment gateway
+- [X] Checkout.com payment gateway
 - [x] Customer group
 - [X] Delivery lead times
 - [x] External payment gateway
@@ -22,12 +22,12 @@ projects, or contributed.
 - [x] Inventory model
 - [x] Inventory return location
 - [x] Inventory stock location
-- [ ] Klarna payment gateway
-- [ ] Manual payment gateway
+- [X] Klarna payment gateway
+- [X] Manual payment gateway
 - [ ] Manual tax calculator
 - [x] Market
 - [x] Merchant
-- [ ] Paypal payment gateway
+- [X] Paypal payment gateway
 - [ ] Payment method
 - [x] Price list
 - [x] Shipping category

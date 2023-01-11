@@ -1,0 +1,37 @@
+{
+  "id" : "70ce6a02-769f-4915-9cf1-a5ab30ddd3ba",
+  "name" : "api_klarna_gateways_wvwnjsnzwx",
+  "request" : {
+    "url" : "/api/klarna_gateways/WvWNJsnZWx",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "24",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "775cf8d1-ad84-4da3-9417-ed3868a5c34c",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 11 Jan 2023 14:28:25 GMT",
+      "X-Served-By" : "cache-ams21056-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673447305.390916,VS0,VE99",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "70ce6a02-769f-4915-9cf1-a5ab30ddd3ba",
+  "persistent" : true,
+  "insertionIndex" : 893
+}

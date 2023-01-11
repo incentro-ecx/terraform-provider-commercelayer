@@ -29,7 +29,7 @@ resource "commercelayer_address" "incentro_address" {
 
 resource "commercelayer_stock_location" "incentro_warehouse_location" {
   attributes {
-    name         = "Incentro Warehouse Location"
+    name         = "Incentro Warehouse Stock Location"
     label_format = "PNG"
     suppress_etd = true
   }

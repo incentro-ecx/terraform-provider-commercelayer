@@ -23,4 +23,10 @@ const (
 	bingGeocodersType            = "bing_geocoders"
 	paymentMethodType            = "payment_methods"
 	paymentGatewayType           = "payment_gateways"
+	manualGatewaysType           = "manual_gateways"
+	adyenGatewaysType            = "adyen_gateways"
+	paypalGatewaysType           = "paypal_gateways"
+	klarnaGatewaysType           = "klarna_gateways"
+	braintreeGatewaysType        = "braintree_gateways"
+	checkoutComGatewaysType      = "checkout_com_gateways"
 )
