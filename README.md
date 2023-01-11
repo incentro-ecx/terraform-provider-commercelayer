@@ -1,7 +1,7 @@
 # Commercelayer Terraform Provider
 
 The Commercelayer terraform provider allows you to configure your [Commercelayer shops](https://commercelayer.io/) with
-infrastructure-as-code principles. See [the terraform registry](https://registry.terraform.io/providers/in/commercetools/latest/docs) for more information
+infrastructure-as-code principles. See [the terraform registry documentation](https://registry.terraform.io/providers/incentro-dc/commercelayer/latest/docs) for more information
 
 ## Currently supported resources
 
