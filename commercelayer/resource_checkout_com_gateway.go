@@ -22,7 +22,7 @@ func resourceCheckoutComGateway() *schema.Resource {
 		},
 		Schema: map[string]*schema.Schema{
 			"id": {
-				Description: "The checkoutCom payment unique identifier",
+				Description: "The checkout.com payment unique identifier",
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
@@ -155,8 +155,6 @@ func resourceCheckoutComGatewayUpdateFunc(ctx context.Context, d *schema.Resourc
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
-				SecretKey:       stringRef(attributes["secret_key"]),
-				PublicKey:       stringRef(attributes["public_key"]),
 			},
 		},
 	}
