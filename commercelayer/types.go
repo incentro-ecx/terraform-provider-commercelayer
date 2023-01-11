@@ -20,7 +20,6 @@ const (
 	inventoryStockLocationsType  = "inventory_stock_locations"
 	deliveryLeadTimesType        = "delivery_lead_times"
 	manualGatewaysType           = "manual_gateways"
-	stripeGatewaysType           = "stripe_gateways"
 	adyenGatewaysType            = "adyen_gateways"
 	paypalGatewaysType           = "paypal_gateways"
 	klarnaGatewaysType           = "klarna_gateways"

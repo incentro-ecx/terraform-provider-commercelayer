@@ -57,7 +57,6 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_inventory_stock_location":  resourceInventoryStockLocation(),
 	"commercelayer_delivery_lead_time":        resourceDeliveryLeadTime(),
 	"commercelayer_manual_gateway":            resourceManualGateway(),
-	"commercelayer_stripe_gateway":            resourceStripeGateway(),
 	"commercelayer_adyen_gateway":             resourceAdyenGateway(),
 	"commercelayer_paypal_gateway":            resourcePaypalGateway(),
 	"commercelayer_klarna_gateway":            resourceKlarnaGateway(),
