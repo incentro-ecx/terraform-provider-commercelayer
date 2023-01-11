@@ -62,6 +62,8 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_klarna_gateway":            resourceKlarnaGateway(),
 	"commercelayer_braintree_gateway":         resourceBraintreeGateway(),
 	"commercelayer_checkout_com_gateway":      resourceCheckoutComGateway(),
+	"commercelayer_google_geocoder":           resourceGoogleGeocoders(),
+	"commercelayer_bing_geocoder":             resourceBingGeocoders(),
 }
 
 type Configuration struct {

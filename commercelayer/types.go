@@ -19,6 +19,8 @@ const (
 	inventoryReturnLocationsType = "inventory_return_locations"
 	inventoryStockLocationsType  = "inventory_stock_locations"
 	deliveryLeadTimesType        = "delivery_lead_times"
+	googleGeocodersType          = "google_geocoders"
+	bingGeocodersType            = "bing_geocoders"
 	manualGatewaysType           = "manual_gateways"
 	adyenGatewaysType            = "adyen_gateways"
 	paypalGatewaysType           = "paypal_gateways"
