@@ -72,25 +72,6 @@ func resourceExternalTaxCalculator() *schema.Resource {
 					},
 				},
 			},
-			//"relationships": {
-			//	Description: "Resource relationships",
-			//	Type:        schema.TypeList,
-			//	MaxItems:    1,
-			//	MinItems:    1,
-			//	Required:    true,
-			//	Elem: &schema.Resource{
-			//		Schema: map[string]*schema.Schema{
-			//			"tax_categories": {
-			//				Description: "The associated tax categories.",
-			//				Type:        schema.TypeList,
-			//				Elem: &schema.Schema{
-			//					Type: schema.TypeString,
-			//				},
-			//				Optional: true,
-			//			},
-			//		},
-			//	},
-			//},
 		},
 	}
 }
@@ -118,7 +99,6 @@ func resourceExternalTaxCalculatorCreateFunc(ctx context.Context, d *schema.Reso
 	c := i.(*commercelayer.APIClient)
 
 	attributes := nestedMap(d.Get("attributes"))
-	//relationships := nestedMap(d.Get("relationships"))
 
 	externalTaxCalculatorCreate := commercelayer.ExternalTaxCalculatorCreate{
 		Data: commercelayer.ExternalTaxCalculatorCreateData{
@@ -130,14 +110,6 @@ func resourceExternalTaxCalculatorCreateFunc(ctx context.Context, d *schema.Reso
 				Metadata:         keyValueRef(attributes["metadata"]),
 				TaxCalculatorUrl: attributes["tax_calculator_url"].(string),
 			},
-			//Relationships: &commercelayer.AvalaraAccountCreateDataRelationships{
-			//	TaxCategories: &commercelayer.AvalaraAccountDataRelationshipsTaxCategories{
-			//		Data: commercelayer.AvalaraAccountDataRelationshipsTaxCategoriesData{
-			//			Type: stringRef(addressType),
-			//			Id:   stringRef(relationships["address"].(string)),
-			//		},
-			//	},
-			//},
 		},
 	}
 
@@ -166,7 +138,6 @@ func resourceExternalTaxCalculatorUpdateFunc(ctx context.Context, d *schema.Reso
 	c := i.(*commercelayer.APIClient)
 
 	attributes := nestedMap(d.Get("attributes"))
-	//relationships := nestedMap(d.Get("relationships"))
 
 	var ExternalTaxCalculatorUpdate = commercelayer.ExternalTaxCalculatorUpdate{
 		Data: commercelayer.ExternalTaxCalculatorUpdateData{
@@ -179,14 +150,6 @@ func resourceExternalTaxCalculatorUpdateFunc(ctx context.Context, d *schema.Reso
 				Metadata:         keyValueRef(attributes["metadata"]),
 				TaxCalculatorUrl: stringRef(attributes["tax_calculator_url"].(string)),
 			},
-			//Relationships: &commercelayer.ExternalTaxCalculatorUpdateDataRelationships{
-			//	Address: &commercelayer.BingGeocoderDataRelationshipsAddresses{
-			//		Data: commercelayer.BingGeocoderDataRelationshipsAddressesData{
-			//			Type: stringRef(addressType),
-			//			Id:   stringRef(relationships["address"].(string)),
-			//		},
-			//	},
-			//},
 		},
 	}
 

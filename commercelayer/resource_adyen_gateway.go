@@ -86,22 +86,6 @@ func resourceAdyenGateway() *schema.Resource {
 							},
 							Optional: true,
 						},
-						"relationships": {
-							Description: "Resource relationships",
-							Type:        schema.TypeList,
-							MaxItems:    1,
-							MinItems:    1,
-							Optional:    true,
-							Elem: &schema.Resource{
-								Schema: map[string]*schema.Schema{
-									"adyen_payment_id": {
-										Description: "The associated payment id.",
-										Type:        schema.TypeString,
-										Optional:    true,
-									},
-								},
-							},
-						},
 					},
 				},
 			},
@@ -133,7 +117,6 @@ func resourceAdyenGatewayCreateFunc(ctx context.Context, d *schema.ResourceData,
 
 	attributes := nestedMap(d.Get("attributes"))
 
-	// TODO: Relationships when paymentMethods are also created
 	adyenGatewayCreate := commercelayer.AdyenGatewayCreate{
 		Data: commercelayer.AdyenGatewayCreateData{
 			Type: adyenGatewaysType,
@@ -146,11 +129,6 @@ func resourceAdyenGatewayCreateFunc(ctx context.Context, d *schema.ResourceData,
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
-			//	Relationships: &commercelayer.AdyenGatewayCreateDataRelationships{
-			//		AdyenPayments: &commercelayer.AdyenGatewayDataRelationshipsAdyenPayments{commercelayer.AdyenGatewayDataRelationshipsAdyenPaymentsData{
-			//			Type: stringRef(adyenPaymentType),
-			//			Id: stringRef(relationships["adyen_payment_id"]),
-			//		}}},
 		},
 	}
 
@@ -180,7 +158,6 @@ func resourceAdyenGatewayUpdateFunc(ctx context.Context, d *schema.ResourceData,
 
 	attributes := nestedMap(d.Get("attributes"))
 
-	// TODO: Relationships when paymentMethods are also created
 	var adyenGatewayUpdate = commercelayer.AdyenGatewayUpdate{
 		Data: commercelayer.AdyenGatewayUpdateData{
 			Type: adyenGatewaysType,
