@@ -1,0 +1,37 @@
+{
+  "id" : "04d73d89-d2ea-4e1f-b605-7f16a5d0e6be",
+  "name" : "api_paypal_gateways_bjzlvsambx",
+  "request" : {
+    "url" : "/api/paypal_gateways/BjZLVsAmbx",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "40",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "f43ebbbe-8e5c-4336-8f75-73a89c023eb4",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 11 Jan 2023 14:29:16 GMT",
+      "X-Served-By" : "cache-ams21026-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673447356.065147,VS0,VE54",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "04d73d89-d2ea-4e1f-b605-7f16a5d0e6be",
+  "persistent" : true,
+  "insertionIndex" : 911
+}

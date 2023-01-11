@@ -1,0 +1,43 @@
+{
+  "id" : "8512ea0d-060d-4f45-a4e0-a1117fe9e412",
+  "name" : "api_paypal_gateways_bjzlvsambx",
+  "request" : {
+    "url" : "/api/paypal_gateways/BjZLVsAmbx",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"BjZLVsAmbx\",\"type\":\"paypal_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/paypal_gateways/BjZLVsAmbx\"},\"attributes\":{\"name\":\"Incentro Paypal Gateway\",\"created_at\":\"2023-01-11T14:29:14.657Z\",\"updated_at\":\"2023-01-11T14:29:14.657Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_paypal_gateway.incentro_paypal_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/paypal_gateways/BjZLVsAmbx/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/paypal_gateways/BjZLVsAmbx/payment_methods\"}},\"paypal_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/paypal_gateways/BjZLVsAmbx/relationships/paypal_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/paypal_gateways/BjZLVsAmbx/paypal_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "36",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"c5f497a32ef4bb4a7a832b037fc1aa52\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "d6c6df54-30f2-4316-b16f-808cf8dad78e",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 11 Jan 2023 14:29:15 GMT",
+      "X-Served-By" : "cache-ams21072-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673447355.961539,VS0,VE77",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "8512ea0d-060d-4f45-a4e0-a1117fe9e412",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-paypal_gateways-BjZLVsAmbx",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1-api-paypal_gateways-BjZLVsAmbx-2",
+  "insertionIndex" : 907
+}

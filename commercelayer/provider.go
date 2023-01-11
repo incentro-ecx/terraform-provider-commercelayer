@@ -56,6 +56,12 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_inventory_return_location": resourceInventoryReturnLocation(),
 	"commercelayer_inventory_stock_location":  resourceInventoryStockLocation(),
 	"commercelayer_delivery_lead_time":        resourceDeliveryLeadTime(),
+	"commercelayer_manual_gateway":            resourceManualGateway(),
+	"commercelayer_adyen_gateway":             resourceAdyenGateway(),
+	"commercelayer_paypal_gateway":            resourcePaypalGateway(),
+	"commercelayer_klarna_gateway":            resourceKlarnaGateway(),
+	"commercelayer_braintree_gateway":         resourceBraintreeGateway(),
+	"commercelayer_checkout_com_gateway":      resourceCheckoutComGateway(),
 	"commercelayer_google_geocoder":           resourceGoogleGeocoders(),
 	"commercelayer_bing_geocoder":             resourceBingGeocoders(),
 }

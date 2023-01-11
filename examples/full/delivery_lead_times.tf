@@ -8,7 +8,7 @@ resource "commercelayer_delivery_lead_time" "incentro_delivery_lead_time" {
   }
 
   relationships {
-    stock_location_id = commercelayer_stock_location.incentro_warehouse_location.id
+    stock_location_id  = commercelayer_stock_location.incentro_warehouse_location.id
     shipping_method_id = commercelayer_shipping_method.incentro_shipping_method.id
   }
 }

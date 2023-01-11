@@ -21,4 +21,10 @@ const (
 	deliveryLeadTimesType        = "delivery_lead_times"
 	googleGeocodersType          = "google_geocoders"
 	bingGeocodersType            = "bing_geocoders"
+	manualGatewaysType           = "manual_gateways"
+	adyenGatewaysType            = "adyen_gateways"
+	paypalGatewaysType           = "paypal_gateways"
+	klarnaGatewaysType           = "klarna_gateways"
+	braintreeGatewaysType        = "braintree_gateways"
+	checkoutComGatewaysType      = "checkout_com_gateways"
 )

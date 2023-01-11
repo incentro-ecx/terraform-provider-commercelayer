@@ -1,0 +1,43 @@
+{
+  "id" : "83eb03bc-75a8-4473-87e5-f80e1718b901",
+  "name" : "api_adyen_gateways_wxqgrsydgj",
+  "request" : {
+    "url" : "/api/adyen_gateways/WxQGrsydGj",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"WxQGrsydGj\",\"type\":\"adyen_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/WxQGrsydGj\"},\"attributes\":{\"name\":\"Incentro Adyen Gateway\",\"created_at\":\"2023-01-11T14:24:37.206Z\",\"updated_at\":\"2023-01-11T14:24:37.206Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_adyen_gateway.incentro_adyen_gateway\"},\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/WxQGrsydGj/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/WxQGrsydGj/payment_methods\"}},\"adyen_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/WxQGrsydGj/relationships/adyen_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/WxQGrsydGj/adyen_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "3",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"b298f7e02683feed3c77ded0586b794e\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "27d77041-422d-45b7-9148-f78259feb95c",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 11 Jan 2023 14:24:37 GMT",
+      "X-Served-By" : "cache-ams21068-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673447077.465389,VS0,VE39",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "83eb03bc-75a8-4473-87e5-f80e1718b901",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-adyen_gateways-WxQGrsydGj",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1-api-adyen_gateways-WxQGrsydGj-2",
+  "insertionIndex" : 425
+}
