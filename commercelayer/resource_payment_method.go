@@ -9,9 +9,9 @@ import (
 
 func resourcePaymentMethod() *schema.Resource {
 	return &schema.Resource{
-		Description: "Payment methods can be associated with orders as their shipping or billing addresses. Add a " +
-			"Google or Bing geocoder to a market if you want its addresses to be automatically geocoded. Customers " +
-			"can save their most-used addresses in their address books (as customer addresses).",
+		Description: "Payment methods represent the type of payment sources " +
+			"(e.g., Credit Card, PayPal, or Apple Pay) offered in a market. " +
+			"They can have a price and must be present before placing an order.",
 		ReadContext:   resourcePaymentMethodReadFunc,
 		CreateContext: resourcePaymentMethodCreateFunc,
 		UpdateContext: resourcePaymentMethodUpdateFunc,
@@ -39,21 +39,24 @@ func resourcePaymentMethod() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"payment_source_type": {
-							Description: "The payment source type, can be one of: 'AdyenPayment', 'BraintreePayment', 'CheckoutComPayment', 'CreditCard', " +
-								"'ExternalPayment', 'KlarnaPayment', 'PaypalPayment', 'StripePayment', or 'WireTransfer'.",
+							Description: "The payment source type, can be one of: 'AdyenPayment', 'BraintreePayment', " +
+								"'CheckoutComPayment', 'CreditCard', 'ExternalPayment', 'KlarnaPayment', 'PaypalPayment', " +
+								"'StripePayment', or 'WireTransfer'.",
 							Type:     schema.TypeString,
 							Required: true,
 						},
 						"currency_code": {
-							Description: "The international 3-letter currency code as defined by the ISO 4217 standard.",
-							Type:        schema.TypeString,
-							Required:    true,
+							Description: "The international 3-letter currency code as defined by the ISO 4217 standard. " +
+								"Required, unless inherited by market",
+							Type:     schema.TypeString,
+							Required: true,
 						},
 						"moto": {
-							Description: "Send this attribute if you want to mark the payment as MOTO, must be supported by payment gateway.",
-							Type:        schema.TypeBool,
-							Optional:    true,
-							Default:     false,
+							Description: "Send this attribute if you want to mark the payment as MOTO, " +
+								"must be supported by payment gateway.",
+							Type:     schema.TypeBool,
+							Optional: true,
+							Default:  false,
 						},
 						"price_amount_cents": {
 							Description: "The payment method's price, in cents.",
@@ -93,12 +96,12 @@ func resourcePaymentMethod() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"market_id": {
-							Description: "The payment method's price, in cents",
+							Description: "The associated market.",
 							Type:        schema.TypeString,
 							Optional:    true,
 						},
 						"payment_gateway_id": {
-							Description: "The payment method's price, in cents",
+							Description: "The associated payment gateway.",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
@@ -146,7 +149,20 @@ func resourcePaymentMethodCreateFunc(ctx context.Context, d *schema.ResourceData
 				ReferenceOrigin:   stringRef(attributes["reference_origin"]),
 				Metadata:          keyValueRef(attributes["metadata"]),
 			},
-			Relationships: &commercelayer.PaymentMethodCreateDataRelationships{},
+			Relationships: &commercelayer.PaymentMethodCreateDataRelationships{
+				Market: &commercelayer.AvalaraAccountDataRelationshipsMarkets{
+					Data: commercelayer.AvalaraAccountDataRelationshipsMarketsData{
+						Type: stringRef(marketType),
+						Id:   stringRef(relationships["market_id"]),
+					},
+				},
+				PaymentGateway: commercelayer.AdyenPaymentDataRelationshipsPaymentGateway{
+					Data: commercelayer.AdyenPaymentDataRelationshipsPaymentGatewayData{
+						Type: stringRef(adyenGatewayType),
+						Id:   stringRef(relationships["payment_gateway_id"]),
+					},
+				},
+			},
 		},
 	}
 
@@ -208,6 +224,20 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 				Reference:         stringRef(attributes["reference"]),
 				ReferenceOrigin:   stringRef(attributes["reference_origin"]),
 				Metadata:          keyValueRef(attributes["metadata"]),
+			},
+			Relationships: &commercelayer.PaymentMethodUpdateDataRelationships{
+				Market: &commercelayer.AvalaraAccountDataRelationshipsMarkets{
+					Data: commercelayer.AvalaraAccountDataRelationshipsMarketsData{
+						Type: stringRef(marketType),
+						Id:   stringRef(relationships["market_id"]),
+					},
+				},
+				PaymentGateway: &commercelayer.AdyenPaymentDataRelationshipsPaymentGateway{
+					Data: commercelayer.AdyenPaymentDataRelationshipsPaymentGatewayData{
+						Type: stringRef(adyenGatewayType),
+						Id:   stringRef(relationships["payment_gateway_id"]),
+					},
+				},
 			},
 		},
 	}

@@ -6,6 +6,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
 	"net/http"
+	"strings"
 )
 
 func testAccCheckPaymentMethodDestroy(s *terraform.State) error {
@@ -26,10 +27,10 @@ func testAccCheckPaymentMethodDestroy(s *terraform.State) error {
 	}
 
 	for _, rs := range s.RootModule().Resources {
-		if rs.Type == "commercelayer_market" {
+		if rs.Type == "commercelayer_payment_method" {
 			err := retryRemoval(10, func() (*http.Response, error) {
-				_, resp, err := client.MarketsApi.
-					GETMarketsMarketId(context.Background(), rs.Primary.ID).
+				_, resp, err := client.PaymentMethodsApi.
+					GETPaymentMethodsPaymentMethodId(context.Background(), rs.Primary.ID).
 					Execute()
 				return resp, err
 			})
@@ -53,29 +54,35 @@ func (s *AcceptanceSuite) TestAccPaymentMethod_basic() {
 		CheckDestroy:      testAccCheckPaymentMethodDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccPaymentMethodCreate(resourceName),
+				Config: strings.Join([]string{testAccPaymentMethodCreate(resourceName), testAccAdyenGatewayCreate(resourceName), testAccMarketCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", paymentMethodType),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "EUR"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.payment_source_type", "CreditCard"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "0"),
 				),
 			},
 			{
-				Config: testAccPaymentMethodUpdate(resourceName),
+				Config: strings.Join([]string{testAccPaymentMethodCreate(resourceName), testAccAdyenGatewayCreate(resourceName), testAccMarketCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Payment Method Updated"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "EUR"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.payment_source_type", "CreditCard"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "0"),
 				),
 			},
 		},
 	})
 }
 
-// TODO: add payment_gateway_id to Template body
 func testAccPaymentMethodCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_payment_method" "incentro_payment_method" {
 		  attributes {
-      		payment_source_type   = "CreditCard",
+      		payment_source_type   = "CreditCard"
 			currency_code          = "EUR"
-			price_amount_cents     = 1000
+			price_amount_cents     = 0
 			metadata               = {
 			  foo : "bar"
 		 	  testName: "{{.testName}}"
@@ -83,26 +90,27 @@ func testAccPaymentMethodCreate(testName string) string {
 		  }
 
 		  relationships {
+			payment_gateway_id = commercelayer_payment_gateway.incentro_payment_gateway.id
 			market_id = commercelayer_market.incentro_market.id
 		  }
 		}
 	`, map[string]any{"testName": testName})
 }
 
-// TODO: add payment_gateway_id to Template body
 func testAccPaymentMethodUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_payment_method" "incentro_payment_method" {
 		  attributes {
       		payment_source_type    = "CreditCard"
 			currency_code          = "EUR"
-			price_amount_cents     = 1000
+			price_amount_cents     = 0
 			metadata               = {
-			  foo : "bar"
+			  bar : "foo"
 		 	  testName: "{{.testName}}"
 			}
 		  }
   		  relationships {
+			payment_gateway_id = commercelayer_payment_gateway.incentro_payment_gateway.id
 			market_id = commercelayer_market.incentro_market.id
 		  }
 		}
