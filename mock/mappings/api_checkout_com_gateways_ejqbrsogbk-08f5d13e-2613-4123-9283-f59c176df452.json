@@ -1,0 +1,43 @@
+{
+  "id" : "08f5d13e-2613-4123-9283-f59c176df452",
+  "name" : "api_checkout_com_gateways_ejqbrsogbk",
+  "request" : {
+    "url" : "/api/checkout_com_gateways/ejqbrsogbk",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"ejqbrsogbk\",\"type\":\"checkout_com_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/checkout_com_gateways/ejqbrsogbk\"},\"attributes\":{\"name\":\"Incentro CheckoutCom Gateway\",\"created_at\":\"2023-01-11T14:27:56.338Z\",\"updated_at\":\"2023-01-11T14:27:56.338Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_checkout_com_gateway.incentro_checkout_com_gateway\"},\"webhook_endpoint_id\":null,\"webhook_endpoint_secret\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/checkout_com_gateways/ejqbrsogbk\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/checkout_com_gateways/ejqbrsogbk/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/checkout_com_gateways/ejqbrsogbk/payment_methods\"}},\"checkout_com_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/checkout_com_gateways/ejqbrsogbk/relationships/checkout_com_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/checkout_com_gateways/ejqbrsogbk/checkout_com_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "13",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"dccdc533292ff0cf2d4fcd9499fc45e3\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "c890b75c-f9a7-49f1-9394-2ea6b23db585",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 11 Jan 2023 14:27:56 GMT",
+      "X-Served-By" : "cache-ams21055-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673447277.928335,VS0,VE49",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "08f5d13e-2613-4123-9283-f59c176df452",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-checkout_com_gateways-ejqbrsogbk",
+  "requiredScenarioState" : "scenario-1-api-checkout_com_gateways-ejqbrsogbk-2",
+  "newScenarioState" : "scenario-1-api-checkout_com_gateways-ejqbrsogbk-3",
+  "insertionIndex" : 881
+}

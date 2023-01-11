@@ -69,18 +69,18 @@ func resourceBraintreeGateway() *schema.Resource {
 								"(3, 7 or 12 chars), an asterisk (*) and the product name (18, 14 or 9 chars), " +
 								"for a total length of 22 chars.",
 							Type:     schema.TypeString,
-							Required: true,
+							Optional: true,
 						},
 						"descriptor_phone": {
 							Description: "The dynamic descriptor phone number. Must be 10-14 " +
 								"characters and can only contain numbers, dashes, parentheses and periods.",
 							Type:     schema.TypeString,
-							Required: true,
+							Optional: true,
 						},
 						"descriptor_url": {
 							Description: "The dynamic descriptor URL.",
 							Type:        schema.TypeString,
-							Required:    true,
+							Optional:    true,
 						},
 						"reference": {
 							Description: "A string that you can use to add any external identifier to the resource. This " +
