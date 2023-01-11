@@ -2,6 +2,7 @@
   <configuration default="false" name="run resource_payment_method_test.go" type="GoTestRunConfiguration" factoryName="Go Test" folderName="Resource integration tests">
     <module name="terraform-provider-commercelayer" />
     <working_directory value="$PROJECT_DIR$/commercelayer" />
+    <go_parameters value="-p 1" />
     <parameters value=" -testify.m ^TestAccPaymentMethod_basic$" />
     <envs>
       <env name="TF_ACC" value="1" />

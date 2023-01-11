@@ -150,15 +150,9 @@ func resourcePaymentMethodCreateFunc(ctx context.Context, d *schema.ResourceData
 				Metadata:          keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.PaymentMethodCreateDataRelationships{
-				Market: &commercelayer.AvalaraAccountDataRelationshipsMarkets{
-					Data: commercelayer.AvalaraAccountDataRelationshipsMarketsData{
-						Type: stringRef(marketType),
-						Id:   stringRef(relationships["market_id"]),
-					},
-				},
 				PaymentGateway: commercelayer.AdyenPaymentDataRelationshipsPaymentGateway{
 					Data: commercelayer.AdyenPaymentDataRelationshipsPaymentGatewayData{
-						Type: stringRef(adyenGatewayType),
+						Type: stringRef(adyenGatewaysType),
 						Id:   stringRef(relationships["payment_gateway_id"]),
 					},
 				},
@@ -226,15 +220,9 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 				Metadata:          keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.PaymentMethodUpdateDataRelationships{
-				Market: &commercelayer.AvalaraAccountDataRelationshipsMarkets{
-					Data: commercelayer.AvalaraAccountDataRelationshipsMarketsData{
-						Type: stringRef(marketType),
-						Id:   stringRef(relationships["market_id"]),
-					},
-				},
 				PaymentGateway: &commercelayer.AdyenPaymentDataRelationshipsPaymentGateway{
 					Data: commercelayer.AdyenPaymentDataRelationshipsPaymentGatewayData{
-						Type: stringRef(adyenGatewayType),
+						Type: stringRef(adyenGatewaysType),
 						Id:   stringRef(relationships["payment_gateway_id"]),
 					},
 				},
