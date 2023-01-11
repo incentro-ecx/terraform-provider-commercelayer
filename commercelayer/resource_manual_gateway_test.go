@@ -2,10 +2,10 @@ package commercelayer
 
 import (
 	"context"
+	"fmt"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
-	"net/http"
 )
 
 func testAccCheckManualGatewayDestroy(s *terraform.State) error {
@@ -13,15 +13,17 @@ func testAccCheckManualGatewayDestroy(s *terraform.State) error {
 
 	for _, rs := range s.RootModule().Resources {
 		if rs.Type == "commercelayer_manual_gateway" {
-			err := retryRemoval(10, func() (*http.Response, error) {
-				_, resp, err := client.ManualGatewaysApi.
-					GETManualGatewaysManualGatewayId(context.Background(), rs.Primary.ID).
-					Execute()
-				return resp, err
-			})
+			_, resp, err := client.ManualGatewaysApi.
+				GETManualGatewaysManualGatewayId(context.Background(), rs.Primary.ID).Execute()
+			if resp.StatusCode == 404 {
+				fmt.Printf("commercelayer_manual_gateway with id %s has been removed\n", rs.Primary.ID)
+				continue
+			}
 			if err != nil {
 				return err
 			}
+
+			return fmt.Errorf("received response code with status %d", resp.StatusCode)
 		}
 
 	}
