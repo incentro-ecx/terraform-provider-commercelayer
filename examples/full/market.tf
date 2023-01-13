@@ -4,7 +4,8 @@ resource "commercelayer_market" "incentro_market" {
     //TODO: check why these are considered invalid
     #    checkout_url        = "http://example.url"
     #    external_prices_url = "http://example.url"
-    facebook_pixel_id = "pixel"
+    facebook_pixel_id             = "pixel"
+    external_order_validation_url = "https://www.example.com"
   }
 
   relationships {
