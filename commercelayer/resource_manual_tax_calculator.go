@@ -38,7 +38,7 @@ func resourceManualTaxCalculator() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"name": {
-							Description: "The payment tax calculator's internal name.",
+							Description: "The tax calculator's internal name.",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
