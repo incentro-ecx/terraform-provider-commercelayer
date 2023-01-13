@@ -27,4 +27,6 @@ const (
 	klarnaGatewaysType           = "klarna_gateways"
 	braintreeGatewaysType        = "braintree_gateways"
 	checkoutComGatewaysType      = "checkout_com_gateways"
+	taxRulesType                 = "tax_rules"
+	manualTaxCalculatorType      = "manual_tax_calculators"
 )
