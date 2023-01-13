@@ -7,20 +7,20 @@ import (
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
 )
 
-func resourceManualTaxCalculator() *schema.Resource {
+func resourceTaxjarAccount() *schema.Resource {
 	return &schema.Resource{
-		Description: "Configure the manual tax calculator by creating one or more associated tax rules. " +
-			"The rules will apply the related tax rate to the matching orders.",
-		ReadContext:   resourceManualTaxCalculatorReadFunc,
-		CreateContext: resourceManualTaxCalculatorCreateFunc,
-		UpdateContext: resourceManualTaxCalculatorUpdateFunc,
-		DeleteContext: resourceManualTaxCalculatorDeleteFunc,
+		Description: "Configure your TaxJar account to automatically compute tax calculations " +
+			"for the orders of the associated market.",
+		ReadContext:   resourceTaxjarAccountReadFunc,
+		CreateContext: resourceTaxjarAccountCreateFunc,
+		UpdateContext: resourceTaxjarAccountUpdateFunc,
+		DeleteContext: resourceTaxjarAccountDeleteFunc,
 		Importer: &schema.ResourceImporter{
 			StateContext: schema.ImportStatePassthroughContext,
 		},
 		Schema: map[string]*schema.Schema{
 			"id": {
-				Description: "The manual payment unique identifier",
+				Description: "The taxjar account unique identifier",
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
@@ -39,6 +39,11 @@ func resourceManualTaxCalculator() *schema.Resource {
 					Schema: map[string]*schema.Schema{
 						"name": {
 							Description: "The tax calculator's internal name.",
+							Type:        schema.TypeString,
+							Required:    true,
+						},
+						"api_key": {
+							Description: "The TaxJar account API key.",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
@@ -70,35 +75,36 @@ func resourceManualTaxCalculator() *schema.Resource {
 	}
 }
 
-func resourceManualTaxCalculatorReadFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
+func resourceTaxjarAccountReadFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
-	resp, _, err := c.ManualTaxCalculatorsApi.GETManualTaxCalculatorsManualTaxCalculatorId(ctx, d.Id()).Execute()
+	resp, _, err := c.TaxjarAccountsApi.GETTaxjarAccountsTaxjarAccountId(ctx, d.Id()).Execute()
 	if err != nil {
 		return diagErr(err)
 	}
 
-	manualTaxCalculator, ok := resp.GetDataOk()
+	taxjarAccount, ok := resp.GetDataOk()
 	if !ok {
 		d.SetId("")
 		return nil
 	}
 
-	d.SetId(manualTaxCalculator.GetId())
+	d.SetId(taxjarAccount.GetId())
 
 	return nil
 }
 
-func resourceManualTaxCalculatorCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
+func resourceTaxjarAccountCreateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
 	attributes := nestedMap(d.Get("attributes"))
 
-	manualTaxCalculatorCreate := commercelayer.ManualTaxCalculatorCreate{
-		Data: commercelayer.ManualTaxCalculatorCreateData{
-			Type: manualTaxCalculatorsType,
-			Attributes: commercelayer.POSTManualTaxCalculators201ResponseDataAttributes{
+	taxjarAccountCreate := commercelayer.TaxjarAccountCreate{
+		Data: commercelayer.TaxjarAccountCreateData{
+			Type: taxjarAccountsType,
+			Attributes: commercelayer.POSTTaxjarAccounts201ResponseDataAttributes{
 				Name:            attributes["name"].(string),
+				ApiKey:          attributes["api_key"].(string),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
@@ -106,37 +112,37 @@ func resourceManualTaxCalculatorCreateFunc(ctx context.Context, d *schema.Resour
 		},
 	}
 
-	err := d.Set("type", manualTaxCalculatorsType)
+	err := d.Set("type", taxjarAccountsType)
 	if err != nil {
 		return diagErr(err)
 	}
 
-	manualTaxCalculator, _, err := c.ManualTaxCalculatorsApi.POSTManualTaxCalculators(ctx).ManualTaxCalculatorCreate(manualTaxCalculatorCreate).Execute()
+	taxjarAccount, _, err := c.TaxjarAccountsApi.POSTTaxjarAccounts(ctx).TaxjarAccountCreate(taxjarAccountCreate).Execute()
 	if err != nil {
 		return diagErr(err)
 	}
 
-	d.SetId(*manualTaxCalculator.Data.Id)
+	d.SetId(*taxjarAccount.Data.Id)
 
 	return nil
 }
 
-func resourceManualTaxCalculatorDeleteFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
+func resourceTaxjarAccountDeleteFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
-	_, err := c.ManualTaxCalculatorsApi.DELETEManualTaxCalculatorsManualTaxCalculatorId(ctx, d.Id()).Execute()
+	_, err := c.TaxjarAccountsApi.DELETETaxjarAccountsTaxjarAccountId(ctx, d.Id()).Execute()
 	return diag.FromErr(err)
 }
 
-func resourceManualTaxCalculatorUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
+func resourceTaxjarAccountUpdateFunc(ctx context.Context, d *schema.ResourceData, i interface{}) diag.Diagnostics {
 	c := i.(*commercelayer.APIClient)
 
 	attributes := nestedMap(d.Get("attributes"))
 
-	var manualTaxCalculatorUpdate = commercelayer.ManualTaxCalculatorUpdate{
-		Data: commercelayer.ManualTaxCalculatorUpdateData{
-			Type: manualTaxCalculatorsType,
+	var taxjarAccountUpdate = commercelayer.TaxjarAccountUpdate{
+		Data: commercelayer.TaxjarAccountUpdateData{
+			Type: taxjarAccountsType,
 			Id:   d.Id(),
-			Attributes: commercelayer.PATCHManualTaxCalculatorsManualTaxCalculatorId200ResponseDataAttributes{
+			Attributes: commercelayer.PATCHTaxjarAccountsTaxjarAccountId200ResponseDataAttributes{
 				Name:            stringRef(attributes["name"]),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
@@ -145,8 +151,8 @@ func resourceManualTaxCalculatorUpdateFunc(ctx context.Context, d *schema.Resour
 		},
 	}
 
-	_, _, err := c.ManualTaxCalculatorsApi.PATCHManualTaxCalculatorsManualTaxCalculatorId(ctx, d.Id()).
-		ManualTaxCalculatorUpdate(manualTaxCalculatorUpdate).Execute()
+	_, _, err := c.TaxjarAccountsApi.PATCHTaxjarAccountsTaxjarAccountId(ctx, d.Id()).
+		TaxjarAccountUpdate(taxjarAccountUpdate).Execute()
 
 	return diag.FromErr(err)
 }
