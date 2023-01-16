@@ -28,4 +28,6 @@ const (
 	braintreeGatewaysType        = "braintree_gateways"
 	checkoutComGatewaysType      = "checkout_com_gateways"
 	stripeGatewaysType           = "stripe_gateways"
+	manualTaxCalculatorsType     = "manual_tax_calculators"
+	taxjarAccountsType           = "taxjar_accounts"
 )

@@ -1,0 +1,43 @@
+{
+  "id" : "4a128e27-accd-444c-aab3-89b2098c7122",
+  "name" : "api_taxjar_accounts_ynlrjtdoqm",
+  "request" : {
+    "url" : "/api/taxjar_accounts/YNlrjTDoqM",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"YNlrjTDoqM\",\"type\":\"taxjar_accounts\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/taxjar_accounts/YNlrjTDoqM\"},\"attributes\":{\"name\":\"Incentro Taxjar Account\",\"created_at\":\"2023-01-13T11:03:12.550Z\",\"updated_at\":\"2023-01-13T11:03:12.550Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_taxjar_accounts.incentro_taxjar_account\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/taxjar_accounts/YNlrjTDoqM/relationships/markets\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/taxjar_accounts/YNlrjTDoqM/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/taxjar_accounts/YNlrjTDoqM/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/taxjar_accounts/YNlrjTDoqM/attachments\"}},\"tax_categories\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/taxjar_accounts/YNlrjTDoqM/relationships/tax_categories\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/taxjar_accounts/YNlrjTDoqM/tax_categories\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "54",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"0224c014594ed9af324612505cf3c4a1\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "d7b23585-46a0-42fa-93cc-483e21d9c083",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 13 Jan 2023 11:03:12 GMT",
+      "X-Served-By" : "cache-ams21021-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673607793.820179,VS0,VE74",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "4a128e27-accd-444c-aab3-89b2098c7122",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-taxjar_accounts-YNlrjTDoqM",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1-api-taxjar_accounts-YNlrjTDoqM-2",
+  "insertionIndex" : 5815
+}
