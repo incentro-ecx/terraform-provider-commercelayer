@@ -1,0 +1,37 @@
+{
+  "id" : "50419596-0f25-4432-8c6f-1eb89b17a26c",
+  "name" : "api_taxjar_accounts_ynlrjtdoqm",
+  "request" : {
+    "url" : "/api/taxjar_accounts/YNlrjTDoqM",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "58",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "29f7d6f6-7652-4e2f-b2d5-ad66adea1a01",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 13 Jan 2023 11:03:14 GMT",
+      "X-Served-By" : "cache-ams21026-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673607794.115838,VS0,VE84",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "50419596-0f25-4432-8c6f-1eb89b17a26c",
+  "persistent" : true,
+  "insertionIndex" : 5819
+}
