@@ -6,6 +6,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	"strings"
 )
 
 func testAccCheckTaxRuleDestroy(s *terraform.State) error {
@@ -40,7 +41,7 @@ func (s *AcceptanceSuite) TestAccTaxRule_basic() {
 		CheckDestroy:      testAccCheckTaxRuleDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccTaxRuleCreate(resourceName),
+				Config: strings.Join([]string{testAccTaxRuleCreate(resourceName), testManualTaxCalculator(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", taxRulesType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Tax Rule"),
