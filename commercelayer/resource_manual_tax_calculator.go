@@ -20,7 +20,7 @@ func resourceManualTaxCalculator() *schema.Resource {
 		},
 		Schema: map[string]*schema.Schema{
 			"id": {
-				Description: "The manual payment unique identifier",
+				Description: "The manual tax calculator unique identifier",
 				Type:        schema.TypeString,
 				Computed:    true,
 			},
