@@ -62,7 +62,7 @@ func (s *AcceptanceSuite) TestAccTaxRule_basic() {
 				),
 			},
 			{
-				Config: strings.Join([]string{testAccManualTaxCalculatorCreate(resourceName), testAccTaxRuleCreate(resourceName)}, "\n"),
+				Config: strings.Join([]string{testAccManualTaxCalculatorCreate(resourceName), testAccTaxRuleUpdate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Tax Rule Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
@@ -77,6 +77,7 @@ func testAccTaxRuleCreate(testName string) string {
 	resource "commercelayer_tax_rule" "incentro_tax_rule" {
 	  attributes {
 		name = "Incentro Tax Rule"
+	 	tax_rate = "0.0"
 		metadata = {
 		  foo : "bar"
 		  testName: "{{.testName}}"
@@ -94,6 +95,7 @@ func testAccTaxRuleUpdate(testName string) string {
 	resource "commercelayer_tax_rule" "incentro_tax_rule" {
 	  attributes {
 		name = "Incentro Tax Rule Changed"
+	 	tax_rate = "0.0"
 		metadata = {
 		  bar : "foo"
 		  testName: "{{.testName}}"

@@ -181,6 +181,7 @@ func resourceTaxRuleCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 			Type: taxRulesType,
 			Attributes: commercelayer.POSTTaxRules201ResponseDataAttributes{
 				Name:            attributes["name"].(string),
+				TaxRate:         float64ToFloat32Ref(attributes["tax_rate"].(float64)),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
@@ -189,7 +190,7 @@ func resourceTaxRuleCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 				ManualTaxCalculator: commercelayer.TaxRuleDataRelationshipsManualTaxCalculator{
 					Data: commercelayer.TaxRuleDataRelationshipsManualTaxCalculatorData{
 						Type: stringRef(manualTaxCalculatorsType),
-						Id:   stringRef(relationships["manual_tax_calculator_id"]),
+						Id:   stringRef(relationships["manual_tax_calculator_id"].(string)),
 					},
 				},
 			},
@@ -229,6 +230,7 @@ func resourceTaxRuleUpdateFunc(ctx context.Context, d *schema.ResourceData, i in
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHTaxRulesTaxRuleId200ResponseDataAttributes{
 				Name:            stringRef(attributes["name"].(string)),
+				TaxRate:         float64ToFloat32Ref(attributes["tax_rate"].(float64)),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
@@ -237,7 +239,7 @@ func resourceTaxRuleUpdateFunc(ctx context.Context, d *schema.ResourceData, i in
 				ManualTaxCalculator: &commercelayer.TaxRuleDataRelationshipsManualTaxCalculator{
 					Data: commercelayer.TaxRuleDataRelationshipsManualTaxCalculatorData{
 						Type: stringRef(manualTaxCalculatorsType),
-						Id:   stringRef(relationships["manual_tax_calculator_id"]),
+						Id:   stringRef(relationships["manual_tax_calculator_id"].(string)),
 					},
 				},
 			},
