@@ -1,3 +1,12 @@
+resource "commercelayer_adyen_gateway" "incentro_adyen_gateway" {
+  attributes {
+    name = "Incentro Adyen Gateway"
+    metadata = {
+      foo : "bar"
+    }
+  }
+}
+
 resource "commercelayer_payment_method" "incentro_payment_method" {
   attributes {
     payment_source_type = "CreditCard"
@@ -10,14 +19,5 @@ resource "commercelayer_payment_method" "incentro_payment_method" {
 
   relationships {
     payment_gateway_id = commercelayer_adyen_gateway.incentro_adyen_gateway.id
-  }
-}
-
-resource "commercelayer_adyen_gateway" "incentro_adyen_gateway" {
-  attributes {
-    name = "Incentro Adyen Gateway"
-    metadata = {
-      foo : "bar"
-    }
   }
 }

@@ -92,7 +92,7 @@ func resourcePaymentMethod() *schema.Resource {
 				Type:        schema.TypeList,
 				MaxItems:    1,
 				MinItems:    1,
-				Optional:    true,
+				Required:    true,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"market_id": {
