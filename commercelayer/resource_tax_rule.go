@@ -159,13 +159,13 @@ func resourceTaxRuleReadFunc(ctx context.Context, d *schema.ResourceData, i inte
 		return diagErr(err)
 	}
 
-	externalTaxCalculator, ok := resp.GetDataOk()
+	taxRule, ok := resp.GetDataOk()
 	if !ok {
 		d.SetId("")
 		return nil
 	}
 
-	d.SetId(externalTaxCalculator.GetId())
+	d.SetId(taxRule.GetId())
 
 	return nil
 }
@@ -176,9 +176,9 @@ func resourceTaxRuleCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 	attributes := nestedMap(d.Get("attributes"))
 	relationships := nestedMap(d.Get("relationships"))
 
-	externalTaxCalculatorCreate := commercelayer.TaxRuleCreate{
+	taxRuleCreate := commercelayer.TaxRuleCreate{
 		Data: commercelayer.TaxRuleCreateData{
-			Type: externalTaxCalculatorType,
+			Type: taxRulesType,
 			Attributes: commercelayer.POSTTaxRules201ResponseDataAttributes{
 				Name:            attributes["name"].(string),
 				Reference:       stringRef(attributes["reference"]),
@@ -188,7 +188,7 @@ func resourceTaxRuleCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 			Relationships: &commercelayer.TaxRuleCreateDataRelationships{
 				ManualTaxCalculator: commercelayer.TaxRuleDataRelationshipsManualTaxCalculator{
 					Data: commercelayer.TaxRuleDataRelationshipsManualTaxCalculatorData{
-						Type: stringRef(manualTaxCalculatorType),
+						Type: stringRef(manualTaxCalculatorsType),
 						Id:   stringRef(relationships["manual_tax_calculator_id"]),
 					},
 				},
@@ -196,17 +196,17 @@ func resourceTaxRuleCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 		},
 	}
 
-	err := d.Set("type", externalTaxCalculatorType)
+	err := d.Set("type", taxRulesType)
 	if err != nil {
 		return diagErr(err)
 	}
 
-	externalTaxCalculator, _, err := c.TaxRulesApi.POSTTaxRules(ctx).TaxRuleCreate(externalTaxCalculatorCreate).Execute()
+	taxRule, _, err := c.TaxRulesApi.POSTTaxRules(ctx).TaxRuleCreate(taxRuleCreate).Execute()
 	if err != nil {
 		return diagErr(err)
 	}
 
-	d.SetId(*externalTaxCalculator.Data.Id)
+	d.SetId(*taxRule.Data.Id)
 
 	return nil
 }
@@ -225,7 +225,7 @@ func resourceTaxRuleUpdateFunc(ctx context.Context, d *schema.ResourceData, i in
 
 	var TaxRuleUpdate = commercelayer.TaxRuleUpdate{
 		Data: commercelayer.TaxRuleUpdateData{
-			Type: externalTaxCalculatorType,
+			Type: taxRulesType,
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHTaxRulesTaxRuleId200ResponseDataAttributes{
 				Name:            stringRef(attributes["name"].(string)),
@@ -236,7 +236,7 @@ func resourceTaxRuleUpdateFunc(ctx context.Context, d *schema.ResourceData, i in
 			Relationships: &commercelayer.TaxRuleDataRelationships{
 				ManualTaxCalculator: &commercelayer.TaxRuleDataRelationshipsManualTaxCalculator{
 					Data: commercelayer.TaxRuleDataRelationshipsManualTaxCalculatorData{
-						Type: stringRef(manualTaxCalculatorType),
+						Type: stringRef(manualTaxCalculatorsType),
 						Id:   stringRef(relationships["manual_tax_calculator_id"]),
 					},
 				},

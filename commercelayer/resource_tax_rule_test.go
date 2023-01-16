@@ -26,6 +26,19 @@ func testAccCheckTaxRuleDestroy(s *terraform.State) error {
 			return fmt.Errorf("received response code with status %d", resp.StatusCode)
 		}
 
+		if rs.Type == "commercelayer_manual_tax_calculator" {
+			_, resp, err := client.TaxRulesApi.GETTaxRulesTaxRuleId(context.Background(), rs.Primary.ID).Execute()
+			if resp.StatusCode == 404 {
+				fmt.Printf("commercelayer_manual_tax_calculator with id %s has been removed\n", rs.Primary.ID)
+				continue
+			}
+			if err != nil {
+				return err
+			}
+
+			return fmt.Errorf("received response code with status %d", resp.StatusCode)
+		}
+
 	}
 	return nil
 }
@@ -41,7 +54,7 @@ func (s *AcceptanceSuite) TestAccTaxRule_basic() {
 		CheckDestroy:      testAccCheckTaxRuleDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: strings.Join([]string{testAccTaxRuleCreate(resourceName), testManualTaxCalculator(resourceName)}, "\n"),
+				Config: strings.Join([]string{testAccManualTaxCalculatorCreate(resourceName), testAccTaxRuleCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", taxRulesType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Tax Rule"),
@@ -49,7 +62,7 @@ func (s *AcceptanceSuite) TestAccTaxRule_basic() {
 				),
 			},
 			{
-				Config: testAccTaxRuleUpdate(resourceName),
+				Config: strings.Join([]string{testAccManualTaxCalculatorCreate(resourceName), testAccTaxRuleCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Tax Rule Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
