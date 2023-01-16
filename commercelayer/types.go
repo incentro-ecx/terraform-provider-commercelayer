@@ -27,4 +27,5 @@ const (
 	klarnaGatewaysType           = "klarna_gateways"
 	braintreeGatewaysType        = "braintree_gateways"
 	checkoutComGatewaysType      = "checkout_com_gateways"
+	stripeGatewaysType           = "stripe_gateways"
 )
