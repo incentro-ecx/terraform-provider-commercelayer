@@ -62,7 +62,7 @@ func testAccStripeGatewayCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_stripe_gateway" "incentro_stripe_gateway" {
            attributes {
-			name                   = "Incentro Stripe Gateway"
+			name        = "Incentro Stripe Gateway"
 			login       = "xxxx-yyyy-zzzz"
 
 			metadata = {
@@ -78,7 +78,7 @@ func testAccStripeGatewayUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_stripe_gateway" "incentro_stripe_gateway" {
            attributes {
-			name                   = "Incentro Stripe Gateway Changed"
+			name        = "Incentro Stripe Gateway Changed"
 			login       = "xxxx-yyyy-zzzz"
 
 			metadata = {
