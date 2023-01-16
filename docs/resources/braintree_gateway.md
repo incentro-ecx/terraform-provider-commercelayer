@@ -41,9 +41,6 @@ resource "commercelayer_braintree_gateway" "incentro_braintree_gateway" {
 
 Required:
 
-- `descriptor_name` (String) The dynamic descriptor name. Must be composed by business name (3, 7 or 12 chars), an asterisk (*) and the product name (18, 14 or 9 chars), for a total length of 22 chars.
-- `descriptor_phone` (String) The dynamic descriptor phone number. Must be 10-14 characters and can only contain numbers, dashes, parentheses and periods.
-- `descriptor_url` (String) The dynamic descriptor URL.
 - `merchant_account_id` (String) The gateway merchant account ID.
 - `merchant_id` (String) The gateway merchant ID.
 - `name` (String) The payment gateway's internal name.
@@ -52,6 +49,9 @@ Required:
 
 Optional:
 
+- `descriptor_name` (String) The dynamic descriptor name. Must be composed by business name (3, 7 or 12 chars), an asterisk (*) and the product name (18, 14 or 9 chars), for a total length of 22 chars.
+- `descriptor_phone` (String) The dynamic descriptor phone number. Must be 10-14 characters and can only contain numbers, dashes, parentheses and periods.
+- `descriptor_url` (String) The dynamic descriptor URL.
 - `metadata` (Map of String) Set of key-value pairs that you can attach to the resource. This can be useful for storing additional information about the resource in a structured format
 - `reference` (String) A string that you can use to add any external identifier to the resource. This can be useful for integrating the resource to an external system, like an ERP, a marketing tool, a CRM, or whatever.
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code

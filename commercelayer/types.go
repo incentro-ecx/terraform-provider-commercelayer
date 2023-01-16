@@ -21,6 +21,8 @@ const (
 	deliveryLeadTimesType        = "delivery_lead_times"
 	googleGeocodersType          = "google_geocoders"
 	bingGeocodersType            = "bing_geocoders"
+	paymentMethodType            = "payment_methods"
+	paymentGatewayType           = "payment_gateways"
 	manualGatewaysType           = "manual_gateways"
 	adyenGatewaysType            = "adyen_gateways"
 	paypalGatewaysType           = "paypal_gateways"
@@ -29,4 +31,6 @@ const (
 	checkoutComGatewaysType      = "checkout_com_gateways"
 	taxRulesType                 = "tax_rules"
 	manualTaxCalculatorType      = "manual_tax_calculators"
+	manualTaxCalculatorsType     = "manual_tax_calculators"
+	taxjarAccountsType           = "taxjar_accounts"
 )

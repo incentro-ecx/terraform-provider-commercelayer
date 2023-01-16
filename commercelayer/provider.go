@@ -65,6 +65,9 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_google_geocoder":           resourceGoogleGeocoders(),
 	"commercelayer_bing_geocoder":             resourceBingGeocoders(),
 	"commercelayer_tax_rule":                  resourceTaxRule(),
+	"commercelayer_payment_method":            resourcePaymentMethod(),
+	"commercelayer_manual_tax_calculator":     resourceManualTaxCalculator(),
+	"commercelayer_taxjar_accounts":           resourceTaxjarAccount(),
 }
 
 type Configuration struct {

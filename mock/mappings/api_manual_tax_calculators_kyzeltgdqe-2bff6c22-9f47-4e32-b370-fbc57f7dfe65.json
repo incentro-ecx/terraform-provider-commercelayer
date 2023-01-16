@@ -1,0 +1,37 @@
+{
+  "id" : "2bff6c22-9f47-4e32-b370-fbc57f7dfe65",
+  "name" : "api_manual_tax_calculators_kyzeltgdqe",
+  "request" : {
+    "url" : "/api/manual_tax_calculators/kyzeLTGdqE",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "7",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "d5808ed7-a91a-435a-a09a-1e5760c0393c",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 13 Jan 2023 10:05:54 GMT",
+      "X-Served-By" : "cache-ams21050-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673604354.142154,VS0,VE93",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "2bff6c22-9f47-4e32-b370-fbc57f7dfe65",
+  "persistent" : true,
+  "insertionIndex" : 3723
+}
