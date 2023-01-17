@@ -24,18 +24,18 @@ projects, or contributed.
 - [x] Inventory stock location
 - [X] Klarna payment gateway
 - [X] Manual payment gateway
-- [ ] Manual tax calculator
+- [X] Manual tax calculator
 - [x] Market
 - [x] Merchant
 - [X] Paypal payment gateway
-- [ ] Payment method
+- [X] Payment method
 - [x] Price list
 - [x] Shipping category
 - [x] Shipping method
 - [x] Shipping zone
 - [x] Stock location
-- [ ] Stripe payment gateway
-- [ ] Taxjar tax calculator
+- [X] Stripe payment gateway
+- [X] Taxjar tax calculator
 - [ ] Tax categories
 - [ ] Tax rules
 - [x] Webhook
