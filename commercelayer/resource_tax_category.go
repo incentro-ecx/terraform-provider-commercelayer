@@ -37,18 +37,13 @@ func resourceTaxCategory() *schema.Resource {
 				Required:    true,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
-						"name": {
-							Description: "The external tax calculator's internal name",
-							Type:        schema.TypeString,
-							Required:    true,
-						},
 						"code": {
-							Description: "The external tax calculator's internal name",
+							Description: "The tax category identifier code, specific for a particular tax calculator.",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
 						"sku_code": {
-							Description: "The external tax calculator's internal name",
+							Description: "The code of the associated SKU.",
 							Type:        schema.TypeString,
 							Optional:    true,
 						},
@@ -85,12 +80,12 @@ func resourceTaxCategory() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"sku_id": {
-							Description: "The associated address id.",
+							Description: "The associated SKU id.",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
 						"tax_calculator_id": {
-							Description: "The associated address id.",
+							Description: "The associated tax calculator id.",
 							Type:        schema.TypeString,
 							Required:    true,
 						},
@@ -109,13 +104,13 @@ func resourceTaxCategoryReadFunc(ctx context.Context, d *schema.ResourceData, i 
 		return diagErr(err)
 	}
 
-	externalTaxCalculator, ok := resp.GetDataOk()
+	taxCategory, ok := resp.GetDataOk()
 	if !ok {
 		d.SetId("")
 		return nil
 	}
 
-	d.SetId(externalTaxCalculator.GetId())
+	d.SetId(taxCategory.GetId())
 
 	return nil
 }
@@ -126,7 +121,7 @@ func resourceTaxCategoryCreateFunc(ctx context.Context, d *schema.ResourceData, 
 	attributes := nestedMap(d.Get("attributes"))
 	relationships := nestedMap(d.Get("relationships"))
 
-	externalTaxCalculatorCreate := commercelayer.TaxCategoryCreate{
+	taxCategoryCreate := commercelayer.TaxCategoryCreate{
 		Data: commercelayer.TaxCategoryCreateData{
 			Type: taxCategoriesType,
 			Attributes: commercelayer.POSTTaxCategories201ResponseDataAttributes{
@@ -143,28 +138,31 @@ func resourceTaxCategoryCreateFunc(ctx context.Context, d *schema.ResourceData, 
 						Id:   stringRef(relationships["sku_id"]),
 					},
 				},
-				//TODO: fill in default tax calculator
 				TaxCalculator: commercelayer.TaxCategoryDataRelationshipsTaxCalculator{
-					AvalaraAccount:        nil,
-					ExternalTaxCalculator: nil,
-					ManualTaxCalculator:   nil,
-					TaxjarAccount:         nil,
+					ManualTaxCalculator: &commercelayer.ManualTaxCalculator{
+						Data: commercelayer.ManualTaxCalculatorData{
+							Type: manualTaxCalculatorsType,
+							Attributes: commercelayer.GETManualTaxCalculators200ResponseDataInnerAttributes{
+								Id: stringRef(relationships["tax_calculator_id"].(string)),
+							},
+							Relationships: nil,
+						}},
 				},
 			},
 		},
 	}
 
-	err := d.Set("type", externalTaxCalculatorType)
+	err := d.Set("type", taxCategoriesType)
 	if err != nil {
 		return diagErr(err)
 	}
 
-	externalTaxCalculator, _, err := c.TaxCategoriesApi.POSTTaxCategories(ctx).TaxCategoryCreate(externalTaxCalculatorCreate).Execute()
+	taxCategory, _, err := c.TaxCategoriesApi.POSTTaxCategories(ctx).TaxCategoryCreate(taxCategoryCreate).Execute()
 	if err != nil {
 		return diagErr(err)
 	}
 
-	d.SetId(*externalTaxCalculator.Data.Id)
+	d.SetId(*taxCategory.Data.Id)
 
 	return nil
 }
@@ -183,11 +181,11 @@ func resourceTaxCategoryUpdateFunc(ctx context.Context, d *schema.ResourceData, 
 
 	var TaxCategoryUpdate = commercelayer.TaxCategoryUpdate{
 		Data: commercelayer.TaxCategoryUpdateData{
-			Type: externalTaxCalculatorType,
+			Type: taxCategoriesType,
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHTaxCategoriesTaxCategoryId200ResponseDataAttributes{
 				Code:            stringRef(attributes["code"].(string)),
-				SkuCode:         stringRef(attributes["code"].(string)),
+				SkuCode:         stringRef(attributes["sku_code"].(string)),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
