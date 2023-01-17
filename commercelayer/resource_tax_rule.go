@@ -181,7 +181,7 @@ func resourceTaxRuleCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 			Type: taxRulesType,
 			Attributes: commercelayer.POSTTaxRules201ResponseDataAttributes{
 				Name:            attributes["name"].(string),
-				TaxRate:         float64ToFloat32Ref(attributes["tax_rate"].(float64)),
+				TaxRate:         float64ToFloat32Ref(attributes["tax_rate"]),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
@@ -230,7 +230,7 @@ func resourceTaxRuleUpdateFunc(ctx context.Context, d *schema.ResourceData, i in
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHTaxRulesTaxRuleId200ResponseDataAttributes{
 				Name:            stringRef(attributes["name"].(string)),
-				TaxRate:         float64ToFloat32Ref(attributes["tax_rate"].(float64)),
+				TaxRate:         float64ToFloat32Ref(attributes["tax_rate"]),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
