@@ -31,7 +31,6 @@ const (
 	checkoutComGatewaysType      = "checkout_com_gateways"
 	stripeGatewaysType           = "stripe_gateways"
 	taxjarAccountsType           = "taxjar_accounts"
-	taxCategoriesType            = "tax_categories"
 	skusType                     = "skus"
 	manualTaxCalculatorsType     = "manual_tax_calculators"
 )
