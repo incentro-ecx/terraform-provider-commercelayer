@@ -1,0 +1,44 @@
+{
+  "id" : "06cc282f-e3bd-487d-8666-2a6384f63e3d",
+  "name" : "api_skus_nadesyjppe",
+  "request" : {
+    "url" : "/api/skus/naDeSyjpPE",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"naDeSyjpPE\",\"type\":\"skus\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE\"},\"attributes\":{\"code\":\"Incentro SKU Updated\",\"name\":\"Incentro SKU Updated\",\"description\":null,\"image_url\":null,\"pieces_per_pack\":null,\"weight\":null,\"unit_of_weight\":null,\"hs_tariff_number\":null,\"do_not_ship\":false,\"do_not_track\":false,\"inventory\":null,\"created_at\":\"2023-01-18T10:50:53.469Z\",\"updated_at\":\"2023-01-18T10:50:54.685Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_sku.incentro_sku\"}},\"relationships\":{\"shipping_category\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/relationships/shipping_category\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/shipping_category\"}},\"prices\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/relationships/prices\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/prices\"}},\"stock_items\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/relationships/stock_items\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/stock_items\"}},\"delivery_lead_times\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/relationships/delivery_lead_times\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/delivery_lead_times\"}},\"sku_options\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/relationships/sku_options\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/sku_options\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/skus/naDeSyjpPE/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "20",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Cache-Control" : "public, no-cache",
+      "Etag" : "W/\"80f55db8d9ad2614c97b445994d98da7\"",
+      "X-Request-Id" : "f2d10837-6670-4e31-bf01-9c4849f438a7",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 18 Jan 2023 10:50:55 GMT",
+      "Age" : "0",
+      "X-Served-By" : "cache-ams21030-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1674039055.132479,VS0,VE78",
+      "Vary" : "Authorization, Origin"
+    }
+  },
+  "uuid" : "06cc282f-e3bd-487d-8666-2a6384f63e3d",
+  "persistent" : true,
+  "scenarioName" : "scenario-2-api-skus-naDeSyjpPE",
+  "requiredScenarioState" : "scenario-2-api-skus-naDeSyjpPE-3",
+  "newScenarioState" : "scenario-2-api-skus-naDeSyjpPE-4",
+  "insertionIndex" : 1461
+}

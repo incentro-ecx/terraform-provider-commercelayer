@@ -1,0 +1,37 @@
+{
+  "id" : "e500998a-391d-4d8a-8869-9206827d59ef",
+  "name" : "api_skus_nadesyjppe",
+  "request" : {
+    "url" : "/api/skus/naDeSyjpPE",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "21",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "a6821372-feef-45af-a849-24922c4c1f54",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 18 Jan 2023 10:50:55 GMT",
+      "X-Served-By" : "cache-ams21055-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1674039055.487418,VS0,VE92",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "e500998a-391d-4d8a-8869-9206827d59ef",
+  "persistent" : true,
+  "insertionIndex" : 1462
+}

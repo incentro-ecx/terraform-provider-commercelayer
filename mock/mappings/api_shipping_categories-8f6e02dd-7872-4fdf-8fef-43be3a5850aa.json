@@ -1,0 +1,45 @@
+{
+  "id" : "8f6e02dd-7872-4fdf-8fef-43be3a5850aa",
+  "name" : "api_shipping_categories",
+  "request" : {
+    "url" : "/api/shipping_categories",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_sku.incentro_sku\"},\"name\":\"Incentro Shipping Category\"},\"type\":\"shipping_categories\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"yKMJmFQaYN\",\"type\":\"shipping_categories\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/shipping_categories/yKMJmFQaYN\"},\"attributes\":{\"name\":\"Incentro Shipping Category\",\"created_at\":\"2023-01-18T10:50:53.316Z\",\"updated_at\":\"2023-01-18T10:50:53.316Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_sku.incentro_sku\"}},\"relationships\":{\"skus\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/shipping_categories/yKMJmFQaYN/relationships/skus\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/shipping_categories/yKMJmFQaYN/skus\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/shipping_categories/yKMJmFQaYN/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/shipping_categories/yKMJmFQaYN/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "13",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"4f33db0c260364fac308e1cb10ee8930\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "411aac5d-3381-4c2f-86ff-caeb0c124a19",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 18 Jan 2023 10:50:53 GMT",
+      "X-Served-By" : "cache-ams21068-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1674039053.228195,VS0,VE109",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "8f6e02dd-7872-4fdf-8fef-43be3a5850aa",
+  "persistent" : true,
+  "insertionIndex" : 1453
+}

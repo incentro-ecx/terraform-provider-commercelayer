@@ -69,6 +69,7 @@ var baseResourceMap = map[string]*schema.Resource{
 	"commercelayer_payment_method":            resourcePaymentMethod(),
 	"commercelayer_manual_tax_calculator":     resourceManualTaxCalculator(),
 	"commercelayer_taxjar_accounts":           resourceTaxjarAccount(),
+	"commercelayer_sku":                       resourceSku(),
 }
 
 type Configuration struct {
