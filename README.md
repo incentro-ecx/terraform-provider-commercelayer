@@ -30,6 +30,7 @@ projects, or contributed.
 - [X] Paypal payment gateway
 - [X] Payment method
 - [x] Price list
+- [X] Sku
 - [x] Shipping category
 - [x] Shipping method
 - [x] Shipping zone
