@@ -136,13 +136,13 @@ func resourceInventoryStockLocationCreateFunc(ctx context.Context, d *schema.Res
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.InventoryReturnLocationCreateDataRelationships{
-				StockLocation: commercelayer.DeliveryLeadTimeDataRelationshipsStockLocation{
+				StockLocation: commercelayer.DeliveryLeadTimeCreateDataRelationshipsStockLocation{
 					Data: commercelayer.DeliveryLeadTimeDataRelationshipsStockLocationData{
 						Type: stringRef(stockLocationType),
 						Id:   stringRef(relationships["stock_location_id"]),
 					},
 				},
-				InventoryModel: commercelayer.InventoryReturnLocationDataRelationshipsInventoryModel{
+				InventoryModel: commercelayer.InventoryReturnLocationCreateDataRelationshipsInventoryModel{
 					Data: commercelayer.InventoryReturnLocationDataRelationshipsInventoryModelData{
 						Type: stringRef(inventoryModelType),
 						Id:   stringRef(relationships["inventory_model_id"]),
@@ -190,14 +190,14 @@ func resourceInventoryStockLocationUpdateFunc(ctx context.Context, d *schema.Res
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
-			Relationships: &commercelayer.InventoryReturnLocationDataRelationships{
-				StockLocation: &commercelayer.DeliveryLeadTimeDataRelationshipsStockLocation{
+			Relationships: &commercelayer.InventoryReturnLocationUpdateDataRelationships{
+				StockLocation: &commercelayer.DeliveryLeadTimeCreateDataRelationshipsStockLocation{
 					Data: commercelayer.DeliveryLeadTimeDataRelationshipsStockLocationData{
 						Type: stringRef(stockLocationType),
 						Id:   stringRef(relationships["stock_location_id"]),
 					},
 				},
-				InventoryModel: &commercelayer.InventoryReturnLocationDataRelationshipsInventoryModel{
+				InventoryModel: &commercelayer.InventoryReturnLocationCreateDataRelationshipsInventoryModel{
 					Data: commercelayer.InventoryReturnLocationDataRelationshipsInventoryModelData{
 						Type: stringRef(inventoryModelType),
 						Id:   stringRef(relationships["inventory_model_id"]),

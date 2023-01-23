@@ -132,15 +132,16 @@ func resourceDeliveryLeadTimesCreateFunc(ctx context.Context, d *schema.Resource
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.DeliveryLeadTimeCreateDataRelationships{
-				StockLocation: commercelayer.DeliveryLeadTimeDataRelationshipsStockLocation{
+				StockLocation: commercelayer.DeliveryLeadTimeCreateDataRelationshipsStockLocation{
 					Data: commercelayer.DeliveryLeadTimeDataRelationshipsStockLocationData{
 						Type: stringRef(stockLocationType),
 						Id:   stringRef(relationships["stock_location_id"]),
 					}},
-				ShippingMethod: commercelayer.DeliveryLeadTimeDataRelationshipsShippingMethod{Data: commercelayer.DeliveryLeadTimeDataRelationshipsShippingMethodData{
-					Type: stringRef(shippingMethodType),
-					Id:   stringRef(relationships["shipping_method_id"]),
-				}},
+				ShippingMethod: commercelayer.DeliveryLeadTimeCreateDataRelationshipsShippingMethod{
+					Data: commercelayer.DeliveryLeadTimeDataRelationshipsShippingMethodData{
+						Type: stringRef(shippingMethodType),
+						Id:   stringRef(relationships["shipping_method_id"]),
+					}},
 			},
 		},
 	}
@@ -185,15 +186,16 @@ func resourceDeliveryLeadTimesUpdateFunc(ctx context.Context, d *schema.Resource
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.DeliveryLeadTimeUpdateDataRelationships{
-				StockLocation: &commercelayer.DeliveryLeadTimeDataRelationshipsStockLocation{
+				StockLocation: &commercelayer.DeliveryLeadTimeCreateDataRelationshipsStockLocation{
 					Data: commercelayer.DeliveryLeadTimeDataRelationshipsStockLocationData{
 						Type: stringRef(stockLocationType),
 						Id:   stringRef(relationships["stock_location_id"]),
 					}},
-				ShippingMethod: &commercelayer.DeliveryLeadTimeDataRelationshipsShippingMethod{Data: commercelayer.DeliveryLeadTimeDataRelationshipsShippingMethodData{
-					Type: stringRef(shippingMethodType),
-					Id:   stringRef(relationships["shipping_method_id"]),
-				}},
+				ShippingMethod: &commercelayer.DeliveryLeadTimeCreateDataRelationshipsShippingMethod{
+					Data: commercelayer.DeliveryLeadTimeDataRelationshipsShippingMethodData{
+						Type: stringRef(shippingMethodType),
+						Id:   stringRef(relationships["shipping_method_id"]),
+					}},
 			},
 		},
 	}
