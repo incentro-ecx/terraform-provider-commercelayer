@@ -222,7 +222,7 @@ func resourceAddressCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 
 	geocoderId := stringRef(relationships["geocoder_id"])
 	if geocoderId != nil {
-		addressCreate.Data.Relationships.Geocoder = &commercelayer.AddressDataRelationshipsGeocoder{
+		addressCreate.Data.Relationships.Geocoder = &commercelayer.AddressCreateDataRelationshipsGeocoder{
 			Data: commercelayer.AddressDataRelationshipsGeocoderData{
 				Type: stringRef(geocoderType),
 				Id:   stringRef(geocoderId),
@@ -286,7 +286,7 @@ func resourceAddressUpdateFunc(ctx context.Context, d *schema.ResourceData, i in
 
 	geocoderId := stringRef(relationships["geocoder_id"])
 	if geocoderId != nil {
-		addressUpdate.Data.Relationships.Geocoder = &commercelayer.AddressDataRelationshipsGeocoder{
+		addressUpdate.Data.Relationships.Geocoder = &commercelayer.AddressCreateDataRelationshipsGeocoder{
 			Data: commercelayer.AddressDataRelationshipsGeocoderData{
 				Type: stringRef(geocoderType),
 				Id:   geocoderId,

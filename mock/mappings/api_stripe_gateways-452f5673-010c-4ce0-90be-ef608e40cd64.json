@@ -1,0 +1,45 @@
+{
+  "id" : "452f5673-010c-4ce0-90be-ef608e40cd64",
+  "name" : "api_stripe_gateways",
+  "request" : {
+    "url" : "/api/stripe_gateways",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"login\":\"xxxx-yyyy-zzzz\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_stripe_gateway.incentro_stripe_gateway\"},\"name\":\"Incentro Stripe Gateway\"},\"type\":\"stripe_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"axYQYswAmx\",\"type\":\"stripe_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stripe_gateways/axYQYswAmx\"},\"attributes\":{\"name\":\"Incentro Stripe Gateway\",\"created_at\":\"2023-01-16T15:19:14.376Z\",\"updated_at\":\"2023-01-16T15:19:14.376Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_stripe_gateway.incentro_stripe_gateway\"},\"webhook_endpoint_id\":null,\"webhook_endpoint_secret\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/stripe_gateways/axYQYswAmx\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stripe_gateways/axYQYswAmx/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stripe_gateways/axYQYswAmx/payment_methods\"}},\"stripe_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/stripe_gateways/axYQYswAmx/relationships/stripe_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/stripe_gateways/axYQYswAmx/stripe_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "2",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"fbd931e67084f348b1198129dd298113\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "3cbae4a0-2b8d-4298-b2b1-ca7d26f0185d",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Mon, 16 Jan 2023 15:19:14 GMT",
+      "X-Served-By" : "cache-ams21063-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673882354.308520,VS0,VE97",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "452f5673-010c-4ce0-90be-ef608e40cd64",
+  "persistent" : true,
+  "insertionIndex" : 6077
+}
