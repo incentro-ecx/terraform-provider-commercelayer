@@ -57,6 +57,11 @@ func resourceMarket() *schema.Resource {
 							Type:        schema.TypeString,
 							Optional:    true,
 						},
+						"external_order_validation_url": {
+							Description: "The URL used to validate orders by an external source.",
+							Type:        schema.TypeString,
+							Optional:    true,
+						},
 						"reference": {
 							Description: "A string that you can use to add any external identifier to the resource. This " +
 								"can be useful for integrating the resource to an external system, like an ERP, a " +
@@ -150,13 +155,14 @@ func resourceMarketCreateFunc(ctx context.Context, d *schema.ResourceData, i int
 		Data: commercelayer.MarketCreateData{
 			Type: marketType,
 			Attributes: commercelayer.POSTMarkets201ResponseDataAttributes{
-				Name:              attributes["name"].(string),
-				FacebookPixelId:   stringRef(attributes["facebook_pixel_id"]),
-				CheckoutUrl:       stringRef(attributes["checkout_url"]),
-				ExternalPricesUrl: stringRef(attributes["external_prices_url"]),
-				Reference:         stringRef(attributes["reference"]),
-				ReferenceOrigin:   stringRef(attributes["reference_origin"]),
-				Metadata:          keyValueRef(attributes["metadata"]),
+				Name:                       attributes["name"].(string),
+				FacebookPixelId:            stringRef(attributes["facebook_pixel_id"]),
+				CheckoutUrl:                stringRef(attributes["checkout_url"]),
+				ExternalPricesUrl:          stringRef(attributes["external_prices_url"]),
+				ExternalOrderValidationUrl: stringRef(attributes["external_order_validation_url"]),
+				Reference:                  stringRef(attributes["reference"]),
+				ReferenceOrigin:            stringRef(attributes["reference_origin"]),
+				Metadata:                   keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.MarketCreateDataRelationships{
 				Merchant: commercelayer.MarketCreateDataRelationshipsMerchant{
@@ -231,13 +237,14 @@ func resourceMarketUpdateFunc(ctx context.Context, d *schema.ResourceData, i int
 			Type: marketType,
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHMarketsMarketId200ResponseDataAttributes{
-				Name:              stringRef(attributes["name"]),
-				FacebookPixelId:   stringRef(attributes["facebook_pixel_id"]),
-				CheckoutUrl:       stringRef(attributes["checkout_url"]),
-				ExternalPricesUrl: stringRef(attributes["external_prices_url"]),
-				Reference:         stringRef(attributes["reference"]),
-				ReferenceOrigin:   stringRef(attributes["reference_origin"]),
-				Metadata:          keyValueRef(attributes["metadata"]),
+				Name:                       stringRef(attributes["name"]),
+				FacebookPixelId:            stringRef(attributes["facebook_pixel_id"]),
+				CheckoutUrl:                stringRef(attributes["checkout_url"]),
+				ExternalPricesUrl:          stringRef(attributes["external_prices_url"]),
+				ExternalOrderValidationUrl: stringRef(attributes["external_order_validation_url"]),
+				Reference:                  stringRef(attributes["reference"]),
+				ReferenceOrigin:            stringRef(attributes["reference_origin"]),
+				Metadata:                   keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.MarketUpdateDataRelationships{
 				Merchant: &commercelayer.MarketCreateDataRelationshipsMerchant{

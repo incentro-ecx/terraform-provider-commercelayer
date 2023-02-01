@@ -1,0 +1,37 @@
+{
+  "id" : "f2a8cb9f-3ade-4632-ae75-5240ea02a269",
+  "name" : "api_inventory_models_azdjrsdkyw",
+  "request" : {
+    "url" : "/api/inventory_models/AZdJRSDkyW",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "22",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "4ef1b9d8-586b-4b82-a146-5fa007d29ec9",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:33:08 GMT",
+      "X-Served-By" : "cache-ams21062-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243989.810083,VS0,VE58",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "f2a8cb9f-3ade-4632-ae75-5240ea02a269",
+  "persistent" : true,
+  "insertionIndex" : 370
+}

@@ -75,6 +75,8 @@ func testAccMarketCreate(testName string) string {
 		  attributes {
 			name              = "Incentro Market"
 			facebook_pixel_id = "pixel"
+            external_order_validation_url = "https://www.example.com"
+
 			metadata = {
 			  testName: "{{.testName}}"
 			}
@@ -95,6 +97,8 @@ func testAccMarketUpdate(testName string) string {
 		  attributes {
 			name              = "Incentro Market Changed"
 			facebook_pixel_id = "pixelchanged"
+            external_order_validation_url = "https://www.example.com"
+
 			metadata = {
 			  testName: "{{.testName}}"
 			}

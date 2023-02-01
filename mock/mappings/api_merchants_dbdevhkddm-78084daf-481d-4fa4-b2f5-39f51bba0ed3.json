@@ -1,0 +1,37 @@
+{
+  "id" : "78084daf-481d-4fa4-b2f5-39f51bba0ed3",
+  "name" : "api_merchants_dbdevhkddm",
+  "request" : {
+    "url" : "/api/merchants/dbdeVHKDDM",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "23",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "fa0e017d-9ee4-449c-bbe9-7fbb9d3f54d2",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:33:08 GMT",
+      "X-Served-By" : "cache-ams21050-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243989.818221,VS0,VE57",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "78084daf-481d-4fa4-b2f5-39f51bba0ed3",
+  "persistent" : true,
+  "insertionIndex" : 371
+}
