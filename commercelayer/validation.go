@@ -30,3 +30,27 @@ var inventoryModelStrategyValidation = func(i interface{}, path cty.Path) diag.D
 	return diag.Errorf("Invalid inventory model strategy provided: %s. Must be one of %s",
 		i.(string), strings.Join(getInventoryModelStrategies(), ", "))
 }
+
+func getPaymentSources() []string {
+	return []string{
+		"AdyenPayment",
+		"BraintreePayment",
+		"CheckoutComPayment",
+		"CreditCard",
+		"ExternalPayment",
+		"KlarnaPayment",
+		"PaypalPayment",
+		"StripePayment",
+		"WireTransfer",
+	}
+}
+
+var paymentSourceValidation = func(i interface{}, path cty.Path) diag.Diagnostics {
+	for _, s := range getPaymentSources() {
+		if s == i.(string) {
+			return nil
+		}
+	}
+	return diag.Errorf("Invalid payment source provided: %s. Must be one of %s",
+		i.(string), strings.Join(getPaymentSources(), ", "))
+}
