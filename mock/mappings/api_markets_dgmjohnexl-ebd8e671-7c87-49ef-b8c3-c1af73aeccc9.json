@@ -1,0 +1,44 @@
+{
+  "id" : "ebd8e671-7c87-49ef-b8c3-c1af73aeccc9",
+  "name" : "api_markets_dgmjohnexl",
+  "request" : {
+    "url" : "/api/markets/DgmJOhNEXl",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"DgmJOhNEXl\",\"type\":\"markets\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl\"},\"attributes\":{\"number\":12489,\"name\":\"Incentro Market\",\"facebook_pixel_id\":\"pixel\",\"checkout_url\":null,\"external_prices_url\":null,\"external_order_validation_url\":\"https://www.example.com\",\"shared_secret\":\"5dd74686304c36ecd38d28b2713fb591\",\"private\":false,\"disabled_at\":null,\"created_at\":\"2023-02-01T09:18:13.771Z\",\"updated_at\":\"2023-02-01T09:18:13.771Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_market.incentro_market\"}},\"relationships\":{\"merchant\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/relationships/merchant\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/merchant\"}},\"price_list\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/relationships/price_list\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/price_list\"}},\"inventory_model\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/relationships/inventory_model\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/inventory_model\"}},\"tax_calculator\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/relationships/tax_calculator\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/tax_calculator\"}},\"customer_group\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/relationships/customer_group\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/customer_group\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/DgmJOhNEXl/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "42",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Cache-Control" : "public, no-cache",
+      "Etag" : "W/\"aa8c0d41255b3e932d2c5f9ab072894b\"",
+      "X-Request-Id" : "e4b28284-c9a7-4432-a095-67462d990cb2",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:18:14 GMT",
+      "Age" : "0",
+      "X-Served-By" : "cache-ams21040-AMS",
+      "X-Cache" : "HIT",
+      "X-Cache-Hits" : "1",
+      "X-Timer" : "S1675243095.903177,VS0,VE1",
+      "Vary" : "Authorization, Origin"
+    }
+  },
+  "uuid" : "ebd8e671-7c87-49ef-b8c3-c1af73aeccc9",
+  "persistent" : true,
+  "scenarioName" : "scenario-5-api-markets-DgmJOhNEXl",
+  "requiredScenarioState" : "scenario-5-api-markets-DgmJOhNEXl-2",
+  "newScenarioState" : "scenario-5-api-markets-DgmJOhNEXl-3",
+  "insertionIndex" : 303
+}

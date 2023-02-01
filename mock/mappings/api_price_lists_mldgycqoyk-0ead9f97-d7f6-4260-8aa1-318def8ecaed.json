@@ -1,0 +1,37 @@
+{
+  "id" : "0ead9f97-d7f6-4260-8aa1-318def8ecaed",
+  "name" : "api_price_lists_mldgycqoyk",
+  "request" : {
+    "url" : "/api/price_lists/mldGyCqOYk",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "52",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "d1a024a2-20d1-4bc9-a6d7-b195e4f23932",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:18:16 GMT",
+      "X-Served-By" : "cache-ams21062-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243096.120401,VS0,VE48",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "0ead9f97-d7f6-4260-8aa1-318def8ecaed",
+  "persistent" : true,
+  "insertionIndex" : 312
+}

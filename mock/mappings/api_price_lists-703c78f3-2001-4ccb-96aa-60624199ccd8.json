@@ -1,0 +1,45 @@
+{
+  "id" : "703c78f3-2001-4ccb-96aa-60624199ccd8",
+  "name" : "api_price_lists",
+  "request" : {
+    "url" : "/api/price_lists",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"currency_code\":\"EUR\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.incentro_market\"},\"name\":\"incentro price list\",\"tax_included\":true},\"type\":\"price_lists\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"mldGyCqOYk\",\"type\":\"price_lists\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/mldGyCqOYk\"},\"attributes\":{\"name\":\"incentro price list\",\"currency_code\":\"EUR\",\"tax_included\":true,\"created_at\":\"2023-02-01T09:18:13.379Z\",\"updated_at\":\"2023-02-01T09:18:13.379Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.incentro_market\"}},\"relationships\":{\"prices\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/mldGyCqOYk/relationships/prices\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/mldGyCqOYk/prices\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/mldGyCqOYk/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/mldGyCqOYk/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "35",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"2a77bf65ed94f23bf5cd391d132c877e\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "d69861a7-b7ab-48b6-826d-b749b8fcf032",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:18:13 GMT",
+      "X-Served-By" : "cache-ams21073-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243093.311914,VS0,VE89",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "703c78f3-2001-4ccb-96aa-60624199ccd8",
+  "persistent" : true,
+  "insertionIndex" : 291
+}
