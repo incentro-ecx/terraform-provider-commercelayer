@@ -1,0 +1,45 @@
+{
+  "id" : "83a0998f-0539-4bf5-8883-924726f8fc5b",
+  "name" : "api_markets_koajyhqkzj",
+  "request" : {
+    "url" : "/api/markets/KoaJYhQkzj",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"external_order_validation_url\":\"https://www.example.com\",\"facebook_pixel_id\":\"pixelchanged\",\"metadata\":{\"testName\":\"commercelayer_market.incentro_market\"},\"name\":\"Incentro Market Changed\"},\"id\":\"KoaJYhQkzj\",\"relationships\":{\"inventory_model\":{\"data\":{\"id\":\"AZdJRSDkyW\",\"type\":\"inventory_models\"}},\"merchant\":{\"data\":{\"id\":\"dbdeVHKDDM\",\"type\":\"merchants\"}},\"price_list\":{\"data\":{\"id\":\"AkebyCovrl\",\"type\":\"price_lists\"}}},\"type\":\"markets\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"KoaJYhQkzj\",\"type\":\"markets\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj\"},\"attributes\":{\"number\":12491,\"name\":\"Incentro Market Changed\",\"facebook_pixel_id\":\"pixelchanged\",\"checkout_url\":null,\"external_prices_url\":null,\"external_order_validation_url\":\"https://www.example.com\",\"shared_secret\":\"192f3b34430c92ed8de49317d90df765\",\"private\":false,\"disabled_at\":null,\"created_at\":\"2023-02-01T09:33:06.153Z\",\"updated_at\":\"2023-02-01T09:33:07.710Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_market.incentro_market\"}},\"relationships\":{\"merchant\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/relationships/merchant\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/merchant\"}},\"price_list\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/relationships/price_list\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/price_list\"}},\"inventory_model\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/relationships/inventory_model\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/inventory_model\"}},\"tax_calculator\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/relationships/tax_calculator\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/tax_calculator\"}},\"customer_group\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/relationships/customer_group\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/customer_group\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/markets/KoaJYhQkzj/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "14",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"64fc68f17584f436dad097d0d4783302\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "d0ad61c0-acff-410e-8ce2-75babcce95b5",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:33:07 GMT",
+      "X-Served-By" : "cache-ams21062-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243988.630784,VS0,VE97",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "83a0998f-0539-4bf5-8883-924726f8fc5b",
+  "persistent" : true,
+  "insertionIndex" : 362
+}
