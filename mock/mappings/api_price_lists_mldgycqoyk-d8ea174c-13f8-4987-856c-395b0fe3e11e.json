@@ -1,0 +1,44 @@
+{
+  "id" : "d8ea174c-13f8-4987-856c-395b0fe3e11e",
+  "name" : "api_price_lists_mldgycqoyk",
+  "request" : {
+    "url" : "/api/price_lists/mldGyCqOYk",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"mldGyCqOYk\",\"type\":\"price_lists\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/mldGyCqOYk\"},\"attributes\":{\"name\":\"incentro price list\",\"currency_code\":\"EUR\",\"tax_included\":true,\"created_at\":\"2023-02-01T09:18:13.379Z\",\"updated_at\":\"2023-02-01T09:18:13.379Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.incentro_market\"}},\"relationships\":{\"prices\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/mldGyCqOYk/relationships/prices\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/mldGyCqOYk/prices\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/mldGyCqOYk/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/price_lists/mldGyCqOYk/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "38",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Cache-Control" : "public, no-cache",
+      "Etag" : "W/\"2a77bf65ed94f23bf5cd391d132c877e\"",
+      "X-Request-Id" : "9edeb155-d6d1-4b19-b58d-0f19a5d6803b",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:18:14 GMT",
+      "Age" : "0",
+      "X-Served-By" : "cache-ams21081-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243094.109778,VS0,VE42",
+      "Vary" : "Authorization, Origin"
+    }
+  },
+  "uuid" : "d8ea174c-13f8-4987-856c-395b0fe3e11e",
+  "persistent" : true,
+  "scenarioName" : "scenario-2-api-price_lists-mldGyCqOYk",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-2-api-price_lists-mldGyCqOYk-2",
+  "insertionIndex" : 295
+}

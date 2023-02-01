@@ -1,0 +1,37 @@
+{
+  "id" : "07f5ee6c-ff36-4453-bd4b-0a4691080fdd",
+  "name" : "api_inventory_models_gznnksbwnz",
+  "request" : {
+    "url" : "/api/inventory_models/GZNNKSbwNZ",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "53",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "f9c6b341-568d-40a1-893e-4af7040e918e",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:18:16 GMT",
+      "X-Served-By" : "cache-ams21065-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243096.121984,VS0,VE49",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "07f5ee6c-ff36-4453-bd4b-0a4691080fdd",
+  "persistent" : true,
+  "insertionIndex" : 313
+}

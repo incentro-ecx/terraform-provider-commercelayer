@@ -1,0 +1,42 @@
+{
+  "id" : "cc779a74-a66b-4a7d-ae0a-a5f6d7188181",
+  "name" : "api_merchants_ebepghrpox",
+  "request" : {
+    "url" : "/api/merchants/EbePgHrPox",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"EbePgHrPox\",\"type\":\"merchants\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/merchants/EbePgHrPox\"},\"attributes\":{\"name\":\"Incentro Merchant\",\"created_at\":\"2023-02-01T09:18:13.554Z\",\"updated_at\":\"2023-02-01T09:18:13.554Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.incentro_market\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/merchants/EbePgHrPox/relationships/address\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/merchants/EbePgHrPox/address\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/merchants/EbePgHrPox/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/merchants/EbePgHrPox/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "49",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"067affeefde9391133008ef937144419\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "7f49673f-c7ab-4578-b488-386f0f8e3d76",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:18:15 GMT",
+      "X-Served-By" : "cache-ams21053-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243096.520225,VS0,VE38",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "cc779a74-a66b-4a7d-ae0a-a5f6d7188181",
+  "persistent" : true,
+  "scenarioName" : "scenario-4-api-merchants-EbePgHrPox",
+  "requiredScenarioState" : "scenario-4-api-merchants-EbePgHrPox-3",
+  "insertionIndex" : 308
+}

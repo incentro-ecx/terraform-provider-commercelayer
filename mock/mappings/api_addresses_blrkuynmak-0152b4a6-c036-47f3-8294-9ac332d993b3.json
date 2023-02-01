@@ -1,0 +1,37 @@
+{
+  "id" : "0152b4a6-c036-47f3-8294-9ac332d993b3",
+  "name" : "api_addresses_blrkuynmak",
+  "request" : {
+    "url" : "/api/addresses/BlrkuynmaK",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "55",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "f38c1ff1-2f80-46b1-a703-a3201538c16e",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:18:16 GMT",
+      "X-Served-By" : "cache-ams21047-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243096.283709,VS0,VE43",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "0152b4a6-c036-47f3-8294-9ac332d993b3",
+  "persistent" : true,
+  "insertionIndex" : 314
+}

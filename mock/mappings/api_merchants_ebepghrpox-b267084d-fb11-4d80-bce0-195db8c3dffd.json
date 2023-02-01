@@ -1,0 +1,37 @@
+{
+  "id" : "b267084d-fb11-4d80-bce0-195db8c3dffd",
+  "name" : "api_merchants_ebepghrpox",
+  "request" : {
+    "url" : "/api/merchants/EbePgHrPox",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "54",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "bec7469b-fc97-4e77-a67b-32a786ec97fb",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:18:16 GMT",
+      "X-Served-By" : "cache-ams21050-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243096.121717,VS0,VE43",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "b267084d-fb11-4d80-bce0-195db8c3dffd",
+  "persistent" : true,
+  "insertionIndex" : 311
+}
