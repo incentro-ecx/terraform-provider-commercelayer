@@ -159,19 +159,19 @@ func resourceMarketCreateFunc(ctx context.Context, d *schema.ResourceData, i int
 				Metadata:          keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.MarketCreateDataRelationships{
-				Merchant: commercelayer.MarketDataRelationshipsMerchant{
+				Merchant: commercelayer.MarketCreateDataRelationshipsMerchant{
 					Data: commercelayer.MarketDataRelationshipsMerchantData{
 						Type: stringRef(merchantType),
 						Id:   stringRef(relationships["merchant_id"]),
 					},
 				},
-				PriceList: commercelayer.MarketDataRelationshipsPriceList{
+				PriceList: commercelayer.MarketCreateDataRelationshipsPriceList{
 					Data: commercelayer.MarketDataRelationshipsPriceListData{
 						Type: stringRef(priceListType),
 						Id:   stringRef(relationships["price_list_id"]),
 					},
 				},
-				InventoryModel: commercelayer.InventoryReturnLocationDataRelationshipsInventoryModel{
+				InventoryModel: commercelayer.InventoryReturnLocationCreateDataRelationshipsInventoryModel{
 					Data: commercelayer.InventoryReturnLocationDataRelationshipsInventoryModelData{
 						Type: stringRef(inventoryModelType),
 						Id:   stringRef(relationships["inventory_model_id"]),
@@ -183,7 +183,7 @@ func resourceMarketCreateFunc(ctx context.Context, d *schema.ResourceData, i int
 
 	taxCalculatorId := stringRef(relationships["tax_calculator_id"])
 	if taxCalculatorId != nil {
-		marketCreate.Data.Relationships.TaxCalculator = &commercelayer.MarketDataRelationshipsTaxCalculator{
+		marketCreate.Data.Relationships.TaxCalculator = &commercelayer.MarketCreateDataRelationshipsTaxCalculator{
 			Data: commercelayer.MarketDataRelationshipsTaxCalculatorData{
 				Type: stringRef(taxCalculatorType),
 				Id:   taxCalculatorId,
@@ -192,7 +192,7 @@ func resourceMarketCreateFunc(ctx context.Context, d *schema.ResourceData, i int
 
 	customerGroupId := stringRef(relationships["customer_group_id"])
 	if customerGroupId != nil {
-		marketCreate.Data.Relationships.CustomerGroup = &commercelayer.CustomerDataRelationshipsCustomerGroup{
+		marketCreate.Data.Relationships.CustomerGroup = &commercelayer.CustomerCreateDataRelationshipsCustomerGroup{
 			Data: commercelayer.CustomerDataRelationshipsCustomerGroupData{
 				Type: stringRef(customerGroupType),
 				Id:   customerGroupId,
@@ -240,19 +240,19 @@ func resourceMarketUpdateFunc(ctx context.Context, d *schema.ResourceData, i int
 				Metadata:          keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.MarketUpdateDataRelationships{
-				Merchant: &commercelayer.MarketDataRelationshipsMerchant{
+				Merchant: &commercelayer.MarketCreateDataRelationshipsMerchant{
 					Data: commercelayer.MarketDataRelationshipsMerchantData{
 						Type: stringRef(merchantType),
 						Id:   stringRef(relationships["merchant_id"]),
 					},
 				},
-				PriceList: &commercelayer.MarketDataRelationshipsPriceList{
+				PriceList: &commercelayer.MarketCreateDataRelationshipsPriceList{
 					Data: commercelayer.MarketDataRelationshipsPriceListData{
 						Type: stringRef(priceListType),
 						Id:   stringRef(relationships["price_list_id"]),
 					},
 				},
-				InventoryModel: &commercelayer.InventoryReturnLocationDataRelationshipsInventoryModel{
+				InventoryModel: &commercelayer.InventoryReturnLocationCreateDataRelationshipsInventoryModel{
 					Data: commercelayer.InventoryReturnLocationDataRelationshipsInventoryModelData{
 						Type: stringRef(inventoryModelType),
 						Id:   stringRef(relationships["inventory_model_id"]),
@@ -264,7 +264,7 @@ func resourceMarketUpdateFunc(ctx context.Context, d *schema.ResourceData, i int
 
 	taxCalculatorId := stringRef(relationships["tax_calculator_id"])
 	if taxCalculatorId != nil {
-		marketUpdate.Data.Relationships.TaxCalculator = &commercelayer.MarketDataRelationshipsTaxCalculator{
+		marketUpdate.Data.Relationships.TaxCalculator = &commercelayer.MarketCreateDataRelationshipsTaxCalculator{
 			Data: commercelayer.MarketDataRelationshipsTaxCalculatorData{
 				Type: stringRef(taxCalculatorType),
 				Id:   stringRef(taxCalculatorId),
@@ -273,7 +273,7 @@ func resourceMarketUpdateFunc(ctx context.Context, d *schema.ResourceData, i int
 
 	customerGroupId := stringRef(relationships["customer_group_id"])
 	if customerGroupId != nil {
-		marketUpdate.Data.Relationships.CustomerGroup = &commercelayer.CustomerDataRelationshipsCustomerGroup{
+		marketUpdate.Data.Relationships.CustomerGroup = &commercelayer.CustomerCreateDataRelationshipsCustomerGroup{
 			Data: commercelayer.CustomerDataRelationshipsCustomerGroupData{
 				Type: stringRef(customerGroupType),
 				Id:   stringRef(customerGroupId),
