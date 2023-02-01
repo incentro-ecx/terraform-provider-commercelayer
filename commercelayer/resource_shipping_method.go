@@ -191,7 +191,7 @@ func resourceShippingMethodCreateFunc(ctx context.Context, d *schema.ResourceDat
 
 	marketId := stringRef(relationships["market_id"])
 	if marketId != nil {
-		shippingMethodCreate.Data.Relationships.Market = &commercelayer.AvalaraAccountDataRelationshipsMarkets{
+		shippingMethodCreate.Data.Relationships.Market = &commercelayer.BillingInfoValidationRuleCreateDataRelationshipsMarket{
 			Data: commercelayer.AvalaraAccountDataRelationshipsMarketsData{
 				Type: stringRef(marketType),
 				Id:   marketId,
@@ -200,7 +200,7 @@ func resourceShippingMethodCreateFunc(ctx context.Context, d *schema.ResourceDat
 
 	shippingZoneId := stringRef(relationships["shipping_zone_id"])
 	if shippingZoneId != nil {
-		shippingMethodCreate.Data.Relationships.ShippingZone = &commercelayer.ShippingMethodDataRelationshipsShippingZone{
+		shippingMethodCreate.Data.Relationships.ShippingZone = &commercelayer.ShippingMethodCreateDataRelationshipsShippingZone{
 			Data: commercelayer.ShippingMethodDataRelationshipsShippingZoneData{
 				Type: stringRef(shippingZoneType),
 				Id:   shippingZoneId,
@@ -209,7 +209,7 @@ func resourceShippingMethodCreateFunc(ctx context.Context, d *schema.ResourceDat
 
 	shippingCategoryId := stringRef(relationships["shipping_category_id"])
 	if shippingCategoryId != nil {
-		shippingMethodCreate.Data.Relationships.ShippingCategory = &commercelayer.ShipmentDataRelationshipsShippingCategory{
+		shippingMethodCreate.Data.Relationships.ShippingCategory = &commercelayer.ShippingMethodCreateDataRelationshipsShippingCategory{
 			Data: commercelayer.ShipmentDataRelationshipsShippingCategoryData{
 				Type: stringRef(shippingCategoryType),
 				Id:   shippingCategoryId,
@@ -218,7 +218,7 @@ func resourceShippingMethodCreateFunc(ctx context.Context, d *schema.ResourceDat
 
 	stockLocationId := stringRef(relationships["stock_location_id"])
 	if stockLocationId != nil {
-		shippingMethodCreate.Data.Relationships.StockLocation = &commercelayer.DeliveryLeadTimeDataRelationshipsStockLocation{
+		shippingMethodCreate.Data.Relationships.StockLocation = &commercelayer.DeliveryLeadTimeCreateDataRelationshipsStockLocation{
 			Data: commercelayer.DeliveryLeadTimeDataRelationshipsStockLocationData{
 				Type: stringRef(stockLocationType),
 				Id:   stockLocationId,
@@ -285,7 +285,7 @@ func resourceShippingMethodUpdateFunc(ctx context.Context, d *schema.ResourceDat
 
 	marketId := stringRef(relationships["market_id"])
 	if marketId != nil {
-		shippingMethodUpdate.Data.Relationships.Market = &commercelayer.AvalaraAccountDataRelationshipsMarkets{
+		shippingMethodUpdate.Data.Relationships.Market = &commercelayer.BillingInfoValidationRuleCreateDataRelationshipsMarket{
 			Data: commercelayer.AvalaraAccountDataRelationshipsMarketsData{
 				Type: stringRef(marketType),
 				Id:   marketId,
@@ -294,7 +294,7 @@ func resourceShippingMethodUpdateFunc(ctx context.Context, d *schema.ResourceDat
 
 	shippingZoneId := stringRef(relationships["shipping_zone_id"])
 	if shippingZoneId != nil {
-		shippingMethodUpdate.Data.Relationships.ShippingZone = &commercelayer.ShippingMethodDataRelationshipsShippingZone{
+		shippingMethodUpdate.Data.Relationships.ShippingZone = &commercelayer.ShippingMethodCreateDataRelationshipsShippingZone{
 			Data: commercelayer.ShippingMethodDataRelationshipsShippingZoneData{
 				Type: stringRef(shippingZoneType),
 				Id:   shippingZoneId,
@@ -303,7 +303,7 @@ func resourceShippingMethodUpdateFunc(ctx context.Context, d *schema.ResourceDat
 
 	shippingCategoryId := stringRef(relationships["shipping_category_id"])
 	if shippingCategoryId != nil {
-		shippingMethodUpdate.Data.Relationships.ShippingCategory = &commercelayer.ShipmentDataRelationshipsShippingCategory{
+		shippingMethodUpdate.Data.Relationships.ShippingCategory = &commercelayer.ShippingMethodCreateDataRelationshipsShippingCategory{
 			Data: commercelayer.ShipmentDataRelationshipsShippingCategoryData{
 				Type: stringRef(shippingCategoryType),
 				Id:   shippingCategoryId,
@@ -312,7 +312,7 @@ func resourceShippingMethodUpdateFunc(ctx context.Context, d *schema.ResourceDat
 
 	stockLocationId := stringRef(relationships["stock_location_id"])
 	if stockLocationId != nil {
-		shippingMethodUpdate.Data.Relationships.StockLocation = &commercelayer.DeliveryLeadTimeDataRelationshipsStockLocation{
+		shippingMethodUpdate.Data.Relationships.StockLocation = &commercelayer.DeliveryLeadTimeCreateDataRelationshipsStockLocation{
 			Data: commercelayer.DeliveryLeadTimeDataRelationshipsStockLocationData{
 				Type: stringRef(stockLocationType),
 				Id:   stockLocationId,

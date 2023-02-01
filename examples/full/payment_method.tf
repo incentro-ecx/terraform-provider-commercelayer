@@ -1,11 +1,8 @@
 resource "commercelayer_payment_method" "incentro_payment_method" {
   attributes {
-    payment_source_type = "CreditCard"
-    currency_code       = "EUR"
-    price_amount_cents  = 0
-    metadata = {
-      foo : "bar"
-    }
+    payment_source_type   = "AdyenPayment"
+    currency_code          = "EUR"
+    price_amount_cents     = 0
   }
 
   relationships {

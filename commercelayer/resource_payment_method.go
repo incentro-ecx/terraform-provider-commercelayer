@@ -150,7 +150,7 @@ func resourcePaymentMethodCreateFunc(ctx context.Context, d *schema.ResourceData
 				Metadata:          keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.PaymentMethodCreateDataRelationships{
-				PaymentGateway: commercelayer.AdyenPaymentDataRelationshipsPaymentGateway{
+				PaymentGateway: commercelayer.PaymentMethodCreateDataRelationshipsPaymentGateway{
 					Data: commercelayer.AdyenPaymentDataRelationshipsPaymentGatewayData{
 						Type: stringRef(adyenGatewaysType),
 						Id:   stringRef(relationships["payment_gateway_id"]),
@@ -162,7 +162,7 @@ func resourcePaymentMethodCreateFunc(ctx context.Context, d *schema.ResourceData
 
 	marketId := stringRef(relationships["market_id"])
 	if marketId != nil {
-		paymentMethodCreate.Data.Relationships.Market = &commercelayer.AvalaraAccountDataRelationshipsMarkets{
+		paymentMethodCreate.Data.Relationships.Market = &commercelayer.BillingInfoValidationRuleCreateDataRelationshipsMarket{
 			Data: commercelayer.AvalaraAccountDataRelationshipsMarketsData{
 				Type: stringRef(marketType),
 				Id:   marketId,
@@ -171,7 +171,7 @@ func resourcePaymentMethodCreateFunc(ctx context.Context, d *schema.ResourceData
 
 	paymentGatewayId := stringRef(relationships["payment_gateway_id"])
 	if paymentGatewayId != nil {
-		paymentMethodCreate.Data.Relationships.PaymentGateway = commercelayer.AdyenPaymentDataRelationshipsPaymentGateway{
+		paymentMethodCreate.Data.Relationships.PaymentGateway = commercelayer.PaymentMethodCreateDataRelationshipsPaymentGateway{
 			Data: commercelayer.AdyenPaymentDataRelationshipsPaymentGatewayData{
 				Type: stringRef(paymentGatewayType),
 				Id:   paymentGatewayId,
@@ -220,7 +220,7 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 				Metadata:          keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.PaymentMethodUpdateDataRelationships{
-				PaymentGateway: &commercelayer.AdyenPaymentDataRelationshipsPaymentGateway{
+				PaymentGateway: &commercelayer.PaymentMethodCreateDataRelationshipsPaymentGateway{
 					Data: commercelayer.AdyenPaymentDataRelationshipsPaymentGatewayData{
 						Type: stringRef(adyenGatewaysType),
 						Id:   stringRef(relationships["payment_gateway_id"]),
@@ -232,7 +232,7 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 
 	marketId := stringRef(relationships["market_id"])
 	if marketId != nil {
-		paymentMethodUpdate.Data.Relationships.Market = &commercelayer.AvalaraAccountDataRelationshipsMarkets{
+		paymentMethodUpdate.Data.Relationships.Market = &commercelayer.BillingInfoValidationRuleCreateDataRelationshipsMarket{
 			Data: commercelayer.AvalaraAccountDataRelationshipsMarketsData{
 				Type: stringRef(marketType),
 				Id:   marketId,
@@ -242,7 +242,7 @@ func resourcePaymentMethodUpdateFunc(ctx context.Context, d *schema.ResourceData
 	paymentGatewayId := stringRef(relationships["payment_gateway_id"])
 	if paymentGatewayId != nil {
 		paymentMethodUpdate.Data.Relationships.PaymentGateway =
-			&commercelayer.AdyenPaymentDataRelationshipsPaymentGateway{
+			&commercelayer.PaymentMethodCreateDataRelationshipsPaymentGateway{
 				Data: commercelayer.AdyenPaymentDataRelationshipsPaymentGatewayData{
 					Type: stringRef(paymentGatewayType),
 					Id:   paymentGatewayId,

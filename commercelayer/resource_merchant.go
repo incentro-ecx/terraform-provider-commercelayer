@@ -121,7 +121,7 @@ func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i i
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.MerchantCreateDataRelationships{
-				Address: commercelayer.BingGeocoderDataRelationshipsAddresses{
+				Address: commercelayer.CustomerAddressCreateDataRelationshipsAddress{
 					Data: commercelayer.BingGeocoderDataRelationshipsAddressesData{
 						Type: stringRef(addressType),
 						Id:   stringRef(relationships["address_id"]),
@@ -169,7 +169,7 @@ func resourceMerchantUpdateFunc(ctx context.Context, d *schema.ResourceData, i i
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.MerchantUpdateDataRelationships{
-				Address: &commercelayer.BingGeocoderDataRelationshipsAddresses{
+				Address: &commercelayer.CustomerAddressCreateDataRelationshipsAddress{
 					Data: commercelayer.BingGeocoderDataRelationshipsAddressesData{
 						Type: stringRef(addressType),
 						Id:   stringRef(relationships["address_id"]),
