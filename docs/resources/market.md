@@ -54,8 +54,9 @@ resource "commercelayer_price_list" "incentro_price_list" {
 
 resource "commercelayer_market" "incentro_market" {
   attributes {
-    name              = "Incentro Market"
-    facebook_pixel_id = "pixel"
+    name                          = "Incentro Market"
+    facebook_pixel_id             = "pixel"
+    external_order_validation_url = "https://www.example.com"
   }
 
   relationships {
@@ -89,6 +90,7 @@ Required:
 Optional:
 
 - `checkout_url` (String) The checkout URL for this market
+- `external_order_validation_url` (String) The URL used to validate orders by an external source.
 - `external_prices_url` (String) The URL used to fetch prices from an external source
 - `facebook_pixel_id` (String) The Facebook Pixed ID
 - `metadata` (Map of String) Set of key-value pairs that you can attach to the resource. This can be useful for storing additional information about the resource in a structured format

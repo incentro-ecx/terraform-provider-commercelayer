@@ -1,0 +1,41 @@
+{
+  "id" : "52b7818a-9aa2-41ad-8c3a-b54d13d01304",
+  "name" : "api_adyen_gateways_njmoxszzrx",
+  "request" : {
+    "url" : "/api/adyen_gateways/njmoXszZRx",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "16",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json; charset=utf-8",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "a218a58a-fb10-4e0f-8d17-374e35bab283",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 21 Mar 2023 08:05:46 GMT",
+      "X-Served-By" : "cache-ams21073-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1679385946.481146,VS0,VE67",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "52b7818a-9aa2-41ad-8c3a-b54d13d01304",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-adyen_gateways-njmoXszZRx",
+  "requiredScenarioState" : "scenario-1-api-adyen_gateways-njmoXszZRx-4",
+  "insertionIndex" : 1241
+}
