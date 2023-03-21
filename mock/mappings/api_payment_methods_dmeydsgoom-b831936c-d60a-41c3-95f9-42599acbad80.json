@@ -1,0 +1,43 @@
+{
+  "id" : "b831936c-d60a-41c3-95f9-42599acbad80",
+  "name" : "api_payment_methods_dmeydsgoom",
+  "request" : {
+    "url" : "/api/payment_methods/DMeydsgOoM",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"DMeydsgOoM\",\"type\":\"payment_methods\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/DMeydsgOoM\"},\"attributes\":{\"payment_source_type\":\"adyen_payments\",\"name\":\"Adyen Payment\",\"currency_code\":\"EUR\",\"moto\":false,\"require_capture\":true,\"auto_capture\":false,\"disabled_at\":null,\"price_amount_cents\":0,\"price_amount_float\":0.0,\"formatted_price_amount\":\"€0,00\",\"auto_capture_max_amount_cents\":null,\"auto_capture_max_amount_float\":null,\"formatted_auto_capture_max_amount\":null,\"created_at\":\"2023-03-21T16:37:04.100Z\",\"updated_at\":\"2023-03-21T16:37:04.100Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"}},\"relationships\":{\"market\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/DMeydsgOoM/relationships/market\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/DMeydsgOoM/market\"}},\"payment_gateway\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/DMeydsgOoM/relationships/payment_gateway\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/DMeydsgOoM/payment_gateway\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/DMeydsgOoM/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/DMeydsgOoM/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "21",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"2d9dc9be281d71da03a08f1d97246ea4\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "286c7a32-1621-4f5f-a0d2-a42461fa127c",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 21 Mar 2023 16:37:05 GMT",
+      "X-Served-By" : "cache-ams21061-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1679416625.007220,VS0,VE86",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "b831936c-d60a-41c3-95f9-42599acbad80",
+  "persistent" : true,
+  "scenarioName" : "scenario-2-api-payment_methods-DMeydsgOoM",
+  "requiredScenarioState" : "scenario-2-api-payment_methods-DMeydsgOoM-2",
+  "newScenarioState" : "scenario-2-api-payment_methods-DMeydsgOoM-3",
+  "insertionIndex" : 1555
+}
