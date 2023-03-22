@@ -65,6 +65,7 @@ func testAccAdyenGatewayCreate(testName string) string {
 			name                   = "Incentro Adyen Gateway"
 			merchant_account       = "xxxx-yyyy-zzzz"
 			api_key       		   = "xxxx-yyyy-zzzz"
+			public_key       	   = "xxxx-yyyy-zzzz"
 			live_url_prefix        = "1797a841fbb37ca7-AdyenDemo"
 
 			metadata = {
@@ -83,6 +84,7 @@ func testAccAdyenGatewayUpdate(testName string) string {
 			name                   = "Incentro Adyen Gateway Changed"
 			merchant_account       = "xxxx-yyyy-zzzz"
 			api_key       		   = "xxxx-yyyy-zzzz"
+			public_key       	   = "xxxx-yyyy-zzzz"
 			live_url_prefix        = "1797a841fbb37ca7-AdyenDemo"
 
 			metadata = {

@@ -1,8 +1,8 @@
 {
-  "id" : "15987510-e201-4f57-9abd-43c48b07e33c",
-  "name" : "api_adyen_gateways_wxqgrsydgj",
+  "id" : "924d621f-a43e-443f-95f8-b901ac84fc3b",
+  "name" : "api_payment_methods_dmeydsgoom",
   "request" : {
-    "url" : "/api/adyen_gateways/WxQGrsydGj",
+    "url" : "/api/payment_methods/DMeydsgOoM",
     "method" : "DELETE"
   },
   "response" : {
@@ -16,22 +16,22 @@
       "X-Permitted-Cross-Domain-Policies" : "none",
       "Referrer-Policy" : "strict-origin-when-cross-origin",
       "X-Ratelimit-Limit" : "600",
-      "X-Ratelimit-Count" : "7",
+      "X-Ratelimit-Count" : "25",
       "X-Ratelimit-Period" : "300",
       "Cache-Control" : "no-cache",
-      "X-Request-Id" : "ecbbf08c-b8ba-42d8-845d-23699c94382e",
+      "X-Request-Id" : "8e8d7358-c035-47d7-b7bc-5da7b8c34d96",
       "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
       "Via" : "1.1 vegur, 1.1 varnish",
       "Accept-Ranges" : "bytes",
-      "Date" : "Wed, 11 Jan 2023 14:24:38 GMT",
-      "X-Served-By" : "cache-ams21069-AMS",
+      "Date" : "Tue, 21 Mar 2023 16:37:06 GMT",
+      "X-Served-By" : "cache-ams21054-AMS",
       "X-Cache" : "MISS",
       "X-Cache-Hits" : "0",
-      "X-Timer" : "S1673447079.572036,VS0,VE104",
+      "X-Timer" : "S1679416626.109292,VS0,VE51",
       "Vary" : "Origin"
     }
   },
-  "uuid" : "15987510-e201-4f57-9abd-43c48b07e33c",
+  "uuid" : "924d621f-a43e-443f-95f8-b901ac84fc3b",
   "persistent" : true,
-  "insertionIndex" : 429
+  "insertionIndex" : 1559
 }
