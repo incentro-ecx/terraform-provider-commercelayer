@@ -274,7 +274,7 @@ func resourceMarketUpdateFunc(ctx context.Context, d *schema.ResourceData, i int
 		marketUpdate.Data.Relationships.TaxCalculator = &commercelayer.MarketCreateDataRelationshipsTaxCalculator{
 			Data: commercelayer.MarketDataRelationshipsTaxCalculatorData{
 				Type: stringRef(taxCalculatorType),
-				Id:   stringRef(taxCalculatorId),
+				Id:   taxCalculatorId,
 			}}
 	}
 
@@ -283,7 +283,7 @@ func resourceMarketUpdateFunc(ctx context.Context, d *schema.ResourceData, i int
 		marketUpdate.Data.Relationships.CustomerGroup = &commercelayer.CustomerCreateDataRelationshipsCustomerGroup{
 			Data: commercelayer.CustomerDataRelationshipsCustomerGroupData{
 				Type: stringRef(customerGroupType),
-				Id:   stringRef(customerGroupId),
+				Id:   customerGroupId,
 			}}
 	}
 
