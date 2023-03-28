@@ -1,0 +1,37 @@
+{
+  "id" : "47849fdf-19dc-4e61-814a-06cb16921928",
+  "name" : "api_external_tax_calculators_xqombtgken",
+  "request" : {
+    "url" : "/api/external_tax_calculators/XqOmBTgKeN",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "25",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "f5de5200-4c15-4cfc-bdd8-92d42e4d2d53",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 28 Mar 2023 08:12:20 GMT",
+      "X-Served-By" : "cache-ams21063-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1679991140.284196,VS0,VE93",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "47849fdf-19dc-4e61-814a-06cb16921928",
+  "persistent" : true,
+  "insertionIndex" : 644
+}

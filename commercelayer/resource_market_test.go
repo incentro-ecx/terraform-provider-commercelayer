@@ -45,6 +45,7 @@ func (s *AcceptanceSuite) TestAccMarket_basic() {
 					testAccInventoryModelCreate(resourceName),
 					testAccMerchantCreate(resourceName),
 					testAccPriceListCreate(resourceName),
+					testAccExternalTaxCalculatorCreate(resourceName),
 					testAccMarketCreate(resourceName)}, "\n",
 				),
 				Check: resource.ComposeTestCheckFunc(
@@ -58,6 +59,7 @@ func (s *AcceptanceSuite) TestAccMarket_basic() {
 					testAccInventoryModelCreate(resourceName),
 					testAccMerchantCreate(resourceName),
 					testAccPriceListCreate(resourceName),
+					testAccExternalTaxCalculatorCreate(resourceName),
 					testAccMarketUpdate(resourceName)}, "\n",
 				),
 				Check: resource.ComposeTestCheckFunc(

@@ -1,0 +1,42 @@
+{
+  "id" : "d47ec8b3-507c-453e-8bce-a8196a3fbb9c",
+  "name" : "api_markets_blydjhmzeg",
+  "request" : {
+    "url" : "/api/markets/BlydJhMZEg",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "30",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json; charset=utf-8",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "a971d671-5282-4b9e-b2f5-c4412efe3036",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 28 Mar 2023 08:12:20 GMT",
+      "Age" : "0",
+      "X-Served-By" : "cache-ams21081-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1679991141.777679,VS0,VE34",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "d47ec8b3-507c-453e-8bce-a8196a3fbb9c",
+  "persistent" : true,
+  "scenarioName" : "scenario-6-api-markets-BlydJhMZEg",
+  "requiredScenarioState" : "scenario-6-api-markets-BlydJhMZEg-4",
+  "insertionIndex" : 650
+}
