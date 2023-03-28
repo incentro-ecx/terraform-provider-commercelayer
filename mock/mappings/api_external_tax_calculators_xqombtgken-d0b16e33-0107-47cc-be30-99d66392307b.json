@@ -1,0 +1,42 @@
+{
+  "id" : "d0b16e33-0107-47cc-be30-99d66392307b",
+  "name" : "api_external_tax_calculators_xqombtgken",
+  "request" : {
+    "url" : "/api/external_tax_calculators/XqOmBTgKeN",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"XqOmBTgKeN\",\"type\":\"external_tax_calculators\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/XqOmBTgKeN\"},\"attributes\":{\"name\":\"incentro_external_tax_calculator\",\"created_at\":\"2023-03-28T08:12:18.094Z\",\"updated_at\":\"2023-03-28T08:12:18.094Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_market.incentro_market\"},\"tax_calculator_url\":\"https://example.com\",\"shared_secret\":\"9a49c15c2785b88326fa68feddfeace4\"},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/XqOmBTgKeN/relationships/markets\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/XqOmBTgKeN/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/XqOmBTgKeN/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/external_tax_calculators/XqOmBTgKeN/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "18",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"ce87c8f22cd653a342d081414286dc3e\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "dff19d32-0e6d-4a5b-9ffd-046e86d77599",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 28 Mar 2023 08:12:19 GMT",
+      "X-Served-By" : "cache-ams21075-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1679991140.817110,VS0,VE43",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "d0b16e33-0107-47cc-be30-99d66392307b",
+  "persistent" : true,
+  "scenarioName" : "scenario-2-api-external_tax_calculators-XqOmBTgKeN",
+  "requiredScenarioState" : "scenario-2-api-external_tax_calculators-XqOmBTgKeN-3",
+  "insertionIndex" : 638
+}
