@@ -2,6 +2,7 @@ package commercelayer
 
 import (
 	"context"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
@@ -114,6 +115,7 @@ func resourceStripeGatewayCreateFunc(ctx context.Context, d *schema.ResourceData
 			Attributes: commercelayer.POSTStripeGateways201ResponseDataAttributes{
 				Name:            attributes["name"].(string),
 				Login:           attributes["login"].(string),
+				PublishableKey:  stringRef(attributes["publishable_key"]),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
