@@ -1,37 +1,30 @@
 {
-  "id" : "dad59f80-8680-4718-bd9b-65feebb85d00",
-  "name" : "api_adyen_gateways_njmoxszzrx",
+  "id" : "eab7c0ee-e5ff-4e04-a760-d900b129b7ec",
+  "name" : "api_adyen_gateways_dxgweszzmx",
   "request" : {
-    "url" : "/api/adyen_gateways/njmoXszZRx",
+    "url" : "/api/adyen_gateways/dxgWesZzMx",
     "method" : "DELETE"
   },
   "response" : {
     "status" : 204,
     "headers" : {
-      "Server" : "Cowboy",
-      "X-Frame-Options" : "SAMEORIGIN",
       "X-Xss-Protection" : "1; mode=block",
       "X-Content-Type-Options" : "nosniff",
       "X-Download-Options" : "noopen",
       "X-Permitted-Cross-Domain-Policies" : "none",
       "Referrer-Policy" : "strict-origin-when-cross-origin",
       "X-Ratelimit-Limit" : "600",
-      "X-Ratelimit-Count" : "15",
+      "X-Ratelimit-Count" : "7",
       "X-Ratelimit-Period" : "300",
       "Cache-Control" : "no-cache",
-      "X-Request-Id" : "cc005e3b-c38f-41d9-b8b9-1aff9ed18b20",
+      "X-Request-Id" : "f234f73e-b7fd-4264-9123-3c68e1531a1c",
       "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
-      "Via" : "1.1 vegur, 1.1 varnish",
       "Accept-Ranges" : "bytes",
-      "Date" : "Tue, 21 Mar 2023 08:05:46 GMT",
-      "X-Served-By" : "cache-ams21054-AMS",
-      "X-Cache" : "MISS",
-      "X-Cache-Hits" : "0",
-      "X-Timer" : "S1679385946.308427,VS0,VE70",
+      "Date" : "Fri, 05 May 2023 11:41:34 GMT",
       "Vary" : "Origin"
     }
   },
-  "uuid" : "dad59f80-8680-4718-bd9b-65feebb85d00",
+  "uuid" : "eab7c0ee-e5ff-4e04-a760-d900b129b7ec",
   "persistent" : true,
-  "insertionIndex" : 1240
+  "insertionIndex" : 893
 }
