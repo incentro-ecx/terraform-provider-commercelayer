@@ -180,14 +180,24 @@ func resourceTaxRuleCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 		Data: commercelayer.TaxRuleCreateData{
 			Type: taxRulesType,
 			Attributes: commercelayer.POSTTaxRules201ResponseDataAttributes{
-				Name:            attributes["name"].(string),
-				TaxRate:         float64ToFloat32Ref(attributes["tax_rate"]),
-				Reference:       stringRef(attributes["reference"]),
-				ReferenceOrigin: stringRef(attributes["reference_origin"]),
-				Metadata:        keyValueRef(attributes["metadata"]),
+				Name:                 attributes["name"].(string),
+				TaxRate:              float64ToFloat32Ref(attributes["tax_rate"]),
+				CountryCodeRegex:     stringRef(attributes["country_code_regex"]),
+				NotCountryCodeRegex:  stringRef(attributes["not_country_code_regex"]),
+				StateCodeRegex:       stringRef(attributes["state_code_regex"]),
+				NotStateCodeRegex:    stringRef(attributes["not_state_code_regex"]),
+				ZipCodeRegex:         stringRef(attributes["zip_code_regex"]),
+				NotZipCodeRegex:      stringRef(attributes["not_zip_code_regex"]),
+				FreightTaxable:       boolRef(attributes["freight_taxable"]),
+				PaymentMethodTaxable: boolRef(attributes["payment_method_taxable"]),
+				GiftCardTaxable:      boolRef(attributes["gift_card_taxable"]),
+				AdjustmentTaxable:    boolRef(attributes["adjustment_taxable"]),
+				Reference:            stringRef(attributes["reference"]),
+				ReferenceOrigin:      stringRef(attributes["reference_origin"]),
+				Metadata:             keyValueRef(attributes["metadata"]),
 			},
 			Relationships: &commercelayer.TaxRuleCreateDataRelationships{
-				ManualTaxCalculator: commercelayer.TaxRuleDataRelationshipsManualTaxCalculator{
+				ManualTaxCalculator: commercelayer.TaxRuleCreateDataRelationshipsManualTaxCalculator{
 					Data: commercelayer.TaxRuleDataRelationshipsManualTaxCalculatorData{
 						Type: stringRef(manualTaxCalculatorsType),
 						Id:   stringRef(relationships["manual_tax_calculator_id"].(string)),
@@ -229,14 +239,24 @@ func resourceTaxRuleUpdateFunc(ctx context.Context, d *schema.ResourceData, i in
 			Type: taxRulesType,
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHTaxRulesTaxRuleId200ResponseDataAttributes{
-				Name:            stringRef(attributes["name"].(string)),
-				TaxRate:         float64ToFloat32Ref(attributes["tax_rate"]),
-				Reference:       stringRef(attributes["reference"]),
-				ReferenceOrigin: stringRef(attributes["reference_origin"]),
-				Metadata:        keyValueRef(attributes["metadata"]),
+				Name:                 stringRef(attributes["name"].(string)),
+				TaxRate:              float64ToFloat32Ref(attributes["tax_rate"]),
+				CountryCodeRegex:     stringRef(attributes["country_code_regex"]),
+				NotCountryCodeRegex:  stringRef(attributes["not_country_code_regex"]),
+				StateCodeRegex:       stringRef(attributes["state_code_regex"]),
+				NotStateCodeRegex:    stringRef(attributes["not_state_code_regex"]),
+				ZipCodeRegex:         stringRef(attributes["zip_code_regex"]),
+				NotZipCodeRegex:      stringRef(attributes["not_zip_code_regex"]),
+				FreightTaxable:       boolRef(attributes["freight_taxable"]),
+				PaymentMethodTaxable: boolRef(attributes["payment_method_taxable"]),
+				GiftCardTaxable:      boolRef(attributes["gift_card_taxable"]),
+				AdjustmentTaxable:    boolRef(attributes["adjustment_taxable"]),
+				Reference:            stringRef(attributes["reference"]),
+				ReferenceOrigin:      stringRef(attributes["reference_origin"]),
+				Metadata:             keyValueRef(attributes["metadata"]),
 			},
-			Relationships: &commercelayer.TaxRuleDataRelationships{
-				ManualTaxCalculator: &commercelayer.TaxRuleDataRelationshipsManualTaxCalculator{
+			Relationships: &commercelayer.TaxRuleUpdateDataRelationships{
+				ManualTaxCalculator: &commercelayer.TaxRuleCreateDataRelationshipsManualTaxCalculator{
 					Data: commercelayer.TaxRuleDataRelationshipsManualTaxCalculatorData{
 						Type: stringRef(manualTaxCalculatorsType),
 						Id:   stringRef(relationships["manual_tax_calculator_id"].(string)),
