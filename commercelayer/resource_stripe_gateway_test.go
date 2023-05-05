@@ -3,6 +3,7 @@ package commercelayer
 import (
 	"context"
 	"fmt"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
@@ -62,8 +63,9 @@ func testAccStripeGatewayCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_stripe_gateway" "incentro_stripe_gateway" {
            attributes {
-			name        = "Incentro Stripe Gateway"
-			login       = "xxxx-yyyy-zzzz"
+			name        	= "Incentro Stripe Gateway"
+			login       	= "xxxx-yyyy-zzzz"
+			publishable_key = "aaaa-bbbb-cccc"
 
 			metadata = {
 				foo: "bar"
@@ -78,8 +80,9 @@ func testAccStripeGatewayUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_stripe_gateway" "incentro_stripe_gateway" {
            attributes {
-			name        = "Incentro Stripe Gateway Changed"
-			login       = "xxxx-yyyy-zzzz"
+			name        	= "Incentro Stripe Gateway Changed"
+			login       	= "xxxx-yyyy-zzzz"
+			publishable_key = "aaaa-bbbb-cccc"
 
 			metadata = {
 				bar: "foo"

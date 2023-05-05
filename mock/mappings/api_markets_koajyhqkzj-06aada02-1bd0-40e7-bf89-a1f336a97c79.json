@@ -1,0 +1,37 @@
+{
+  "id" : "06aada02-1bd0-40e7-bf89-a1f336a97c79",
+  "name" : "api_markets_koajyhqkzj",
+  "request" : {
+    "url" : "/api/markets/KoaJYhQkzj",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "20",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "0537d76b-69e7-4dd5-88df-a685cac7ceec",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 01 Feb 2023 09:33:08 GMT",
+      "X-Served-By" : "cache-ams21053-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1675243989.618561,VS0,VE93",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "06aada02-1bd0-40e7-bf89-a1f336a97c79",
+  "persistent" : true,
+  "insertionIndex" : 368
+}

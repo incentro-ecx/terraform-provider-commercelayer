@@ -39,8 +39,9 @@ resource "commercelayer_price_list" "incentro_price_list" {
 
 resource "commercelayer_market" "incentro_market" {
   attributes {
-    name              = "Incentro Market"
-    facebook_pixel_id = "pixel"
+    name                          = "Incentro Market"
+    facebook_pixel_id             = "pixel"
+    external_order_validation_url = "https://www.example.com"
   }
 
   relationships {

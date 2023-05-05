@@ -1,0 +1,43 @@
+{
+  "id" : "097f9a1a-3842-455e-a06a-159f05bd6c45",
+  "name" : "api_adyen_gateways_pvdxlsppov",
+  "request" : {
+    "url" : "/api/adyen_gateways/pvDXLsPpOv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"pvDXLsPpOv\",\"type\":\"adyen_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/pvDXLsPpOv\"},\"attributes\":{\"name\":\"Incentro Adyen Gateway\",\"created_at\":\"2023-03-21T16:37:03.936Z\",\"updated_at\":\"2023-03-21T16:37:03.936Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"},\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\",\"async_api\":null,\"webhook_endpoint_secret\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/adyen_gateways/pvDXLsPpOv\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/pvDXLsPpOv/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/pvDXLsPpOv/payment_methods\"}},\"adyen_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/pvDXLsPpOv/relationships/adyen_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/pvDXLsPpOv/adyen_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "18",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"7df4376a13d90dbba12abaa6641b64d8\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "50c35b54-6e48-4941-a97a-280e39601e44",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 21 Mar 2023 16:37:04 GMT",
+      "X-Served-By" : "cache-ams21041-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1679416624.382060,VS0,VE75",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "097f9a1a-3842-455e-a06a-159f05bd6c45",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-adyen_gateways-pvDXLsPpOv",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-1-api-adyen_gateways-pvDXLsPpOv-2",
+  "insertionIndex" : 1552
+}

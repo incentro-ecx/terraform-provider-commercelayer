@@ -1,0 +1,37 @@
+{
+  "id" : "c64972f9-cea5-4c35-af5e-e526db122466",
+  "name" : "api_inventory_models_lwlwdsbjra",
+  "request" : {
+    "url" : "/api/inventory_models/lWlwDSbjRa",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "27",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "40f05139-49ee-4b66-b08d-fa875b4bab33",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Tue, 28 Mar 2023 08:12:20 GMT",
+      "X-Served-By" : "cache-ams21023-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1679991141.541394,VS0,VE87",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "c64972f9-cea5-4c35-af5e-e526db122466",
+  "persistent" : true,
+  "insertionIndex" : 647
+}

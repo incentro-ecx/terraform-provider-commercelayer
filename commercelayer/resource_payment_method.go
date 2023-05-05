@@ -39,11 +39,12 @@ func resourcePaymentMethod() *schema.Resource {
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"payment_source_type": {
-							Description: "The payment source type, can be one of: 'AdyenPayment', 'BraintreePayment', " +
-								"'CheckoutComPayment', 'CreditCard', 'ExternalPayment', 'KlarnaPayment', 'PaypalPayment', " +
-								"'StripePayment', or 'WireTransfer'.",
-							Type:     schema.TypeString,
-							Required: true,
+							Description: "The payment source type, can be one of: AdyenPayment, BraintreePayment, " +
+								"CheckoutComPayment, CreditCard, ExternalPayment, KlarnaPayment, PaypalPayment, " +
+								"StripePayment or WireTransfer",
+							Type:             schema.TypeString,
+							Required:         true,
+							ValidateDiagFunc: paymentSourceValidation,
 						},
 						"currency_code": {
 							Description: "The international 3-letter currency code as defined by the ISO 4217 standard. " +

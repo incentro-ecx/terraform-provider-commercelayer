@@ -45,6 +45,7 @@ func (s *AcceptanceSuite) TestAccMarket_basic() {
 					testAccInventoryModelCreate(resourceName),
 					testAccMerchantCreate(resourceName),
 					testAccPriceListCreate(resourceName),
+					testAccExternalTaxCalculatorCreate(resourceName),
 					testAccMarketCreate(resourceName)}, "\n",
 				),
 				Check: resource.ComposeTestCheckFunc(
@@ -58,6 +59,7 @@ func (s *AcceptanceSuite) TestAccMarket_basic() {
 					testAccInventoryModelCreate(resourceName),
 					testAccMerchantCreate(resourceName),
 					testAccPriceListCreate(resourceName),
+					testAccExternalTaxCalculatorCreate(resourceName),
 					testAccMarketUpdate(resourceName)}, "\n",
 				),
 				Check: resource.ComposeTestCheckFunc(
@@ -75,6 +77,8 @@ func testAccMarketCreate(testName string) string {
 		  attributes {
 			name              = "Incentro Market"
 			facebook_pixel_id = "pixel"
+            external_order_validation_url = "https://www.example.com"
+
 			metadata = {
 			  testName: "{{.testName}}"
 			}
@@ -95,6 +99,8 @@ func testAccMarketUpdate(testName string) string {
 		  attributes {
 			name              = "Incentro Market Changed"
 			facebook_pixel_id = "pixelchanged"
+            external_order_validation_url = "https://www.example.com"
+
 			metadata = {
 			  testName: "{{.testName}}"
 			}

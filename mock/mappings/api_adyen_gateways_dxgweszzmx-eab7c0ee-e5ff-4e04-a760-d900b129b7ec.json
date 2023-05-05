@@ -1,0 +1,30 @@
+{
+  "id" : "eab7c0ee-e5ff-4e04-a760-d900b129b7ec",
+  "name" : "api_adyen_gateways_dxgweszzmx",
+  "request" : {
+    "url" : "/api/adyen_gateways/dxgWesZzMx",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "7",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "f234f73e-b7fd-4264-9123-3c68e1531a1c",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Fri, 05 May 2023 11:41:34 GMT",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "eab7c0ee-e5ff-4e04-a760-d900b129b7ec",
+  "persistent" : true,
+  "insertionIndex" : 893
+}

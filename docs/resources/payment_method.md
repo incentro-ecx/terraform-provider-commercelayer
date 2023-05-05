@@ -15,21 +15,19 @@ Payment methods represent the type of payment sources (e.g., Credit Card, PayPal
 ```terraform
 resource "commercelayer_adyen_gateway" "incentro_adyen_gateway" {
   attributes {
-    name = "Incentro Adyen Gateway"
-    metadata = {
-      foo : "bar"
-    }
+    name             = "Incentro Adyen Gateway"
+    merchant_account = "xxxx-yyyy-zzzz"
+    api_key          = "xxxx-yyyy-zzzz"
+    public_key       = "xxxx-yyyy-zzzz"
+    live_url_prefix  = "1797a841fbb37ca7-AdyenDemo"
   }
 }
 
 resource "commercelayer_payment_method" "incentro_payment_method" {
   attributes {
-    payment_source_type = "CreditCard"
+    payment_source_type = "AdyenPayment"
     currency_code       = "EUR"
-    price_amount_cents  = 1000
-    metadata = {
-      foo : "bar"
-    }
+    price_amount_cents  = 0
   }
 
   relationships {
@@ -57,7 +55,7 @@ resource "commercelayer_payment_method" "incentro_payment_method" {
 Required:
 
 - `currency_code` (String) The international 3-letter currency code as defined by the ISO 4217 standard. Required, unless inherited by market
-- `payment_source_type` (String) The payment source type, can be one of: 'AdyenPayment', 'BraintreePayment', 'CheckoutComPayment', 'CreditCard', 'ExternalPayment', 'KlarnaPayment', 'PaypalPayment', 'StripePayment', or 'WireTransfer'.
+- `payment_source_type` (String) The payment source type, can be one of: AdyenPayment, BraintreePayment, CheckoutComPayment, CreditCard, ExternalPayment, KlarnaPayment, PaypalPayment, StripePayment or WireTransfer
 - `price_amount_cents` (Number) The payment method's price, in cents.
 
 Optional:
