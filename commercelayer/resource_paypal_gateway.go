@@ -112,7 +112,7 @@ func resourcePaypalGatewayCreateFunc(ctx context.Context, d *schema.ResourceData
 			Attributes: commercelayer.POSTPaypalGateways201ResponseDataAttributes{
 				Name:            attributes["name"].(string),
 				ClientId:        attributes["client_id"].(string),
-				ClientSecret:    attributes["client_id"].(string),
+				ClientSecret:    attributes["client_secret"].(string),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
@@ -153,7 +153,7 @@ func resourcePaypalGatewayUpdateFunc(ctx context.Context, d *schema.ResourceData
 			Attributes: commercelayer.PATCHPaypalGatewaysPaypalGatewayId200ResponseDataAttributes{
 				Name:            stringRef(attributes["name"]),
 				ClientId:        stringRef(attributes["client_id"]),
-				ClientSecret:    stringRef(attributes["client_id"]),
+				ClientSecret:    stringRef(attributes["client_secret"]),
 				Reference:       stringRef(attributes["reference"]),
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
