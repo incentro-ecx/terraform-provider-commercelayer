@@ -16,6 +16,7 @@ func getInventoryModelStrategies() []string {
 	return []string{
 		"no_split",
 		"split_shipments",
+		"split_by_line_items",
 		"ship_from_primary",
 		"ship_from_first_available_or_primary",
 	}
