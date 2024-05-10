@@ -44,7 +44,7 @@ func resourceInventoryModel() *schema.Resource {
 						},
 						"strategy": {
 							Description: "The inventory model's shipping strategy: one between 'no_split' (default), " +
-								"'split_shipments', 'ship_from_primary' and 'ship_from_first_available_or_primary'.",
+								"'split_shipments', 'split_by_line_items', 'ship_from_primary' and 'ship_from_first_available_or_primary'.",
 							Type:             schema.TypeString,
 							Default:          "no_split",
 							Optional:         true,
