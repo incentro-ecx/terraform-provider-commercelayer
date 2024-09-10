@@ -1,6 +1,7 @@
 package commercelayer
 
 import (
+	"errors"
 	"net/http"
 	"sync"
 	"time"
@@ -21,7 +22,7 @@ func (t *throttledTransport) RoundTrip(req *http.Request) (*http.Response, error
 	t.mutex.Lock()
 	defer t.mutex.Unlock()
 
-	for {
+	for i := 0; i < 5; i++ {
 		resp, err := t.transport.RoundTrip(req)
 		if err != nil {
 			return nil, err
@@ -40,4 +41,6 @@ func (t *throttledTransport) RoundTrip(req *http.Request) (*http.Response, error
 
 		time.Sleep(interval)
 	}
+
+	return nil, errors.New("max retries reached when trying to handle rate limiting")
 }
