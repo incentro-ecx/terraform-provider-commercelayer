@@ -104,8 +104,9 @@ github.com/huandu/xstrings v1.4.0/go.mod h1:y5/lhBue+AyNmUVz9RLU9xbLR0o4KIIExikq
 github.com/imdario/mergo v0.3.11/go.mod h1:jmQim1M+e3UYxmgPu/WyfjB3N3VflVyUjjjwH0dnCYA=
 github.com/imdario/mergo v0.3.16 h1:wwQJbIsHYGMUyLSPrEq1CT16AhnhNJQ51+4fdHUnCl4=
 github.com/imdario/mergo v0.3.16/go.mod h1:WBLT9ZmE3lPoWsEzCh9LPo3TiwVN+ZKEjmz+hD27ysY=
-github.com/incentro-dc/go-commercelayer-sdk v0.0.4 h1:9EaFccOB6fNqfkrqUZGhoAvet8gQdEOXuHD2XYjIYIk=
 github.com/incentro-dc/go-commercelayer-sdk v0.0.4/go.mod h1:7o1L5RRkJ6Fw04+Hvjqt/dCDonYA+it1Leug5rtE+/s=
+github.com/incentro-dc/go-commercelayer-sdk v0.0.5 h1:+LoAMtNHGyEFWnYXvOLfLtjWaUu0CbZss2fu8P+sLK0=
+github.com/incentro-dc/go-commercelayer-sdk v0.0.5/go.mod h1:7o1L5RRkJ6Fw04+Hvjqt/dCDonYA+it1Leug5rtE+/s=
 github.com/jbenet/go-context v0.0.0-20150711004518-d14ea06fba99 h1:BQSFePA1RWJOlocH6Fxy8MmwDt+yVQYULKfN0RoTN8A=
 github.com/jhump/protoreflect v1.6.0 h1:h5jfMVslIg6l29nsMs0D8Wj17RDVdNYti0vDN/PZZoE=
 github.com/kevinburke/ssh_config v1.2.0 h1:x584FjTGwHzMwvHx18PXxbBVzfnxogHaAReU4gf13a4=

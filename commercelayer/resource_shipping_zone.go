@@ -117,7 +117,7 @@ func resourceShippingZoneReadFunc(ctx context.Context, d *schema.ResourceData, i
 		return nil
 	}
 
-	d.SetId(shippingZone.GetId())
+	d.SetId(shippingZone.GetId().(string))
 
 	return nil
 }
@@ -155,7 +155,7 @@ func resourceShippingZoneCreateFunc(ctx context.Context, d *schema.ResourceData,
 		return diagErr(err)
 	}
 
-	d.SetId(*shippingZone.Data.Id)
+	d.SetId(shippingZone.Data.GetId().(string))
 
 	return nil
 }

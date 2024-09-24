@@ -158,7 +158,7 @@ func resourceShippingMethodReadFunc(ctx context.Context, d *schema.ResourceData,
 		return nil
 	}
 
-	d.SetId(shippingMethod.GetId())
+	d.SetId(shippingMethod.GetId().(string))
 
 	return nil
 }
@@ -245,7 +245,7 @@ func resourceShippingMethodCreateFunc(ctx context.Context, d *schema.ResourceDat
 		return diagErr(err)
 	}
 
-	d.SetId(*shippingMethod.Data.Id)
+	d.SetId(shippingMethod.Data.GetId().(string))
 
 	return nil
 }

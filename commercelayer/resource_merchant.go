@@ -100,7 +100,7 @@ func resourceMerchantReadFunc(ctx context.Context, d *schema.ResourceData, i int
 		return nil
 	}
 
-	d.SetId(merchant.GetId())
+	d.SetId(merchant.GetId().(string))
 
 	return nil
 }
@@ -141,7 +141,7 @@ func resourceMerchantCreateFunc(ctx context.Context, d *schema.ResourceData, i i
 		return diagErr(err)
 	}
 
-	d.SetId(*merchant.Data.Id)
+	d.SetId(merchant.Data.GetId().(string))
 
 	return nil
 }

@@ -90,7 +90,7 @@ func resourceGoogleGeocodersReadFunc(ctx context.Context, d *schema.ResourceData
 		return nil
 	}
 
-	d.SetId(googleGeocoder.GetId())
+	d.SetId(googleGeocoder.GetId().(string))
 
 	return nil
 }
@@ -124,7 +124,7 @@ func resourceGoogleGeocodersCreateFunc(ctx context.Context, d *schema.ResourceDa
 		return diagErr(err)
 	}
 
-	d.SetId(*googleGeocoders.Data.Id)
+	d.SetId(googleGeocoders.Data.GetId().(string))
 
 	return nil
 }

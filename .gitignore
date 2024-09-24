@@ -83,3 +83,5 @@ fabric.properties
 /dist/
 /.env
 /token.json
+
+/local

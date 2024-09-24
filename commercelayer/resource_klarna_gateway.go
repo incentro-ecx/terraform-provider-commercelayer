@@ -101,7 +101,7 @@ func resourceKlarnaGatewayReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return nil
 	}
 
-	d.SetId(klarnaGateway.GetId())
+	d.SetId(klarnaGateway.GetId().(string))
 
 	return nil
 }
@@ -136,7 +136,7 @@ func resourceKlarnaGatewayCreateFunc(ctx context.Context, d *schema.ResourceData
 		return diagErr(err)
 	}
 
-	d.SetId(*klarnaGateway.Data.Id)
+	d.SetId(klarnaGateway.Data.GetId().(string))
 
 	return nil
 }

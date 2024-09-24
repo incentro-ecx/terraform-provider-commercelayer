@@ -110,7 +110,7 @@ func resourceDeliveryLeadTimesReadFunc(ctx context.Context, d *schema.ResourceDa
 		return nil
 	}
 
-	d.SetId(deliveryLeadTime.GetId())
+	d.SetId(deliveryLeadTime.GetId().(string))
 
 	return nil
 }
@@ -157,7 +157,7 @@ func resourceDeliveryLeadTimesCreateFunc(ctx context.Context, d *schema.Resource
 		return diagErr(err)
 	}
 
-	d.SetId(*deliveryLeadTimes.Data.Id)
+	d.SetId(deliveryLeadTimes.Data.GetId().(string))
 
 	return nil
 }

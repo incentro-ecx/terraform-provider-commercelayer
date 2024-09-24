@@ -97,7 +97,7 @@ func resourcePriceListReadFunc(ctx context.Context, d *schema.ResourceData, i in
 		return nil
 	}
 
-	d.SetId(priceList.GetId())
+	d.SetId(priceList.GetId().(string))
 
 	return nil
 }
@@ -131,7 +131,7 @@ func resourcePriceListCreateFunc(ctx context.Context, d *schema.ResourceData, i 
 		return diagErr(err)
 	}
 
-	d.SetId(*priceList.Data.Id)
+	d.SetId(priceList.Data.GetId().(string))
 
 	return nil
 }

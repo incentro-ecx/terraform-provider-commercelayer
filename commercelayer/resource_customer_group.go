@@ -84,7 +84,7 @@ func resourceCustomerGroupReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return nil
 	}
 
-	d.SetId(customerGroup.GetId())
+	d.SetId(customerGroup.GetId().(string))
 
 	return nil
 }
@@ -116,7 +116,7 @@ func resourceCustomerGroupCreateFunc(ctx context.Context, d *schema.ResourceData
 		return diagErr(err)
 	}
 
-	d.SetId(*customerGroup.Data.Id)
+	d.SetId(customerGroup.Data.GetId().(string))
 
 	return nil
 }

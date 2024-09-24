@@ -89,7 +89,7 @@ func resourceTaxjarAccountReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return nil
 	}
 
-	d.SetId(taxjarAccount.GetId())
+	d.SetId(taxjarAccount.GetId().(string))
 
 	return nil
 }
@@ -122,7 +122,7 @@ func resourceTaxjarAccountCreateFunc(ctx context.Context, d *schema.ResourceData
 		return diagErr(err)
 	}
 
-	d.SetId(*taxjarAccount.Data.Id)
+	d.SetId(taxjarAccount.Data.GetId().(string))
 
 	return nil
 }

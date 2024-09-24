@@ -124,7 +124,7 @@ func resourceBraintreeGatewayReadFunc(ctx context.Context, d *schema.ResourceDat
 		return nil
 	}
 
-	d.SetId(braintreeGateway.GetId())
+	d.SetId(braintreeGateway.GetId().(string))
 
 	return nil
 }
@@ -160,7 +160,7 @@ func resourceBraintreeGatewayCreateFunc(ctx context.Context, d *schema.ResourceD
 		return diagErr(err)
 	}
 
-	d.SetId(*braintreeGateway.Data.Id)
+	d.SetId(braintreeGateway.Data.GetId().(string))
 
 	return nil
 }

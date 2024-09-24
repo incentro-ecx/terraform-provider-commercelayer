@@ -99,7 +99,7 @@ func resourceStripeGatewayReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return nil
 	}
 
-	d.SetId(stripeGateway.GetId())
+	d.SetId(stripeGateway.GetId().(string))
 
 	return nil
 }
@@ -133,7 +133,7 @@ func resourceStripeGatewayCreateFunc(ctx context.Context, d *schema.ResourceData
 		return diagErr(err)
 	}
 
-	d.SetId(*stripeGateway.Data.Id)
+	d.SetId(stripeGateway.Data.GetId().(string))
 
 	return nil
 }

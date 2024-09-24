@@ -182,7 +182,7 @@ func resourceAddressReadFunc(ctx context.Context, d *schema.ResourceData, i inte
 		return nil
 	}
 
-	d.SetId(address.GetId())
+	d.SetId(address.GetId().(string))
 
 	return nil
 }
@@ -239,7 +239,7 @@ func resourceAddressCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 		return diagErr(err)
 	}
 
-	d.SetId(*address.Data.Id)
+	d.SetId(address.Data.GetId().(string))
 
 	return nil
 }

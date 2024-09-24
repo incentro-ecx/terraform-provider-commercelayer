@@ -110,7 +110,7 @@ func resourceWebhookReadFunc(ctx context.Context, d *schema.ResourceData, i inte
 		return nil
 	}
 
-	d.SetId(webhook.GetId())
+	d.SetId(webhook.GetId().(string))
 
 	return nil
 }
@@ -145,10 +145,10 @@ func resourceWebhookCreateFunc(ctx context.Context, d *schema.ResourceData, i in
 		return diagErr(err)
 	}
 
-	d.SetId(*webhook.Data.Id)
+	d.SetId(webhook.Data.GetId().(string))
 
 	//Fetch the shared secret (this is a work-around because the create does not return it)
-	resp, _, err := c.WebhooksApi.GETWebhooksWebhookId(ctx, *webhook.Data.Id).Execute()
+	resp, _, err := c.WebhooksApi.GETWebhooksWebhookId(ctx, webhook.Data.GetId().(string)).Execute()
 	if err != nil {
 		return diagErr(err)
 	}

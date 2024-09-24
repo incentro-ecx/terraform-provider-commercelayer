@@ -110,7 +110,7 @@ func resourceExternalGatewayReadFunc(ctx context.Context, d *schema.ResourceData
 		return nil
 	}
 
-	d.SetId(externalGateway.GetId())
+	d.SetId(externalGateway.GetId().(string))
 
 	return nil
 }
@@ -147,7 +147,7 @@ func resourceExternalGatewayCreateFunc(ctx context.Context, d *schema.ResourceDa
 		return diagErr(err)
 	}
 
-	d.SetId(*externalGateway.Data.Id)
+	d.SetId(externalGateway.Data.GetId().(string))
 
 	return nil
 }

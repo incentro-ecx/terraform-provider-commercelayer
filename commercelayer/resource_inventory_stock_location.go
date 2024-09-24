@@ -114,7 +114,7 @@ func resourceInventoryStockLocationReadFunc(ctx context.Context, d *schema.Resou
 		return nil
 	}
 
-	d.SetId(inventoryModel.GetId())
+	d.SetId(inventoryModel.GetId().(string))
 
 	return nil
 }
@@ -162,7 +162,7 @@ func resourceInventoryStockLocationCreateFunc(ctx context.Context, d *schema.Res
 		return diagErr(err)
 	}
 
-	d.SetId(*inventoryModel.Data.Id)
+	d.SetId(inventoryModel.Data.GetId().(string))
 
 	return nil
 }
