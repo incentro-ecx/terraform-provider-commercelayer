@@ -9,10 +9,13 @@ jobs:
     name: lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-go@v3
+      - uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
         with:
-          go-version: '1.18'
-      - uses: actions/checkout@v3
+          go-version-file: go.mod
+
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v3
         with:
@@ -23,9 +26,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-go@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
         with:
-          go-version: '1.18'
+          go-version-file: go.mod
+
       - run: go test -v -cover ./...
 
   acceptance-tests:
@@ -45,18 +51,23 @@ jobs:
           - '1.2.*'
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-go@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
         with:
-          go-version: '1.18'
+          go-version-file: go.mod
+
       - uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: ${{ matrix.terraform-version }}
           terraform_wrapper: false
+
       - name: load mock data
         shell: bash
         run: |
           FILES="${{ github.workspace }}/mock/mappings/*"
           for f in $FILES; do curl --location --request POST 'http://localhost:8080/__admin/mappings' --header 'Content-Type: application/json' --header 'Accept: application/json' --data-raw "$(cat "$f")"; done
+
       - run: go test -v -p 1 ./...
         env:
           TF_ACC: '1'
