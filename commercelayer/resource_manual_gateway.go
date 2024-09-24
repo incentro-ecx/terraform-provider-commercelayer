@@ -84,7 +84,7 @@ func resourceManualGatewayReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return nil
 	}
 
-	d.SetId(manualGateway.GetId())
+	d.SetId(manualGateway.GetId().(string))
 
 	return nil
 }
@@ -116,7 +116,7 @@ func resourceManualGatewayCreateFunc(ctx context.Context, d *schema.ResourceData
 		return diagErr(err)
 	}
 
-	d.SetId(*manualGateway.Data.Id)
+	d.SetId(manualGateway.Data.GetId().(string))
 
 	return nil
 }

@@ -90,7 +90,7 @@ func resourceBingGeocodersReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return nil
 	}
 
-	d.SetId(bingGeocoder.GetId())
+	d.SetId(bingGeocoder.GetId().(string))
 
 	return nil
 }
@@ -124,7 +124,7 @@ func resourceBingGeocodersCreateFunc(ctx context.Context, d *schema.ResourceData
 		return diagErr(err)
 	}
 
-	d.SetId(*bingGeocoders.Data.Id)
+	d.SetId(bingGeocoders.Data.GetId().(string))
 
 	return nil
 }

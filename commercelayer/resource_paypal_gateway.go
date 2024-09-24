@@ -96,7 +96,7 @@ func resourcePaypalGatewayReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return nil
 	}
 
-	d.SetId(paypalGateway.GetId())
+	d.SetId(paypalGateway.GetId().(string))
 
 	return nil
 }
@@ -130,7 +130,7 @@ func resourcePaypalGatewayCreateFunc(ctx context.Context, d *schema.ResourceData
 		return diagErr(err)
 	}
 
-	d.SetId(*paypalGateway.Data.Id)
+	d.SetId(paypalGateway.Data.GetId().(string))
 
 	return nil
 }

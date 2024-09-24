@@ -112,7 +112,7 @@ func resourceStockLocationReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return nil
 	}
 
-	d.SetId(stockLocation.GetId())
+	d.SetId(stockLocation.GetId().(string))
 
 	return nil
 }
@@ -155,7 +155,7 @@ func resourceStockLocationCreateFunc(ctx context.Context, d *schema.ResourceData
 		return diagErr(err)
 	}
 
-	d.SetId(*stockLocation.Data.Id)
+	d.SetId(stockLocation.Data.GetId().(string))
 
 	return nil
 }

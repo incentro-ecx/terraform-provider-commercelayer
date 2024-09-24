@@ -96,7 +96,7 @@ func resourceCheckoutComGatewayReadFunc(ctx context.Context, d *schema.ResourceD
 		return nil
 	}
 
-	d.SetId(checkoutComGateway.GetId())
+	d.SetId(checkoutComGateway.GetId().(string))
 
 	return nil
 }
@@ -130,7 +130,7 @@ func resourceCheckoutComGatewayCreateFunc(ctx context.Context, d *schema.Resourc
 		return diagErr(err)
 	}
 
-	d.SetId(*checkoutComGateway.Data.Id)
+	d.SetId(checkoutComGateway.Data.GetId().(string))
 
 	return nil
 }

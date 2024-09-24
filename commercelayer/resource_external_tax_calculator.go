@@ -90,7 +90,7 @@ func resourceExternalTaxCalculatorReadFunc(ctx context.Context, d *schema.Resour
 		return nil
 	}
 
-	d.SetId(externalTaxCalculator.GetId())
+	d.SetId(externalTaxCalculator.GetId().(string))
 
 	return nil
 }
@@ -123,7 +123,7 @@ func resourceExternalTaxCalculatorCreateFunc(ctx context.Context, d *schema.Reso
 		return diagErr(err)
 	}
 
-	d.SetId(*externalTaxCalculator.Data.Id)
+	d.SetId(externalTaxCalculator.Data.GetId().(string))
 
 	return nil
 }

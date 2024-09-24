@@ -127,7 +127,7 @@ func resourcePaymentMethodReadFunc(ctx context.Context, d *schema.ResourceData, 
 		return nil
 	}
 
-	d.SetId(address.GetId())
+	d.SetId(address.GetId().(string))
 
 	return nil
 }
@@ -190,7 +190,7 @@ func resourcePaymentMethodCreateFunc(ctx context.Context, d *schema.ResourceData
 		return diagErr(err)
 	}
 
-	d.SetId(*paymentMethod.Data.Id)
+	d.SetId(paymentMethod.Data.GetId().(string))
 
 	return nil
 }

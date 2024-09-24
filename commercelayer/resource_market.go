@@ -140,7 +140,7 @@ func resourceMarketReadFunc(ctx context.Context, d *schema.ResourceData, i inter
 		return nil
 	}
 
-	d.SetId(Market.GetId())
+	d.SetId(Market.GetId().(string))
 
 	return nil
 }
@@ -215,7 +215,7 @@ func resourceMarketCreateFunc(ctx context.Context, d *schema.ResourceData, i int
 		return diagErr(err)
 	}
 
-	d.SetId(*market.Data.Id)
+	d.SetId(market.Data.GetId().(string))
 
 	return nil
 }

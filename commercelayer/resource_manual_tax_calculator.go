@@ -84,7 +84,7 @@ func resourceManualTaxCalculatorReadFunc(ctx context.Context, d *schema.Resource
 		return nil
 	}
 
-	d.SetId(manualTaxCalculator.GetId())
+	d.SetId(manualTaxCalculator.GetId().(string))
 
 	return nil
 }
@@ -116,7 +116,7 @@ func resourceManualTaxCalculatorCreateFunc(ctx context.Context, d *schema.Resour
 		return diagErr(err)
 	}
 
-	d.SetId(*manualTaxCalculator.Data.Id)
+	d.SetId(manualTaxCalculator.Data.GetId().(string))
 
 	return nil
 }

@@ -85,7 +85,7 @@ func resourceShippingCategoryReadFunc(ctx context.Context, d *schema.ResourceDat
 		return nil
 	}
 
-	d.SetId(shippingCategory.GetId())
+	d.SetId(shippingCategory.GetId().(string))
 
 	return nil
 }
@@ -117,7 +117,7 @@ func resourceShippingCategoryCreateFunc(ctx context.Context, d *schema.ResourceD
 		return diagErr(err)
 	}
 
-	d.SetId(*shippingCategory.Data.Id)
+	d.SetId(shippingCategory.Data.GetId().(string))
 
 	return nil
 }

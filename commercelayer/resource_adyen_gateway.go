@@ -123,7 +123,7 @@ func resourceAdyenGatewayReadFunc(ctx context.Context, d *schema.ResourceData, i
 		return nil
 	}
 
-	d.SetId(adyenGateway.GetId())
+	d.SetId(adyenGateway.GetId().(string))
 
 	return nil
 }
@@ -162,7 +162,7 @@ func resourceAdyenGatewayCreateFunc(ctx context.Context, d *schema.ResourceData,
 		return diagErr(err)
 	}
 
-	d.SetId(*adyenGateway.Data.Id)
+	d.SetId(adyenGateway.Data.GetId().(string))
 
 	return nil
 }
