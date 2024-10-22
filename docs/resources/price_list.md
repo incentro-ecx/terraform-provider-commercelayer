@@ -4,10 +4,10 @@ page_title: "commercelayer_price_list Resource - terraform-provider-commercelaye
 subcategory: ""
 description: |-
   Price lists are collections of SKU prices,
-          defined by currency and market. When a list of SKUs is fetched,
-          only SKUs with a price defined in the market's price list and at least
-          a stock item in one of the market stock locations will be returned.
-          A user can create price lists to manage international business or B2B/B2C models.
+  defined by currency and market. When a list of SKUs is fetched,
+  only SKUs with a price defined in the market's price list and at least
+  a stock item in one of the market stock locations will be returned.
+  A user can create price lists to manage international business or B2B/B2C models.
 ---
 
 # commercelayer_price_list (Resource)
@@ -55,5 +55,3 @@ Optional:
 - `reference` (String) A string that you can use to add any external identifier to the resource. This can be useful for integrating the resource to an external system, like an ERP, a marketing tool, a CRM, or whatever.
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code
 - `tax_included` (Boolean) Indicates if the associated prices include taxes.
-
-

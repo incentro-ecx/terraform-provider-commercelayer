@@ -56,5 +56,3 @@ Optional:
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code
 - `state_code_regex` (String) The regex that will be evaluated to match the shipping address state code.
 - `zip_code_regex` (String) The regex that will be evaluated to match the shipping address zip code.
-
-

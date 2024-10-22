@@ -47,5 +47,3 @@ Optional:
 - `publishable_key` (String) The gateway publishable API key.
 - `reference` (String) A string that you can use to add any external identifier to the resource. This can be useful for integrating the resource to an external system, like an ERP, a marketing tool, a CRM, or whatever.
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code
-
-

@@ -71,5 +71,3 @@ Optional:
 Required:
 
 - `address_id` (String) The associated address id.
-
-

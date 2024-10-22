@@ -4,10 +4,10 @@ page_title: "commercelayer_external_gateway Resource - terraform-provider-commer
 subcategory: ""
 description: |-
   Price lists are collections of SKU prices,
-          defined by currency and market. When a list of SKUs is fetched,
-          only SKUs with a price defined in the market's price list and at least
-          a stock item in one of the market stock locations will be returned.
-          A user can create price lists to manage international business or B2B/B2C models.
+  defined by currency and market. When a list of SKUs is fetched,
+  only SKUs with a price defined in the market's price list and at least
+  a stock item in one of the market stock locations will be returned.
+  A user can create price lists to manage international business or B2B/B2C models.
 ---
 
 # commercelayer_external_gateway (Resource)
@@ -62,5 +62,3 @@ Optional:
 - `refund_url` (String) The endpoint used by the external gateway to refund payments.
 - `token_url` (String) The endpoint used by the external gateway to create a customer payment token.
 - `void_url` (String) The endpoint used by the external gateway to void payments.
-
-

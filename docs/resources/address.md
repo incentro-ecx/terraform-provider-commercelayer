@@ -78,5 +78,3 @@ Optional:
 Optional:
 
 - `geocoder_id` (String) The associated geocoder id.
-
-

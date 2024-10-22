@@ -103,5 +103,3 @@ Required:
 
 - `shipping_method_id` (String) The associated shipping method id.
 - `stock_location_id` (String) The associated stock location id.
-
-

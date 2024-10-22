@@ -48,5 +48,3 @@ Optional:
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code
 - `stock_locations_cutoff` (Number) The maximum number of stock locations used for inventory computation
 - `strategy` (String) The inventory model's shipping strategy: one between 'no_split' (default), 'split_shipments', 'split_by_line_items', 'ship_from_primary' and 'ship_from_first_available_or_primary'.
-
-
