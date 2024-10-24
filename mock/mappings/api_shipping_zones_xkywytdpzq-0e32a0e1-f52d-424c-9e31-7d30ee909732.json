@@ -1,0 +1,36 @@
+{
+  "id" : "0e32a0e1-f52d-424c-9e31-7d30ee909732",
+  "name" : "api_shipping_zones_xkywytdpzq",
+  "request" : {
+    "url" : "/api/shipping_zones/xKYwYtdPZQ",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "26c25333-0079-4e59-8b2a-9541ea200a09",
+      "x-kong-upstream-latency" : "8",
+      "X-Ratelimit-Remaining" : "86",
+      "x-kong-request-id" : "c3c24833420f22285f72ca7950395e34",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:07:20 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "0e32a0e1-f52d-424c-9e31-7d30ee909732",
+  "persistent" : true,
+  "scenarioName" : "scenario-6-api-shipping_zones-xKYwYtdPZQ",
+  "requiredScenarioState" : "scenario-6-api-shipping_zones-xKYwYtdPZQ-4",
+  "insertionIndex" : 40
+}

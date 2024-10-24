@@ -1,0 +1,40 @@
+{
+  "id" : "a4c81a4d-d8fa-4540-9256-36c96c65c988",
+  "name" : "api_stripe_gateways_ljbaqsaezv",
+  "request" : {
+    "url" : "/api/stripe_gateways/LjBAQsaezv",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_stripe_gateway.incentro_stripe_gateway\"},\"name\":\"Incentro Stripe Gateway Changed\",\"reference\":null,\"reference_origin\":null},\"id\":\"LjBAQsaezv\",\"type\":\"stripe_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"LjBAQsaezv\",\"type\":\"stripe_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv\"},\"attributes\":{\"name\":\"Incentro Stripe Gateway Changed\",\"created_at\":\"2024-10-24T16:07:23.940Z\",\"updated_at\":\"2024-10-24T16:07:24.943Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_stripe_gateway.incentro_stripe_gateway\"},\"connected_account\":null,\"auto_payments\":false,\"webhook_endpoint_id\":null,\"webhook_endpoint_secret\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/stripe_gateways/LjBAQsaezv/eu-west-1\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/versions\"}},\"stripe_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/relationships/stripe_payments\",\"related\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/stripe_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"ee97a1e3c2255d030ace2f9cab4c1184a0e743ae9186e9c522839a97c5200148\"}}}",
+    "headers" : {
+      "x-request-id" : "144aa233-107f-4d80-a5fa-ccc92f037e9f",
+      "x-kong-upstream-latency" : "20",
+      "X-Ratelimit-Remaining" : "94",
+      "x-kong-request-id" : "9b6cda7cdc77683c298b76088ef98658",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:07:24 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"a645c77eab0069cb9ca6861e542e281d\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "a4c81a4d-d8fa-4540-9256-36c96c65c988",
+  "persistent" : true,
+  "insertionIndex" : 24
+}

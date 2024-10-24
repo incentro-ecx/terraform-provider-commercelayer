@@ -1,0 +1,32 @@
+{
+  "id" : "07f2829b-a203-4417-826e-c192362de4be",
+  "name" : "api_price_lists_akyyacerek",
+  "request" : {
+    "url" : "/api/price_lists/AkYYaCErEk",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "9ca5a9e6-7250-4d3c-95b8-0f7e4d5bf84f",
+      "x-kong-upstream-latency" : "26",
+      "X-Ratelimit-Remaining" : "71",
+      "x-kong-request-id" : "ccecf70d6e1ec957283ad35c2f894f4b",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:06:02 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "07f2829b-a203-4417-826e-c192362de4be",
+  "persistent" : true,
+  "insertionIndex" : 104
+}

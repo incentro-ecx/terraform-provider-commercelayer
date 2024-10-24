@@ -1,0 +1,40 @@
+{
+  "id" : "a6345dae-6239-4745-bc14-0c79b237e494",
+  "name" : "api_adyen_gateways",
+  "request" : {
+    "url" : "/api/adyen_gateways",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"api_key\":\"xxxx-yyyy-zzzz\",\"api_version\":\"68\",\"async_api\":true,\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\",\"merchant_account\":\"xxxx-yyyy-zzzz\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"},\"name\":\"Incentro Adyen Gateway\",\"public_key\":\"xxxx-yyyy-zzzz\",\"reference\":null,\"reference_origin\":null,\"webhook_endpoint_secret\":\"foobar\"},\"type\":\"adyen_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"BxZLVszGyj\",\"type\":\"adyen_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/adyen_gateways/BxZLVszGyj\"},\"attributes\":{\"name\":\"Incentro Adyen Gateway\",\"created_at\":\"2024-10-24T16:06:06.712Z\",\"updated_at\":\"2024-10-24T16:06:06.712Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"},\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\",\"api_version\":68,\"async_api\":true,\"native_customer_payment_sources\":false,\"webhook_endpoint_secret\":\"foobar\",\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/adyen_gateways/BxZLVszGyj/eu-west-1\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/adyen_gateways/BxZLVszGyj/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/adyen_gateways/BxZLVszGyj/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/adyen_gateways/BxZLVszGyj/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/adyen_gateways/BxZLVszGyj/versions\"}},\"adyen_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/adyen_gateways/BxZLVszGyj/relationships/adyen_payments\",\"related\":\"https://loucs.commercelayer.io/api/adyen_gateways/BxZLVszGyj/adyen_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"bfdd8a9f7aa2719443b5f7fe1205795373cc31ce3cfdd91d3a62cc7741ef86d8\"}}}",
+    "headers" : {
+      "x-request-id" : "637d9131-96ef-4ca5-9936-57868bb6a155",
+      "x-kong-upstream-latency" : "22",
+      "X-Ratelimit-Remaining" : "67",
+      "x-kong-request-id" : "320da85cfa58d80d988d490389b09c64",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:06:06 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"323ae5b6caae4151299041c8d7eb15ae\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "a6345dae-6239-4745-bc14-0c79b237e494",
+  "persistent" : true,
+  "insertionIndex" : 88
+}

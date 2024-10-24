@@ -1,0 +1,40 @@
+{
+  "id" : "e12b00e4-7260-414e-981d-253f57de4613",
+  "name" : "api_payment_methods",
+  "request" : {
+    "url" : "/api/payment_methods",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"currency_code\":\"EUR\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"},\"moto\":false,\"payment_source_type\":\"AdyenPayment\",\"price_amount_cents\":10,\"reference\":null,\"reference_origin\":null},\"relationships\":{\"payment_gateway\":{\"data\":{\"id\":\"BxZLVszGyj\",\"type\":\"payment_gateways\"}}},\"type\":\"payment_methods\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"vEawJsbOAk\",\"type\":\"payment_methods\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/payment_methods/vEawJsbOAk\"},\"attributes\":{\"name\":\"Adyen Payment\",\"payment_source_type\":\"adyen_payments\",\"currency_code\":\"EUR\",\"moto\":false,\"require_capture\":true,\"auto_place\":false,\"auto_capture\":false,\"price_amount_cents\":10,\"price_amount_float\":0.1,\"formatted_price_amount\":\"€0,10\",\"auto_capture_max_amount_cents\":null,\"auto_capture_max_amount_float\":null,\"formatted_auto_capture_max_amount\":null,\"disabled_at\":null,\"created_at\":\"2024-10-24T16:06:06.878Z\",\"updated_at\":\"2024-10-24T16:06:06.878Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"}},\"relationships\":{\"market\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/payment_methods/vEawJsbOAk/relationships/market\",\"related\":\"https://loucs.commercelayer.io/api/payment_methods/vEawJsbOAk/market\"}},\"payment_gateway\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/payment_methods/vEawJsbOAk/relationships/payment_gateway\",\"related\":\"https://loucs.commercelayer.io/api/payment_methods/vEawJsbOAk/payment_gateway\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/payment_methods/vEawJsbOAk/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/payment_methods/vEawJsbOAk/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/payment_methods/vEawJsbOAk/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/payment_methods/vEawJsbOAk/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"fdb0c13c0dc11c7f4a117be189802a15f2acbe2f25df43138dc8603f7bffa083\"}}}",
+    "headers" : {
+      "x-request-id" : "3dda5ab2-485d-443b-ab7f-4edf7c358cf2",
+      "x-kong-upstream-latency" : "18",
+      "X-Ratelimit-Remaining" : "66",
+      "x-kong-request-id" : "8a04a25470e8642c3582a150ce7f9021",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:06:06 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"a9d1cade92c852e02dd7b8bce1652307\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "e12b00e4-7260-414e-981d-253f57de4613",
+  "persistent" : true,
+  "insertionIndex" : 87
+}

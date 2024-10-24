@@ -1,0 +1,32 @@
+{
+  "id" : "c921784a-4877-4ab2-b25e-35ebb612969e",
+  "name" : "api_merchants_mnykrhxvvb",
+  "request" : {
+    "url" : "/api/merchants/mnYKRHXVVb",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "172bc885-3557-42aa-9a84-166f4f568451",
+      "x-kong-upstream-latency" : "36",
+      "X-Ratelimit-Remaining" : "69",
+      "x-kong-request-id" : "fbe10740e4c7665162b23735b1466464",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:06:05 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "c921784a-4877-4ab2-b25e-35ebb612969e",
+  "persistent" : true,
+  "insertionIndex" : 92
+}

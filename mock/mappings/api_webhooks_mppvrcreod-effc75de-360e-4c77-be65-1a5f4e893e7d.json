@@ -1,0 +1,40 @@
+{
+  "id" : "effc75de-360e-4c77-be65-1a5f4e893e7d",
+  "name" : "api_webhooks_mppvrcreod",
+  "request" : {
+    "url" : "/api/webhooks/mPpvRCrEOd",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"callback_url\":\"http://other-example.url\",\"include_resources\":[\"line_items\"],\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_webhook.incentro_webhook\"},\"name\":\"incentro updated webhook\",\"reference\":null,\"reference_origin\":null,\"topic\":\"orders.place\"},\"id\":\"mPpvRCrEOd\",\"type\":\"webhooks\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"mPpvRCrEOd\",\"type\":\"webhooks\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/webhooks/mPpvRCrEOd\"},\"attributes\":{\"name\":\"incentro updated webhook\",\"topic\":\"orders.place\",\"callback_url\":\"http://other-example.url\",\"include_resources\":[\"line_items\"],\"disabled_at\":null,\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"9bdda3095ed58ab1cb07a1b35310481c\",\"created_at\":\"2024-10-24T16:07:28.016Z\",\"updated_at\":\"2024-10-24T16:07:28.967Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_webhook.incentro_webhook\"}},\"relationships\":{\"last_event_callbacks\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/webhooks/mPpvRCrEOd/relationships/last_event_callbacks\",\"related\":\"https://loucs.commercelayer.io/api/webhooks/mPpvRCrEOd/last_event_callbacks\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/webhooks/mPpvRCrEOd/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/webhooks/mPpvRCrEOd/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"9510cc0f86c8e1470051a38efdb7c767536d3b40e4ba6825edc6a5e86c8ec9fb\"}}}",
+    "headers" : {
+      "x-request-id" : "7cea6060-e0ac-4cba-9825-2269ca5276e1",
+      "x-kong-upstream-latency" : "24",
+      "X-Ratelimit-Remaining" : "92",
+      "x-kong-request-id" : "9b2a032b86a122031ff5e548ac557e75",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:07:28 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"8b8dc84d1dbe75782b7da592d52da5c6\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "effc75de-360e-4c77-be65-1a5f4e893e7d",
+  "persistent" : true,
+  "insertionIndex" : 9
+}

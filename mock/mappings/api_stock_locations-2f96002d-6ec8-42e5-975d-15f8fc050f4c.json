@@ -1,0 +1,40 @@
+{
+  "id" : "2f96002d-6ec8-42e5-975d-15f8fc050f4c",
+  "name" : "api_stock_locations",
+  "request" : {
+    "url" : "/api/stock_locations",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"label_format\":\"PNG\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_inventory_return_location.incentro_inventory_return_location\"},\"name\":\"Incentro Stock Location\",\"reference\":null,\"reference_origin\":null,\"suppress_etd\":true},\"relationships\":{\"address\":{\"data\":{\"id\":\"bQxrurpApJ\",\"type\":\"addresses\"}}},\"type\":\"stock_locations\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"NnoYJuqOqk\",\"type\":\"stock_locations\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk\"},\"attributes\":{\"number\":25283,\"name\":\"Incentro Stock Location\",\"code\":null,\"label_format\":\"PNG\",\"suppress_etd\":true,\"created_at\":\"2024-10-24T16:05:41.209Z\",\"updated_at\":\"2024-10-24T16:05:41.209Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_inventory_return_location.incentro_inventory_return_location\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/relationships/address\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/address\"}},\"inventory_stock_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/relationships/inventory_stock_locations\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/relationships/inventory_return_locations\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/inventory_return_locations\"}},\"stock_items\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/relationships/stock_items\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/stock_items\"}},\"stock_transfers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/relationships/stock_transfers\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/stock_transfers\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/NnoYJuqOqk/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"d4c3e84fa4be0b094b0e1545dac0b4e30f993b2e5a9d3ee17b308379a168848d\"}}}",
+    "headers" : {
+      "x-request-id" : "3c513aa2-3479-4de0-955e-f2fb3364326f",
+      "x-kong-upstream-latency" : "79",
+      "X-Ratelimit-Remaining" : "84",
+      "x-kong-request-id" : "56cbc9631f1f5375d9951f520a84a149",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:41 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"16fce694aaf72df4fd04ab744025a338\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "2f96002d-6ec8-42e5-975d-15f8fc050f4c",
+  "persistent" : true,
+  "insertionIndex" : 196
+}

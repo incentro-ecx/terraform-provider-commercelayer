@@ -1,0 +1,32 @@
+{
+  "id" : "b7b95089-2033-4bf0-92b2-d835bbc2740b",
+  "name" : "api_shipping_methods_jorxbfarpv",
+  "request" : {
+    "url" : "/api/shipping_methods/JORxbFaRpV",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "6da98ef7-3047-4aeb-8819-05f980423ccb",
+      "x-kong-upstream-latency" : "39",
+      "X-Ratelimit-Remaining" : "92",
+      "x-kong-request-id" : "4675904a7f2ff61dca585f40c041ad21",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:30 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "b7b95089-2033-4bf0-92b2-d835bbc2740b",
+  "persistent" : true,
+  "insertionIndex" : 235
+}

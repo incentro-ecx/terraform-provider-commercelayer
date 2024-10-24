@@ -1,0 +1,36 @@
+{
+  "id" : "f39c30e5-7308-4d62-a45a-ec0e11726748",
+  "name" : "api_google_geocoders_agqqasarwg",
+  "request" : {
+    "url" : "/api/google_geocoders/aGqqAsArWG",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "33569229-76f0-42aa-a5ff-13eb134054fe",
+      "x-kong-upstream-latency" : "5",
+      "X-Ratelimit-Remaining" : "53",
+      "x-kong-request-id" : "2ad9755c526ce630ca098e6e12552b0e",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:38 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "f39c30e5-7308-4d62-a45a-ec0e11726748",
+  "persistent" : true,
+  "scenarioName" : "scenario-33-api-google_geocoders-aGqqAsArWG",
+  "requiredScenarioState" : "scenario-33-api-google_geocoders-aGqqAsArWG-4",
+  "insertionIndex" : 206
+}

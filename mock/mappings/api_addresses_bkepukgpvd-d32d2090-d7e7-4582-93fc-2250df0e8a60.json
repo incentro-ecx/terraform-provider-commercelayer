@@ -1,0 +1,32 @@
+{
+  "id" : "d32d2090-d7e7-4582-93fc-2250df0e8a60",
+  "name" : "api_addresses_bkepukgpvd",
+  "request" : {
+    "url" : "/api/addresses/bkepukgPVD",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "62056cde-5e06-4cda-95ad-7cda9c15ff0e",
+      "x-kong-upstream-latency" : "23",
+      "X-Ratelimit-Remaining" : "99",
+      "x-kong-request-id" : "2d33932048e3b2291b83fa07e2de3b23",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:18 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "d32d2090-d7e7-4582-93fc-2250df0e8a60",
+  "persistent" : true,
+  "insertionIndex" : 284
+}

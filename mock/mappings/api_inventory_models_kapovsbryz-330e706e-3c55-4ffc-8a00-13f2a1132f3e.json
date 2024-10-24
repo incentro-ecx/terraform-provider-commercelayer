@@ -1,0 +1,32 @@
+{
+  "id" : "330e706e-3c55-4ffc-8a00-13f2a1132f3e",
+  "name" : "api_inventory_models_kapovsbryz",
+  "request" : {
+    "url" : "/api/inventory_models/kapovSBRyZ",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "63d50ef5-f8bf-4c7a-8c26-2fd7e5e23e80",
+      "x-kong-upstream-latency" : "23",
+      "X-Ratelimit-Remaining" : "87",
+      "x-kong-request-id" : "e08859571638d11acab46e4a29802a7f",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:40 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "330e706e-3c55-4ffc-8a00-13f2a1132f3e",
+  "persistent" : true,
+  "insertionIndex" : 200
+}

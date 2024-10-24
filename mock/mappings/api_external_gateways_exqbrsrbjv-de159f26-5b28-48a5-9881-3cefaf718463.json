@@ -1,0 +1,38 @@
+{
+  "id" : "de159f26-5b28-48a5-9881-3cefaf718463",
+  "name" : "api_external_gateways_exqbrsrbjv",
+  "request" : {
+    "url" : "/api/external_gateways/exqbrsrbJv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"exqbrsrbJv\",\"type\":\"external_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv\"},\"attributes\":{\"name\":\"incentro_external_gateway\",\"created_at\":\"2024-10-24T16:05:31.863Z\",\"updated_at\":\"2024-10-24T16:05:31.863Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_external_gateway.incentro_external_gateway\"},\"authorize_url\":\"https://example.com\",\"capture_url\":\"https://example.com\",\"void_url\":\"https://example.com\",\"refund_url\":\"https://example.com\",\"token_url\":\"https://example.com\",\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"b018ce1100e2a4a1deb33a2487e33057\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/versions\"}},\"external_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/relationships/external_payments\",\"related\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/external_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"6d0486f647776ca141ee2ee1a956492404521ee489ba53358ff3d4c7555d0644\"}}}",
+    "headers" : {
+      "x-request-id" : "a997cee3-29a9-439c-91f6-3b1e899f615b",
+      "x-kong-upstream-latency" : "11",
+      "X-Ratelimit-Remaining" : "66",
+      "x-kong-request-id" : "12ccc93ff2fe97101ce9fd7bc3002d3b",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:32 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"e1d7fa24e14cfd9e6744566b5eb4f04b\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "de159f26-5b28-48a5-9881-3cefaf718463",
+  "persistent" : true,
+  "scenarioName" : "scenario-35-api-external_gateways-exqbrsrbJv",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-35-api-external_gateways-exqbrsrbJv-2",
+  "insertionIndex" : 228
+}

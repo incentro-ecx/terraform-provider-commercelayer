@@ -1,0 +1,32 @@
+{
+  "id" : "a975d9b4-fcc2-43cf-b9ae-0d3f5f1b784f",
+  "name" : "api_taxjar_accounts_jynpytlmlv",
+  "request" : {
+    "url" : "/api/taxjar_accounts/jynPYTLmlv",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "6ceffd91-0458-4e0e-89b8-6cb60d12326b",
+      "x-kong-upstream-latency" : "25",
+      "X-Ratelimit-Remaining" : "91",
+      "x-kong-request-id" : "4cef9a161d51d853c3328a0e58e9e15f",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:07:27 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "a975d9b4-fcc2-43cf-b9ae-0d3f5f1b784f",
+  "persistent" : true,
+  "insertionIndex" : 15
+}

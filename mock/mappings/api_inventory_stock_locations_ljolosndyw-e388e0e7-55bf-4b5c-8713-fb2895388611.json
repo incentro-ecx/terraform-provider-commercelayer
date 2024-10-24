@@ -1,0 +1,40 @@
+{
+  "id" : "e388e0e7-55bf-4b5c-8713-fb2895388611",
+  "name" : "api_inventory_stock_locations_ljolosndyw",
+  "request" : {
+    "url" : "/api/inventory_stock_locations/ljOLoSNDYW",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"testName\":\"commercelayer_inventory_stock_location.incentro_inventory_stock_location\"},\"on_hold\":false,\"priority\":2,\"reference\":null,\"reference_origin\":null},\"id\":\"ljOLoSNDYW\",\"relationships\":{\"inventory_model\":{\"data\":{\"id\":\"JazqXSymMZ\",\"type\":\"inventory_models\"}},\"stock_location\":{\"data\":{\"id\":\"BGOxpulLWk\",\"type\":\"stock_locations\"}}},\"type\":\"inventory_stock_locations\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"ljOLoSNDYW\",\"type\":\"inventory_stock_locations\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_stock_locations/ljOLoSNDYW\"},\"attributes\":{\"priority\":2,\"on_hold\":false,\"created_at\":\"2024-10-24T16:05:45.844Z\",\"updated_at\":\"2024-10-24T16:05:47.806Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_stock_location.incentro_inventory_stock_location\"}},\"relationships\":{\"stock_location\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_stock_locations/ljOLoSNDYW/relationships/stock_location\",\"related\":\"https://loucs.commercelayer.io/api/inventory_stock_locations/ljOLoSNDYW/stock_location\"}},\"inventory_model\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_stock_locations/ljOLoSNDYW/relationships/inventory_model\",\"related\":\"https://loucs.commercelayer.io/api/inventory_stock_locations/ljOLoSNDYW/inventory_model\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_stock_locations/ljOLoSNDYW/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/inventory_stock_locations/ljOLoSNDYW/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"7f3f88b263a63d0d69c812d10b3ccc4be306fc10e10e6d784bfad9b0c1e01174\"}}}",
+    "headers" : {
+      "x-request-id" : "8f36dd5d-1ab4-4ea8-ae3a-51339c81f772",
+      "x-kong-upstream-latency" : "23",
+      "X-Ratelimit-Remaining" : "87",
+      "x-kong-request-id" : "a24d3b13b8ccab6831926c4286deaf58",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:47 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"eabdfcfe3fbf95579a247fdd4eaad4f3\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "e388e0e7-55bf-4b5c-8713-fb2895388611",
+  "persistent" : true,
+  "insertionIndex" : 164
+}

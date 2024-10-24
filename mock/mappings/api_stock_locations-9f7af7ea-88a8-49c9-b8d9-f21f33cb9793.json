@@ -1,0 +1,40 @@
+{
+  "id" : "9f7af7ea-88a8-49c9-b8d9-f21f33cb9793",
+  "name" : "api_stock_locations",
+  "request" : {
+    "url" : "/api/stock_locations",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"label_format\":\"PNG\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_inventory_stock_location.incentro_inventory_stock_location\"},\"name\":\"Incentro Stock Location\",\"reference\":null,\"reference_origin\":null,\"suppress_etd\":true},\"relationships\":{\"address\":{\"data\":{\"id\":\"beJOulJmJO\",\"type\":\"addresses\"}}},\"type\":\"stock_locations\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"BGOxpulLWk\",\"type\":\"stock_locations\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk\"},\"attributes\":{\"number\":25284,\"name\":\"Incentro Stock Location\",\"code\":null,\"label_format\":\"PNG\",\"suppress_etd\":true,\"created_at\":\"2024-10-24T16:05:45.536Z\",\"updated_at\":\"2024-10-24T16:05:45.536Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_inventory_stock_location.incentro_inventory_stock_location\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/address\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/address\"}},\"inventory_stock_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/inventory_stock_locations\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/inventory_return_locations\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/inventory_return_locations\"}},\"stock_items\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/stock_items\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/stock_items\"}},\"stock_transfers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/stock_transfers\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/stock_transfers\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"4843cbc244c1638c41623192ea1266ace3cf11085435fe84ad228dfde967f52d\"}}}",
+    "headers" : {
+      "x-request-id" : "674f60ac-38b8-4605-8ea0-814b7dadd2b1",
+      "x-kong-upstream-latency" : "57",
+      "X-Ratelimit-Remaining" : "80",
+      "x-kong-request-id" : "cb3cc124e8fb273634296e1be8280e77",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:45 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"2af2a329cb0be71b120a8f6fb71fd727\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "9f7af7ea-88a8-49c9-b8d9-f21f33cb9793",
+  "persistent" : true,
+  "insertionIndex" : 174
+}

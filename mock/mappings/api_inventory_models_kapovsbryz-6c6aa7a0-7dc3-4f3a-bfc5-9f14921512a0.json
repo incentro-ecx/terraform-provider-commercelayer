@@ -1,0 +1,37 @@
+{
+  "id" : "6c6aa7a0-7dc3-4f3a-bfc5-9f14921512a0",
+  "name" : "api_inventory_models_kapovsbryz",
+  "request" : {
+    "url" : "/api/inventory_models/kapovSBRyZ",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "0bcb0686-961a-49eb-90f3-73578603f3f1",
+      "x-kong-upstream-latency" : "8",
+      "X-Ratelimit-Remaining" : "493",
+      "x-kong-request-id" : "ad8cfa7a754a252c55198e540c66b438",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:40 GMT",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "cache-control" : "no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "6c6aa7a0-7dc3-4f3a-bfc5-9f14921512a0",
+  "persistent" : true,
+  "scenarioName" : "scenario-32-api-inventory_models-kapovSBRyZ",
+  "requiredScenarioState" : "scenario-32-api-inventory_models-kapovSBRyZ-4",
+  "insertionIndex" : 199
+}

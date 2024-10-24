@@ -1,0 +1,32 @@
+{
+  "id" : "936a48ca-4bb3-4634-84d9-539648a583c7",
+  "name" : "api_addresses_woelupqxvn",
+  "request" : {
+    "url" : "/api/addresses/WoelupqXVn",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "84bca3dc-dac0-4ae3-a850-67e99aca1029",
+      "x-kong-upstream-latency" : "29",
+      "X-Ratelimit-Remaining" : "93",
+      "x-kong-request-id" : "40f2493d93dea044e396c87b18c91f4c",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:07:23 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "936a48ca-4bb3-4634-84d9-539648a583c7",
+  "persistent" : true,
+  "insertionIndex" : 29
+}

@@ -1,0 +1,32 @@
+{
+  "id" : "d63d6b22-dc61-4eef-9e7a-3863e1da2c73",
+  "name" : "api_inventory_return_locations_vzxpwiyzmz",
+  "request" : {
+    "url" : "/api/inventory_return_locations/VZXPWiyzmZ",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "63a00de9-7a27-4381-9e11-a0c9843b6490",
+      "x-kong-upstream-latency" : "33",
+      "X-Ratelimit-Remaining" : "86",
+      "x-kong-request-id" : "36e6e47940300159b8588459e4897260",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:43 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "d63d6b22-dc61-4eef-9e7a-3863e1da2c73",
+  "persistent" : true,
+  "insertionIndex" : 181
+}

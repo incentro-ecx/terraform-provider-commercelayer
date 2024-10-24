@@ -1,0 +1,32 @@
+{
+  "id" : "6aaa15b9-4c9c-4382-bba4-a8449021196f",
+  "name" : "api_shipping_methods_yepkyfrnav",
+  "request" : {
+    "url" : "/api/shipping_methods/YEPkYFrnAV",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "1c1f6f44-13ad-4d9d-b618-42824dca72ca",
+      "x-kong-upstream-latency" : "34",
+      "X-Ratelimit-Remaining" : "96",
+      "x-kong-request-id" : "283fd264a0d8246b15271a79bbe72b02",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:07:18 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "6aaa15b9-4c9c-4382-bba4-a8449021196f",
+  "persistent" : true,
+  "insertionIndex" : 48
+}

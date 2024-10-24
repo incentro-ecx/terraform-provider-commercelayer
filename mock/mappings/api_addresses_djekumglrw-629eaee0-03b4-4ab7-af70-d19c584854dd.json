@@ -1,0 +1,32 @@
+{
+  "id" : "629eaee0-03b4-4ab7-af70-d19c584854dd",
+  "name" : "api_addresses_djekumglrw",
+  "request" : {
+    "url" : "/api/addresses/djekumgLRw",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "d1768e2f-992e-4828-83f7-9d90ff50074a",
+      "x-kong-upstream-latency" : "26",
+      "X-Ratelimit-Remaining" : "70",
+      "x-kong-request-id" : "a6531119e615fd73f92fa2287062a20e",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 16:06:02 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "629eaee0-03b4-4ab7-af70-d19c584854dd",
+  "persistent" : true,
+  "insertionIndex" : 103
+}

@@ -1,0 +1,37 @@
+{
+  "id" : "fce4b0a9-0b19-4716-b619-66483932d522",
+  "name" : "api_delivery_lead_times_xonayfdvrp",
+  "request" : {
+    "url" : "/api/delivery_lead_times/XOnAYFdVrp",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "040b2dc0-20e3-489f-8b92-1e5fadc9d695",
+      "x-kong-upstream-latency" : "6",
+      "X-Ratelimit-Remaining" : "69",
+      "x-kong-request-id" : "229ec81c9f339e1ede244934d4900c41",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:31 GMT",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "cache-control" : "no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "fce4b0a9-0b19-4716-b619-66483932d522",
+  "persistent" : true,
+  "scenarioName" : "scenario-37-api-delivery_lead_times-XOnAYFdVrp",
+  "requiredScenarioState" : "scenario-37-api-delivery_lead_times-XOnAYFdVrp-4",
+  "insertionIndex" : 232
+}

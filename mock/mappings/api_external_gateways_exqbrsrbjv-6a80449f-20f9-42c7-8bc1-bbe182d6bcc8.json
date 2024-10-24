@@ -1,0 +1,40 @@
+{
+  "id" : "6a80449f-20f9-42c7-8bc1-bbe182d6bcc8",
+  "name" : "api_external_gateways_exqbrsrbjv",
+  "request" : {
+    "url" : "/api/external_gateways/exqbrsrbJv",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"authorize_url\":null,\"capture_url\":null,\"metadata\":{\"testName\":\"commercelayer_external_gateway.incentro_external_gateway\"},\"name\":\"incentro_external_gateway_changed\",\"reference\":null,\"reference_origin\":null,\"refund_url\":null,\"token_url\":null,\"void_url\":null},\"id\":\"exqbrsrbJv\",\"type\":\"external_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"exqbrsrbJv\",\"type\":\"external_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv\"},\"attributes\":{\"name\":\"incentro_external_gateway_changed\",\"created_at\":\"2024-10-24T16:05:31.863Z\",\"updated_at\":\"2024-10-24T16:05:33.561Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_external_gateway.incentro_external_gateway\"},\"authorize_url\":null,\"capture_url\":null,\"void_url\":null,\"refund_url\":null,\"token_url\":null,\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"b018ce1100e2a4a1deb33a2487e33057\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/versions\"}},\"external_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/relationships/external_payments\",\"related\":\"https://loucs.commercelayer.io/api/external_gateways/exqbrsrbJv/external_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"40284226c70e46b267a95ffd9929f5ad646daa6b1c48c2407bcad0a34482eea5\"}}}",
+    "headers" : {
+      "x-request-id" : "c5d8b810-9c7c-4efd-b9af-f980288002d6",
+      "x-kong-upstream-latency" : "23",
+      "X-Ratelimit-Remaining" : "92",
+      "x-kong-request-id" : "16c8cf0c4816b1491f235b59e281346f",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:33 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"5aa6a777588732a9528f0d40104bfa79\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "6a80449f-20f9-42c7-8bc1-bbe182d6bcc8",
+  "persistent" : true,
+  "insertionIndex" : 223
+}

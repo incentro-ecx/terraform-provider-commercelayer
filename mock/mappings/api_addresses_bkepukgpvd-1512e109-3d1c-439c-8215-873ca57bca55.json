@@ -1,0 +1,38 @@
+{
+  "id" : "1512e109-3d1c-439c-8215-873ca57bca55",
+  "name" : "api_addresses_bkepukgpvd",
+  "request" : {
+    "url" : "/api/addresses/bkepukgPVD",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"bkepukgPVD\",\"type\":\"addresses\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/bkepukgPVD\"},\"attributes\":{\"business\":true,\"first_name\":null,\"last_name\":null,\"company\":\"Incentro\",\"full_name\":\"Incentro\",\"line_1\":\"Moermanskkade 113\",\"line_2\":null,\"city\":\"Amsterdam\",\"zip_code\":\"1013 BC\",\"state_code\":\"NH\",\"country_code\":\"NL\",\"phone\":\"020 409 0444\",\"full_address\":\"Moermanskkade 113, 1013 BC Amsterdam NH (NL) 020 409 0444\",\"name\":\"Incentro, Moermanskkade 113, 1013 BC Amsterdam NH (NL) 020 409 0444\",\"email\":null,\"notes\":null,\"lat\":null,\"lng\":null,\"is_localized\":false,\"is_geocoded\":false,\"provider_name\":null,\"map_url\":null,\"static_map_url\":null,\"billing_info\":null,\"created_at\":\"2024-10-24T16:05:16.873Z\",\"updated_at\":\"2024-10-24T16:05:17.923Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_address.incentro_address\"}},\"relationships\":{\"geocoder\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/bkepukgPVD/relationships/geocoder\",\"related\":\"https://loucs.commercelayer.io/api/addresses/bkepukgPVD/geocoder\"}},\"events\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/bkepukgPVD/relationships/events\",\"related\":\"https://loucs.commercelayer.io/api/addresses/bkepukgPVD/events\"}},\"tags\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/bkepukgPVD/relationships/tags\",\"related\":\"https://loucs.commercelayer.io/api/addresses/bkepukgPVD/tags\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/bkepukgPVD/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/addresses/bkepukgPVD/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"99ea2ed7e99d999b7ba7eb5899064dbd193bcb41b309d9cb620b9b6d1286e96c\"}}}",
+    "headers" : {
+      "x-request-id" : "d62707c0-d286-4d9d-bc0e-f7b2a1b131a0",
+      "x-kong-upstream-latency" : "14",
+      "X-Ratelimit-Remaining" : "97",
+      "x-kong-request-id" : "34bc416fa7377363cbf8ef45e968d97f",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:18 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"d80657cf3dd6e8dce6c188b7e4c05a8a\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "1512e109-3d1c-439c-8215-873ca57bca55",
+  "persistent" : true,
+  "scenarioName" : "scenario-44-api-addresses-bkepukgPVD",
+  "requiredScenarioState" : "scenario-44-api-addresses-bkepukgPVD-3",
+  "newScenarioState" : "scenario-44-api-addresses-bkepukgPVD-4",
+  "insertionIndex" : 285
+}

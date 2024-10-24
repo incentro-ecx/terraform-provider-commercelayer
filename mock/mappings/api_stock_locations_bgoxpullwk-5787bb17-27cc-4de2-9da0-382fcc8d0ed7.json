@@ -1,0 +1,39 @@
+{
+  "id" : "5787bb17-27cc-4de2-9da0-382fcc8d0ed7",
+  "name" : "api_stock_locations_bgoxpullwk",
+  "request" : {
+    "url" : "/api/stock_locations/BGOxpulLWk",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"BGOxpulLWk\",\"type\":\"stock_locations\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk\"},\"attributes\":{\"number\":25284,\"name\":\"Incentro Stock Location\",\"code\":null,\"label_format\":\"PNG\",\"suppress_etd\":true,\"created_at\":\"2024-10-24T16:05:45.536Z\",\"updated_at\":\"2024-10-24T16:05:45.536Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_inventory_stock_location.incentro_inventory_stock_location\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/address\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/address\"}},\"inventory_stock_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/inventory_stock_locations\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/inventory_return_locations\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/inventory_return_locations\"}},\"stock_items\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/stock_items\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/stock_items\"}},\"stock_transfers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/stock_transfers\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/stock_transfers\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/BGOxpulLWk/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"ae36ce2c28b6416b916c5a53806e8d2383a8ad382d355b2a770a4d952b5a34a0\"}}}",
+    "headers" : {
+      "x-request-id" : "67edb9df-04ce-4fc0-98c4-d105c4da998d",
+      "x-kong-upstream-latency" : "15",
+      "X-Ratelimit-Remaining" : "485",
+      "x-kong-request-id" : "c1d80875758c6d73743fca1b43c7cb17",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:46 GMT",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "etag" : "W/\"c93d34c9fa9c880e91b2b72d03ede2f5\"",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "5787bb17-27cc-4de2-9da0-382fcc8d0ed7",
+  "persistent" : true,
+  "scenarioName" : "scenario-25-api-stock_locations-BGOxpulLWk",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-25-api-stock_locations-BGOxpulLWk-2",
+  "insertionIndex" : 170
+}

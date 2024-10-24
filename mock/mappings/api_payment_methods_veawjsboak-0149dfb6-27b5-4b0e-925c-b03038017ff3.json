@@ -1,0 +1,32 @@
+{
+  "id" : "0149dfb6-27b5-4b0e-925c-b03038017ff3",
+  "name" : "api_payment_methods_veawjsboak",
+  "request" : {
+    "url" : "/api/payment_methods/vEawJsbOAk",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "a1b6a3db-71e2-4226-a9e4-7b8c260be325",
+      "x-kong-upstream-latency" : "20",
+      "X-Ratelimit-Remaining" : "67",
+      "x-kong-request-id" : "d9ddc93c8fc4836b22eece114c72256b",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:06:08 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "0149dfb6-27b5-4b0e-925c-b03038017ff3",
+  "persistent" : true,
+  "insertionIndex" : 79
+}

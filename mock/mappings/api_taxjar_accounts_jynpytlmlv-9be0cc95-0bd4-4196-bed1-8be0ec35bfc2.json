@@ -1,0 +1,36 @@
+{
+  "id" : "9be0cc95-0bd4-4196-bed1-8be0ec35bfc2",
+  "name" : "api_taxjar_accounts_jynpytlmlv",
+  "request" : {
+    "url" : "/api/taxjar_accounts/jynPYTLmlv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "cc91f28c-375d-40e1-9d73-e113a7fcdec1",
+      "x-kong-upstream-latency" : "9",
+      "X-Ratelimit-Remaining" : "75",
+      "x-kong-request-id" : "0d820200e3022428064ccf3dbcb9831e",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:07:27 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "9be0cc95-0bd4-4196-bed1-8be0ec35bfc2",
+  "persistent" : true,
+  "scenarioName" : "scenario-2-api-taxjar_accounts-jynPYTLmlv",
+  "requiredScenarioState" : "scenario-2-api-taxjar_accounts-jynPYTLmlv-4",
+  "insertionIndex" : 14
+}

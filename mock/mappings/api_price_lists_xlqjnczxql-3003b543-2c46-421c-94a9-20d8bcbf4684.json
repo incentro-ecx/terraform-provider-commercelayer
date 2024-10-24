@@ -1,0 +1,39 @@
+{
+  "id" : "3003b543-2c46-421c-94a9-20d8bcbf4684",
+  "name" : "api_price_lists_xlqjnczxql",
+  "request" : {
+    "url" : "/api/price_lists/xlqjNCZXQL",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"xlqjNCZXQL\",\"type\":\"price_lists\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL\"},\"attributes\":{\"name\":\"incentro updated price list\",\"code\":null,\"currency_code\":\"CHF\",\"tax_included\":true,\"created_at\":\"2024-10-24T16:07:11.760Z\",\"updated_at\":\"2024-10-24T16:07:12.531Z\",\"reference\":null,\"reference_origin\":null,\"rules\":{},\"rule_outcomes\":{},\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_price_list.incentro_price_list\"}},\"relationships\":{\"prices\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/relationships/prices\",\"related\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/prices\"}},\"price_list_schedulers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/relationships/price_list_schedulers\",\"related\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/price_list_schedulers\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"c0516b8da9214bfc6b778a3c10ee5f842429e87557389f623281ac8c1796edae\"}}}",
+    "headers" : {
+      "x-request-id" : "2f12fa0f-ba43-47d9-aaa3-369d1e1fdc5a",
+      "x-kong-upstream-latency" : "13",
+      "X-Ratelimit-Remaining" : "497",
+      "x-kong-request-id" : "a49bb27d7bfdf7559070d924285d4230",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:07:12 GMT",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "etag" : "W/\"f659f28ed73b26f43b002e610aca13b2\"",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "3003b543-2c46-421c-94a9-20d8bcbf4684",
+  "persistent" : true,
+  "scenarioName" : "scenario-9-api-price_lists-xlqjNCZXQL",
+  "requiredScenarioState" : "scenario-9-api-price_lists-xlqjNCZXQL-3",
+  "newScenarioState" : "scenario-9-api-price_lists-xlqjNCZXQL-4",
+  "insertionIndex" : 63
+}

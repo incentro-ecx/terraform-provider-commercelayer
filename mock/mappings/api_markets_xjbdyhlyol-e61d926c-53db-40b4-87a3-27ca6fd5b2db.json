@@ -1,0 +1,39 @@
+{
+  "id" : "e61d926c-53db-40b4-87a3-27ca6fd5b2db",
+  "name" : "api_markets_xjbdyhlyol",
+  "request" : {
+    "url" : "/api/markets/XjBdyhLYOl",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"XjBdyhLYOl\",\"type\":\"markets\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl\"},\"attributes\":{\"number\":27916,\"name\":\"Incentro Market Changed\",\"code\":null,\"facebook_pixel_id\":\"pixelchanged\",\"checkout_url\":null,\"external_prices_url\":null,\"external_order_validation_url\":\"https://www.example.com\",\"private\":false,\"shipping_cost_cutoff\":null,\"disabled_at\":null,\"shared_secret\":\"b1f95c80cd9123cc248c0635f2acd4ed\",\"created_at\":\"2024-10-24T16:05:57.059Z\",\"updated_at\":\"2024-10-24T16:05:59.317Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_market.incentro_market\"}},\"relationships\":{\"merchant\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/merchant\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/merchant\"}},\"price_list\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/price_list\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/price_list\"}},\"base_price_list\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/base_price_list\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/base_price_list\"}},\"inventory_model\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/inventory_model\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/inventory_model\"}},\"subscription_model\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/subscription_model\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/subscription_model\"}},\"tax_calculator\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/tax_calculator\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/tax_calculator\"}},\"customer_group\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/customer_group\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/customer_group\"}},\"geocoder\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/geocoder\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/geocoder\"}},\"price_list_schedulers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/price_list_schedulers\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/price_list_schedulers\"}},\"order_validation_rules\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/order_validation_rules\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/order_validation_rules\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/markets/XjBdyhLYOl/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"f6fdfe5b09c31fbf5d9a6172143ed0ae51e0bf2bebcb211daa6cb54edb548bb1\"}}}",
+    "headers" : {
+      "x-request-id" : "09964db0-268a-49c9-8da7-4d44ce4924fd",
+      "x-kong-upstream-latency" : "16",
+      "X-Ratelimit-Remaining" : "472",
+      "x-kong-request-id" : "86f9fe6b12f1ac13841d830a492d1d1f",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:06:00 GMT",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "etag" : "W/\"576fe85b3cb20bfb1254ae974be471d7\"",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "e61d926c-53db-40b4-87a3-27ca6fd5b2db",
+  "persistent" : true,
+  "scenarioName" : "scenario-15-api-markets-XjBdyhLYOl",
+  "requiredScenarioState" : "scenario-15-api-markets-XjBdyhLYOl-3",
+  "newScenarioState" : "scenario-15-api-markets-XjBdyhLYOl-4",
+  "insertionIndex" : 109
+}

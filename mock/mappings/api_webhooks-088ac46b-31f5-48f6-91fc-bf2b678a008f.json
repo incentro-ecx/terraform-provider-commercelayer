@@ -1,0 +1,40 @@
+{
+  "id" : "088ac46b-31f5-48f6-91fc-bf2b678a008f",
+  "name" : "api_webhooks",
+  "request" : {
+    "url" : "/api/webhooks",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"callback_url\":\"http://example.url\",\"include_resources\":[\"customer\"],\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_webhook.incentro_webhook\"},\"name\":\"incentro webhook\",\"reference\":null,\"reference_origin\":null,\"topic\":\"orders.create\"},\"type\":\"webhooks\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"mPpvRCrEOd\",\"type\":\"webhooks\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/webhooks/mPpvRCrEOd\"},\"attributes\":{\"name\":\"incentro webhook\",\"topic\":\"orders.create\",\"callback_url\":\"http://example.url\",\"include_resources\":[\"customer\"],\"disabled_at\":null,\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"9bdda3095ed58ab1cb07a1b35310481c\",\"created_at\":\"2024-10-24T16:07:28.016Z\",\"updated_at\":\"2024-10-24T16:07:28.016Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_webhook.incentro_webhook\"}},\"relationships\":{\"last_event_callbacks\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/webhooks/mPpvRCrEOd/relationships/last_event_callbacks\",\"related\":\"https://loucs.commercelayer.io/api/webhooks/mPpvRCrEOd/last_event_callbacks\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/webhooks/mPpvRCrEOd/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/webhooks/mPpvRCrEOd/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"d801acc6ef371c4a5057dfae7b48647a9f5527b85c0baa811d0c9c7b98116168\"}}}",
+    "headers" : {
+      "x-request-id" : "a0fd2a1a-43e8-4fae-bc7e-88802cace2b3",
+      "x-kong-upstream-latency" : "23",
+      "X-Ratelimit-Remaining" : "91",
+      "x-kong-request-id" : "8fc441000b299e3f3487c53e21cdb448",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:07:28 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"c8eb3adad279efcd35774f7b32ded390\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "088ac46b-31f5-48f6-91fc-bf2b678a008f",
+  "persistent" : true,
+  "insertionIndex" : 13
+}

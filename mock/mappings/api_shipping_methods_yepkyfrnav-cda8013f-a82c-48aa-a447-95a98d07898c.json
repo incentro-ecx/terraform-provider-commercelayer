@@ -1,0 +1,40 @@
+{
+  "id" : "cda8013f-a82c-48aa-a447-95a98d07898c",
+  "name" : "api_shipping_methods_yepkyfrnav",
+  "request" : {
+    "url" : "/api/shipping_methods/YEPkYFrnAV",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"_disable\":true,\"currency_code\":\"CHF\",\"external_prices_url\":\"https://api.commercelayer.io/v1/prices\",\"free_over_amount_cents\":1,\"max_weight\":20,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_shipping_method.incentro_shipping_method\"},\"min_weight\":1,\"name\":\"Incentro Test Shipping Method Updated\",\"price_amount_cents\":1,\"reference\":null,\"reference_origin\":null,\"scheme\":\"external\",\"unit_of_weight\":\"oz\",\"use_subtotal\":true},\"id\":\"YEPkYFrnAV\",\"relationships\":{},\"type\":\"shipping_methods\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"YEPkYFrnAV\",\"type\":\"shipping_methods\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV\"},\"attributes\":{\"name\":\"Incentro Test Shipping Method Updated\",\"scheme\":\"external\",\"currency_code\":\"CHF\",\"external_prices_url\":\"https://api.commercelayer.io/v1/prices\",\"price_amount_cents\":1,\"price_amount_float\":0.01,\"formatted_price_amount\":\"CHF 0.01\",\"free_over_amount_cents\":1,\"free_over_amount_float\":0.01,\"formatted_free_over_amount\":\"CHF 0.01\",\"use_subtotal\":true,\"price_amount_for_shipment_cents\":1,\"price_amount_for_shipment_float\":0.01,\"formatted_price_amount_for_shipment\":\"CHF 0.01\",\"min_weight\":1.0,\"max_weight\":20.0,\"unit_of_weight\":\"oz\",\"disabled_at\":\"2024-10-24T16:07:17.169Z\",\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"created_at\":\"2024-10-24T16:07:16.146Z\",\"updated_at\":\"2024-10-24T16:07:17.172Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_shipping_method.incentro_shipping_method\"}},\"relationships\":{\"market\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/relationships/market\",\"related\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/market\"}},\"shipping_zone\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/relationships/shipping_zone\",\"related\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/shipping_zone\"}},\"shipping_category\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/relationships/shipping_category\",\"related\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/shipping_category\"}},\"stock_location\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/relationships/stock_location\",\"related\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/stock_location\"}},\"delivery_lead_time_for_shipment\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/relationships/delivery_lead_time_for_shipment\",\"related\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/delivery_lead_time_for_shipment\"}},\"shipping_method_tiers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/relationships/shipping_method_tiers\",\"related\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/shipping_method_tiers\"}},\"shipping_weight_tiers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/relationships/shipping_weight_tiers\",\"related\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/shipping_weight_tiers\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/shipping_methods/YEPkYFrnAV/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"a63f3580b8ce6770e375dcf6fa7acefc1d6d16a1c5e697a1294dff90aaee899c\"}}}",
+    "headers" : {
+      "x-request-id" : "fd2a63df-b72b-4169-92ec-cab4b6f8aca5",
+      "x-kong-upstream-latency" : "34",
+      "X-Ratelimit-Remaining" : "97",
+      "x-kong-request-id" : "2fb0d53ffae591509e51a3578fd61611",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 16:07:17 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"3158e8f4e8a34718229c90a738e1e18a\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "cda8013f-a82c-48aa-a447-95a98d07898c",
+  "persistent" : true,
+  "insertionIndex" : 50
+}

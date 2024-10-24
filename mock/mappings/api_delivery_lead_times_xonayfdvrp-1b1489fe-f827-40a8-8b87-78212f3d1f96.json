@@ -1,0 +1,39 @@
+{
+  "id" : "1b1489fe-f827-40a8-8b87-78212f3d1f96",
+  "name" : "api_delivery_lead_times_xonayfdvrp",
+  "request" : {
+    "url" : "/api/delivery_lead_times/XOnAYFdVrp",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"XOnAYFdVrp\",\"type\":\"delivery_lead_times\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/delivery_lead_times/XOnAYFdVrp\"},\"attributes\":{\"min_hours\":20,\"max_hours\":200,\"min_days\":1,\"max_days\":8,\"created_at\":\"2024-10-24T16:05:27.930Z\",\"updated_at\":\"2024-10-24T16:05:29.578Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_delivery_lead_time.incentro_delivery_lead_time\"}},\"relationships\":{\"stock_location\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/delivery_lead_times/XOnAYFdVrp/relationships/stock_location\",\"related\":\"https://loucs.commercelayer.io/api/delivery_lead_times/XOnAYFdVrp/stock_location\"}},\"shipping_method\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/delivery_lead_times/XOnAYFdVrp/relationships/shipping_method\",\"related\":\"https://loucs.commercelayer.io/api/delivery_lead_times/XOnAYFdVrp/shipping_method\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/delivery_lead_times/XOnAYFdVrp/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/delivery_lead_times/XOnAYFdVrp/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/delivery_lead_times/XOnAYFdVrp/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/delivery_lead_times/XOnAYFdVrp/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"75a0b786157ee1e5da1f09bcc71dc4a80fad9804681213de2301f77a009f8dad\"}}}",
+    "headers" : {
+      "x-request-id" : "a14d3fee-8eea-4610-9570-c1121625551c",
+      "x-kong-upstream-latency" : "14",
+      "X-Ratelimit-Remaining" : "71",
+      "x-kong-request-id" : "abe05b3e2120a02d747c412259562649",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:30 GMT",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "etag" : "W/\"3bc37e5708388b5bb497755e8b91f27d\"",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "1b1489fe-f827-40a8-8b87-78212f3d1f96",
+  "persistent" : true,
+  "scenarioName" : "scenario-37-api-delivery_lead_times-XOnAYFdVrp",
+  "requiredScenarioState" : "scenario-37-api-delivery_lead_times-XOnAYFdVrp-3",
+  "newScenarioState" : "scenario-37-api-delivery_lead_times-XOnAYFdVrp-4",
+  "insertionIndex" : 238
+}

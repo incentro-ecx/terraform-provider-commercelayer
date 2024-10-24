@@ -1,0 +1,36 @@
+{
+  "id" : "23a1ad3c-d455-443b-9925-d8eac270a146",
+  "name" : "api_merchants_mnykrhxvvb",
+  "request" : {
+    "url" : "/api/merchants/mnYKRHXVVb",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "42c80543-7c31-4717-bb91-ea2d1df4dcea",
+      "x-kong-upstream-latency" : "11",
+      "X-Ratelimit-Remaining" : "10",
+      "x-kong-request-id" : "277da20ecaba2309a69ebf516b5ec751",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:06:06 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "23a1ad3c-d455-443b-9925-d8eac270a146",
+  "persistent" : true,
+  "scenarioName" : "scenario-13-api-merchants-mnYKRHXVVb",
+  "requiredScenarioState" : "scenario-13-api-merchants-mnYKRHXVVb-4",
+  "insertionIndex" : 89
+}

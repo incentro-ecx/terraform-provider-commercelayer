@@ -1,0 +1,32 @@
+{
+  "id" : "571dc8b3-be93-4a14-b3bb-401a8ec02e14",
+  "name" : "api_addresses_bejouljmjo",
+  "request" : {
+    "url" : "/api/addresses/beJOulJmJO",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "f05a10be-b773-4c55-8c63-d7b061375cd1",
+      "x-kong-upstream-latency" : "28",
+      "X-Ratelimit-Remaining" : "79",
+      "x-kong-request-id" : "dca808056e220d2d9590f9723c91883f",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 16:05:49 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "571dc8b3-be93-4a14-b3bb-401a8ec02e14",
+  "persistent" : true,
+  "insertionIndex" : 156
+}

@@ -1,0 +1,40 @@
+{
+  "id" : "9be29ccc-b90b-4884-b178-5c9fa0480992",
+  "name" : "api_customer_groups_odjmwhjarp",
+  "request" : {
+    "url" : "/api/customer_groups/ODjmWhjArp",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_customer_group.incentro_customer_group\"},\"name\":\"Incentro updated customer group\",\"reference\":null,\"reference_origin\":null},\"id\":\"ODjmWhjArp\",\"type\":\"customer_groups\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"ODjmWhjArp\",\"type\":\"customer_groups\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/ODjmWhjArp\"},\"attributes\":{\"name\":\"Incentro updated customer group\",\"code\":null,\"created_at\":\"2024-10-24T16:05:25.338Z\",\"updated_at\":\"2024-10-24T16:05:26.286Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_customer_group.incentro_customer_group\"}},\"relationships\":{\"customers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/ODjmWhjArp/relationships/customers\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/ODjmWhjArp/customers\"}},\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/ODjmWhjArp/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/ODjmWhjArp/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/ODjmWhjArp/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/ODjmWhjArp/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/ODjmWhjArp/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/ODjmWhjArp/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"433d0ec7abd3230dd1bd9360c58117869bedf6ce8ebcee8c00f560d8e4b22090\"}}}",
+    "headers" : {
+      "x-request-id" : "1e84ea5b-bc07-496f-93e9-fbe7569b5cd0",
+      "x-kong-upstream-latency" : "32",
+      "X-Ratelimit-Remaining" : "95",
+      "x-kong-request-id" : "84c6e8454bc7d0711695bc51b6170e59",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:26 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"866e8966c0719c78edb7b151064aa35c\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "9be29ccc-b90b-4884-b178-5c9fa0480992",
+  "persistent" : true,
+  "insertionIndex" : 258
+}
