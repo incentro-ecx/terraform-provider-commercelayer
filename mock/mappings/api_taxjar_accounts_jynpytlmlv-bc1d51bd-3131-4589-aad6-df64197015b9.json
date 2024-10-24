@@ -1,0 +1,38 @@
+{
+  "id" : "bc1d51bd-3131-4589-aad6-df64197015b9",
+  "name" : "api_taxjar_accounts_jynpytlmlv",
+  "request" : {
+    "url" : "/api/taxjar_accounts/jynPYTLmlv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"jynPYTLmlv\",\"type\":\"taxjar_accounts\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/taxjar_accounts/jynPYTLmlv\"},\"attributes\":{\"name\":\"Incentro Taxjar Account\",\"type\":\"taxjar_accounts\",\"created_at\":\"2024-10-24T16:07:25.987Z\",\"updated_at\":\"2024-10-24T16:07:25.987Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_taxjar_accounts.incentro_taxjar_account\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/taxjar_accounts/jynPYTLmlv/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/taxjar_accounts/jynPYTLmlv/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/taxjar_accounts/jynPYTLmlv/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/taxjar_accounts/jynPYTLmlv/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/taxjar_accounts/jynPYTLmlv/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/taxjar_accounts/jynPYTLmlv/versions\"}},\"tax_categories\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/taxjar_accounts/jynPYTLmlv/relationships/tax_categories\",\"related\":\"https://loucs.commercelayer.io/api/taxjar_accounts/jynPYTLmlv/tax_categories\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"83881a624f3f3b727dd93be5b1a8a70624d700b48537fd12df329d6f19f16fba\"}}}",
+    "headers" : {
+      "x-request-id" : "07a57d96-6925-4843-8a8f-634ad2439f44",
+      "x-kong-upstream-latency" : "14",
+      "X-Ratelimit-Remaining" : "77",
+      "x-kong-request-id" : "4079ad0f8d39432846ca8c18994ada48",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:07:26 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"de3ec85676c0adeb6a614e67a3b82378\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "bc1d51bd-3131-4589-aad6-df64197015b9",
+  "persistent" : true,
+  "scenarioName" : "scenario-2-api-taxjar_accounts-jynPYTLmlv",
+  "requiredScenarioState" : "scenario-2-api-taxjar_accounts-jynPYTLmlv-2",
+  "newScenarioState" : "scenario-2-api-taxjar_accounts-jynPYTLmlv-3",
+  "insertionIndex" : 18
+}

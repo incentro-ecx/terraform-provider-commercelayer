@@ -1,0 +1,32 @@
+{
+  "id" : "8a7bdd8f-c6f7-4f18-9f7e-8f249eaa10b8",
+  "name" : "api_customer_groups_odjmwhjarp",
+  "request" : {
+    "url" : "/api/customer_groups/ODjmWhjArp",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "b4dfbbf5-0fc2-4fea-9fef-88d831754dd7",
+      "x-kong-upstream-latency" : "33",
+      "X-Ratelimit-Remaining" : "95",
+      "x-kong-request-id" : "a37986008c6b4a3511ccef77a8b75f5e",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:26 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "8a7bdd8f-c6f7-4f18-9f7e-8f249eaa10b8",
+  "persistent" : true,
+  "insertionIndex" : 256
+}

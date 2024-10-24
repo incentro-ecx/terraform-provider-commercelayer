@@ -1,0 +1,40 @@
+{
+  "id" : "ac49c015-24e3-42de-972f-eb1a98240a84",
+  "name" : "api_klarna_gateways",
+  "request" : {
+    "url" : "/api/klarna_gateways",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"api_key\":\"xxxx-yyyy-zzzz\",\"api_secret\":\"xxxx-yyyy-zzzz\",\"country_code\":\"EU\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_klarna_gateway.incentro_klarna_gateway\"},\"name\":\"Incentro Klarna Gateway\",\"reference\":null,\"reference_origin\":null},\"type\":\"klarna_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"WkWNJszPMj\",\"type\":\"klarna_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj\"},\"attributes\":{\"name\":\"Incentro Klarna Gateway\",\"created_at\":\"2024-10-24T16:05:49.752Z\",\"updated_at\":\"2024-10-24T16:05:49.752Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_klarna_gateway.incentro_klarna_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/versions\"}},\"klarna_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/relationships/klarna_payments\",\"related\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/klarna_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"cddeae08ade3f096b091624e46aeea678d8b4fa051699c7f14c0ba0b177dc591\"}}}",
+    "headers" : {
+      "x-request-id" : "543afecc-4a63-4111-8755-040cfb052f60",
+      "x-kong-upstream-latency" : "34",
+      "X-Ratelimit-Remaining" : "78",
+      "x-kong-request-id" : "2afff91aa1a70e5afa3994665d978665",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 16:05:49 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"b1f7e3853960cf5c626b69e779450da7\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "ac49c015-24e3-42de-972f-eb1a98240a84",
+  "persistent" : true,
+  "insertionIndex" : 154
+}

@@ -1,0 +1,38 @@
+{
+  "id" : "e6825df4-4ebb-421d-946f-16611654a356",
+  "name" : "api_inventory_return_locations_vzxpwiyzmz",
+  "request" : {
+    "url" : "/api/inventory_return_locations/VZXPWiyzmZ",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"VZXPWiyzmZ\",\"type\":\"inventory_return_locations\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ\"},\"attributes\":{\"priority\":1,\"created_at\":\"2024-10-24T16:05:41.481Z\",\"updated_at\":\"2024-10-24T16:05:41.481Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_return_location.incentro_inventory_return_location\"}},\"relationships\":{\"stock_location\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/relationships/stock_location\",\"related\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/stock_location\"}},\"inventory_model\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/relationships/inventory_model\",\"related\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/inventory_model\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"6329720c8a885d74e9773e5e82556314cdbc30e2b97f10c2b7c7e80f62068d3c\"}}}",
+    "headers" : {
+      "x-request-id" : "cfda8748-75e6-4559-bee7-589595cab54a",
+      "x-kong-upstream-latency" : "14",
+      "X-Ratelimit-Remaining" : "51",
+      "x-kong-request-id" : "235f655115773f6dc7d730106c69355e",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:42 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"93e8f7aafc9bb71cbdc5bae069d7da28\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "e6825df4-4ebb-421d-946f-16611654a356",
+  "persistent" : true,
+  "scenarioName" : "scenario-28-api-inventory_return_locations-VZXPWiyzmZ",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-28-api-inventory_return_locations-VZXPWiyzmZ-2",
+  "insertionIndex" : 191
+}

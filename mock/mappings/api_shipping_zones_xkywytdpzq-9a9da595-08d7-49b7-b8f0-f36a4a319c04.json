@@ -1,0 +1,32 @@
+{
+  "id" : "9a9da595-08d7-49b7-b8f0-f36a4a319c04",
+  "name" : "api_shipping_zones_xkywytdpzq",
+  "request" : {
+    "url" : "/api/shipping_zones/xKYwYtdPZQ",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "4d6d0778-ba08-4d6c-a240-24da2cf9aa15",
+      "x-kong-upstream-latency" : "24",
+      "X-Ratelimit-Remaining" : "95",
+      "x-kong-request-id" : "fed9901763dd194656f4865ce673db43",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:07:20 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "9a9da595-08d7-49b7-b8f0-f36a4a319c04",
+  "persistent" : true,
+  "insertionIndex" : 41
+}

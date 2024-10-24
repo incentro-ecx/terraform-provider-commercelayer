@@ -1,0 +1,32 @@
+{
+  "id" : "bf437996-ec62-41fd-a1d0-1605d04de786",
+  "name" : "api_stock_locations_ekjpouwnan",
+  "request" : {
+    "url" : "/api/stock_locations/ekjpouwNAn",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "ab33dc22-7b98-4648-a427-df91bd7cd204",
+      "x-kong-upstream-latency" : "78",
+      "X-Ratelimit-Remaining" : "93",
+      "x-kong-request-id" : "b23d8f34f02c0b460ad9175311134457",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 16:05:30 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "bf437996-ec62-41fd-a1d0-1605d04de786",
+  "persistent" : true,
+  "insertionIndex" : 236
+}

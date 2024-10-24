@@ -1,0 +1,39 @@
+{
+  "id" : "5d469a08-1362-4336-bf55-cad40fabdef0",
+  "name" : "oauth_token",
+  "request" : {
+    "url" : "/oauth/token",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalTo" : "grant_type=client_credentials",
+      "caseInsensitive" : false
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"access_token\":\"eyJhbGciOiJIUzUxMiJ9.eyJvcmdhbml6YXRpb24iOnsiaWQiOiJXblpQb0ZaRUt5Iiwic2x1ZyI6ImxvdWNzIiwiZW50ZXJwcmlzZSI6ZmFsc2UsInJlZ2lvbiI6ImV1LXdlc3QtMSJ9LCJhcHBsaWNhdGlvbiI6eyJpZCI6Ikd2UFhpWHJLQnAiLCJjbGllbnRfaWQiOiI0VHI0NWFOZ1NKMlpBdWhrRmtsWnh5YnBiUl9IQ1B0dEtHaFhRZEFVZjRvIiwia2luZCI6ImludGVncmF0aW9uIiwicHVibGljIjpmYWxzZX0sInNjb3BlIjoibWFya2V0OmFsbCIsImV4cCI6MTcyOTc4ODM4NCwidGVzdCI6dHJ1ZSwicmFuZCI6MC45MDgxNzk0MDQ0MzE0MDg3LCJpYXQiOjE3Mjk3ODExODQsImlzcyI6Imh0dHBzOi8vYXV0aC5jb21tZXJjZWxheWVyLmlvIn0.VDChFpwFHNZ-u_CfuXFAFOWnrC_xu1l3K0J9wt5ZseSjdWGoLiR_YBc9PHg9OTwXvNilW9v_WuulLtt3Lboemw\",\"token_type\":\"Bearer\",\"expires_in\":2468,\"scope\":\"market:all\",\"created_at\":1729781184}",
+    "headers" : {
+      "x-request-id" : "2ec0933f-e461-4174-9f68-cd0c8a001bca",
+      "x-kong-upstream-latency" : "9",
+      "X-Ratelimit-Remaining" : "25",
+      "x-kong-request-id" : "da43d95ae91a597bbda4a734b177b906",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:16 GMT",
+      "X-Ratelimit-Limit" : "30",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept-Encoding, Origin",
+      "etag" : "W/\"7a0db506cbbdab173b960a218c4265c0\"",
+      "content-type" : "application/json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-store"
+    }
+  },
+  "uuid" : "5d469a08-1362-4336-bf55-cad40fabdef0",
+  "persistent" : true,
+  "insertionIndex" : 290
+}

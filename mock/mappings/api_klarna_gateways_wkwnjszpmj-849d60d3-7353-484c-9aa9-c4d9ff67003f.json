@@ -1,0 +1,38 @@
+{
+  "id" : "849d60d3-7353-484c-9aa9-c4d9ff67003f",
+  "name" : "api_klarna_gateways_wkwnjszpmj",
+  "request" : {
+    "url" : "/api/klarna_gateways/WkWNJszPMj",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"WkWNJszPMj\",\"type\":\"klarna_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj\"},\"attributes\":{\"name\":\"Incentro Klarna Gateway Changed\",\"created_at\":\"2024-10-24T16:05:49.752Z\",\"updated_at\":\"2024-10-24T16:05:50.642Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_klarna_gateway.incentro_klarna_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/versions\"}},\"klarna_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/relationships/klarna_payments\",\"related\":\"https://loucs.commercelayer.io/api/klarna_gateways/WkWNJszPMj/klarna_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"a63c5ed13ac18e7fda50fece86b6060fc37861bf7c79e7ab5e897c872751da35\"}}}",
+    "headers" : {
+      "x-request-id" : "f26fdb7c-dc44-44fc-9f47-826bc13a5da3",
+      "x-kong-upstream-latency" : "13",
+      "X-Ratelimit-Remaining" : "36",
+      "x-kong-request-id" : "d4905f1838ea6530afcb8c4d7af1831d",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:50 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"69a423273d0a26f4cdf66276c97fc531\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "849d60d3-7353-484c-9aa9-c4d9ff67003f",
+  "persistent" : true,
+  "scenarioName" : "scenario-23-api-klarna_gateways-WkWNJszPMj",
+  "requiredScenarioState" : "scenario-23-api-klarna_gateways-WkWNJszPMj-3",
+  "newScenarioState" : "scenario-23-api-klarna_gateways-WkWNJszPMj-4",
+  "insertionIndex" : 150
+}

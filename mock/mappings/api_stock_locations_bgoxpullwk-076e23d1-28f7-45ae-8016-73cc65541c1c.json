@@ -1,0 +1,32 @@
+{
+  "id" : "076e23d1-28f7-45ae-8016-73cc65541c1c",
+  "name" : "api_stock_locations_bgoxpullwk",
+  "request" : {
+    "url" : "/api/stock_locations/BGOxpulLWk",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "40b3bf07-5b12-4275-9227-e47936abe64f",
+      "x-kong-upstream-latency" : "56",
+      "X-Ratelimit-Remaining" : "80",
+      "x-kong-request-id" : "3feb083cf68dd0397df0cc78cf27ac7d",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:49 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "076e23d1-28f7-45ae-8016-73cc65541c1c",
+  "persistent" : true,
+  "insertionIndex" : 157
+}

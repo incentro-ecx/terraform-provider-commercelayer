@@ -1,0 +1,36 @@
+{
+  "id" : "84958eaf-2cda-4df3-858a-29add206fb36",
+  "name" : "api_klarna_gateways_wkwnjszpmj",
+  "request" : {
+    "url" : "/api/klarna_gateways/WkWNJszPMj",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "ebbcf84a-c15e-4184-b244-5a9d69a77477",
+      "x-kong-upstream-latency" : "8",
+      "X-Ratelimit-Remaining" : "35",
+      "x-kong-request-id" : "38e3ea7a51192304af83b5055f04923b",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:51 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "84958eaf-2cda-4df3-858a-29add206fb36",
+  "persistent" : true,
+  "scenarioName" : "scenario-23-api-klarna_gateways-WkWNJszPMj",
+  "requiredScenarioState" : "scenario-23-api-klarna_gateways-WkWNJszPMj-4",
+  "insertionIndex" : 148
+}

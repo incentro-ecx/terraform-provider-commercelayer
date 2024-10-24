@@ -1,0 +1,32 @@
+{
+  "id" : "15ad8440-8a77-4b8c-976b-7735a92e8271",
+  "name" : "api_inventory_models_dzngysxrva",
+  "request" : {
+    "url" : "/api/inventory_models/dZngySxRva",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "4702e8ba-3e3e-4941-9438-db93f36759e4",
+      "x-kong-upstream-latency" : "27",
+      "X-Ratelimit-Remaining" : "85",
+      "x-kong-request-id" : "a0b74562c459b10b1a9115728b7af56a",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 16:05:44 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "15ad8440-8a77-4b8c-976b-7735a92e8271",
+  "persistent" : true,
+  "insertionIndex" : 180
+}

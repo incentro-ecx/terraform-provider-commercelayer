@@ -92,5 +92,3 @@ Required:
 
 - `inventory_model_id` (String) The associated inventory model id.
 - `stock_location_id` (String) The associated stock location id.
-
-

@@ -85,3 +85,4 @@ fabric.properties
 /token.json
 
 /local
+/go.work*

@@ -1,0 +1,32 @@
+{
+  "id" : "519cef76-f69c-4cc6-8703-d5ff0c685ff3",
+  "name" : "api_inventory_stock_locations_ljolosndyw",
+  "request" : {
+    "url" : "/api/inventory_stock_locations/ljOLoSNDYW",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "466061b7-7b04-46aa-912a-696843c41428",
+      "x-kong-upstream-latency" : "20",
+      "X-Ratelimit-Remaining" : "82",
+      "x-kong-request-id" : "a7a7894b2d9204666119b35e6cdbf90d",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:48 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "519cef76-f69c-4cc6-8703-d5ff0c685ff3",
+  "persistent" : true,
+  "insertionIndex" : 159
+}

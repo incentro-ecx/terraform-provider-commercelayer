@@ -1,0 +1,36 @@
+{
+  "id" : "fe9692fa-1dc3-4167-a30c-f2d54acfb6b6",
+  "name" : "api_paypal_gateways_rxemeszgnx",
+  "request" : {
+    "url" : "/api/paypal_gateways/RxeMeszGnx",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "adcf701f-3aa6-4121-ba38-dc2b2146812d",
+      "x-kong-upstream-latency" : "10",
+      "X-Ratelimit-Remaining" : "98",
+      "x-kong-request-id" : "14664b7083704051827e5c696a272736",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:07:11 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "fe9692fa-1dc3-4167-a30c-f2d54acfb6b6",
+  "persistent" : true,
+  "scenarioName" : "scenario-10-api-paypal_gateways-RxeMeszGnx",
+  "requiredScenarioState" : "scenario-10-api-paypal_gateways-RxeMeszGnx-5",
+  "insertionIndex" : 68
+}

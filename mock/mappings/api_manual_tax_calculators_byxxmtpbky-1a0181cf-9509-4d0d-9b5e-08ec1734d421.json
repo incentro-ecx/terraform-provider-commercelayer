@@ -1,0 +1,36 @@
+{
+  "id" : "1a0181cf-9509-4d0d-9b5e-08ec1734d421",
+  "name" : "api_manual_tax_calculators_byxxmtpbky",
+  "request" : {
+    "url" : "/api/manual_tax_calculators/byXxMTpBky",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "bc30aab7-bfc7-4e3f-aed4-745deadf2ff7",
+      "x-kong-upstream-latency" : "7",
+      "X-Ratelimit-Remaining" : "27",
+      "x-kong-request-id" : "6ee95327b80512744d198a137d30bd00",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:56 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "1a0181cf-9509-4d0d-9b5e-08ec1734d421",
+  "persistent" : true,
+  "scenarioName" : "scenario-21-api-manual_tax_calculators-byXxMTpBky",
+  "requiredScenarioState" : "scenario-21-api-manual_tax_calculators-byXxMTpBky-4",
+  "insertionIndex" : 134
+}

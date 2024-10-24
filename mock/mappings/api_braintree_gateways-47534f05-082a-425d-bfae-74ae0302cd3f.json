@@ -1,0 +1,40 @@
+{
+  "id" : "47534f05-082a-425d-bfae-74ae0302cd3f",
+  "name" : "api_braintree_gateways",
+  "request" : {
+    "url" : "/api/braintree_gateways",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"merchant_account_id\":\"xxxx-yyyy-zzzz\",\"merchant_id\":\"xxxx-yyyy-zzzz\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_braintree_gateway.incentro_braintree_gateway\"},\"name\":\"Incentro Braintree Gateway\",\"private_key\":\"xxxx-yyyy-zzzz\",\"public_key\":\"xxxx-yyyy-zzzz\",\"reference\":null,\"reference_origin\":null},\"type\":\"braintree_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"rjPLwsmXrj\",\"type\":\"braintree_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj\"},\"attributes\":{\"name\":\"Incentro Braintree Gateway\",\"created_at\":\"2024-10-24T16:05:23.360Z\",\"updated_at\":\"2024-10-24T16:05:23.360Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_braintree_gateway.incentro_braintree_gateway\"},\"descriptor_name\":null,\"descriptor_phone\":null,\"descriptor_url\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/braintree_gateways/rjPLwsmXrj/eu-west-1\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/versions\"}},\"braintree_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/relationships/braintree_payments\",\"related\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/braintree_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"4a9e26b3c336c34e2588d109a2cb18abb62f8d5d0b3a7afedebbb327629fc762\"}}}",
+    "headers" : {
+      "x-request-id" : "079ab564-d0b0-45a5-80a0-788e688a57bf",
+      "x-kong-upstream-latency" : "16",
+      "X-Ratelimit-Remaining" : "96",
+      "x-kong-request-id" : "015f5b1e9373a52d1f3c0c1aa83cf91f",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 16:05:23 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"d852029bf381b28c09e13283f1b90ea0\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "47534f05-082a-425d-bfae-74ae0302cd3f",
+  "persistent" : true,
+  "insertionIndex" : 268
+}

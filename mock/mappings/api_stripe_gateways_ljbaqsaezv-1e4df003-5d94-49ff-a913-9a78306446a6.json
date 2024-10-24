@@ -1,0 +1,38 @@
+{
+  "id" : "1e4df003-5d94-49ff-a913-9a78306446a6",
+  "name" : "api_stripe_gateways_ljbaqsaezv",
+  "request" : {
+    "url" : "/api/stripe_gateways/LjBAQsaezv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"LjBAQsaezv\",\"type\":\"stripe_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv\"},\"attributes\":{\"name\":\"Incentro Stripe Gateway\",\"created_at\":\"2024-10-24T16:07:23.940Z\",\"updated_at\":\"2024-10-24T16:07:23.940Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_stripe_gateway.incentro_stripe_gateway\"},\"connected_account\":null,\"auto_payments\":false,\"webhook_endpoint_id\":null,\"webhook_endpoint_secret\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/stripe_gateways/LjBAQsaezv/eu-west-1\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/versions\"}},\"stripe_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/relationships/stripe_payments\",\"related\":\"https://loucs.commercelayer.io/api/stripe_gateways/LjBAQsaezv/stripe_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"a5230e3f3a149a24270930d2f9f46f9c269b0f9919838e007b9b47a0104e1776\"}}}",
+    "headers" : {
+      "x-request-id" : "f8720cb4-bcbf-48e2-92fe-da04dd8e9431",
+      "x-kong-upstream-latency" : "15",
+      "X-Ratelimit-Remaining" : "82",
+      "x-kong-request-id" : "cee5ce05e0429f0406a9c07b8397b922",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:07:24 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"254d9b31e4ea9bd98ada9a8fc270f533\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "1e4df003-5d94-49ff-a913-9a78306446a6",
+  "persistent" : true,
+  "scenarioName" : "scenario-3-api-stripe_gateways-LjBAQsaezv",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-3-api-stripe_gateways-LjBAQsaezv-2",
+  "insertionIndex" : 26
+}

@@ -1,0 +1,29 @@
+{
+  "id" : "61d08a4b-91eb-46a6-b193-fb57456724c5",
+  "name" : "api_paypal_gateways_rxemeszgnx",
+  "request" : {
+    "url" : "/api/paypal_gateways/RxeMeszGnx",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 429,
+    "body" : "{\n    \"errors\": {\n        \"title\": \"Too Many Requests\",\n        \"code\": \"THROTTLED\",\n        \"status\": 429\n  }\n}",
+    "headers" : {
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "Cache-Control" : "no-cache",
+      "Retry-After" : "0",
+      "Access-Control-Allow-Origin" : "*",
+      "X-Ratelimit-Remaining" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:06:10 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    }
+  },
+  "uuid" : "61d08a4b-91eb-46a6-b193-fb57456724c5",
+  "persistent" : true,
+  "scenarioName" : "scenario-10-api-paypal_gateways-RxeMeszGnx",
+  "requiredScenarioState" : "scenario-10-api-paypal_gateways-RxeMeszGnx-3",
+  "newScenarioState" : "scenario-10-api-paypal_gateways-RxeMeszGnx-4",
+  "insertionIndex" : 71
+}

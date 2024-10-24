@@ -1,0 +1,40 @@
+{
+  "id" : "16b440b3-2727-44a1-9374-c87c2878759d",
+  "name" : "api_stock_locations_xmxbxuomzg",
+  "request" : {
+    "url" : "/api/stock_locations/xMXBXuomZG",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"label_format\":\"PDF\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_stock_location.incentro_stock_location\"},\"name\":\"Incentro Stock Location Updated\",\"reference\":null,\"reference_origin\":null,\"suppress_etd\":false},\"id\":\"xMXBXuomZG\",\"relationships\":{\"address\":{\"data\":{\"id\":\"WoelupqXVn\",\"type\":\"addresses\"}}},\"type\":\"stock_locations\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"xMXBXuomZG\",\"type\":\"stock_locations\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG\"},\"attributes\":{\"number\":25285,\"name\":\"Incentro Stock Location Updated\",\"code\":null,\"label_format\":\"PDF\",\"suppress_etd\":false,\"created_at\":\"2024-10-24T16:07:20.950Z\",\"updated_at\":\"2024-10-24T16:07:22.223Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_stock_location.incentro_stock_location\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/relationships/address\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/address\"}},\"inventory_stock_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/relationships/inventory_stock_locations\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/relationships/inventory_return_locations\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/inventory_return_locations\"}},\"stock_items\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/relationships/stock_items\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/stock_items\"}},\"stock_transfers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/relationships/stock_transfers\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/stock_transfers\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/stock_locations/xMXBXuomZG/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"00a68a2e7cdb63be49314c309db32b4297b752c22ad644934b0d731891db5e68\"}}}",
+    "headers" : {
+      "x-request-id" : "a5ee96f5-dcc2-421a-9d32-3d1bb93f84b0",
+      "x-kong-upstream-latency" : "76",
+      "X-Ratelimit-Remaining" : "95",
+      "x-kong-request-id" : "9cad9969ff20ed566b9dc24ee1dcee1c",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:07:22 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"a7ccd9912b38a18cde5de391b2dd6caf\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "16b440b3-2727-44a1-9374-c87c2878759d",
+  "persistent" : true,
+  "insertionIndex" : 33
+}

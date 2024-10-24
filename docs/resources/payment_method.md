@@ -76,5 +76,3 @@ Required:
 Optional:
 
 - `market_id` (String) The associated market.
-
-

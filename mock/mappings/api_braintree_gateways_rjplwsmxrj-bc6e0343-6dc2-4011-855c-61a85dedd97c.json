@@ -1,0 +1,38 @@
+{
+  "id" : "bc6e0343-6dc2-4011-855c-61a85dedd97c",
+  "name" : "api_braintree_gateways_rjplwsmxrj",
+  "request" : {
+    "url" : "/api/braintree_gateways/rjPLwsmXrj",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"rjPLwsmXrj\",\"type\":\"braintree_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj\"},\"attributes\":{\"name\":\"Incentro Braintree Gateway Changed\",\"created_at\":\"2024-10-24T16:05:23.360Z\",\"updated_at\":\"2024-10-24T16:05:24.178Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_braintree_gateway.incentro_braintree_gateway\"},\"descriptor_name\":null,\"descriptor_phone\":null,\"descriptor_url\":null,\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/braintree_gateways/rjPLwsmXrj/eu-west-1\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/versions\"}},\"braintree_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/relationships/braintree_payments\",\"related\":\"https://loucs.commercelayer.io/api/braintree_gateways/rjPLwsmXrj/braintree_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"0b19c589b5c1784369ba244b44f29fb2e56ca1c47c39d8a84bf8a9c9f21c5311\"}}}",
+    "headers" : {
+      "x-request-id" : "fd35e06c-7a9e-461c-8995-bfb1ca0db3dd",
+      "x-kong-upstream-latency" : "16",
+      "X-Ratelimit-Remaining" : "85",
+      "x-kong-request-id" : "24f5b41c780d4c784b23965a0c17a040",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:24 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"482ec16fdf20ed52beb1595a1d53f877\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "bc6e0343-6dc2-4011-855c-61a85dedd97c",
+  "persistent" : true,
+  "scenarioName" : "scenario-41-api-braintree_gateways-rjPLwsmXrj",
+  "requiredScenarioState" : "scenario-41-api-braintree_gateways-rjPLwsmXrj-3",
+  "newScenarioState" : "scenario-41-api-braintree_gateways-rjPLwsmXrj-4",
+  "insertionIndex" : 264
+}

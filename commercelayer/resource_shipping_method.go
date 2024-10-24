@@ -40,9 +40,10 @@ func resourceShippingMethod() *schema.Resource {
 							Required:    true,
 						},
 						"scheme": {
-							Description: "The shipping method's scheme, one of 'flat' or 'weight_tiered'.",
+							Description: "The shipping method's scheme, one of 'flat', 'weight_tiered' or 'external'.",
 							Type:        schema.TypeString,
 							Optional:    true,
+							Default:     "flat",
 						},
 						"currency_code": {
 							Description: "The international 3-letter currency code as defined by the ISO " +
@@ -50,6 +51,11 @@ func resourceShippingMethod() *schema.Resource {
 							Type:             schema.TypeString,
 							Optional:         true,
 							ValidateDiagFunc: currencyCodeValidation,
+						},
+						"external_prices_url": {
+							Description: "Required, if external scheme",
+							Type:        schema.TypeString,
+							Optional:    true,
 						},
 						"price_amount_cents": {
 							Description: "The price of this shipping method, in cents.",
@@ -60,6 +66,12 @@ func resourceShippingMethod() *schema.Resource {
 							Description: "Apply free shipping if the order amount is over this value, in cents.",
 							Type:        schema.TypeInt,
 							Optional:    true,
+						},
+						"use_subtotal": {
+							Description: "Send this attribute if you want to compare the free over amount with order's subtotal (excluding discounts, if any).",
+							Type:        schema.TypeBool,
+							Optional:    true,
+							Default:     false,
 						},
 						"min_weight": {
 							Description: "The minimum weight for which this shipping method is available.",
@@ -75,6 +87,12 @@ func resourceShippingMethod() *schema.Resource {
 							Description: "Can be one of 'gr', 'lb', or 'oz'",
 							Type:        schema.TypeString,
 							Optional:    true,
+						},
+						"enabled": {
+							Description: "Whether the resource is enabled",
+							Type:        schema.TypeBool,
+							Optional:    true,
+							Default:     true,
 						},
 						"reference": {
 							Description: "A string that you can use to add any external identifier to the resource. This " +
@@ -176,8 +194,10 @@ func resourceShippingMethodCreateFunc(ctx context.Context, d *schema.ResourceDat
 				Name:                attributes["name"].(string),
 				Scheme:              stringRef(attributes["scheme"]),
 				CurrencyCode:        stringRef(attributes["currency_code"]),
+				ExternalPricesUrl:   stringRef(attributes["external_prices_url"]),
 				PriceAmountCents:    int32(attributes["price_amount_cents"].(int)),
 				FreeOverAmountCents: intToInt32Ref(attributes["free_over_amount_cents"]),
+				UseSubtotal:         boolRef(attributes["use_subtotal"]),
 				MinWeight:           float64ToFloat32Ref(attributes["min_weight"]),
 				MaxWeight:           float64ToFloat32Ref(attributes["max_weight"]),
 				UnitOfWeight:        stringRef(attributes["unit_of_weight"]),
@@ -187,6 +207,12 @@ func resourceShippingMethodCreateFunc(ctx context.Context, d *schema.ResourceDat
 			},
 			Relationships: &commercelayer.ShippingMethodCreateDataRelationships{},
 		},
+	}
+
+	if !attributes["enabled"].(bool) {
+		shippingMethodCreate.Data.Attributes.Disable = true
+	} else {
+		shippingMethodCreate.Data.Attributes.Enable = true
 	}
 
 	marketId := stringRef(relationships["market_id"])
@@ -209,7 +235,7 @@ func resourceShippingMethodCreateFunc(ctx context.Context, d *schema.ResourceDat
 
 	shippingCategoryId := stringRef(relationships["shipping_category_id"])
 	if shippingCategoryId != nil {
-		shippingMethodCreate.Data.Relationships.ShippingCategory = &commercelayer.ShippingMethodCreateDataRelationshipsShippingCategory{
+		shippingMethodCreate.Data.Relationships.ShippingCategory = &commercelayer.ShipmentCreateDataRelationshipsShippingCategory{
 			Data: commercelayer.ShipmentDataRelationshipsShippingCategoryData{
 				Type: stringRef(shippingCategoryType),
 				Id:   shippingCategoryId,
@@ -270,8 +296,10 @@ func resourceShippingMethodUpdateFunc(ctx context.Context, d *schema.ResourceDat
 				Name:                stringRef(attributes["name"]),
 				Scheme:              stringRef(attributes["scheme"]),
 				CurrencyCode:        stringRef(attributes["currency_code"]),
+				ExternalPricesUrl:   stringRef(attributes["external_prices_url"]),
 				PriceAmountCents:    intToInt32Ref(attributes["price_amount_cents"]),
 				FreeOverAmountCents: intToInt32Ref(attributes["free_over_amount_cents"]),
+				UseSubtotal:         boolRef(attributes["use_subtotal"]),
 				MinWeight:           float64ToFloat32Ref(attributes["min_weight"]),
 				MaxWeight:           float64ToFloat32Ref(attributes["max_weight"]),
 				UnitOfWeight:        stringRef(attributes["unit_of_weight"]),
@@ -281,6 +309,12 @@ func resourceShippingMethodUpdateFunc(ctx context.Context, d *schema.ResourceDat
 			},
 			Relationships: &commercelayer.ShippingMethodCreateDataRelationships{},
 		},
+	}
+
+	if !attributes["enabled"].(bool) {
+		shippingMethodUpdate.Data.Attributes.Disable = true
+	} else {
+		shippingMethodUpdate.Data.Attributes.Enable = true
 	}
 
 	marketId := stringRef(relationships["market_id"])
@@ -303,7 +337,7 @@ func resourceShippingMethodUpdateFunc(ctx context.Context, d *schema.ResourceDat
 
 	shippingCategoryId := stringRef(relationships["shipping_category_id"])
 	if shippingCategoryId != nil {
-		shippingMethodUpdate.Data.Relationships.ShippingCategory = &commercelayer.ShippingMethodCreateDataRelationshipsShippingCategory{
+		shippingMethodUpdate.Data.Relationships.ShippingCategory = &commercelayer.ShipmentCreateDataRelationshipsShippingCategory{
 			Data: commercelayer.ShipmentDataRelationshipsShippingCategoryData{
 				Type: stringRef(shippingCategoryType),
 				Id:   shippingCategoryId,

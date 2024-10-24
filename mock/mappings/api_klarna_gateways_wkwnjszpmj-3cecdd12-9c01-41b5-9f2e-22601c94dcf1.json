@@ -1,0 +1,32 @@
+{
+  "id" : "3cecdd12-9c01-41b5-9f2e-22601c94dcf1",
+  "name" : "api_klarna_gateways_wkwnjszpmj",
+  "request" : {
+    "url" : "/api/klarna_gateways/WkWNJszPMj",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "abbaa0ff-10aa-4dfa-99da-1e7e76a8c728",
+      "x-kong-upstream-latency" : "34",
+      "X-Ratelimit-Remaining" : "78",
+      "x-kong-request-id" : "a31d5e45706ab977d3cad11b759e8949",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:51 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "3cecdd12-9c01-41b5-9f2e-22601c94dcf1",
+  "persistent" : true,
+  "insertionIndex" : 149
+}

@@ -1,0 +1,32 @@
+{
+  "id" : "0041d3ee-3515-4f04-95b8-11bfc58cecc9",
+  "name" : "api_webhooks_mppvrcreod",
+  "request" : {
+    "url" : "/api/webhooks/mPpvRCrEOd",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "078ae977-b8df-49c4-b3af-5d85697cfccc",
+      "x-kong-upstream-latency" : "18",
+      "X-Ratelimit-Remaining" : "90",
+      "x-kong-request-id" : "283bdf476868142023f0590b9e2f8f0f",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 16:07:29 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "0041d3ee-3515-4f04-95b8-11bfc58cecc9",
+  "persistent" : true,
+  "insertionIndex" : 7
+}

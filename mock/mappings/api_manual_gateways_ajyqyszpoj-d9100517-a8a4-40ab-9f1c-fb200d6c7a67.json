@@ -1,0 +1,38 @@
+{
+  "id" : "d9100517-a8a4-40ab-9f1c-fb200d6c7a67",
+  "name" : "api_manual_gateways_ajyqyszpoj",
+  "request" : {
+    "url" : "/api/manual_gateways/ajYQYsZpoj",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"ajYQYsZpoj\",\"type\":\"manual_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/manual_gateways/ajYQYsZpoj\"},\"attributes\":{\"name\":\"Incentro Manual Gateway Changed\",\"created_at\":\"2024-10-24T16:05:51.773Z\",\"updated_at\":\"2024-10-24T16:05:52.972Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_manual_gateway.incentro_manual_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/manual_gateways/ajYQYsZpoj/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/manual_gateways/ajYQYsZpoj/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/manual_gateways/ajYQYsZpoj/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/manual_gateways/ajYQYsZpoj/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"74aee32f3e4a6b73b1aa1fc06a124fea6fe4fa481194f60195e24947fbc89565\"}}}",
+    "headers" : {
+      "x-request-id" : "08c278b7-5b9e-40c9-b2e1-2eb76e5860c3",
+      "x-kong-upstream-latency" : "11",
+      "X-Ratelimit-Remaining" : "32",
+      "x-kong-request-id" : "3d9c330864a69c1d3aabc0274fe0bf6a",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:53 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"ee6c002fb41818ef8f16c3a3cd329608\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "d9100517-a8a4-40ab-9f1c-fb200d6c7a67",
+  "persistent" : true,
+  "scenarioName" : "scenario-22-api-manual_gateways-ajYQYsZpoj",
+  "requiredScenarioState" : "scenario-22-api-manual_gateways-ajYQYsZpoj-3",
+  "newScenarioState" : "scenario-22-api-manual_gateways-ajYQYsZpoj-4",
+  "insertionIndex" : 143
+}

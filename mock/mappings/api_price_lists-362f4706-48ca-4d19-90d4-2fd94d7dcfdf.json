@@ -1,0 +1,40 @@
+{
+  "id" : "362f4706-48ca-4d19-90d4-2fd94d7dcfdf",
+  "name" : "api_price_lists",
+  "request" : {
+    "url" : "/api/price_lists",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"currency_code\":\"EUR\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_price_list.incentro_price_list\"},\"name\":\"incentro price list\",\"reference\":null,\"reference_origin\":null,\"tax_included\":true},\"type\":\"price_lists\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"xlqjNCZXQL\",\"type\":\"price_lists\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL\"},\"attributes\":{\"name\":\"incentro price list\",\"code\":null,\"currency_code\":\"EUR\",\"tax_included\":true,\"created_at\":\"2024-10-24T16:07:11.760Z\",\"updated_at\":\"2024-10-24T16:07:11.760Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_price_list.incentro_price_list\"}},\"relationships\":{\"prices\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/relationships/prices\",\"related\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/prices\"}},\"price_list_schedulers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/relationships/price_list_schedulers\",\"related\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/price_list_schedulers\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/price_lists/xlqjNCZXQL/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"849f5ec15986516b08cdb2502b66054ade8a21921a08562a12f0aab06246ffdd\"}}}",
+    "headers" : {
+      "x-request-id" : "7cda03c7-1c45-4c75-817c-d1db31d176f4",
+      "x-kong-upstream-latency" : "30",
+      "X-Ratelimit-Remaining" : "99",
+      "x-kong-request-id" : "5a3bac23c975730ba5f2335301cf3775",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:07:11 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"c584c86614a35ef78e6eb8de539f2b90\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "362f4706-48ca-4d19-90d4-2fd94d7dcfdf",
+  "persistent" : true,
+  "insertionIndex" : 67
+}

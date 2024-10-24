@@ -1,0 +1,40 @@
+{
+  "id" : "756da867-07cb-48e0-aa15-397f061204cf",
+  "name" : "api_inventory_return_locations_vzxpwiyzmz",
+  "request" : {
+    "url" : "/api/inventory_return_locations/VZXPWiyzmZ",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"testName\":\"commercelayer_inventory_return_location.incentro_inventory_return_location\"},\"priority\":2,\"reference\":null,\"reference_origin\":null},\"id\":\"VZXPWiyzmZ\",\"relationships\":{\"inventory_model\":{\"data\":{\"id\":\"dZngySxRva\",\"type\":\"inventory_models\"}},\"stock_location\":{\"data\":{\"id\":\"NnoYJuqOqk\",\"type\":\"stock_locations\"}}},\"type\":\"inventory_return_locations\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"VZXPWiyzmZ\",\"type\":\"inventory_return_locations\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ\"},\"attributes\":{\"priority\":2,\"created_at\":\"2024-10-24T16:05:41.481Z\",\"updated_at\":\"2024-10-24T16:05:42.994Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_return_location.incentro_inventory_return_location\"}},\"relationships\":{\"stock_location\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/relationships/stock_location\",\"related\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/stock_location\"}},\"inventory_model\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/relationships/inventory_model\",\"related\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/inventory_model\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VZXPWiyzmZ/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"d3a53b4a8c209118d7c485da857ddb3121a08364df10ef330c2dfce6703dd5b8\"}}}",
+    "headers" : {
+      "x-request-id" : "29b15f26-593b-452b-b495-14198867c485",
+      "x-kong-upstream-latency" : "26",
+      "X-Ratelimit-Remaining" : "88",
+      "x-kong-request-id" : "6dc0c71e018ec97ddd53d22bbcc8740d",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 16:05:43 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"49cde1d57bf0e6f114c81049591f6671\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "756da867-07cb-48e0-aa15-397f061204cf",
+  "persistent" : true,
+  "insertionIndex" : 186
+}

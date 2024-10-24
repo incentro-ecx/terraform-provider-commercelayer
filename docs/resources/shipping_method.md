@@ -54,14 +54,17 @@ Required:
 Optional:
 
 - `currency_code` (String) The international 3-letter currency code as defined by the ISO 4217 standard.
+- `enabled` (Boolean) Whether the resource is enabled
+- `external_prices_url` (String) Required, if external scheme
 - `free_over_amount_cents` (Number) Apply free shipping if the order amount is over this value, in cents.
 - `max_weight` (Number) The maximum weight for which this shipping method is available.
 - `metadata` (Map of String) Set of key-value pairs that you can attach to the resource. This can be useful for storing additional information about the resource in a structured format
 - `min_weight` (Number) The minimum weight for which this shipping method is available.
 - `reference` (String) A string that you can use to add any external identifier to the resource. This can be useful for integrating the resource to an external system, like an ERP, a marketing tool, a CRM, or whatever.
 - `reference_origin` (String) Any identifier of the third party system that defines the reference code
-- `scheme` (String) The shipping method's scheme, one of 'flat' or 'weight_tiered'.
+- `scheme` (String) The shipping method's scheme, one of 'flat', 'weight_tiered' or 'external'.
 - `unit_of_weight` (String) Can be one of 'gr', 'lb', or 'oz'
+- `use_subtotal` (Boolean) Send this attribute if you want to compare the free over amount with order's subtotal (excluding discounts, if any).
 
 
 <a id="nestedblock--relationships"></a>
@@ -74,5 +77,3 @@ Optional:
 - `shipping_method_tier_ids` (List of String) The associated shipping method tiers (meaningful when billing_scheme != 'flat').
 - `shipping_zone_id` (String) The shipping zone that is used to match the order shipping address.
 - `stock_location_id` (String) The stock location for which this shipping method is available.
-
-

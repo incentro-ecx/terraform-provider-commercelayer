@@ -1,0 +1,39 @@
+{
+  "id" : "6d0d3efd-3d97-4cb2-86ab-b8b438bd0b1c",
+  "name" : "api_inventory_models_kapovsbryz",
+  "request" : {
+    "url" : "/api/inventory_models/kapovSBRyZ",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"kapovSBRyZ\",\"type\":\"inventory_models\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_models/kapovSBRyZ\"},\"attributes\":{\"name\":\"Incentro Inventory Model\",\"strategy\":\"no_split\",\"stock_locations_cutoff\":1,\"stock_reservation_cutoff\":3600,\"put_stock_transfers_on_hold\":false,\"manual_stock_decrement\":false,\"created_at\":\"2024-10-24T16:05:38.959Z\",\"updated_at\":\"2024-10-24T16:05:38.959Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_model.incentro_inventory_model\"}},\"relationships\":{\"inventory_stock_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_models/kapovSBRyZ/relationships/inventory_stock_locations\",\"related\":\"https://loucs.commercelayer.io/api/inventory_models/kapovSBRyZ/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_models/kapovSBRyZ/relationships/inventory_return_locations\",\"related\":\"https://loucs.commercelayer.io/api/inventory_models/kapovSBRyZ/inventory_return_locations\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_models/kapovSBRyZ/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/inventory_models/kapovSBRyZ/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_models/kapovSBRyZ/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/inventory_models/kapovSBRyZ/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"d19b6e263b690e27117998f2af8e2c13782f72ede8ec9b67ec3a964c71ffb5e7\"}}}",
+    "headers" : {
+      "x-request-id" : "a36e09ea-8d24-41af-b901-1668985277e3",
+      "x-kong-upstream-latency" : "15",
+      "X-Ratelimit-Remaining" : "495",
+      "x-kong-request-id" : "3ff8b3764437e84efae69f3aa0ddb42b",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:39 GMT",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "etag" : "W/\"c2ebd97954cc921db80a92393f8df15e\"",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "6d0d3efd-3d97-4cb2-86ab-b8b438bd0b1c",
+  "persistent" : true,
+  "scenarioName" : "scenario-32-api-inventory_models-kapovSBRyZ",
+  "requiredScenarioState" : "scenario-32-api-inventory_models-kapovSBRyZ-2",
+  "newScenarioState" : "scenario-32-api-inventory_models-kapovSBRyZ-3",
+  "insertionIndex" : 203
+}

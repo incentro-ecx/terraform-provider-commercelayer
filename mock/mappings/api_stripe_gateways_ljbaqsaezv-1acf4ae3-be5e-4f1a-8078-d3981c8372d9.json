@@ -1,0 +1,32 @@
+{
+  "id" : "1acf4ae3-be5e-4f1a-8078-d3981c8372d9",
+  "name" : "api_stripe_gateways_ljbaqsaezv",
+  "request" : {
+    "url" : "/api/stripe_gateways/LjBAQsaezv",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "63f1e8ae-5c47-407f-8bef-b9db9e18f7d7",
+      "x-kong-upstream-latency" : "39",
+      "X-Ratelimit-Remaining" : "92",
+      "x-kong-request-id" : "bcbc0b4eedf5ac12fc29b54054b78d33",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:07:25 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "1acf4ae3-be5e-4f1a-8078-d3981c8372d9",
+  "persistent" : true,
+  "insertionIndex" : 22
+}

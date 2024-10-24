@@ -1,0 +1,36 @@
+{
+  "id" : "d481314b-8c88-49dc-bf54-1683db50ee3b",
+  "name" : "api_payment_methods_veawjsboak",
+  "request" : {
+    "url" : "/api/payment_methods/vEawJsbOAk",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "e264c456-9a0f-48af-92cd-be77b2a98304",
+      "x-kong-upstream-latency" : "7",
+      "X-Ratelimit-Remaining" : "2",
+      "x-kong-request-id" : "de3cec3e702cb12557d31b01a208e858",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:06:09 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "d481314b-8c88-49dc-bf54-1683db50ee3b",
+  "persistent" : true,
+  "scenarioName" : "scenario-11-api-payment_methods-vEawJsbOAk",
+  "requiredScenarioState" : "scenario-11-api-payment_methods-vEawJsbOAk-4",
+  "insertionIndex" : 76
+}

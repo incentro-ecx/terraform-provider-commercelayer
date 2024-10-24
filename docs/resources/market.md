@@ -111,5 +111,3 @@ Optional:
 
 - `customer_group_id` (String) The associated customer group id.
 - `tax_calculator_id` (String) The associated tax calculator id.
-
-

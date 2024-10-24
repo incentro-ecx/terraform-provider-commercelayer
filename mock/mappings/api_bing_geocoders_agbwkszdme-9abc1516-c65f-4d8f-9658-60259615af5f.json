@@ -1,0 +1,32 @@
+{
+  "id" : "9abc1516-c65f-4d8f-9658-60259615af5f",
+  "name" : "api_bing_geocoders_agbwkszdme",
+  "request" : {
+    "url" : "/api/bing_geocoders/aGBwksZdme",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "1ea44893-4f78-45c5-96fa-602ae7025b49",
+      "x-kong-upstream-latency" : "23",
+      "X-Ratelimit-Remaining" : "97",
+      "x-kong-request-id" : "bae11b1e4943a733ba5faa3bda253e7f",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:22 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "9abc1516-c65f-4d8f-9658-60259615af5f",
+  "persistent" : true,
+  "insertionIndex" : 270
+}

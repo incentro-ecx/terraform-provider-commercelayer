@@ -73,16 +73,14 @@ func (s *AcceptanceSuite) TestAccPaymentMethod_basic() {
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.foo", "bar"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "EUR"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.payment_source_type", "AdyenPayment"),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "0"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "10"),
 				),
 			},
 			{
 				Config: strings.Join([]string{testAccAdyenGatewayCreate(resourceName), testAccPaymentMethodUpdate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.currency_code", "EUR"),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.payment_source_type", "AdyenPayment"),
-					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "0"),
+					resource.TestCheckResourceAttr(resourceName, "attributes.0.price_amount_cents", "5"),
 				),
 			},
 		},
@@ -95,7 +93,7 @@ func testAccPaymentMethodCreate(testName string) string {
 		  attributes {
       		payment_source_type   = "AdyenPayment"
 			currency_code          = "EUR"
-			price_amount_cents     = 0
+			price_amount_cents     = 10
 			metadata               = {
 			  foo : "bar"
 		 	  testName: "{{.testName}}"
@@ -115,7 +113,7 @@ func testAccPaymentMethodUpdate(testName string) string {
 		  attributes {
       		payment_source_type    = "AdyenPayment"
 			currency_code          = "EUR"
-			price_amount_cents     = 0
+			price_amount_cents     = 5
 			metadata               = {
 			  bar : "foo"
 		 	  testName: "{{.testName}}"

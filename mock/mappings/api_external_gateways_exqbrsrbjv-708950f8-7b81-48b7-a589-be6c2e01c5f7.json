@@ -1,0 +1,32 @@
+{
+  "id" : "708950f8-7b81-48b7-a589-be6c2e01c5f7",
+  "name" : "api_external_gateways_exqbrsrbjv",
+  "request" : {
+    "url" : "/api/external_gateways/exqbrsrbJv",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "11e12a19-5a12-4382-b17f-c11ddfdcd266",
+      "x-kong-upstream-latency" : "32",
+      "X-Ratelimit-Remaining" : "90",
+      "x-kong-request-id" : "7462eb7468c2346e94633239ced36550",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 16:05:34 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "708950f8-7b81-48b7-a589-be6c2e01c5f7",
+  "persistent" : true,
+  "insertionIndex" : 221
+}

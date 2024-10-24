@@ -1,0 +1,32 @@
+{
+  "id" : "ce01078a-2202-4323-996d-f07551474cbb",
+  "name" : "api_markets_xjbdyhlyol",
+  "request" : {
+    "url" : "/api/markets/XjBdyhLYOl",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "f72c0c7a-23a0-4a46-a154-d3499feb2904",
+      "x-kong-upstream-latency" : "1324",
+      "X-Ratelimit-Remaining" : "74",
+      "x-kong-request-id" : "327f2e7f06bd507c28ecdf2022415b70",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 16:06:02 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "ce01078a-2202-4323-996d-f07551474cbb",
+  "persistent" : true,
+  "insertionIndex" : 107
+}

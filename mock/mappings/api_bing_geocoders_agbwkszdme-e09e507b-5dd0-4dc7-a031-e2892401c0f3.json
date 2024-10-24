@@ -1,0 +1,38 @@
+{
+  "id" : "e09e507b-5dd0-4dc7-a031-e2892401c0f3",
+  "name" : "api_bing_geocoders_agbwkszdme",
+  "request" : {
+    "url" : "/api/bing_geocoders/aGBwksZdme",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"aGBwksZdme\",\"type\":\"bing_geocoders\",\"attributes\":{\"name\":\"Incentro Bing Geocoder\",\"type\":\"bing_geocoders\",\"created_at\":\"2024-10-24T16:05:21.384Z\",\"updated_at\":\"2024-10-24T16:05:21.384Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_bing_geocoder.incentro_bing_geocoder\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/markets\"}},\"addresses\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/relationships/addresses\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/addresses\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/aGBwksZdme/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"6cf1ccc051639dae28dde9f9134c8686e4bb8d998803b137055adfdca689db42\"}}}",
+    "headers" : {
+      "x-request-id" : "744f7686-6c7f-4e09-9d3b-961a25bf8fe3",
+      "x-kong-upstream-latency" : "18",
+      "X-Ratelimit-Remaining" : "90",
+      "x-kong-request-id" : "1b5e5b05ebcc6d692c075308c71b8128",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 16:05:21 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"b7c7b43d4c6d01ffd102425be71ae454\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "e09e507b-5dd0-4dc7-a031-e2892401c0f3",
+  "persistent" : true,
+  "scenarioName" : "scenario-42-api-bing_geocoders-aGBwksZdme",
+  "requiredScenarioState" : "scenario-42-api-bing_geocoders-aGBwksZdme-2",
+  "newScenarioState" : "scenario-42-api-bing_geocoders-aGBwksZdme-3",
+  "insertionIndex" : 273
+}
