@@ -1,0 +1,38 @@
+{
+  "id" : "c10eb423-9e4c-409d-9ce4-b620788a9aed",
+  "name" : "inventory_return_locations_vlkzeirgrv",
+  "request" : {
+    "url" : "/inventory_return_locations/VlkzeiRGrv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"VlkzeiRGrv\",\"type\":\"inventory_return_locations\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VlkzeiRGrv\"},\"attributes\":{\"priority\":1,\"created_at\":\"2024-10-24T15:51:51.706Z\",\"updated_at\":\"2024-10-24T15:51:51.706Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_inventory_return_location.incentro_inventory_return_location\"}},\"relationships\":{\"stock_location\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VlkzeiRGrv/relationships/stock_location\",\"related\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VlkzeiRGrv/stock_location\"}},\"inventory_model\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VlkzeiRGrv/relationships/inventory_model\",\"related\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VlkzeiRGrv/inventory_model\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VlkzeiRGrv/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/inventory_return_locations/VlkzeiRGrv/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"d8b2443316a2a64146d85228019d32c53ce47e61642241809203834378258c57\"}}}",
+    "headers" : {
+      "x-request-id" : "a7b90983-4d21-4d9a-a8bf-167615001b37",
+      "x-kong-upstream-latency" : "16",
+      "X-Ratelimit-Remaining" : "51",
+      "x-kong-request-id" : "55063a655475803ca18f627f3f74e46d",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:51:52 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"f02d6cca01def3cc3c7f4aeab2abf1dd\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "c10eb423-9e4c-409d-9ce4-b620788a9aed",
+  "persistent" : true,
+  "scenarioName" : "scenario-28-inventory_return_locations-VlkzeiRGrv",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-28-inventory_return_locations-VlkzeiRGrv-2",
+  "insertionIndex" : 186
+}

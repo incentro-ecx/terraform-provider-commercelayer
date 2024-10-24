@@ -1,0 +1,32 @@
+{
+  "id" : "46f79876-f8dd-4de2-a912-d0f3098144e9",
+  "name" : "inventory_return_locations_vlkzeirgrv",
+  "request" : {
+    "url" : "/inventory_return_locations/VlkzeiRGrv",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "e8dd1f73-8547-4662-bb34-93017ef748b9",
+      "x-kong-upstream-latency" : "27",
+      "X-Ratelimit-Remaining" : "86",
+      "x-kong-request-id" : "ab69c9433e122f087972f02787460328",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:51:54 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "46f79876-f8dd-4de2-a912-d0f3098144e9",
+  "persistent" : true,
+  "insertionIndex" : 176
+}

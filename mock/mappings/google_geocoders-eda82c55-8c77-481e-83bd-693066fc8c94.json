@@ -1,0 +1,40 @@
+{
+  "id" : "eda82c55-8c77-481e-83bd-693066fc8c94",
+  "name" : "google_geocoders",
+  "request" : {
+    "url" : "/google_geocoders",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"api_key\":\"Google Geocoder API Key\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_google_geocoder.incentro_google_geocoder\"},\"name\":\"Incentro Google Geocoder\",\"reference\":null,\"reference_origin\":null},\"type\":\"google_geocoders\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"MGWAlsaNDn\",\"type\":\"google_geocoders\",\"attributes\":{\"name\":\"Incentro Google Geocoder\",\"type\":\"google_geocoders\",\"created_at\":\"2024-10-24T15:51:47.077Z\",\"updated_at\":\"2024-10-24T15:51:47.077Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_google_geocoder.incentro_google_geocoder\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/markets\"}},\"addresses\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/relationships/addresses\",\"related\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/addresses\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"fc8ae56ceca2428d2b2de4453b921c364959efabb2b3dba183e543b6c98b3bc2\"}}}",
+    "headers" : {
+      "x-request-id" : "d89123ab-4ebc-4f4c-8073-84c600ca797d",
+      "x-kong-upstream-latency" : "16",
+      "X-Ratelimit-Remaining" : "88",
+      "x-kong-request-id" : "044a136483705b10a28c6a03b7877d45",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:51:47 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"da1b400fddc2240bb07a60a0a52140cd\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "eda82c55-8c77-481e-83bd-693066fc8c94",
+  "persistent" : true,
+  "insertionIndex" : 207
+}

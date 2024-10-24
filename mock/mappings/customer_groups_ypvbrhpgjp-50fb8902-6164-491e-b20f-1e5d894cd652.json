@@ -1,0 +1,32 @@
+{
+  "id" : "50fb8902-6164-491e-b20f-1e5d894cd652",
+  "name" : "customer_groups_ypvbrhpgjp",
+  "request" : {
+    "url" : "/customer_groups/YpvbrhPgjp",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "df2f59d2-d584-4cd1-9e71-43f1710cc036",
+      "x-kong-upstream-latency" : "21",
+      "X-Ratelimit-Remaining" : "95",
+      "x-kong-request-id" : "b8e850185873347e67411d0a5cd9ee6c",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:51:36 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "50fb8902-6164-491e-b20f-1e5d894cd652",
+  "persistent" : true,
+  "insertionIndex" : 251
+}

@@ -1,0 +1,32 @@
+{
+  "id" : "29a47602-f959-423b-8abd-729a4890d3e8",
+  "name" : "stock_locations_rneebuyjln",
+  "request" : {
+    "url" : "/stock_locations/rneEbuYJLn",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "693f9589-3585-4622-a4de-90ced9dc1644",
+      "x-kong-upstream-latency" : "61",
+      "X-Ratelimit-Remaining" : "94",
+      "x-kong-request-id" : "d1e4760e07f15e5d01e7630c6a9ae51a",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:53:33 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "29a47602-f959-423b-8abd-729a4890d3e8",
+  "persistent" : true,
+  "insertionIndex" : 25
+}

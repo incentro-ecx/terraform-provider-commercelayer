@@ -1,0 +1,36 @@
+{
+  "id" : "735d2578-1567-4bc4-ba9b-0d4f036a36be",
+  "name" : "bing_geocoders_lxkgysqxbx",
+  "request" : {
+    "url" : "/bing_geocoders/lxKgysqXBx",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "fde643d5-e8aa-46de-9ff3-3467d97a1f01",
+      "x-kong-upstream-latency" : "8",
+      "X-Ratelimit-Remaining" : "88",
+      "x-kong-request-id" : "4d683365f0a78e3232e579586905473f",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:51:32 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "735d2578-1567-4bc4-ba9b-0d4f036a36be",
+  "persistent" : true,
+  "scenarioName" : "scenario-42-bing_geocoders-lxKgysqXBx",
+  "requiredScenarioState" : "scenario-42-bing_geocoders-lxKgysqXBx-4",
+  "insertionIndex" : 264
+}

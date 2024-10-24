@@ -1,0 +1,36 @@
+{
+  "id" : "0e78e47d-4917-4aab-a5e2-cbe5fbac92d9",
+  "name" : "addresses_boelupqapl",
+  "request" : {
+    "url" : "/addresses/Boelupqapl",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "532beb0c-323d-43b1-9e0c-c97dd1e2e05d",
+      "x-kong-upstream-latency" : "16",
+      "X-Ratelimit-Remaining" : "70",
+      "x-kong-request-id" : "e76ce31391997b0d441e6f290024ca51",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:51:41 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "0e78e47d-4917-4aab-a5e2-cbe5fbac92d9",
+  "persistent" : true,
+  "scenarioName" : "scenario-38-addresses-Boelupqapl",
+  "requiredScenarioState" : "scenario-38-addresses-Boelupqapl-4",
+  "insertionIndex" : 228
+}

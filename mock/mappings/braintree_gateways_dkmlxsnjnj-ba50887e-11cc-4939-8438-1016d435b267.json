@@ -1,0 +1,32 @@
+{
+  "id" : "ba50887e-11cc-4939-8438-1016d435b267",
+  "name" : "braintree_gateways_dkmlxsnjnj",
+  "request" : {
+    "url" : "/braintree_gateways/DkMLXsNJnj",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "6a086688-799d-4068-87d0-5eabd39f393a",
+      "x-kong-upstream-latency" : "88",
+      "X-Ratelimit-Remaining" : "96",
+      "x-kong-request-id" : "fb0059416811ef11ca007122d9ad8317",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:51:34 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "ba50887e-11cc-4939-8438-1016d435b267",
+  "persistent" : true,
+  "insertionIndex" : 258
+}

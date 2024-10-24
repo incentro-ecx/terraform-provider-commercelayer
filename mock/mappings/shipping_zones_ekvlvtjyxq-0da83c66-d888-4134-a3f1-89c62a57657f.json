@@ -1,0 +1,32 @@
+{
+  "id" : "0da83c66-d888-4134-a3f1-89c62a57657f",
+  "name" : "shipping_zones_ekvlvtjyxq",
+  "request" : {
+    "url" : "/shipping_zones/EKVlVtJYxQ",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "6799a1ec-7e16-47ef-a6af-a6e645add646",
+      "x-kong-upstream-latency" : "20",
+      "X-Ratelimit-Remaining" : "95",
+      "x-kong-request-id" : "ad739c6f2002b6021ca17453fd167b20",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 15:53:30 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "0da83c66-d888-4134-a3f1-89c62a57657f",
+  "persistent" : true,
+  "insertionIndex" : 36
+}

@@ -1,0 +1,38 @@
+{
+  "id" : "834f75ab-16c3-4993-9aa4-cd135d6b45a7",
+  "name" : "google_geocoders_mgwalsandn",
+  "request" : {
+    "url" : "/google_geocoders/MGWAlsaNDn",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"MGWAlsaNDn\",\"type\":\"google_geocoders\",\"attributes\":{\"name\":\"Incentro Google Geocoder\",\"type\":\"google_geocoders\",\"created_at\":\"2024-10-24T15:51:47.077Z\",\"updated_at\":\"2024-10-24T15:51:47.077Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_google_geocoder.incentro_google_geocoder\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/markets\"}},\"addresses\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/relationships/addresses\",\"related\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/addresses\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/google_geocoders/MGWAlsaNDn/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"adfac19d318b5171ca8d81f6a12a13d66d2e62703b18e1fb57665fbe1ea2177f\"}}}",
+    "headers" : {
+      "x-request-id" : "fdb1b34e-6d80-4e3d-9d62-722e591cd04f",
+      "x-kong-upstream-latency" : "14",
+      "X-Ratelimit-Remaining" : "56",
+      "x-kong-request-id" : "e58e3f5e392c2a34bcafac7672c5943d",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:51:47 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"65cca9823811eb9393d1c36cacd080ae\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "834f75ab-16c3-4993-9aa4-cd135d6b45a7",
+  "persistent" : true,
+  "scenarioName" : "scenario-33-google_geocoders-MGWAlsaNDn",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-33-google_geocoders-MGWAlsaNDn-2",
+  "insertionIndex" : 206
+}

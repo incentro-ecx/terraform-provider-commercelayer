@@ -1,0 +1,32 @@
+{
+  "id" : "a528706c-5cf0-4a59-a8be-60569adf8081",
+  "name" : "addresses_bkzqueglle",
+  "request" : {
+    "url" : "/addresses/BKZQuEGLLe",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "7d890ba3-954b-4f4b-9b20-6e97b47a9f7d",
+      "x-kong-upstream-latency" : "26",
+      "X-Ratelimit-Remaining" : "83",
+      "x-kong-request-id" : "3c2ef93640ede97c148a3b4749e1a059",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:51:54 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "a528706c-5cf0-4a59-a8be-60569adf8081",
+  "persistent" : true,
+  "insertionIndex" : 173
+}

@@ -1,0 +1,36 @@
+{
+  "id" : "83e3238b-d012-4526-9104-401fcaafd2b1",
+  "name" : "braintree_gateways_dkmlxsnjnj",
+  "request" : {
+    "url" : "/braintree_gateways/DkMLXsNJnj",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "d983a99b-aff0-4e01-b398-78b27f61d74d",
+      "x-kong-upstream-latency" : "7",
+      "X-Ratelimit-Remaining" : "84",
+      "x-kong-request-id" : "f2071b58f52661066941db33c7382967",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:51:34 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "83e3238b-d012-4526-9104-401fcaafd2b1",
+  "persistent" : true,
+  "scenarioName" : "scenario-41-braintree_gateways-DkMLXsNJnj",
+  "requiredScenarioState" : "scenario-41-braintree_gateways-DkMLXsNJnj-4",
+  "insertionIndex" : 257
+}

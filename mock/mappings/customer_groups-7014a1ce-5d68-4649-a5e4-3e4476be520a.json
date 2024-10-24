@@ -1,0 +1,40 @@
+{
+  "id" : "7014a1ce-5d68-4649-a5e4-3e4476be520a",
+  "name" : "customer_groups",
+  "request" : {
+    "url" : "/customer_groups",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_customer_group.incentro_customer_group\"},\"name\":\"Incentro customer group\",\"reference\":null,\"reference_origin\":null},\"type\":\"customer_groups\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"YpvbrhPgjp\",\"type\":\"customer_groups\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp\"},\"attributes\":{\"name\":\"Incentro customer group\",\"code\":null,\"created_at\":\"2024-10-24T15:51:35.216Z\",\"updated_at\":\"2024-10-24T15:51:35.216Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_customer_group.incentro_customer_group\"}},\"relationships\":{\"customers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/relationships/customers\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/customers\"}},\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"821c482c9fa6424c77e70656fed3d9ff0ac180a12e6f12cc88f871ff50a908f8\"}}}",
+    "headers" : {
+      "x-request-id" : "9cc8a366-63f9-40cf-8bb2-17b20e477888",
+      "x-kong-upstream-latency" : "17",
+      "X-Ratelimit-Remaining" : "95",
+      "x-kong-request-id" : "0b91817f3dcb2a3c347b5455dceba377",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:51:35 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"c52159f3a8dcee6afc155c19af256faa\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "7014a1ce-5d68-4649-a5e4-3e4476be520a",
+  "persistent" : true,
+  "insertionIndex" : 256
+}

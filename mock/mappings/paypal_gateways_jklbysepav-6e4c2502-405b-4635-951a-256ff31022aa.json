@@ -1,0 +1,40 @@
+{
+  "id" : "6e4c2502-405b-4635-951a-256ff31022aa",
+  "name" : "paypal_gateways_jklbysepav",
+  "request" : {
+    "url" : "/paypal_gateways/JkLbysepAv",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"client_id\":\"xxxx-yyyy-zzzz\",\"client_secret\":\"xxxx-yyyy-zzzz\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_paypal_gateway.incentro_paypal_gateway\"},\"name\":\"Incentro Paypal Gateway Changed\",\"reference\":null,\"reference_origin\":null},\"id\":\"JkLbysepAv\",\"type\":\"paypal_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"JkLbysepAv\",\"type\":\"paypal_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv\"},\"attributes\":{\"name\":\"Incentro Paypal Gateway Changed\",\"created_at\":\"2024-10-24T15:52:20.694Z\",\"updated_at\":\"2024-10-24T15:52:21.623Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_paypal_gateway.incentro_paypal_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/versions\"}},\"paypal_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/relationships/paypal_payments\",\"related\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/paypal_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"ee3fab4e5022e26bdc4d923a02ba88a15d297500835aa4a1100b3060c14381db\"}}}",
+    "headers" : {
+      "x-request-id" : "e31a9985-ec9e-46eb-93e5-d70ede060b7e",
+      "x-kong-upstream-latency" : "17",
+      "X-Ratelimit-Remaining" : "80",
+      "x-kong-request-id" : "c6c9fb0c340f34544d1c79327597274f",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:52:21 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"abaf7853f739ca7a816e0073834946b8\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "6e4c2502-405b-4635-951a-256ff31022aa",
+  "persistent" : true,
+  "insertionIndex" : 67
+}

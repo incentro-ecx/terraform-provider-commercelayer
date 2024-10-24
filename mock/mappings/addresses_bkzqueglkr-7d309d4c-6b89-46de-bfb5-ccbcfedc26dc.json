@@ -1,0 +1,38 @@
+{
+  "id" : "7d309d4c-6b89-46de-bfb5-ccbcfedc26dc",
+  "name" : "addresses_bkzqueglkr",
+  "request" : {
+    "url" : "/addresses/BKZQuEGLkr",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"BKZQuEGLkr\",\"type\":\"addresses\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/BKZQuEGLkr\"},\"attributes\":{\"business\":true,\"first_name\":null,\"last_name\":null,\"company\":\"Incentro\",\"full_name\":\"Incentro\",\"line_1\":\"Van Nelleweg 1\",\"line_2\":null,\"city\":\"Rotterdam\",\"zip_code\":\"3044 BC\",\"state_code\":\"ZH\",\"country_code\":\"NL\",\"phone\":\"+31(0)10 20 20 544\",\"full_address\":\"Van Nelleweg 1, 3044 BC Rotterdam ZH (NL) +31(0)10 20 20 544\",\"name\":\"Incentro, Van Nelleweg 1, 3044 BC Rotterdam ZH (NL) +31(0)10 20 20 544\",\"email\":null,\"notes\":null,\"lat\":null,\"lng\":null,\"is_localized\":false,\"is_geocoded\":false,\"provider_name\":null,\"map_url\":null,\"static_map_url\":null,\"billing_info\":null,\"created_at\":\"2024-10-24T15:52:14.630Z\",\"updated_at\":\"2024-10-24T15:52:14.630Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_merchant.incentro_merchant\"}},\"relationships\":{\"geocoder\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/BKZQuEGLkr/relationships/geocoder\",\"related\":\"https://loucs.commercelayer.io/api/addresses/BKZQuEGLkr/geocoder\"}},\"events\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/BKZQuEGLkr/relationships/events\",\"related\":\"https://loucs.commercelayer.io/api/addresses/BKZQuEGLkr/events\"}},\"tags\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/BKZQuEGLkr/relationships/tags\",\"related\":\"https://loucs.commercelayer.io/api/addresses/BKZQuEGLkr/tags\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/BKZQuEGLkr/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/addresses/BKZQuEGLkr/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"f89fcb2755372796e62d219fbe191d440d4a5f484d340a68179b9124a489507e\"}}}",
+    "headers" : {
+      "x-request-id" : "eae48b48-b9b6-4b43-858d-8180346d2c44",
+      "x-kong-upstream-latency" : "12",
+      "X-Ratelimit-Remaining" : "15",
+      "x-kong-request-id" : "20d0c351c156d211f62df41a15944103",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:52:15 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"60c033da9a755461ad3fc34102ef5b89\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "7d309d4c-6b89-46de-bfb5-ccbcfedc26dc",
+  "persistent" : true,
+  "scenarioName" : "scenario-14-addresses-BKZQuEGLkr",
+  "requiredScenarioState" : "scenario-14-addresses-BKZQuEGLkr-2",
+  "newScenarioState" : "scenario-14-addresses-BKZQuEGLkr-3",
+  "insertionIndex" : 92
+}

@@ -1,0 +1,38 @@
+{
+  "id" : "023161d7-1588-4ac2-b760-2fd7797bf189",
+  "name" : "adyen_gateways_pkaqrsdyzk",
+  "request" : {
+    "url" : "/adyen_gateways/PkaqRsdyzk",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"PkaqRsdyzk\",\"type\":\"adyen_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/adyen_gateways/PkaqRsdyzk\"},\"attributes\":{\"name\":\"Incentro Adyen Gateway\",\"created_at\":\"2024-10-24T15:52:17.617Z\",\"updated_at\":\"2024-10-24T15:52:17.617Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"},\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\",\"api_version\":68,\"async_api\":true,\"native_customer_payment_sources\":false,\"webhook_endpoint_secret\":\"foobar\",\"webhook_endpoint_url\":\"https://core.commercelayer.io/webhook_callbacks/adyen_gateways/PkaqRsdyzk/eu-west-1\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/adyen_gateways/PkaqRsdyzk/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/adyen_gateways/PkaqRsdyzk/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/adyen_gateways/PkaqRsdyzk/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/adyen_gateways/PkaqRsdyzk/versions\"}},\"adyen_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/adyen_gateways/PkaqRsdyzk/relationships/adyen_payments\",\"related\":\"https://loucs.commercelayer.io/api/adyen_gateways/PkaqRsdyzk/adyen_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"0fb76ea4a1383324a39553902caa93871cbd4bccfee595e60b4f8fdbf9899530\"}}}",
+    "headers" : {
+      "x-request-id" : "8f0eaff2-dc13-45de-89b6-8314ffa052aa",
+      "x-kong-upstream-latency" : "31",
+      "X-Ratelimit-Remaining" : "9",
+      "x-kong-request-id" : "3457033e7556b53e4aed3047fbe96a43",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:52:18 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"96e3e4a1874928ce3846e67f31a0182e\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "023161d7-1588-4ac2-b760-2fd7797bf189",
+  "persistent" : true,
+  "scenarioName" : "scenario-11-adyen_gateways-PkaqRsdyzk",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-11-adyen_gateways-PkaqRsdyzk-2",
+  "insertionIndex" : 81
+}

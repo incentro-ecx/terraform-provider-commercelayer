@@ -1,0 +1,37 @@
+{
+  "id" : "76d1145b-ed14-47c8-bbff-114aab364c8b",
+  "name" : "price_lists_nlnwecrekb",
+  "request" : {
+    "url" : "/price_lists/nLNWECREKB",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "34501314-4495-4aff-8069-f8cc24615fdf",
+      "x-kong-upstream-latency" : "13",
+      "X-Ratelimit-Remaining" : "496",
+      "x-kong-request-id" : "180bca6d3ff09d289135f70939a89b35",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:53:24 GMT",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "cache-control" : "no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "76d1145b-ed14-47c8-bbff-114aab364c8b",
+  "persistent" : true,
+  "scenarioName" : "scenario-9-price_lists-nLNWECREKB",
+  "requiredScenarioState" : "scenario-9-price_lists-nLNWECREKB-4",
+  "insertionIndex" : 56
+}

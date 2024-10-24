@@ -1,0 +1,32 @@
+{
+  "id" : "d744ba63-05b5-45de-aa94-8bf2762c9212",
+  "name" : "delivery_lead_times_nogemfnlrx",
+  "request" : {
+    "url" : "/delivery_lead_times/NOgEMFNLRx",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "cbe2b79e-0475-4c41-91e8-911fd589dd79",
+      "x-kong-upstream-latency" : "27",
+      "X-Ratelimit-Remaining" : "94",
+      "x-kong-request-id" : "577caa306ac9112072da35542d0f5738",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 15:51:40 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "d744ba63-05b5-45de-aa94-8bf2762c9212",
+  "persistent" : true,
+  "insertionIndex" : 232
+}

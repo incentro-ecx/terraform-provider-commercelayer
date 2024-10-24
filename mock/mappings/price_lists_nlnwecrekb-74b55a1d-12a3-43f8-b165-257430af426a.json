@@ -1,0 +1,32 @@
+{
+  "id" : "74b55a1d-12a3-43f8-b165-257430af426a",
+  "name" : "price_lists_nlnwecrekb",
+  "request" : {
+    "url" : "/price_lists/nLNWECREKB",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "fdef366b-f440-4ece-8ff9-3fe6a203628a",
+      "x-kong-upstream-latency" : "25",
+      "X-Ratelimit-Remaining" : "98",
+      "x-kong-request-id" : "f6d16f38626ad414e38c6827511f8a5c",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:53:24 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "74b55a1d-12a3-43f8-b165-257430af426a",
+  "persistent" : true,
+  "insertionIndex" : 57
+}

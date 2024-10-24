@@ -1,0 +1,38 @@
+{
+  "id" : "dc3e55b9-b604-4b7b-9af4-6a8daa34479a",
+  "name" : "shipping_categories_enbljfzglw",
+  "request" : {
+    "url" : "/shipping_categories/ENblJFZgLW",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"ENblJFZgLW\",\"type\":\"shipping_categories\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_categories/ENblJFZgLW\"},\"attributes\":{\"name\":\"Incentro Shipping Category Updated\",\"code\":null,\"created_at\":\"2024-10-24T15:53:25.075Z\",\"updated_at\":\"2024-10-24T15:53:25.927Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_shipping_category.incentro_shipping_category\"}},\"relationships\":{\"skus\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_categories/ENblJFZgLW/relationships/skus\",\"related\":\"https://loucs.commercelayer.io/api/shipping_categories/ENblJFZgLW/skus\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_categories/ENblJFZgLW/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/shipping_categories/ENblJFZgLW/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_categories/ENblJFZgLW/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/shipping_categories/ENblJFZgLW/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"d9fb43d4ef613db1063f36ddfedf5244445a383cc8d465d97fedbbc73125f4b4\"}}}",
+    "headers" : {
+      "x-request-id" : "fbc679b7-04ab-493c-9eed-d0ab9a964e29",
+      "x-kong-upstream-latency" : "13",
+      "X-Ratelimit-Remaining" : "95",
+      "x-kong-request-id" : "95f01a4afac6e45c4ff9d9392309af3e",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:53:26 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"dbafe557f99c75107d9d3b00be729cb4\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "dc3e55b9-b604-4b7b-9af4-6a8daa34479a",
+  "persistent" : true,
+  "scenarioName" : "scenario-8-shipping_categories-ENblJFZgLW",
+  "requiredScenarioState" : "scenario-8-shipping_categories-ENblJFZgLW-3",
+  "newScenarioState" : "scenario-8-shipping_categories-ENblJFZgLW-4",
+  "insertionIndex" : 51
+}

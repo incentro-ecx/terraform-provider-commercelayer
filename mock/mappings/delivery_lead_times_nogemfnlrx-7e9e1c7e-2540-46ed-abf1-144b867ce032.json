@@ -1,0 +1,40 @@
+{
+  "id" : "7e9e1c7e-2540-46ed-abf1-144b867ce032",
+  "name" : "delivery_lead_times_nogemfnlrx",
+  "request" : {
+    "url" : "/delivery_lead_times/NOgEMFNLRx",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"max_hours\":200,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_delivery_lead_time.incentro_delivery_lead_time\"},\"min_hours\":20,\"reference\":null,\"reference_origin\":null},\"id\":\"NOgEMFNLRx\",\"relationships\":{\"shipping_method\":{\"data\":{\"id\":\"mVJQoFZJyN\",\"type\":\"shipping_methods\"}},\"stock_location\":{\"data\":{\"id\":\"ekbqQudZmG\",\"type\":\"stock_locations\"}}},\"type\":\"delivery_lead_times\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"NOgEMFNLRx\",\"type\":\"delivery_lead_times\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/delivery_lead_times/NOgEMFNLRx\"},\"attributes\":{\"min_hours\":20,\"max_hours\":200,\"min_days\":1,\"max_days\":8,\"created_at\":\"2024-10-24T15:51:38.006Z\",\"updated_at\":\"2024-10-24T15:51:39.553Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_delivery_lead_time.incentro_delivery_lead_time\"}},\"relationships\":{\"stock_location\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/delivery_lead_times/NOgEMFNLRx/relationships/stock_location\",\"related\":\"https://loucs.commercelayer.io/api/delivery_lead_times/NOgEMFNLRx/stock_location\"}},\"shipping_method\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/delivery_lead_times/NOgEMFNLRx/relationships/shipping_method\",\"related\":\"https://loucs.commercelayer.io/api/delivery_lead_times/NOgEMFNLRx/shipping_method\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/delivery_lead_times/NOgEMFNLRx/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/delivery_lead_times/NOgEMFNLRx/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/delivery_lead_times/NOgEMFNLRx/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/delivery_lead_times/NOgEMFNLRx/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"1d2fd162d82e0d64f941ca7bddbc73baa93e89efa63ea6c806b2379d044113ce\"}}}",
+    "headers" : {
+      "x-request-id" : "8ed90178-01d9-4cc9-b625-a3c58d6d0ed9",
+      "x-kong-upstream-latency" : "28",
+      "X-Ratelimit-Remaining" : "94",
+      "x-kong-request-id" : "0d63237028c4ee4c10f57e6c7286327e",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 15:51:39 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"37194a3e58bad26856650932bf7a4f7d\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "7e9e1c7e-2540-46ed-abf1-144b867ce032",
+  "persistent" : true,
+  "insertionIndex" : 237
+}

@@ -1,0 +1,37 @@
+{
+  "id" : "db4cca06-bf19-4c77-9816-47f41c996816",
+  "name" : "markets_rjepzhzyro",
+  "request" : {
+    "url" : "/markets/rjEPzhzyRo",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "ef62f8d6-5fe7-46d8-964a-77ca28f50f44",
+      "x-kong-upstream-latency" : "14",
+      "X-Ratelimit-Remaining" : "471",
+      "x-kong-request-id" : "18e6b73969b95b17e4d1973bc3042128",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:52:14 GMT",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "cache-control" : "no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "db4cca06-bf19-4c77-9816-47f41c996816",
+  "persistent" : true,
+  "scenarioName" : "scenario-15-markets-rjEPzhzyRo",
+  "requiredScenarioState" : "scenario-15-markets-rjEPzhzyRo-4",
+  "insertionIndex" : 97
+}

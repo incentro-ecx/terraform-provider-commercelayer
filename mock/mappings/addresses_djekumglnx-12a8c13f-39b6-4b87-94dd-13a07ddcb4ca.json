@@ -1,0 +1,32 @@
+{
+  "id" : "12a8c13f-39b6-4b87-94dd-13a07ddcb4ca",
+  "name" : "addresses_djekumglnx",
+  "request" : {
+    "url" : "/addresses/djekumgLNX",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "eacd9a23-dc5a-43cd-b6b7-8bb04c4806e7",
+      "x-kong-upstream-latency" : "18",
+      "X-Ratelimit-Remaining" : "93",
+      "x-kong-request-id" : "5dd572554a39980c61394171bf5e4711",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:53:33 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "12a8c13f-39b6-4b87-94dd-13a07ddcb4ca",
+  "persistent" : true,
+  "insertionIndex" : 24
+}

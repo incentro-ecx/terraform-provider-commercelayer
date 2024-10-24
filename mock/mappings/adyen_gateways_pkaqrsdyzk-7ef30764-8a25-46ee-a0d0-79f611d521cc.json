@@ -1,0 +1,32 @@
+{
+  "id" : "7ef30764-8a25-46ee-a0d0-79f611d521cc",
+  "name" : "adyen_gateways_pkaqrsdyzk",
+  "request" : {
+    "url" : "/adyen_gateways/PkaqRsdyzk",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "07d0b186-df84-4bb3-8f51-a5fc4279fa2f",
+      "x-kong-upstream-latency" : "125",
+      "X-Ratelimit-Remaining" : "66",
+      "x-kong-request-id" : "cb5c891b72f68e2a3535df2adb03724d",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 15:52:19 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "7ef30764-8a25-46ee-a0d0-79f611d521cc",
+  "persistent" : true,
+  "insertionIndex" : 73
+}

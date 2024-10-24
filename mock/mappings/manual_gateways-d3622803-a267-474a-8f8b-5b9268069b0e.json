@@ -1,0 +1,40 @@
+{
+  "id" : "d3622803-a267-474a-8f8b-5b9268069b0e",
+  "name" : "manual_gateways",
+  "request" : {
+    "url" : "/manual_gateways",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_manual_gateway.incentro_manual_gateway\"},\"name\":\"Incentro Manual Gateway\",\"reference\":null,\"reference_origin\":null},\"type\":\"manual_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"oxoaEswMWj\",\"type\":\"manual_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/manual_gateways/oxoaEswMWj\"},\"attributes\":{\"name\":\"Incentro Manual Gateway\",\"created_at\":\"2024-10-24T15:52:02.075Z\",\"updated_at\":\"2024-10-24T15:52:02.075Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_manual_gateway.incentro_manual_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/manual_gateways/oxoaEswMWj/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/manual_gateways/oxoaEswMWj/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/manual_gateways/oxoaEswMWj/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/manual_gateways/oxoaEswMWj/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"62ba0e4c45a11f1e1bb2246a82cb9fb8d0594abc37917bedc7ac52ae0617be29\"}}}",
+    "headers" : {
+      "x-request-id" : "26a93999-36e6-4479-805b-c74a65e96a8b",
+      "x-kong-upstream-latency" : "13",
+      "X-Ratelimit-Remaining" : "77",
+      "x-kong-request-id" : "1e837071bb6f1d7c348b99563b068667",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 15:52:02 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"7f5bf566b52dc4a97ac09add25f8cc0d\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "d3622803-a267-474a-8f8b-5b9268069b0e",
+  "persistent" : true,
+  "insertionIndex" : 142
+}

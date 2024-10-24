@@ -1,0 +1,38 @@
+{
+  "id" : "15b09980-bc6c-4b56-bfe6-a0a38418c001",
+  "name" : "webhooks_epqzocjdyk",
+  "request" : {
+    "url" : "/webhooks/ePqzoCJDYK",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"ePqzoCJDYK\",\"type\":\"webhooks\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/webhooks/ePqzoCJDYK\"},\"attributes\":{\"name\":\"incentro webhook\",\"topic\":\"orders.create\",\"callback_url\":\"http://example.url\",\"include_resources\":[\"customer\"],\"disabled_at\":null,\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"4ada7d059b8ea23e93ead729b5c09d82\",\"created_at\":\"2024-10-24T15:53:38.076Z\",\"updated_at\":\"2024-10-24T15:53:38.076Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_webhook.incentro_webhook\"}},\"relationships\":{\"last_event_callbacks\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/webhooks/ePqzoCJDYK/relationships/last_event_callbacks\",\"related\":\"https://loucs.commercelayer.io/api/webhooks/ePqzoCJDYK/last_event_callbacks\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/webhooks/ePqzoCJDYK/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/webhooks/ePqzoCJDYK/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"75b87bed0c247fd56e235c0e3ff24193d2ad6d8d6452b9e5f01202dfaf583885\"}}}",
+    "headers" : {
+      "x-request-id" : "fa122a49-a66b-4fc6-88fd-f922a5ab5a9a",
+      "x-kong-upstream-latency" : "13",
+      "X-Ratelimit-Remaining" : "73",
+      "x-kong-request-id" : "5eeb7b764d1fbe09944bee3a1fd2ad11",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:53:38 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"dbb004d9669d61312ca9b7938fbc164c\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "15b09980-bc6c-4b56-bfe6-a0a38418c001",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-webhooks-ePqzoCJDYK",
+  "requiredScenarioState" : "scenario-1-webhooks-ePqzoCJDYK-2",
+  "newScenarioState" : "scenario-1-webhooks-ePqzoCJDYK-3",
+  "insertionIndex" : 6
+}

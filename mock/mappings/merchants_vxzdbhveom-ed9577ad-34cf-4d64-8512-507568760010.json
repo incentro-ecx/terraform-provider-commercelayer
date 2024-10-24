@@ -1,0 +1,38 @@
+{
+  "id" : "ed9577ad-34cf-4d64-8512-507568760010",
+  "name" : "merchants_vxzdbhveom",
+  "request" : {
+    "url" : "/merchants/vxZdBHVeOM",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"vxZdBHVeOM\",\"type\":\"merchants\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/vxZdBHVeOM\"},\"attributes\":{\"name\":\"Incentro Merchant\",\"created_at\":\"2024-10-24T15:52:14.813Z\",\"updated_at\":\"2024-10-24T15:52:14.813Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_merchant.incentro_merchant\"}},\"relationships\":{\"address\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/vxZdBHVeOM/relationships/address\",\"related\":\"https://loucs.commercelayer.io/api/merchants/vxZdBHVeOM/address\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/vxZdBHVeOM/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/merchants/vxZdBHVeOM/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/merchants/vxZdBHVeOM/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/merchants/vxZdBHVeOM/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"deea92e115a7950944ded21bdb450b4685f598d79fae05e40121a4e3b000a50f\"}}}",
+    "headers" : {
+      "x-request-id" : "36b1fdeb-9d57-4d6e-ac24-020c2fb1a7cc",
+      "x-kong-upstream-latency" : "13",
+      "X-Ratelimit-Remaining" : "16",
+      "x-kong-request-id" : "cda70113b306666bc9f4fe7ecf61e069",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:52:15 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"57e09d2683c5ff56d5c028709547ecd8\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "ed9577ad-34cf-4d64-8512-507568760010",
+  "persistent" : true,
+  "scenarioName" : "scenario-13-merchants-vxZdBHVeOM",
+  "requiredScenarioState" : "Started",
+  "newScenarioState" : "scenario-13-merchants-vxZdBHVeOM-2",
+  "insertionIndex" : 93
+}

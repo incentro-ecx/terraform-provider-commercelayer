@@ -1,0 +1,36 @@
+{
+  "id" : "215a324c-cf6a-44c1-8777-af57fa28a70f",
+  "name" : "taxjar_accounts_kyzeltzedq",
+  "request" : {
+    "url" : "/taxjar_accounts/kyzeLTzEdq",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "{\"errors\":[{\"title\":\"Record not found\",\"detail\":\"The requested resource was not found. Please double-check the resource id.\",\"code\":\"RECORD_NOT_FOUND\",\"status\":\"404\"}]}",
+    "headers" : {
+      "x-request-id" : "907e891b-9596-4626-9180-a4eb04b52041",
+      "x-kong-upstream-latency" : "9",
+      "X-Ratelimit-Remaining" : "75",
+      "x-kong-request-id" : "50a91c314638d163739db072ac175417",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:53:37 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "content-type" : "application/vnd.api+json; charset=utf-8",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "215a324c-cf6a-44c1-8777-af57fa28a70f",
+  "persistent" : true,
+  "scenarioName" : "scenario-2-taxjar_accounts-kyzeLTzEdq",
+  "requiredScenarioState" : "scenario-2-taxjar_accounts-kyzeLTzEdq-4",
+  "insertionIndex" : 9
+}

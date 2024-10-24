@@ -1,0 +1,32 @@
+{
+  "id" : "f5c2a278-3139-4892-a508-dbb20cbc9ef5",
+  "name" : "manual_tax_calculators_evvrmtjxav",
+  "request" : {
+    "url" : "/manual_tax_calculators/EvVRMTJxAv",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "3b53fab7-f877-4912-b780-e9f997ca26a4",
+      "x-kong-upstream-latency" : "26",
+      "X-Ratelimit-Remaining" : "76",
+      "x-kong-request-id" : "9e9f240549b21c606af4251e515e6715",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 15:52:05 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "f5c2a278-3139-4892-a508-dbb20cbc9ef5",
+  "persistent" : true,
+  "insertionIndex" : 130
+}

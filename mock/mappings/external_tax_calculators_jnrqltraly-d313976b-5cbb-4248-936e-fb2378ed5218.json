@@ -1,0 +1,40 @@
+{
+  "id" : "d313976b-5cbb-4248-936e-fb2378ed5218",
+  "name" : "external_tax_calculators_jnrqltraly",
+  "request" : {
+    "url" : "/external_tax_calculators/JNrQLTraLy",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_external_tax_calculator.incentro_external_tax_calculator\"},\"name\":\"incentro_external_tax_calculator_changed\",\"reference\":null,\"reference_origin\":null,\"tax_calculator_url\":\"https://foo.com\"},\"id\":\"JNrQLTraLy\",\"type\":\"external_tax_calculators\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"JNrQLTraLy\",\"type\":\"external_tax_calculators\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_tax_calculators/JNrQLTraLy\"},\"attributes\":{\"name\":\"incentro_external_tax_calculator_changed\",\"type\":\"external_tax_calculators\",\"created_at\":\"2024-10-24T15:51:44.887Z\",\"updated_at\":\"2024-10-24T15:51:45.967Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_external_tax_calculator.incentro_external_tax_calculator\"},\"tax_calculator_url\":\"https://foo.com\",\"circuit_state\":\"closed\",\"circuit_failure_count\":0,\"shared_secret\":\"8096571930ebed570eaecb29c3940871\"},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_tax_calculators/JNrQLTraLy/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/external_tax_calculators/JNrQLTraLy/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_tax_calculators/JNrQLTraLy/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/external_tax_calculators/JNrQLTraLy/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/external_tax_calculators/JNrQLTraLy/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/external_tax_calculators/JNrQLTraLy/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"2c45bbec3b6982543917f2a52aa112dd436a94219d081070cef4bcfdd7e9caa0\"}}}",
+    "headers" : {
+      "x-request-id" : "f322e9f8-2e80-47ec-8138-549f84e89267",
+      "x-kong-upstream-latency" : "20",
+      "X-Ratelimit-Remaining" : "91",
+      "x-kong-request-id" : "81163f7792ac057acc0f840878772735",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:51:45 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"0e69b4251b87b533c98e1701b9f0b6d2\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "d313976b-5cbb-4248-936e-fb2378ed5218",
+  "persistent" : true,
+  "insertionIndex" : 211
+}

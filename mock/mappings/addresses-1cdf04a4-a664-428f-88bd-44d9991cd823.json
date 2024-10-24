@@ -1,0 +1,40 @@
+{
+  "id" : "1cdf04a4-a664-428f-88bd-44d9991cd823",
+  "name" : "addresses",
+  "request" : {
+    "url" : "/addresses",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"billing_info\":null,\"business\":true,\"city\":\"Rotterdam\",\"company\":\"Incentro\",\"country_code\":\"NL\",\"email\":null,\"first_name\":null,\"last_name\":null,\"lat\":null,\"line_1\":\"Van Nelleweg 1\",\"line_2\":null,\"lng\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_stock_location.incentro_stock_location\"},\"notes\":null,\"phone\":\"+31(0)10 20 20 544\",\"reference\":null,\"reference_origin\":null,\"state_code\":\"ZH\",\"zip_code\":\"3044 BC\"},\"type\":\"addresses\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"djekumgLNX\",\"type\":\"addresses\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX\"},\"attributes\":{\"business\":true,\"first_name\":null,\"last_name\":null,\"company\":\"Incentro\",\"full_name\":\"Incentro\",\"line_1\":\"Van Nelleweg 1\",\"line_2\":null,\"city\":\"Rotterdam\",\"zip_code\":\"3044 BC\",\"state_code\":\"ZH\",\"country_code\":\"NL\",\"phone\":\"+31(0)10 20 20 544\",\"full_address\":\"Van Nelleweg 1, 3044 BC Rotterdam ZH (NL) +31(0)10 20 20 544\",\"name\":\"Incentro, Van Nelleweg 1, 3044 BC Rotterdam ZH (NL) +31(0)10 20 20 544\",\"email\":null,\"notes\":null,\"lat\":null,\"lng\":null,\"is_localized\":false,\"is_geocoded\":false,\"provider_name\":null,\"map_url\":null,\"static_map_url\":null,\"billing_info\":null,\"created_at\":\"2024-10-24T15:53:31.168Z\",\"updated_at\":\"2024-10-24T15:53:31.168Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_stock_location.incentro_stock_location\"}},\"relationships\":{\"geocoder\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/relationships/geocoder\",\"related\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/geocoder\"}},\"events\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/relationships/events\",\"related\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/events\"}},\"tags\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/relationships/tags\",\"related\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/tags\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"c02c7d136456902b388510285841af16e8b28e50464cb8e4b4826530777fd325\"}}}",
+    "headers" : {
+      "x-request-id" : "b78ef572-a2a4-4782-b205-8b22cd5e66ba",
+      "x-kong-upstream-latency" : "19",
+      "X-Ratelimit-Remaining" : "95",
+      "x-kong-request-id" : "20ffa727b8db1b7f1b5faa18fbaf0804",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 15:53:31 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"7aae03bedc64134fdbf9681676c11d84\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "1cdf04a4-a664-428f-88bd-44d9991cd823",
+  "persistent" : true,
+  "insertionIndex" : 34
+}

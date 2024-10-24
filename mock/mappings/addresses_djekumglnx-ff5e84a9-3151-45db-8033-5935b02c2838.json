@@ -1,0 +1,38 @@
+{
+  "id" : "ff5e84a9-3151-45db-8033-5935b02c2838",
+  "name" : "addresses_djekumglnx",
+  "request" : {
+    "url" : "/addresses/djekumgLNX",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"djekumgLNX\",\"type\":\"addresses\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX\"},\"attributes\":{\"business\":true,\"first_name\":null,\"last_name\":null,\"company\":\"Incentro\",\"full_name\":\"Incentro\",\"line_1\":\"Van Nelleweg 1\",\"line_2\":null,\"city\":\"Rotterdam\",\"zip_code\":\"3044 BC\",\"state_code\":\"ZH\",\"country_code\":\"NL\",\"phone\":\"+31(0)10 20 20 544\",\"full_address\":\"Van Nelleweg 1, 3044 BC Rotterdam ZH (NL) +31(0)10 20 20 544\",\"name\":\"Incentro, Van Nelleweg 1, 3044 BC Rotterdam ZH (NL) +31(0)10 20 20 544\",\"email\":null,\"notes\":null,\"lat\":null,\"lng\":null,\"is_localized\":false,\"is_geocoded\":false,\"provider_name\":null,\"map_url\":null,\"static_map_url\":null,\"billing_info\":null,\"created_at\":\"2024-10-24T15:53:31.168Z\",\"updated_at\":\"2024-10-24T15:53:31.168Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_stock_location.incentro_stock_location\"}},\"relationships\":{\"geocoder\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/relationships/geocoder\",\"related\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/geocoder\"}},\"events\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/relationships/events\",\"related\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/events\"}},\"tags\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/relationships/tags\",\"related\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/tags\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/addresses/djekumgLNX/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"65142b07382f5fce92a0d1dd36ac5106eff2e35d295de89d1c85d81b5d837d24\"}}}",
+    "headers" : {
+      "x-request-id" : "da769fb1-5f70-4437-aac7-1b64bac8fbf3",
+      "x-kong-upstream-latency" : "17",
+      "X-Ratelimit-Remaining" : "84",
+      "x-kong-request-id" : "80d5997928ebb7396e50a9689dc4030f",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:53:32 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"d5cc73a0420e06c0116b5990f0767285\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "ff5e84a9-3151-45db-8033-5935b02c2838",
+  "persistent" : true,
+  "scenarioName" : "scenario-5-addresses-djekumgLNX",
+  "requiredScenarioState" : "scenario-5-addresses-djekumgLNX-2",
+  "newScenarioState" : "scenario-5-addresses-djekumgLNX-3",
+  "insertionIndex" : 30
+}

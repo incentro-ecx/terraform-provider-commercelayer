@@ -1,0 +1,32 @@
+{
+  "id" : "fdd3d488-e259-4164-a702-bb60afdaa07e",
+  "name" : "manual_gateways_oxoaeswmwj",
+  "request" : {
+    "url" : "/manual_gateways/oxoaEswMWj",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "81039c65-3992-43ab-afb6-0eac65c9e457",
+      "x-kong-upstream-latency" : "36",
+      "X-Ratelimit-Remaining" : "77",
+      "x-kong-request-id" : "4ba6c115ac281d0edb98e851908cd21b",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 15:52:03 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "fdd3d488-e259-4164-a702-bb60afdaa07e",
+  "persistent" : true,
+  "insertionIndex" : 137
+}

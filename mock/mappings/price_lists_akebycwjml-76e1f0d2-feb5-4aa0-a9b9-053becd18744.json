@@ -1,0 +1,32 @@
+{
+  "id" : "76e1f0d2-feb5-4aa0-a9b9-053becd18744",
+  "name" : "price_lists_akebycwjml",
+  "request" : {
+    "url" : "/price_lists/AkebyCWJml",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "255f118c-f91d-4e39-a64d-2af9f92ea9cc",
+      "x-kong-upstream-latency" : "25",
+      "X-Ratelimit-Remaining" : "73",
+      "x-kong-request-id" : "eb7a2f448653ed0f72e906049c63a064",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:52:13 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "76e1f0d2-feb5-4aa0-a9b9-053becd18744",
+  "persistent" : true,
+  "insertionIndex" : 101
+}

@@ -1,0 +1,40 @@
+{
+  "id" : "d95c6987-72d9-4998-b692-833c165dbf9d",
+  "name" : "shipping_zones",
+  "request" : {
+    "url" : "/shipping_zones",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"country_code_regex\":\".*\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_shipping_zone.incentro_shipping_zone\"},\"name\":\"Incentro Shipping Zone\",\"not_country_code_regex\":\"[^i*\\u00262@]\",\"not_state_code_regex\":\"//[^\\r\\n]*[\\r\\n]\",\"not_zip_code_regex\":\".+\",\"reference\":null,\"reference_origin\":null,\"state_code_regex\":\"^dog\",\"zip_code_regex\":\"[a-zA-Z]{2,4}\"},\"type\":\"shipping_zones\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"EKVlVtJYxQ\",\"type\":\"shipping_zones\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_zones/EKVlVtJYxQ\"},\"attributes\":{\"name\":\"Incentro Shipping Zone\",\"country_code_regex\":\".*\",\"not_country_code_regex\":\"[^i*&2@]\",\"state_code_regex\":\"^dog\",\"not_state_code_regex\":\"//[^\\r\\n]*[\\r\\n]\",\"zip_code_regex\":\"[a-zA-Z]{2,4}\",\"not_zip_code_regex\":\".+\",\"created_at\":\"2024-10-24T15:53:29.156Z\",\"updated_at\":\"2024-10-24T15:53:29.156Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_shipping_zone.incentro_shipping_zone\"}},\"relationships\":{\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_zones/EKVlVtJYxQ/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/shipping_zones/EKVlVtJYxQ/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/shipping_zones/EKVlVtJYxQ/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/shipping_zones/EKVlVtJYxQ/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"7249bb067628038aeb6936371ef6baea20a4c6c5d14d4ec1598c0ef8a4712479\"}}}",
+    "headers" : {
+      "x-request-id" : "fb104822-9cef-4c87-8628-8b369f3b607d",
+      "x-kong-upstream-latency" : "24",
+      "X-Ratelimit-Remaining" : "96",
+      "x-kong-request-id" : "c348805004d6c84c9ddf1219ddaa570a",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "Date" : "Thu, 24 Oct 2024 15:53:29 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"08f067b503b207a44047a149285259b7\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "d95c6987-72d9-4998-b692-833c165dbf9d",
+  "persistent" : true,
+  "insertionIndex" : 41
+}

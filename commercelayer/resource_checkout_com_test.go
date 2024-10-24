@@ -31,6 +31,8 @@ func testAccCheckCheckoutComGatewayDestroy(s *terraform.State) error {
 }
 
 func (s *AcceptanceSuite) TestAccCheckoutComGateway_basic() {
+	s.T().Skip("Skipping test because we need a valid key")
+
 	resourceName := "commercelayer_checkout_com_gateway.incentro_checkout_com_gateway"
 
 	resource.Test(s.T(), resource.TestCase{

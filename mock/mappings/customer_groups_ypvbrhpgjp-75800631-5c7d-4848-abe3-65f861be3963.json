@@ -1,0 +1,38 @@
+{
+  "id" : "75800631-5c7d-4848-abe3-65f861be3963",
+  "name" : "customer_groups_ypvbrhpgjp",
+  "request" : {
+    "url" : "/customer_groups/YpvbrhPgjp",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"YpvbrhPgjp\",\"type\":\"customer_groups\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp\"},\"attributes\":{\"name\":\"Incentro customer group\",\"code\":null,\"created_at\":\"2024-10-24T15:51:35.216Z\",\"updated_at\":\"2024-10-24T15:51:35.216Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_customer_group.incentro_customer_group\"}},\"relationships\":{\"customers\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/relationships/customers\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/customers\"}},\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/markets\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/customer_groups/YpvbrhPgjp/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"9bd758b5277d0c6e6a92d885f7a5bdc1acd00186da91806ddb468f10928bdba1\"}}}",
+    "headers" : {
+      "x-request-id" : "afcddec6-922d-4b8b-9384-01daf1a0afc3",
+      "x-kong-upstream-latency" : "13",
+      "X-Ratelimit-Remaining" : "82",
+      "x-kong-request-id" : "efe6e27301ec2817adf363182ac9266e",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:51:35 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"17c116de5306135aaf3850d0c84bd304\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "75800631-5c7d-4848-abe3-65f861be3963",
+  "persistent" : true,
+  "scenarioName" : "scenario-40-customer_groups-YpvbrhPgjp",
+  "requiredScenarioState" : "scenario-40-customer_groups-YpvbrhPgjp-2",
+  "newScenarioState" : "scenario-40-customer_groups-YpvbrhPgjp-3",
+  "insertionIndex" : 254
+}

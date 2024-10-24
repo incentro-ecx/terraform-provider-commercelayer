@@ -1,0 +1,40 @@
+{
+  "id" : "16371e28-1401-4ac7-a81c-a0988cb4b54d",
+  "name" : "bing_geocoders_lxkgysqxbx",
+  "request" : {
+    "url" : "/bing_geocoders/lxKgysqXBx",
+    "method" : "PATCH",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"key\":\"Bing Virtualearth Key\",\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_bing_geocoder.incentro_bing_geocoder\"},\"name\":\"Incentro Updated Bing Geocoder\",\"reference\":null,\"reference_origin\":null},\"id\":\"lxKgysqXBx\",\"type\":\"bing_geocoders\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"lxKgysqXBx\",\"type\":\"bing_geocoders\",\"attributes\":{\"name\":\"Incentro Updated Bing Geocoder\",\"type\":\"bing_geocoders\",\"created_at\":\"2024-10-24T15:51:30.518Z\",\"updated_at\":\"2024-10-24T15:51:31.492Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_bing_geocoder.incentro_bing_geocoder\"}},\"relationships\":{\"markets\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/lxKgysqXBx/relationships/markets\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/lxKgysqXBx/markets\"}},\"addresses\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/lxKgysqXBx/relationships/addresses\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/lxKgysqXBx/addresses\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/bing_geocoders/lxKgysqXBx/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/bing_geocoders/lxKgysqXBx/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"d2cb830a5c41a2b65b8f5775a3119710a54c48f6183348893ca17d9e91267072\"}}}",
+    "headers" : {
+      "x-request-id" : "098ae3ff-78e4-4cbb-939c-c1641b051690",
+      "x-kong-upstream-latency" : "24",
+      "X-Ratelimit-Remaining" : "97",
+      "x-kong-request-id" : "09315b16004dde05bd6c2b5fc97d8222",
+      "x-download-options" : "noopen",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 15:51:31 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"f78fcc276b620a602f989e987a691d46\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "16371e28-1401-4ac7-a81c-a0988cb4b54d",
+  "persistent" : true,
+  "insertionIndex" : 267
+}

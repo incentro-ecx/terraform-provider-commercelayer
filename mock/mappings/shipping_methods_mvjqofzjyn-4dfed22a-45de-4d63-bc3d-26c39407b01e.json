@@ -1,0 +1,32 @@
+{
+  "id" : "4dfed22a-45de-4d63-bc3d-26c39407b01e",
+  "name" : "shipping_methods_mvjqofzjyn",
+  "request" : {
+    "url" : "/shipping_methods/mVJQoFZJyN",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "x-request-id" : "9087506b-02a3-4e55-b262-a0117e669d8a",
+      "x-kong-upstream-latency" : "38",
+      "X-Ratelimit-Remaining" : "92",
+      "x-kong-request-id" : "08dc4728c2ec92537614bb14f5d0ed0b",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-download-options" : "noopen",
+      "x-kong-proxy-latency" : "1",
+      "Date" : "Thu, 24 Oct 2024 15:51:40 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Origin",
+      "accept-ranges" : "bytes",
+      "cache-control" : "no-cache"
+    }
+  },
+  "uuid" : "4dfed22a-45de-4d63-bc3d-26c39407b01e",
+  "persistent" : true,
+  "insertionIndex" : 230
+}

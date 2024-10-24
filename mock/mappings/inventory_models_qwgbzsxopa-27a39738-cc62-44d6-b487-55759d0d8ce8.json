@@ -1,0 +1,38 @@
+{
+  "id" : "27a39738-cc62-44d6-b487-55759d0d8ce8",
+  "name" : "inventory_models_qwgbzsxopa",
+  "request" : {
+    "url" : "/inventory_models/qWGBzSXOPa",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"qWGBzSXOPa\",\"type\":\"inventory_models\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_models/qWGBzSXOPa\"},\"attributes\":{\"name\":\"Incentro Inventory Model\",\"strategy\":\"no_split\",\"stock_locations_cutoff\":1,\"stock_reservation_cutoff\":3600,\"put_stock_transfers_on_hold\":false,\"manual_stock_decrement\":false,\"created_at\":\"2024-10-24T15:52:07.137Z\",\"updated_at\":\"2024-10-24T15:52:07.137Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"testName\":\"commercelayer_market.incentro_market\"}},\"relationships\":{\"inventory_stock_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_models/qWGBzSXOPa/relationships/inventory_stock_locations\",\"related\":\"https://loucs.commercelayer.io/api/inventory_models/qWGBzSXOPa/inventory_stock_locations\"}},\"inventory_return_locations\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_models/qWGBzSXOPa/relationships/inventory_return_locations\",\"related\":\"https://loucs.commercelayer.io/api/inventory_models/qWGBzSXOPa/inventory_return_locations\"}},\"attachments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_models/qWGBzSXOPa/relationships/attachments\",\"related\":\"https://loucs.commercelayer.io/api/inventory_models/qWGBzSXOPa/attachments\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/inventory_models/qWGBzSXOPa/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/inventory_models/qWGBzSXOPa/versions\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"76cf78044e334b8acd092637ba2d5d0f131c97ca0943f51e769107ea606eb84e\"}}}",
+    "headers" : {
+      "x-request-id" : "c08e1445-195c-4458-bd20-fb91a0048c2f",
+      "x-kong-upstream-latency" : "13",
+      "X-Ratelimit-Remaining" : "474",
+      "x-kong-request-id" : "9034d01e80c93b28d96631741520e252",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "1",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:52:10 GMT",
+      "Accept-Ranges" : "bytes",
+      "X-Ratelimit-Limit" : "500",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Authorization, Accept-Encoding, Origin",
+      "etag" : "W/\"49f846d0fb0faa12f675f59e4ea1a8e3\"",
+      "content-type" : "application/vnd.api+json",
+      "cache-control" : "public, no-cache",
+      "Age" : "0"
+    }
+  },
+  "uuid" : "27a39738-cc62-44d6-b487-55759d0d8ce8",
+  "persistent" : true,
+  "scenarioName" : "scenario-18-inventory_models-qWGBzSXOPa",
+  "requiredScenarioState" : "scenario-18-inventory_models-qWGBzSXOPa-3",
+  "insertionIndex" : 107
+}

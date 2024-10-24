@@ -1,0 +1,38 @@
+{
+  "id" : "edc679b6-624c-4d51-a627-8bbd3bc0373b",
+  "name" : "paypal_gateways_jklbysepav",
+  "request" : {
+    "url" : "/paypal_gateways/JkLbysepAv",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"JkLbysepAv\",\"type\":\"paypal_gateways\",\"links\":{\"self\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv\"},\"attributes\":{\"name\":\"Incentro Paypal Gateway Changed\",\"created_at\":\"2024-10-24T15:52:20.694Z\",\"updated_at\":\"2024-10-24T15:52:21.623Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"bar\":\"foo\",\"testName\":\"commercelayer_paypal_gateway.incentro_paypal_gateway\"}},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/relationships/payment_methods\",\"related\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/payment_methods\"}},\"versions\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/relationships/versions\",\"related\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/versions\"}},\"paypal_payments\":{\"links\":{\"self\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/relationships/paypal_payments\",\"related\":\"https://loucs.commercelayer.io/api/paypal_gateways/JkLbysepAv/paypal_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"WnZPoFZEKy\",\"trace_id\":\"70e5d506af296f9c23ab6ae9eb61f5223dead5592483571b1ef05f283bae6a10\"}}}",
+    "headers" : {
+      "x-request-id" : "024bcf07-18e8-47bc-a442-f40ccb47a2bd",
+      "x-kong-upstream-latency" : "16",
+      "X-Ratelimit-Remaining" : "99",
+      "x-kong-request-id" : "72ff874dfe911651765b7d3a5a946606",
+      "x-permitted-cross-domain-policies" : "none",
+      "x-kong-proxy-latency" : "0",
+      "x-download-options" : "noopen",
+      "Date" : "Thu, 24 Oct 2024 15:53:22 GMT",
+      "X-Ratelimit-Limit" : "100",
+      "X-Ratelimit-Interval" : "60",
+      "x-xss-protection" : "1; mode=block",
+      "x-content-type-options" : "nosniff",
+      "referrer-policy" : "strict-origin-when-cross-origin",
+      "Vary" : "Accept, Accept-Encoding, Origin",
+      "etag" : "W/\"a7c365a55bebe62688d263dcdfcdf519\"",
+      "content-type" : "application/vnd.api+json",
+      "accept-ranges" : "bytes",
+      "cache-control" : "max-age=0, private, must-revalidate"
+    }
+  },
+  "uuid" : "edc679b6-624c-4d51-a627-8bbd3bc0373b",
+  "persistent" : true,
+  "scenarioName" : "scenario-10-paypal_gateways-JkLbysepAv",
+  "requiredScenarioState" : "scenario-10-paypal_gateways-JkLbysepAv-4",
+  "newScenarioState" : "scenario-10-paypal_gateways-JkLbysepAv-5",
+  "insertionIndex" : 65
+}
