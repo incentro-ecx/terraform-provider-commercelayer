@@ -56,6 +56,12 @@ func resourceInventoryModel() *schema.Resource {
 							Optional:    true,
 							Default:     2,
 						},
+						"stock_reservation_cutoff": {
+							Description: "The duration in seconds of the generated stock reservations.",
+							Type:        schema.TypeInt,
+							Optional:    true,
+							Default:     3600,
+						},
 						"reference": {
 							Description: "A string that you can use to add any external identifier to the resource. This " +
 								"can be useful for integrating the resource to an external system, like an ERP, a " +
@@ -67,6 +73,18 @@ func resourceInventoryModel() *schema.Resource {
 							Description: "Any identifier of the third party system that defines the reference code",
 							Type:        schema.TypeString,
 							Optional:    true,
+						},
+						"manual_stock_decrement": {
+							Description: "Indicates if the the stock will be decremented manually after the order approval",
+							Type:        schema.TypeBool,
+							Optional:    true,
+							Default:     false,
+						},
+						"put_stock_transfers_on_hold": {
+							Description: "Indicates if the the stock transfers must be put on hold automatically with the associated shipment.",
+							Type:        schema.TypeBool,
+							Optional:    true,
+							Default:     false,
 						},
 						"metadata": {
 							Description: "Set of key-value pairs that you can attach to the resource. This can be useful " +
@@ -112,12 +130,15 @@ func resourceInventoryModelCreateFunc(ctx context.Context, d *schema.ResourceDat
 		Data: commercelayer.InventoryModelCreateData{
 			Type: inventoryModelType,
 			Attributes: commercelayer.POSTInventoryModels201ResponseDataAttributes{
-				Name:                 attributes["name"].(string),
-				Strategy:             stringRef(attributes["strategy"]),
-				StockLocationsCutoff: intToInt32Ref(attributes["stock_locations_cutoff"]),
-				Reference:            stringRef(attributes["reference"]),
-				ReferenceOrigin:      stringRef(attributes["reference_origin"]),
-				Metadata:             keyValueRef(attributes["metadata"]),
+				Name:                    attributes["name"].(string),
+				Strategy:                stringRef(attributes["strategy"]),
+				StockLocationsCutoff:    intToInt32Ref(attributes["stock_locations_cutoff"]),
+				Reference:               stringRef(attributes["reference"]),
+				ReferenceOrigin:         stringRef(attributes["reference_origin"]),
+				ManualStockDecrement:    boolRef(attributes["manual_stock_decrement"]),
+				StockReservationCutoff:  intToInt32Ref(attributes["stock_reservation_cutoff"]),
+				PutStockTransfersOnHold: boolRef(attributes["put_stock_transfers_on_hold"]),
+				Metadata:                keyValueRef(attributes["metadata"]),
 			},
 		},
 	}
@@ -153,12 +174,15 @@ func resourceInventoryModelUpdateFunc(ctx context.Context, d *schema.ResourceDat
 			Type: inventoryModelType,
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHInventoryModelsInventoryModelId200ResponseDataAttributes{
-				Name:                 stringRef(attributes["name"]),
-				Strategy:             stringRef(attributes["strategy"]),
-				StockLocationsCutoff: intToInt32Ref(attributes["stock_locations_cutoff"]),
-				Reference:            stringRef(attributes["reference"]),
-				ReferenceOrigin:      stringRef(attributes["reference_origin"]),
-				Metadata:             keyValueRef(attributes["metadata"]),
+				Name:                    stringRef(attributes["name"]),
+				Strategy:                stringRef(attributes["strategy"]),
+				StockLocationsCutoff:    intToInt32Ref(attributes["stock_locations_cutoff"]),
+				Reference:               stringRef(attributes["reference"]),
+				ReferenceOrigin:         stringRef(attributes["reference_origin"]),
+				ManualStockDecrement:    boolRef(attributes["manual_stock_decrement"]),
+				StockReservationCutoff:  intToInt32Ref(attributes["stock_reservation_cutoff"]),
+				PutStockTransfersOnHold: boolRef(attributes["put_stock_transfers_on_hold"]),
+				Metadata:                keyValueRef(attributes["metadata"]),
 			},
 		},
 	}
