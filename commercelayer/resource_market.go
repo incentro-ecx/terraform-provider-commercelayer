@@ -42,6 +42,11 @@ func resourceMarket() *schema.Resource {
 							Type:        schema.TypeString,
 							Required:    true,
 						},
+						"code": {
+							Description: "A string that you can use to identify the market (must be unique within the environment).",
+							Type:        schema.TypeString,
+							Optional:    true,
+						},
 						"facebook_pixel_id": {
 							Description: "The Facebook Pixed ID",
 							Type:        schema.TypeString,
@@ -60,6 +65,11 @@ func resourceMarket() *schema.Resource {
 						"external_order_validation_url": {
 							Description: "The URL used to validate orders by an external source.",
 							Type:        schema.TypeString,
+							Optional:    true,
+						},
+						"shipping_cost_cutoff": {
+							Description: "When specified indicates the maximum number of shipping line items with cost that will be added to an order.",
+							Type:        schema.TypeInt,
 							Optional:    true,
 						},
 						"reference": {
@@ -157,9 +167,11 @@ func resourceMarketCreateFunc(ctx context.Context, d *schema.ResourceData, i int
 			Attributes: commercelayer.POSTMarkets201ResponseDataAttributes{
 				Name:                       attributes["name"].(string),
 				FacebookPixelId:            stringRef(attributes["facebook_pixel_id"]),
+				Code:                       stringRef(attributes["code"]),
 				CheckoutUrl:                stringRef(attributes["checkout_url"]),
 				ExternalPricesUrl:          stringRef(attributes["external_prices_url"]),
 				ExternalOrderValidationUrl: stringRef(attributes["external_order_validation_url"]),
+				ShippingCostCutoff:         intToInt32Ref(attributes["shipping_cost_cutoff"]),
 				Reference:                  stringRef(attributes["reference"]),
 				ReferenceOrigin:            stringRef(attributes["reference_origin"]),
 				Metadata:                   keyValueRef(attributes["metadata"]),
@@ -238,10 +250,12 @@ func resourceMarketUpdateFunc(ctx context.Context, d *schema.ResourceData, i int
 			Id:   d.Id(),
 			Attributes: commercelayer.PATCHMarketsMarketId200ResponseDataAttributes{
 				Name:                       stringRef(attributes["name"]),
+				Code:                       stringRef(attributes["code"]),
 				FacebookPixelId:            stringRef(attributes["facebook_pixel_id"]),
 				CheckoutUrl:                stringRef(attributes["checkout_url"]),
 				ExternalPricesUrl:          stringRef(attributes["external_prices_url"]),
 				ExternalOrderValidationUrl: stringRef(attributes["external_order_validation_url"]),
+				ShippingCostCutoff:         intToInt32Ref(attributes["shipping_cost_cutoff"]),
 				Reference:                  stringRef(attributes["reference"]),
 				ReferenceOrigin:            stringRef(attributes["reference_origin"]),
 				Metadata:                   keyValueRef(attributes["metadata"]),

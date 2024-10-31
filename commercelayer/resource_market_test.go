@@ -75,10 +75,15 @@ func testAccMarketCreate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_market" "incentro_market" {
 		  attributes {
+			code = "M-001"
 			name              = "Incentro Market"
 			facebook_pixel_id = "pixel"
-            external_order_validation_url = "https://www.example.com"
-
+			checkout_url = "https://www.checkout.com/:order_id"            
+			external_order_validation_url = "https://www.example.com"
+			external_prices_url = "https://www.prices.com"
+			shipping_cost_cutoff = 100
+			reference = "M-001-EXT"
+			reference_origin = "ERP"
 			metadata = {
 			  testName: "{{.testName}}"
 			}
@@ -97,10 +102,15 @@ func testAccMarketUpdate(testName string) string {
 	return hclTemplate(`
 		resource "commercelayer_market" "incentro_market" {
 		  attributes {
+			code = "M-001-CHG"
 			name              = "Incentro Market Changed"
 			facebook_pixel_id = "pixelchanged"
-            external_order_validation_url = "https://www.example.com"
-
+			checkout_url = "https://www.checkout-changed.com/:order_id"            
+			external_order_validation_url = "https://www.example-changed.com"
+			external_prices_url = "https://www.prices-changed.com"
+			shipping_cost_cutoff = 105
+			reference = "M-001-EXT-CHG"
+			reference_origin = "ERP-CHG"
 			metadata = {
 			  testName: "{{.testName}}"
 			}
