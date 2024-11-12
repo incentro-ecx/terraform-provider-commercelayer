@@ -5,7 +5,7 @@
     "url" : "/api/markets",
     "method" : "POST",
     "bodyPatterns" : [ {
-      "equalToJson" : "{\"data\":{\"attributes\":{\"checkout_url\":null,\"external_order_validation_url\":\"https://www.example.com\",\"external_prices_url\":null,\"facebook_pixel_id\":\"pixel\",\"metadata\":{\"testName\":\"commercelayer_market.incentro_market\"},\"name\":\"Incentro Market\",\"reference\":null,\"reference_origin\":null},\"relationships\":{\"inventory_model\":{\"data\":{\"id\":\"kZXEvSyREa\",\"type\":\"inventory_models\"}},\"merchant\":{\"data\":{\"id\":\"qnzZLHQmpn\",\"type\":\"merchants\"}},\"price_list\":{\"data\":{\"id\":\"AkYYaCErEk\",\"type\":\"price_lists\"}}},\"type\":\"markets\"}}\n",
+      "equalToJson" : "{\"data\":{\"attributes\":{\"code\":\"M-001\",\"shipping_cost_cutoff\":100,\"checkout_url\":\"https://www.checkout.com/:order_id\",\"external_order_validation_url\":\"https://www.example.com\",\"external_prices_url\":\"https://www.prices.com\",\"facebook_pixel_id\":\"pixel\",\"metadata\":{\"testName\":\"commercelayer_market.incentro_market\"},\"name\":\"Incentro Market\",\"reference\":\"M-001-EXT\",\"reference_origin\":\"ERP\"},\"relationships\":{\"inventory_model\":{\"data\":{\"id\":\"kZXEvSyREa\",\"type\":\"inventory_models\"}},\"merchant\":{\"data\":{\"id\":\"qnzZLHQmpn\",\"type\":\"merchants\"}},\"price_list\":{\"data\":{\"id\":\"AkYYaCErEk\",\"type\":\"price_lists\"}}},\"type\":\"markets\"}}\n",
       "ignoreArrayOrder" : true,
       "ignoreExtraElements" : true
     } ]

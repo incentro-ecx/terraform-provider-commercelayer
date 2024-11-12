@@ -5,7 +5,7 @@
     "url" : "/api/markets/XjBdyhLYOl",
     "method" : "PATCH",
     "bodyPatterns" : [ {
-      "equalToJson" : "{\"data\":{\"attributes\":{\"checkout_url\":null,\"external_order_validation_url\":\"https://www.example.com\",\"external_prices_url\":null,\"facebook_pixel_id\":\"pixelchanged\",\"metadata\":{\"testName\":\"commercelayer_market.incentro_market\"},\"name\":\"Incentro Market Changed\",\"reference\":null,\"reference_origin\":null},\"id\":\"XjBdyhLYOl\",\"relationships\":{\"inventory_model\":{\"data\":{\"id\":\"kZXEvSyREa\",\"type\":\"inventory_models\"}},\"merchant\":{\"data\":{\"id\":\"qnzZLHQmpn\",\"type\":\"merchants\"}},\"price_list\":{\"data\":{\"id\":\"AkYYaCErEk\",\"type\":\"price_lists\"}}},\"type\":\"markets\"}}\n",
+      "equalToJson" : "{\"data\":{\"attributes\":{\"code\":\"M-001-CHG\",\"shipping_cost_cutoff\":105,\"checkout_url\":\"https://www.checkout-changed.com/:order_id\",\"external_order_validation_url\":\"https://www.example-changed.com\",\"external_prices_url\":\"https://www.prices-changed.com\",\"facebook_pixel_id\":\"pixelchanged\",\"metadata\":{\"testName\":\"commercelayer_market.incentro_market\"},\"name\":\"Incentro Market Changed\",\"reference\":\"M-001-EXT-CHG\",\"reference_origin\":\"ERP-CHG\"},\"id\":\"XjBdyhLYOl\",\"relationships\":{\"inventory_model\":{\"data\":{\"id\":\"kZXEvSyREa\",\"type\":\"inventory_models\"}},\"merchant\":{\"data\":{\"id\":\"qnzZLHQmpn\",\"type\":\"merchants\"}},\"price_list\":{\"data\":{\"id\":\"AkYYaCErEk\",\"type\":\"price_lists\"}}},\"type\":\"markets\"}}\n",
       "ignoreArrayOrder" : true,
       "ignoreExtraElements" : true
     } ]
