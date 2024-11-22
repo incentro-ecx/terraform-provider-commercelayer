@@ -1,3 +1,7 @@
+> [!WARNING]
+> This provider has been deprecated. Our friends over at Lab Digital have forked this provider and will provide maintenance.
+> See [github.com/labd/terraform-provider-commercelayer](https://github.com/labd/terraform-provider-commercelayer) and [registry.terraform.io/providers/labd/commercelayer](https://registry.terraform.io/providers/labd/commercelayer/latest).
+
 # Commercelayer Terraform Provider
 
 The Commercelayer terraform provider allows you to configure your [Commercelayer shops](https://commercelayer.io/) with
